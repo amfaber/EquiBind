@@ -1,0 +1,7309 @@
+              _             
+             (_)            
+   __ _ _ __  _ _ __   __ _ 
+  / _` | '_ \| | '_ \ / _` |
+ | (_| | | | | | | | | (_| |
+  \__, |_| |_|_|_| |_|\__,_|
+   __/ |                    
+  |___/                     
+SOURCE MODIFIED by Andreas Malthe Faber
+
+gnina  master:b9ae032+   Built May 12 2022.
+gnina is based on smina and AutoDock Vina.
+Please cite appropriately.
+
+Commandline: gnina -r /home/amfaber/cyp_screen/protein.pdb -l /home/amfaber/equibind/translated_10_along_x.sdf --minimize
+---BEGIN DATA---
+## 1 L-Phenylalanine
+Affinity: -0.11629  -0.09001 (kcal/mol)
+RMSD: 5.31137
+CNNscore: 0.84187 
+CNNaffinity: 2.73634
+CNNvariance: 0.32613
+## 2 Biotin
+Affinity: 0.00000  -0.42224 (kcal/mol)
+RMSD: 0.86822
+CNNscore: 0.80515 
+CNNaffinity: 3.10766
+CNNvariance: 0.44294
+## 3 Methionine
+Affinity: 0.00000  -0.10357 (kcal/mol)
+RMSD: 0.07126
+CNNscore: 0.87082 
+CNNaffinity: 2.43032
+CNNvariance: 0.19720
+## 0 Pyridoxal_Phosphate
+Affinity: -0.02077  -0.69713 (kcal/mol)
+RMSD: 1.95316
+CNNscore: 0.86913 
+CNNaffinity: 3.45588
+CNNvariance: 0.93348
+## 4 L-Tyrosine
+Affinity: -0.00258  -0.27816 (kcal/mol)
+RMSD: 0.23326
+CNNscore: 0.86175 
+CNNaffinity: 2.90700
+CNNvariance: 0.53674
+## 5 L-Leucine
+Affinity: 0.00000  -0.19402 (kcal/mol)
+RMSD: 0.54157
+CNNscore: 0.86003 
+CNNaffinity: 2.47410
+CNNvariance: 0.22482
+## 6 L-Tryptophan
+Affinity: 0.00000  -0.32343 (kcal/mol)
+RMSD: 0.71927
+CNNscore: 0.87639 
+CNNaffinity: 3.16734
+CNNvariance: 0.38963
+## 8 L-Valine
+Affinity: 0.00000  -0.07840 (kcal/mol)
+RMSD: 0.21445
+CNNscore: 0.87894 
+CNNaffinity: 2.35010
+CNNvariance: 0.16086
+## 7 Thiamine
+Affinity: 0.00000  -0.58074 (kcal/mol)
+RMSD: 1.04673
+CNNscore: 0.81802 
+CNNaffinity: 3.74803
+CNNvariance: 0.66552
+## 9 Pyridoxine
+Affinity: 0.00000  -0.32686 (kcal/mol)
+RMSD: 0.16986
+CNNscore: 0.89394 
+CNNaffinity: 2.88620
+CNNvariance: 0.38271
+## 10 Lipoic_Acid
+Affinity: -0.00291  -0.16440 (kcal/mol)
+RMSD: 0.20904
+CNNscore: 0.81873 
+CNNaffinity: 3.14965
+CNNvariance: 0.51270
+## 11 L-Isoleucine
+Affinity: 0.00000  -0.12471 (kcal/mol)
+RMSD: 0.44090
+CNNscore: 0.86926 
+CNNaffinity: 2.49735
+CNNvariance: 0.23020
+## 12 Pravastatin
+Affinity: -0.48110  -2.38918 (kcal/mol)
+RMSD: 7.39393
+CNNscore: 0.63028 
+CNNaffinity: 4.04901
+CNNvariance: 0.18369
+## 13 Fluvoxamine
+Affinity: -0.05306  -0.85986 (kcal/mol)
+RMSD: 2.85262
+CNNscore: 0.69578 
+CNNaffinity: 3.53475
+CNNvariance: 0.40670
+## 14 Valsartan
+Affinity: -0.37091  -2.32210 (kcal/mol)
+RMSD: 3.23907
+CNNscore: 0.65640 
+CNNaffinity: 4.67054
+CNNvariance: 0.35367
+## 15 Ramipril
+Affinity: -0.04433  -2.08414 (kcal/mol)
+RMSD: 3.38494
+CNNscore: 0.70262 
+CNNaffinity: 4.38552
+CNNvariance: 0.77407
+## 16 Flunisolide
+Affinity: -0.41534  -0.25500 (kcal/mol)
+RMSD: 4.10598
+CNNscore: 0.81793 
+CNNaffinity: 4.15809
+CNNvariance: 0.08173
+## 17 Baclofen
+Affinity: 0.00000  -0.36170 (kcal/mol)
+RMSD: 2.02687
+CNNscore: 0.82988 
+CNNaffinity: 3.06655
+CNNvariance: 0.37009
+## 18 Amphetamine
+Affinity: 0.00000  -0.17086 (kcal/mol)
+RMSD: 0.59892
+CNNscore: 0.86003 
+CNNaffinity: 2.64171
+CNNvariance: 0.17807
+## 19 Nicotine
+Affinity: 0.00000  -0.24447 (kcal/mol)
+RMSD: 0.07303
+CNNscore: 0.89420 
+CNNaffinity: 3.06237
+CNNvariance: 0.28823
+## 20 Cevimeline
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88595 
+CNNaffinity: 2.93274
+CNNvariance: 0.11189
+## 21 Lorazepam
+Affinity: 0.00000  -0.61213 (kcal/mol)
+RMSD: 0.43230
+CNNscore: 0.83893 
+CNNaffinity: 3.97598
+CNNvariance: 0.63163
+## 22 Esmolol
+Affinity: -0.15137  -1.53648 (kcal/mol)
+RMSD: 5.80448
+CNNscore: 0.78234 
+CNNaffinity: 3.37799
+CNNvariance: 0.41516
+## 23 Bortezomib
+Affinity: -0.42398  -1.45076 (kcal/mol)
+RMSD: 7.31796
+CNNscore: 0.58621 
+CNNaffinity: 3.97545
+CNNvariance: 0.58529
+## 24 Ethchlorvynol
+Affinity: 0.00000  0.00234 (kcal/mol)
+RMSD: 0.35705
+CNNscore: 0.88161 
+CNNaffinity: 2.64115
+CNNvariance: 0.23698
+## 25 Phentermine
+Affinity: -0.00312  -0.02065 (kcal/mol)
+RMSD: 0.40504
+CNNscore: 0.85114 
+CNNaffinity: 2.79264
+CNNvariance: 0.22528
+## 26 Indecainide
+Affinity: -0.21825  -1.70731 (kcal/mol)
+RMSD: 4.61484
+CNNscore: 0.72794 
+CNNaffinity: 3.86718
+CNNvariance: 0.12454
+## 27 Tramadol
+Affinity: -0.89331  -0.81271 (kcal/mol)
+RMSD: 7.69070
+CNNscore: 0.77151 
+CNNaffinity: 3.43797
+CNNvariance: 0.04053
+## 28 Betaxolol
+Affinity: -0.00212  -1.41230 (kcal/mol)
+RMSD: 2.90563
+CNNscore: 0.66354 
+CNNaffinity: 3.43688
+CNNvariance: 0.74766
+## 29 Fluconazole
+Affinity: 0.00000  -1.01488 (kcal/mol)
+RMSD: 0.96626
+CNNscore: 0.78733 
+CNNaffinity: 4.06659
+CNNvariance: 0.59125
+## 30 Oseltamivir
+Affinity: -0.13334  -1.43454 (kcal/mol)
+RMSD: 4.11185
+CNNscore: 0.71684 
+CNNaffinity: 3.71483
+CNNvariance: 0.48261
+## 31 Succinylcholine
+Affinity: 0.00000  -1.33879 (kcal/mol)
+RMSD: 7.41771
+CNNscore: 0.77475 
+CNNaffinity: 3.06684
+CNNvariance: 0.15552
+## 32 Sildenafil
+Affinity: -0.21114  -1.53736 (kcal/mol)
+RMSD: 4.02675
+CNNscore: 0.75695 
+CNNaffinity: 5.18087
+CNNvariance: 1.55127
+## 33 Dofetilide
+Affinity: -0.03822  -2.13587 (kcal/mol)
+RMSD: 4.26578
+CNNscore: 0.71655 
+CNNaffinity: 4.46972
+CNNvariance: 0.97789
+## 34 Pyrimethamine
+Affinity: -0.00359  -0.52014 (kcal/mol)
+RMSD: 0.18228
+CNNscore: 0.81907 
+CNNaffinity: 4.18855
+CNNvariance: 0.76753
+## 35 Ticlopidine
+Affinity: -0.01057  -0.01054 (kcal/mol)
+RMSD: 0.22151
+CNNscore: 0.84075 
+CNNaffinity: 3.61574
+CNNvariance: 0.42112
+## 36 Trospium
+Affinity: -0.03594  -1.89761 (kcal/mol)
+RMSD: 1.16846
+CNNscore: 0.78408 
+CNNaffinity: 4.15629
+CNNvariance: 0.12473
+## 37 Pantoprazole
+Affinity: -0.11586  -0.05747 (kcal/mol)
+RMSD: 2.71337
+CNNscore: 0.80409 
+CNNaffinity: 4.33962
+CNNvariance: 1.12939
+## 38 Torasemide
+Affinity: -0.44685  -1.02280 (kcal/mol)
+RMSD: 3.61137
+CNNscore: 0.79738 
+CNNaffinity: 4.37309
+CNNvariance: 0.73092
+## 39 Citalopram
+Affinity: -0.05621  -1.38808 (kcal/mol)
+RMSD: 2.33965
+CNNscore: 0.79203 
+CNNaffinity: 3.99529
+CNNvariance: 0.26435
+## 40 Eletriptan
+Affinity: -0.19770  -0.78158 (kcal/mol)
+RMSD: 3.60572
+CNNscore: 0.79491 
+CNNaffinity: 4.65735
+CNNvariance: 0.29844
+## 41 Bethanidine
+Affinity: -0.04808  -0.44593 (kcal/mol)
+RMSD: 4.46702
+CNNscore: 0.88199 
+CNNaffinity: 2.79314
+CNNvariance: 0.09299
+## 42 Moxifloxacin
+Affinity: -0.04303  -0.27827 (kcal/mol)
+RMSD: 1.69443
+CNNscore: 0.80999 
+CNNaffinity: 4.73060
+CNNvariance: 0.59968
+## 43 Oxyphenonium
+Affinity: 0.00000  -1.60477 (kcal/mol)
+RMSD: 1.07533
+CNNscore: 0.71425 
+CNNaffinity: 3.74947
+CNNvariance: 0.08249
+## 44 Glimepiride
+Affinity: -1.14708  -2.53115 (kcal/mol)
+RMSD: 7.86549
+CNNscore: 0.61967 
+CNNaffinity: 5.11118
+CNNvariance: 0.55944
+## 45 Diflorasone
+Affinity: -0.13734  0.29073 (kcal/mol)
+RMSD: 6.10178
+CNNscore: 0.80539 
+CNNaffinity: 3.97970
+CNNvariance: 0.09773
+## 46 Guanadrel
+Affinity: -0.02194  -0.18736 (kcal/mol)
+RMSD: 0.57445
+CNNscore: 0.85715 
+CNNaffinity: 3.07696
+CNNvariance: 0.35952
+## 47 Lovastatin
+Affinity: -0.06748  -2.16144 (kcal/mol)
+RMSD: 3.24225
+CNNscore: 0.71462 
+CNNaffinity: 4.30065
+CNNvariance: 0.15515
+WARNING: Ligand 1051 in /home/amfaber/equibind/translated_10_along_x.sdf has an extent greater than 100A. Skipping.
+## 48 Enflurane
+Affinity: 0.00000  -0.28019 (kcal/mol)
+RMSD: 0.69856
+CNNscore: 0.89646 
+CNNaffinity: 2.79771
+CNNvariance: 0.49908
+## 49 Pregabalin
+Affinity: 0.00000  -0.44105 (kcal/mol)
+RMSD: 0.86558
+CNNscore: 0.83294 
+CNNaffinity: 2.74513
+CNNvariance: 0.34058
+## 50 Temazepam
+Affinity: 0.00000  -0.49493 (kcal/mol)
+RMSD: 0.33894
+CNNscore: 0.84094 
+CNNaffinity: 3.82611
+CNNvariance: 0.53131
+## 51 Methyclothiazide
+Affinity: 0.00000  -0.18801 (kcal/mol)
+RMSD: 0.45600
+CNNscore: 0.83865 
+CNNaffinity: 4.14228
+CNNvariance: 1.05002
+## 52 Aminosalicylic_Acid
+Affinity: 0.00000  -0.26659 (kcal/mol)
+RMSD: 0.06721
+CNNscore: 0.90934 
+CNNaffinity: 2.83927
+CNNvariance: 0.42866
+## 53 Reboxetine
+Affinity: 0.00000  -1.04367 (kcal/mol)
+RMSD: 2.32121
+CNNscore: 0.80487 
+CNNaffinity: 4.06874
+CNNvariance: 0.39865
+## 54 Milrinone
+Affinity: 0.00000  -0.34843 (kcal/mol)
+RMSD: 0.30569
+CNNscore: 0.85796 
+CNNaffinity: 3.57949
+CNNvariance: 0.74804
+## 55 Pipobroman
+Affinity: -0.03519  -0.30792 (kcal/mol)
+RMSD: 1.77751
+CNNscore: 0.80395 
+CNNaffinity: 3.21782
+CNNvariance: 0.20002
+## 56 Butabarbital
+Affinity: 0.00000  0.04215 (kcal/mol)
+RMSD: 0.19624
+CNNscore: 0.80660 
+CNNaffinity: 3.17085
+CNNvariance: 0.35056
+## 57 Nevirapine
+Affinity: -0.00330  0.05848 (kcal/mol)
+RMSD: 0.05592
+CNNscore: 0.86959 
+CNNaffinity: 4.20040
+CNNvariance: 0.79043
+## 58 Alclometasone
+Affinity: 0.00000  -0.17326 (kcal/mol)
+RMSD: 0.11272
+CNNscore: 0.81154 
+CNNaffinity: 3.92513
+CNNvariance: 0.11470
+## 59 Butalbital
+Affinity: 0.00000  -0.64648 (kcal/mol)
+RMSD: 0.82692
+CNNscore: 0.78239 
+CNNaffinity: 3.33556
+CNNvariance: 0.50278
+## 60 Ranolazine
+Affinity: -0.47867  -1.49408 (kcal/mol)
+RMSD: 7.07698
+CNNscore: 0.65518 
+CNNaffinity: 4.17190
+CNNvariance: 0.07277
+## 61 Mesalazine
+Affinity: -0.00646  -0.25808 (kcal/mol)
+RMSD: 0.18999
+CNNscore: 0.91035 
+CNNaffinity: 2.82395
+CNNvariance: 0.40915
+## 62 Benzatropine
+Affinity: 0.00000  -1.39877 (kcal/mol)
+RMSD: 1.06132
+CNNscore: 0.80868 
+CNNaffinity: 3.98742
+CNNvariance: 0.25460
+## 63 Ziprasidone
+Affinity: -0.86031  -0.76908 (kcal/mol)
+RMSD: 6.15124
+CNNscore: 0.73705 
+CNNaffinity: 4.45710
+CNNvariance: 0.33065
+## 64 Cabergoline
+Affinity: -0.02605  -1.58998 (kcal/mol)
+RMSD: 0.66052
+CNNscore: 0.67801 
+CNNaffinity: 5.07195
+CNNvariance: 0.70050
+## 65 Dapsone
+Affinity: -0.00311  -0.39413 (kcal/mol)
+RMSD: 0.00293
+CNNscore: 0.88021 
+CNNaffinity: 3.59281
+CNNvariance: 0.69534
+## 66 Phenytoin
+Affinity: 0.00000  -0.52822 (kcal/mol)
+RMSD: 0.25134
+CNNscore: 0.81850 
+CNNaffinity: 3.50964
+CNNvariance: 0.35807
+## 67 Medrysone
+Affinity: -0.00386  -0.11565 (kcal/mol)
+RMSD: 0.05765
+CNNscore: 0.80504 
+CNNaffinity: 4.00460
+CNNvariance: 0.19776
+## 68 Diethylstilbestrol
+Affinity: -0.00281  -1.31264 (kcal/mol)
+RMSD: 0.33904
+CNNscore: 0.84602 
+CNNaffinity: 4.10248
+CNNvariance: 0.65372
+## 69 Anagrelide
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.85251 
+CNNaffinity: 3.53693
+CNNvariance: 0.39859
+## 70 Carmustine
+Affinity: 0.00000  -0.20535 (kcal/mol)
+RMSD: 0.41426
+CNNscore: 0.87274 
+CNNaffinity: 3.04495
+CNNvariance: 0.39922
+## 71 Sulfisoxazole
+Affinity: -0.08588  -0.78407 (kcal/mol)
+RMSD: 3.07735
+CNNscore: 0.84454 
+CNNaffinity: 3.82078
+CNNvariance: 0.92683
+## 72 Metoprolol
+Affinity: -0.03416  -1.03892 (kcal/mol)
+RMSD: 2.97013
+CNNscore: 0.75126 
+CNNaffinity: 3.23186
+CNNvariance: 0.45151
+## 73 Crotamiton
+Affinity: 0.00000  -0.45874 (kcal/mol)
+RMSD: 0.10801
+CNNscore: 0.87908 
+CNNaffinity: 3.51535
+CNNvariance: 0.44300
+## 74 Dicoumarol
+Affinity: -0.04781  -1.13304 (kcal/mol)
+RMSD: 1.01399
+CNNscore: 0.87328 
+CNNaffinity: 4.96813
+CNNvariance: 1.82772
+## 75 Ropinirole
+Affinity: -0.14835  -1.51782 (kcal/mol)
+RMSD: 6.84897
+CNNscore: 0.77812 
+CNNaffinity: 3.75211
+CNNvariance: 0.28447
+## 76 Isradipine
+Affinity: -0.38909  -1.74784 (kcal/mol)
+RMSD: 6.75952
+CNNscore: 0.82472 
+CNNaffinity: 4.20386
+CNNvariance: 0.14994
+## 77 Olmesartan
+Affinity: -0.34824  -2.02510 (kcal/mol)
+RMSD: 5.54590
+CNNscore: 0.74917 
+CNNaffinity: 4.88980
+CNNvariance: 0.44953
+## 78 Disopyramide
+Affinity: -0.02585  -0.96518 (kcal/mol)
+RMSD: 1.89720
+CNNscore: 0.76695 
+CNNaffinity: 4.50810
+CNNvariance: 0.49593
+## 79 Lidocaine
+Affinity: -0.00613  -0.61434 (kcal/mol)
+RMSD: 1.28982
+CNNscore: 0.85413 
+CNNaffinity: 3.49847
+CNNvariance: 0.36724
+## 80 Venlafaxine
+Affinity: -0.37045  -0.64158 (kcal/mol)
+RMSD: 5.04010
+CNNscore: 0.76986 
+CNNaffinity: 3.57482
+CNNvariance: 0.11105
+## 81 Atomoxetine
+Affinity: -0.03147  -0.96984 (kcal/mol)
+RMSD: 2.64607
+CNNscore: 0.83735 
+CNNaffinity: 3.52751
+CNNvariance: 0.20194
+## 82 Etomidate
+Affinity: -0.03155  -0.85738 (kcal/mol)
+RMSD: 1.82143
+CNNscore: 0.86731 
+CNNaffinity: 3.70981
+CNNvariance: 0.48900
+## 83 Raltitrexed
+Affinity: -0.09436  -1.52052 (kcal/mol)
+RMSD: 3.57442
+CNNscore: 0.62287 
+CNNaffinity: 4.33327
+CNNvariance: 1.79344
+## 84 Etonogestrel
+Affinity: -0.00681  -0.25634 (kcal/mol)
+RMSD: 0.06818
+CNNscore: 0.81016 
+CNNaffinity: 4.34749
+CNNvariance: 0.50354
+## 85 Morphine
+Affinity: -0.01963  0.00000 (kcal/mol)
+RMSD: 0.48031
+CNNscore: 0.89217 
+CNNaffinity: 3.68424
+CNNvariance: 0.33359
+## 86 Ropivacaine
+Affinity: 0.00000  -0.86765 (kcal/mol)
+RMSD: 0.76844
+CNNscore: 0.81643 
+CNNaffinity: 3.98606
+CNNvariance: 0.40184
+## 87 Bupivacaine
+Affinity: 0.00000  -0.92896 (kcal/mol)
+RMSD: 0.35257
+CNNscore: 0.78337 
+CNNaffinity: 4.24960
+CNNvariance: 0.53381
+## 88 Dapiprazole
+Affinity: -0.31554  -0.48069 (kcal/mol)
+RMSD: 3.06107
+CNNscore: 0.75486 
+CNNaffinity: 3.92410
+CNNvariance: 0.22971
+## 89 Flucloxacillin
+Affinity: -1.25686  -1.53188 (kcal/mol)
+RMSD: 6.58467
+CNNscore: 0.69761 
+CNNaffinity: 4.80759
+CNNvariance: 0.52334
+## 90 Tranexamic_acid
+Affinity: -0.15277  -0.11453 (kcal/mol)
+RMSD: 5.70462
+CNNscore: 0.85001 
+CNNaffinity: 2.76409
+CNNvariance: 0.25699
+## 91 Ertapenem
+Affinity: -0.71091  -0.52306 (kcal/mol)
+RMSD: 4.87172
+CNNscore: 0.69759 
+CNNaffinity: 4.08371
+CNNvariance: 0.62617
+## 92 Desogestrel
+Affinity: -0.00686  -0.27791 (kcal/mol)
+RMSD: 0.40055
+CNNscore: 0.79512 
+CNNaffinity: 4.48177
+CNNvariance: 1.25093
+## 93 Talbutal
+Affinity: 0.00000  -0.46131 (kcal/mol)
+RMSD: 0.22498
+CNNscore: 0.78317 
+CNNaffinity: 3.33534
+CNNvariance: 0.48496
+## 94 Ibutilide
+Affinity: -0.05734  -1.36223 (kcal/mol)
+RMSD: 5.41592
+CNNscore: 0.56251 
+CNNaffinity: 3.70450
+CNNvariance: 0.53107
+## 95 Chlorthalidone
+Affinity: -1.04532  -0.63510 (kcal/mol)
+RMSD: 8.28629
+CNNscore: 0.75397 
+CNNaffinity: 4.05840
+CNNvariance: 0.51310
+## 96 Pentobarbital
+Affinity: 0.00000  -0.06537 (kcal/mol)
+RMSD: 0.36959
+CNNscore: 0.78063 
+CNNaffinity: 3.23462
+CNNvariance: 0.29338
+## 97 Valproic_Acid
+Affinity: 0.00000  -0.45764 (kcal/mol)
+RMSD: 1.45088
+CNNscore: 0.87009 
+CNNaffinity: 2.84167
+CNNvariance: 0.39368
+## 98 Zolmitriptan
+Affinity: -0.00302  -0.79024 (kcal/mol)
+RMSD: 1.52770
+CNNscore: 0.82884 
+CNNaffinity: 3.71198
+CNNvariance: 0.30805
+## 99 Acetaminophen
+Affinity: 0.00000  -0.15944 (kcal/mol)
+RMSD: 0.71758
+CNNscore: 0.91507 
+CNNaffinity: 2.94167
+CNNvariance: 0.43874
+## 100 Gefitinib
+Affinity: -0.31733  -1.66706 (kcal/mol)
+RMSD: 4.99357
+CNNscore: 0.67831 
+CNNaffinity: 5.38898
+CNNvariance: 0.68708
+## 101 Codeine
+Affinity: 0.00000  -0.06939 (kcal/mol)
+RMSD: 0.00046
+CNNscore: 0.89205 
+CNNaffinity: 3.80553
+CNNvariance: 0.34857
+## 102 Fluorometholone
+Affinity: -0.12663  -0.19851 (kcal/mol)
+RMSD: 3.06758
+CNNscore: 0.81978 
+CNNaffinity: 3.99217
+CNNvariance: 0.10003
+## 103 Hydromorphone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89288 
+CNNaffinity: 3.79119
+CNNvariance: 0.35955
+## 104 Indometacin
+Affinity: -0.75609  -0.98424 (kcal/mol)
+RMSD: 5.07902
+CNNscore: 0.82124 
+CNNaffinity: 4.47641
+CNNvariance: 0.52790
+## 105 Ipratropium
+Affinity: -0.01376  -1.08565 (kcal/mol)
+RMSD: 1.58025
+CNNscore: 0.81181 
+CNNaffinity: 3.80236
+CNNvariance: 0.18138
+## 106 Methadone
+Affinity: -0.00525  -1.22858 (kcal/mol)
+RMSD: 0.59871
+CNNscore: 0.77074 
+CNNaffinity: 4.09965
+CNNvariance: 0.40959
+## 107 Olanzapine
+Affinity: -0.00376  -0.32675 (kcal/mol)
+RMSD: 0.37514
+CNNscore: 0.81708 
+CNNaffinity: 4.21402
+CNNvariance: 0.80445
+## 108 Atenolol
+Affinity: 0.00000  -0.95938 (kcal/mol)
+RMSD: 1.65751
+CNNscore: 0.75471 
+CNNaffinity: 3.22342
+CNNvariance: 0.51148
+## 109 Nitrofural
+Affinity: 0.00000  -0.21625 (kcal/mol)
+RMSD: 0.73884
+CNNscore: 0.86007 
+CNNaffinity: 3.10343
+CNNvariance: 0.39070
+## 110 Omeprazole
+Affinity: -0.02091  -0.76195 (kcal/mol)
+RMSD: 0.59061
+CNNscore: 0.83798 
+CNNaffinity: 4.50831
+CNNvariance: 0.58275
+## 111 Cetirizine
+Affinity: -0.45521  -0.96203 (kcal/mol)
+RMSD: 4.90753
+CNNscore: 0.67516 
+CNNaffinity: 3.77773
+CNNvariance: 0.18760
+## 112 Diltiazem
+Affinity: 0.00000  -1.52851 (kcal/mol)
+RMSD: 0.78174
+CNNscore: 0.71689 
+CNNaffinity: 4.41850
+CNNvariance: 0.54096
+## 113 Protriptyline
+Affinity: 0.00000  -0.70260 (kcal/mol)
+RMSD: 0.52393
+CNNscore: 0.78009 
+CNNaffinity: 3.76371
+CNNvariance: 0.17319
+## 114 Aminohippuric_acid
+Affinity: -0.01741  -0.15011 (kcal/mol)
+RMSD: 0.31675
+CNNscore: 0.87803 
+CNNaffinity: 2.97833
+CNNvariance: 0.55680
+## 115 Alfuzosin
+Affinity: -0.09200  -0.93272 (kcal/mol)
+RMSD: 3.04578
+CNNscore: 0.72401 
+CNNaffinity: 4.15094
+CNNvariance: 0.97223
+## 116 Trimethadione
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90211 
+CNNaffinity: 2.65737
+CNNvariance: 0.27882
+## 117 Nitisinone
+Affinity: -0.05764  -1.02190 (kcal/mol)
+RMSD: 2.68257
+CNNscore: 0.85084 
+CNNaffinity: 4.01189
+CNNvariance: 0.45119
+## 118 Clobazam
+Affinity: -0.04028  -0.39880 (kcal/mol)
+RMSD: 0.66202
+CNNscore: 0.86566 
+CNNaffinity: 4.21961
+CNNvariance: 0.60687
+## 119 Megestrol_acetate
+Affinity: -0.94522  -0.61209 (kcal/mol)
+RMSD: 6.00795
+CNNscore: 0.76559 
+CNNaffinity: 4.39230
+CNNvariance: 0.13264
+## 120 Tioguanine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.77417 
+CNNaffinity: 3.03284
+CNNvariance: 0.54442
+## 121 Methylergometrine
+Affinity: -0.71319  -0.43701 (kcal/mol)
+RMSD: 5.27744
+CNNscore: 0.82784 
+CNNaffinity: 4.13011
+CNNvariance: 0.42958
+## 122 Chlorzoxazone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89506 
+CNNaffinity: 3.20345
+CNNvariance: 0.52006
+## 123 Aminoglutethimide
+Affinity: 0.00000  -0.50948 (kcal/mol)
+RMSD: 0.36591
+CNNscore: 0.85238 
+CNNaffinity: 3.62395
+CNNvariance: 0.51594
+## 124 Mefloquine
+Affinity: -0.02295  -0.36592 (kcal/mol)
+RMSD: 1.24616
+CNNscore: 0.77317 
+CNNaffinity: 4.19419
+CNNvariance: 0.27369
+## 125 Sulfadiazine
+Affinity: -0.10015  -0.46117 (kcal/mol)
+RMSD: 3.25371
+CNNscore: 0.85593 
+CNNaffinity: 3.72770
+CNNvariance: 0.89027
+## 126 Clozapine
+Affinity: -0.28822  -0.31590 (kcal/mol)
+RMSD: 4.05901
+CNNscore: 0.81909 
+CNNaffinity: 4.30041
+CNNvariance: 0.53724
+## 127 Grepafloxacin
+Affinity: -0.78362  -0.26532 (kcal/mol)
+RMSD: 4.51079
+CNNscore: 0.82079 
+CNNaffinity: 4.46456
+CNNvariance: 0.26808
+## 128 Doxylamine
+Affinity: 0.00000  -0.95014 (kcal/mol)
+RMSD: 0.68475
+CNNscore: 0.84379 
+CNNaffinity: 3.78217
+CNNvariance: 0.45513
+## 129 Levonorgestrel
+Affinity: 0.00000  -0.23185 (kcal/mol)
+RMSD: 0.05882
+CNNscore: 0.80782 
+CNNaffinity: 4.14075
+CNNvariance: 0.29491
+## 130 Mirtazapine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.84308 
+CNNaffinity: 3.75512
+CNNvariance: 0.24055
+## 131 Meprobamate
+Affinity: -0.03951  -0.69825 (kcal/mol)
+RMSD: 3.74080
+CNNscore: 0.79956 
+CNNaffinity: 3.19034
+CNNvariance: 0.64521
+## 132 Timolol
+Affinity: -0.02237  -0.94274 (kcal/mol)
+RMSD: 2.35027
+CNNscore: 0.59128 
+CNNaffinity: 3.12262
+CNNvariance: 0.41543
+## 133 Treprostinil
+Affinity: -0.04492  -1.66153 (kcal/mol)
+RMSD: 3.35626
+CNNscore: 0.76982 
+CNNaffinity: 4.18729
+CNNvariance: 0.45976
+## 134 Trihexyphenidyl
+Affinity: -0.01348  -1.37435 (kcal/mol)
+RMSD: 2.10130
+CNNscore: 0.75193 
+CNNaffinity: 3.78156
+CNNvariance: 0.16988
+## 135 Palonosetron
+Affinity: 0.00000  -0.31274 (kcal/mol)
+RMSD: 0.24358
+CNNscore: 0.80631 
+CNNaffinity: 3.87767
+CNNvariance: 0.23960
+## 136 Dydrogesterone
+Affinity: -0.26286  -0.22558 (kcal/mol)
+RMSD: 2.77399
+CNNscore: 0.81748 
+CNNaffinity: 4.24849
+CNNvariance: 0.37423
+## 137 Mexiletine
+Affinity: 0.00000  -0.26052 (kcal/mol)
+RMSD: 0.78162
+CNNscore: 0.88366 
+CNNaffinity: 3.16936
+CNNvariance: 0.33038
+## 138 Amlodipine
+Affinity: -0.06907  -1.96844 (kcal/mol)
+RMSD: 3.70563
+CNNscore: 0.75442 
+CNNaffinity: 4.02489
+CNNvariance: 0.14189
+## 139 Tacrine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89571 
+CNNaffinity: 3.66523
+CNNvariance: 0.51556
+## 140 Oxyphencyclimine
+Affinity: -0.04064  -0.76828 (kcal/mol)
+RMSD: 1.62469
+CNNscore: 0.75866 
+CNNaffinity: 3.81209
+CNNvariance: 0.22398
+## 141 Procyclidine
+Affinity: 0.00000  -1.46231 (kcal/mol)
+RMSD: 0.46428
+CNNscore: 0.75822 
+CNNaffinity: 3.77206
+CNNvariance: 0.17712
+## 142 Phenylephrine
+Affinity: -0.00319  -0.22374 (kcal/mol)
+RMSD: 1.24744
+CNNscore: 0.88333 
+CNNaffinity: 2.71744
+CNNvariance: 0.25353
+## 143 Carbimazole
+Affinity: 0.00000  -0.21105 (kcal/mol)
+RMSD: 0.60561
+CNNscore: 0.90764 
+CNNaffinity: 3.14362
+CNNvariance: 0.51810
+## 144 Sulpiride
+Affinity: -0.00921  -0.95346 (kcal/mol)
+RMSD: 1.17371
+CNNscore: 0.82084 
+CNNaffinity: 3.83225
+CNNvariance: 0.53475
+## 145 Nimodipine
+Affinity: -0.22078  -1.94805 (kcal/mol)
+RMSD: 4.35574
+CNNscore: 0.72006 
+CNNaffinity: 4.42611
+CNNvariance: 0.31763
+## 146 Carisoprodol
+Affinity: 0.00000  -0.59997 (kcal/mol)
+RMSD: 3.40623
+CNNscore: 0.76838 
+CNNaffinity: 3.40604
+CNNvariance: 0.72924
+## 147 Progesterone
+Affinity: 0.00000  -0.11670 (kcal/mol)
+RMSD: 0.01636
+CNNscore: 0.82166 
+CNNaffinity: 4.24532
+CNNvariance: 0.34651
+## 148 Phenylpropanolamine
+Affinity: 0.00000  -0.24179 (kcal/mol)
+RMSD: 0.33388
+CNNscore: 0.86898 
+CNNaffinity: 2.58072
+CNNvariance: 0.15814
+## 149 Griseofulvin
+Affinity: -0.01299  -0.22240 (kcal/mol)
+RMSD: 0.40760
+CNNscore: 0.84269 
+CNNaffinity: 4.08889
+CNNvariance: 0.42128
+## 150 Nisoldipine
+Affinity: -0.77657  -2.57516 (kcal/mol)
+RMSD: 5.12248
+CNNscore: 0.74228 
+CNNaffinity: 4.11991
+CNNvariance: 0.08856
+Spironolactone | pose 162 | ligand outside box
+## 151 Eszopiclone
+Affinity: 0.00000  -0.99940 (kcal/mol)
+RMSD: 2.16062
+CNNscore: 0.77003 
+CNNaffinity: 4.43835
+CNNvariance: 1.22082
+## 152 Alprazolam
+Affinity: -0.07338  -0.50043 (kcal/mol)
+RMSD: 1.97228
+CNNscore: 0.82622 
+CNNaffinity: 4.35856
+CNNvariance: 0.64907
+## 153 Dexbrompheniramine
+Affinity: 0.00000  -0.91801 (kcal/mol)
+RMSD: 0.93586
+CNNscore: 0.84210 
+CNNaffinity: 3.84920
+CNNvariance: 0.44121
+## 154 Loxapine
+Affinity: 0.00000  -0.33437 (kcal/mol)
+RMSD: 0.32824
+CNNscore: 0.82510 
+CNNaffinity: 4.21158
+CNNvariance: 0.81764
+## 155 Remoxipride
+Affinity: -0.50015  -0.88123 (kcal/mol)
+RMSD: 5.99099
+CNNscore: 0.72419 
+CNNaffinity: 3.97818
+CNNvariance: 0.18676
+## 156 Rosiglitazone
+Affinity: -0.01468  -1.89123 (kcal/mol)
+RMSD: 1.40090
+CNNscore: 0.77133 
+CNNaffinity: 4.23831
+CNNvariance: 0.94605
+## 157 Pramipexole
+Affinity: 0.00000  -0.25739 (kcal/mol)
+RMSD: 0.13338
+CNNscore: 0.73328 
+CNNaffinity: 3.21730
+CNNvariance: 0.42584
+## 158 Acetohexamide
+Affinity: -0.65056  -0.37809 (kcal/mol)
+RMSD: 5.21241
+CNNscore: 0.79831 
+CNNaffinity: 3.92590
+CNNvariance: 0.50039
+## 159 Ampicillin
+Affinity: -0.26465  -0.95255 (kcal/mol)
+RMSD: 3.83663
+CNNscore: 0.74837 
+CNNaffinity: 3.70499
+CNNvariance: 0.53669
+## 160 Phenoxymethylpenicillin
+Affinity: -0.15431  -0.86768 (kcal/mol)
+RMSD: 4.24430
+CNNscore: 0.77546 
+CNNaffinity: 3.68399
+CNNvariance: 0.50473
+## 161 Secobarbital
+Affinity: -0.00544  -0.17525 (kcal/mol)
+RMSD: 0.45592
+CNNscore: 0.77119 
+CNNaffinity: 3.43101
+CNNvariance: 0.45391
+## 162 Spironolactone
+Affinity: -0.94532  -0.54206 (kcal/mol)
+RMSD: 5.03640
+CNNscore: 0.75209 
+CNNaffinity: 4.63909
+CNNvariance: 0.25771
+## 163 Methylphenidate
+Affinity: 0.00000  -0.33259 (kcal/mol)
+RMSD: 0.50347
+CNNscore: 0.84873 
+CNNaffinity: 3.23590
+CNNvariance: 0.23804
+## 164 Methocarbamol
+Affinity: -0.00260  -0.44282 (kcal/mol)
+RMSD: 4.89490
+CNNscore: 0.83504 
+CNNaffinity: 3.01530
+CNNvariance: 0.45728
+## 165 Hyoscyamine
+Affinity: 0.00000  -1.18453 (kcal/mol)
+RMSD: 2.29761
+CNNscore: 0.83516 
+CNNaffinity: 3.44744
+CNNvariance: 0.23189
+## 166 Zolpidem
+Affinity: -0.06908  -0.84148 (kcal/mol)
+RMSD: 2.07547
+CNNscore: 0.84852 
+CNNaffinity: 4.40430
+CNNvariance: 0.63456
+## 167 Famciclovir
+Affinity: -0.02859  -0.59787 (kcal/mol)
+RMSD: 0.36843
+CNNscore: 0.67447 
+CNNaffinity: 3.81841
+CNNvariance: 0.67222
+## 168 Triprolidine
+Affinity: 0.00000  -1.11132 (kcal/mol)
+RMSD: 1.97575
+CNNscore: 0.83119 
+CNNaffinity: 4.13792
+CNNvariance: 0.35801
+## 169 Lindane
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82014 
+CNNaffinity: 3.27910
+CNNvariance: 0.27715
+## 170 Cyproheptadine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.79606 
+CNNaffinity: 4.14491
+CNNvariance: 0.39759
+## 171 Bendroflumethiazide
+Affinity: -0.62287  -0.03501 (kcal/mol)
+RMSD: 4.70892
+CNNscore: 0.75130 
+CNNaffinity: 4.38217
+CNNvariance: 0.74855
+## 172 Cerivastatin
+Affinity: -0.72299  -2.63543 (kcal/mol)
+RMSD: 6.28709
+CNNscore: 0.71686 
+CNNaffinity: 4.79607
+CNNvariance: 0.22747
+## 173 Trimethoprim
+Affinity: -0.25363  -0.59736 (kcal/mol)
+RMSD: 5.13526
+CNNscore: 0.81519 
+CNNaffinity: 4.03669
+CNNvariance: 0.39527
+## 174 Betamethasone
+Affinity: 0.00000  0.66706 (kcal/mol)
+RMSD: 0.07032
+CNNscore: 0.81172 
+CNNaffinity: 3.98389
+CNNvariance: 0.16311
+## 175 Chloramphenicol
+Affinity: 0.00000  -0.06599 (kcal/mol)
+RMSD: 0.62543
+CNNscore: 0.79952 
+CNNaffinity: 3.32638
+CNNvariance: 0.46628
+## 176 Loracarbef
+Affinity: -0.00299  -0.74396 (kcal/mol)
+RMSD: 1.30182
+CNNscore: 0.79119 
+CNNaffinity: 3.62604
+CNNvariance: 0.56531
+## 177 Lansoprazole
+Affinity: -0.00514  -0.54916 (kcal/mol)
+RMSD: 0.18218
+CNNscore: 0.82345 
+CNNaffinity: 4.28284
+CNNvariance: 0.94055
+## 178 Dipivefrin
+Affinity: -0.00238  -1.54123 (kcal/mol)
+RMSD: 2.05120
+CNNscore: 0.79656 
+CNNaffinity: 4.01277
+CNNvariance: 0.63336
+## 179 Droperidol
+Affinity: -0.36943  -1.25378 (kcal/mol)
+RMSD: 4.22916
+CNNscore: 0.75518 
+CNNaffinity: 4.43643
+CNNvariance: 0.45840
+## 180 Meperidine
+Affinity: -0.00563  -0.74955 (kcal/mol)
+RMSD: 0.64506
+CNNscore: 0.85124 
+CNNaffinity: 3.37113
+CNNvariance: 0.19095
+## 181 Loratadine
+Affinity: -0.05088  -0.06734 (kcal/mol)
+RMSD: 1.65767
+CNNscore: 0.77009 
+CNNaffinity: 4.74432
+CNNvariance: 0.77877
+## 182 Cefalotin
+Affinity: -0.18124  -0.99257 (kcal/mol)
+RMSD: 5.87968
+CNNscore: 0.68665 
+CNNaffinity: 4.00302
+CNNvariance: 1.29017
+## 183 Prazosin
+Affinity: 0.00000  -0.54636 (kcal/mol)
+RMSD: 0.31481
+CNNscore: 0.73182 
+CNNaffinity: 4.13806
+CNNvariance: 0.88205
+## 184 Imipramine
+Affinity: 0.00000  -0.86522 (kcal/mol)
+RMSD: 0.95377
+CNNscore: 0.84771 
+CNNaffinity: 3.99394
+CNNvariance: 0.22631
+## 185 Nabumetone
+Affinity: 0.00000  -0.24836 (kcal/mol)
+RMSD: 0.00570
+CNNscore: 0.86380 
+CNNaffinity: 3.49248
+CNNvariance: 0.43835
+## 186 Sodium_Tetradecyl_Sulfate
+Affinity: -0.04481  -2.21556 (kcal/mol)
+RMSD: 4.67507
+CNNscore: 0.72233 
+CNNaffinity: 3.78221
+CNNvariance: 0.24265
+## 187 Ketorolac
+Affinity: -0.00588  -0.63989 (kcal/mol)
+RMSD: 1.74709
+CNNscore: 0.88790 
+CNNaffinity: 3.65438
+CNNvariance: 0.52444
+## 188 Enoxacin
+Affinity: -0.61527  -0.72952 (kcal/mol)
+RMSD: 6.43744
+CNNscore: 0.86690 
+CNNaffinity: 4.02923
+CNNvariance: 0.45852
+## 189 Quinine
+Affinity: -0.06915  -0.87283 (kcal/mol)
+RMSD: 3.59054
+CNNscore: 0.80659 
+CNNaffinity: 4.06888
+CNNvariance: 0.33039
+## 190 Tenoxicam
+Affinity: -0.07807  -0.50489 (kcal/mol)
+RMSD: 4.43494
+CNNscore: 0.81031 
+CNNaffinity: 3.89044
+CNNvariance: 0.65874
+## 191 Fluoxetine
+Affinity: -0.01830  -1.54657 (kcal/mol)
+RMSD: 1.80721
+CNNscore: 0.80339 
+CNNaffinity: 3.88579
+CNNvariance: 0.27517
+## 192 Hexylcaine
+Affinity: 0.00000  -0.05224 (kcal/mol)
+RMSD: 0.29708
+CNNscore: 0.70300 
+CNNaffinity: 3.18656
+CNNvariance: 0.65618
+## 193 Methohexital
+Affinity: 0.00000  -0.57680 (kcal/mol)
+RMSD: 1.05234
+CNNscore: 0.75208 
+CNNaffinity: 3.68988
+CNNvariance: 0.47639
+## 194 Chlordiazepoxide
+Affinity: -0.06284  -0.45302 (kcal/mol)
+RMSD: 1.74875
+CNNscore: 0.83900 
+CNNaffinity: 4.07760
+CNNvariance: 0.44487
+## 195 Duloxetine
+Affinity: -0.03424  -1.02704 (kcal/mol)
+RMSD: 1.65813
+CNNscore: 0.82853 
+CNNaffinity: 3.96523
+CNNvariance: 0.50137
+## 196 Rimantadine
+Affinity: 0.00000  -0.11331 (kcal/mol)
+RMSD: 0.00071
+CNNscore: 0.86211 
+CNNaffinity: 3.12936
+CNNvariance: 0.19521
+## 197 Lenalidomide
+Affinity: -0.04082  -0.16175 (kcal/mol)
+RMSD: 0.82469
+CNNscore: 0.87157 
+CNNaffinity: 3.57594
+CNNvariance: 0.46300
+## 198 Celecoxib
+Affinity: 0.00000  -1.19904 (kcal/mol)
+RMSD: 0.64270
+CNNscore: 0.82003 
+CNNaffinity: 4.65076
+CNNvariance: 1.01791
+## 199 Brimonidine
+Affinity: -0.30519  -0.30132 (kcal/mol)
+RMSD: 3.66777
+CNNscore: 0.87268 
+CNNaffinity: 3.84293
+CNNvariance: 0.57981
+## 200 Dicloxacillin
+Affinity: -0.72251  -1.61083 (kcal/mol)
+RMSD: 4.44342
+CNNscore: 0.70706 
+CNNaffinity: 4.73432
+CNNvariance: 0.51828
+## 201 Pefloxacin
+Affinity: -0.25229  -0.83049 (kcal/mol)
+RMSD: 4.45742
+CNNscore: 0.83173 
+CNNaffinity: 4.12082
+CNNvariance: 0.42200
+## 202 Altretamine
+Affinity: 0.00000  -0.24005 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.87196 
+CNNaffinity: 3.25509
+CNNvariance: 0.56126
+## 203 Sotalol
+Affinity: -0.45799  -0.66089 (kcal/mol)
+RMSD: 4.52346
+CNNscore: 0.80869 
+CNNaffinity: 3.29775
+CNNvariance: 0.30318
+## 204 Buspirone
+Affinity: -0.01296  -0.70465 (kcal/mol)
+RMSD: 0.60795
+CNNscore: 0.68160 
+CNNaffinity: 4.46003
+CNNvariance: 0.29825
+## 205 Darifenacin
+Affinity: 0.00000  -0.93181 (kcal/mol)
+RMSD: 3.74630
+CNNscore: 0.68229 
+CNNaffinity: 5.15517
+CNNvariance: 1.09585
+## 206 Oxycodone
+Affinity: -0.00734  -0.06873 (kcal/mol)
+RMSD: 0.00289
+CNNscore: 0.88124 
+CNNaffinity: 3.67962
+CNNvariance: 0.38843
+## 207 Flutamide
+Affinity: -0.05725  -0.53422 (kcal/mol)
+RMSD: 2.82440
+CNNscore: 0.86895 
+CNNaffinity: 3.72142
+CNNvariance: 0.50858
+## 208 Tolmetin
+Affinity: -0.15069  -0.69204 (kcal/mol)
+RMSD: 3.27316
+CNNscore: 0.87739 
+CNNaffinity: 3.67688
+CNNvariance: 0.58052
+## 209 Haloperidol
+Affinity: -0.28672  -0.74547 (kcal/mol)
+RMSD: 2.56807
+CNNscore: 0.75681 
+CNNaffinity: 4.04254
+CNNvariance: 0.17172
+## 210 Levallorphan
+Affinity: 0.00000  -0.54253 (kcal/mol)
+RMSD: 0.71765
+CNNscore: 0.82722 
+CNNaffinity: 3.93522
+CNNvariance: 0.22827
+## 211 Nitazoxanide
+Affinity: -0.11493  -0.98445 (kcal/mol)
+RMSD: 3.36322
+CNNscore: 0.86210 
+CNNaffinity: 4.03783
+CNNvariance: 1.09228
+## 212 Aminocaproic_Acid
+Affinity: 0.00000  -0.23405 (kcal/mol)
+RMSD: 3.66356
+CNNscore: 0.84383 
+CNNaffinity: 2.46716
+CNNvariance: 0.27910
+## 213 Dextromethorphan
+Affinity: 0.00000  -0.06211 (kcal/mol)
+RMSD: 0.00167
+CNNscore: 0.84748 
+CNNaffinity: 3.88126
+CNNvariance: 0.24646
+## 214 Anisotropine_methylbromide
+Affinity: -0.00247  -1.62160 (kcal/mol)
+RMSD: 2.48466
+CNNscore: 0.77526 
+CNNaffinity: 3.43829
+CNNvariance: 0.07765
+## 215 Albendazole
+Affinity: -0.04911  -0.71331 (kcal/mol)
+RMSD: 1.51207
+CNNscore: 0.82738 
+CNNaffinity: 3.71229
+CNNvariance: 0.77076
+## 216 Trandolapril
+Affinity: -0.37947  -2.56322 (kcal/mol)
+RMSD: 4.78678
+CNNscore: 0.68393 
+CNNaffinity: 4.41261
+CNNvariance: 0.42139
+## 217 Carteolol
+Affinity: -0.06289  -0.29410 (kcal/mol)
+RMSD: 0.43450
+CNNscore: 0.79101 
+CNNaffinity: 3.40979
+CNNvariance: 0.39562
+## 218 Metolazone
+Affinity: -0.01464  -0.49777 (kcal/mol)
+RMSD: 0.11537
+CNNscore: 0.84063 
+CNNaffinity: 4.47158
+CNNvariance: 1.15769
+## 219 Tolnaftate
+Affinity: 0.00000  -1.08498 (kcal/mol)
+RMSD: 3.17804
+CNNscore: 0.83033 
+CNNaffinity: 4.47752
+CNNvariance: 0.75665
+## 220 Cinchocaine
+Affinity: -0.33822  -1.26762 (kcal/mol)
+RMSD: 7.80244
+CNNscore: 0.76849 
+CNNaffinity: 4.02045
+CNNvariance: 0.37734
+## 221 Erlotinib
+Affinity: -0.47796  -1.88078 (kcal/mol)
+RMSD: 4.22642
+CNNscore: 0.70073 
+CNNaffinity: 4.82719
+CNNvariance: 0.48482
+## 222 Cyclophosphamide
+Affinity: -0.18329  -0.56581 (kcal/mol)
+RMSD: 4.52132
+CNNscore: 0.80523 
+CNNaffinity: 3.01037
+CNNvariance: 0.44706
+## 223 Mephenytoin
+Affinity: 0.00000  -0.46435 (kcal/mol)
+RMSD: 0.58146
+CNNscore: 0.86260 
+CNNaffinity: 3.38193
+CNNvariance: 0.37198
+## 224 Rofecoxib
+Affinity: -0.05986  -1.11509 (kcal/mol)
+RMSD: 1.69808
+CNNscore: 0.83424 
+CNNaffinity: 3.86097
+CNNvariance: 0.44826
+## 225 Chlormerodrin
+Affinity: 0.00000  -0.18304 (kcal/mol)
+RMSD: 2.67537
+CNNscore: 0.83865 
+CNNaffinity: 2.47123
+CNNvariance: 0.20095
+## 226 Ciprofloxacin
+Affinity: 0.00000  -0.18954 (kcal/mol)
+RMSD: 0.42241
+CNNscore: 0.84884 
+CNNaffinity: 4.12952
+CNNvariance: 0.59338
+## 227 Benazepril
+Affinity: 0.00000  -3.14848 (kcal/mol)
+RMSD: 3.60438
+CNNscore: 0.70095 
+CNNaffinity: 4.29496
+CNNvariance: 0.34687
+## 228 Amoxapine
+Affinity: 0.00000  -0.33773 (kcal/mol)
+RMSD: 0.24343
+CNNscore: 0.83211 
+CNNaffinity: 4.10322
+CNNvariance: 0.61169
+## 229 Pyridostigmine
+Affinity: -0.00738  -0.24886 (kcal/mol)
+RMSD: 0.94929
+CNNscore: 0.88878 
+CNNaffinity: 3.04125
+CNNvariance: 0.49096
+## 230 Desoximetasone
+Affinity: -0.09008  -0.21380 (kcal/mol)
+RMSD: 3.04946
+CNNscore: 0.82243 
+CNNaffinity: 4.01849
+CNNvariance: 0.14101
+## 231 Azelaic_acid
+Affinity: -0.65904  -0.99085 (kcal/mol)
+RMSD: 5.66541
+CNNscore: 0.76383 
+CNNaffinity: 3.08078
+CNNvariance: 0.42914
+## 232 Propylthiouracil
+Affinity: 0.00000  -0.14994 (kcal/mol)
+RMSD: 0.19762
+CNNscore: 0.89359 
+CNNaffinity: 3.26976
+CNNvariance: 0.56294
+## 233 Methoxsalen
+Affinity: 0.00000  0.45841 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91256 
+CNNaffinity: 3.51606
+CNNvariance: 0.52416
+## 234 Piroxicam
+Affinity: 0.00000  -0.58881 (kcal/mol)
+RMSD: 0.75598
+CNNscore: 0.82471 
+CNNaffinity: 3.92947
+CNNvariance: 0.64691
+## 235 Lamotrigine
+Affinity: 0.00000  -0.30421 (kcal/mol)
+RMSD: 0.56968
+CNNscore: 0.84261 
+CNNaffinity: 3.90806
+CNNvariance: 0.62874
+## 236 Perflutren
+Affinity: 0.00000  -0.08461 (kcal/mol)
+RMSD: 0.00005
+CNNscore: 0.89094 
+CNNaffinity: 2.74958
+CNNvariance: 0.52521
+## 237 Hydroxyzine
+Affinity: -0.01049  -1.27624 (kcal/mol)
+RMSD: 3.70961
+CNNscore: 0.64666 
+CNNaffinity: 3.85505
+CNNvariance: 0.26016
+## 238 Doxapram
+Affinity: -0.00849  -1.12119 (kcal/mol)
+RMSD: 1.13397
+CNNscore: 0.71230 
+CNNaffinity: 4.43076
+CNNvariance: 0.34157
+## 239 Benzthiazide
+Affinity: 0.00000  -0.73424 (kcal/mol)
+RMSD: 0.22357
+CNNscore: 0.76470 
+CNNaffinity: 4.54787
+CNNvariance: 1.25900
+## 240 Carbamazepine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.87252 
+CNNaffinity: 3.87769
+CNNvariance: 0.55606
+## 241 Cephalexin
+Affinity: 0.00000  -0.82518 (kcal/mol)
+RMSD: 2.25241
+CNNscore: 0.78360 
+CNNaffinity: 3.76972
+CNNvariance: 0.83987
+## 242 Propranolol
+Affinity: -0.05917  -0.70531 (kcal/mol)
+RMSD: 3.86613
+CNNscore: 0.82189 
+CNNaffinity: 3.36398
+CNNvariance: 0.23796
+## 243 Atropine
+Affinity: -0.08886  -0.92276 (kcal/mol)
+RMSD: 2.59811
+CNNscore: 0.84184 
+CNNaffinity: 3.54073
+CNNvariance: 0.28629
+## 244 Fenoprofen
+Affinity: -0.25561  -0.64215 (kcal/mol)
+RMSD: 4.60068
+CNNscore: 0.87385 
+CNNaffinity: 3.54573
+CNNvariance: 0.42364
+## 245 Fenfluramine
+Affinity: -0.34933  -0.76519 (kcal/mol)
+RMSD: 5.64565
+CNNscore: 0.79680 
+CNNaffinity: 3.20209
+CNNvariance: 0.06850
+## 246 Clonidine
+Affinity: 0.00000  -0.31802 (kcal/mol)
+RMSD: 0.73775
+CNNscore: 0.88385 
+CNNaffinity: 3.47952
+CNNvariance: 0.45736
+## 247 Sulfamethizole
+Affinity: -0.51331  -0.44799 (kcal/mol)
+RMSD: 6.44619
+CNNscore: 0.83165 
+CNNaffinity: 3.82571
+CNNvariance: 0.89677
+## 248 Carbenicillin
+Affinity: 0.00000  -1.03887 (kcal/mol)
+RMSD: 3.97085
+CNNscore: 0.72852 
+CNNaffinity: 3.82193
+CNNvariance: 0.87741
+## 249 Mazindol
+Affinity: 0.00000  -0.63481 (kcal/mol)
+RMSD: 0.04165
+CNNscore: 0.82418 
+CNNaffinity: 3.66276
+CNNvariance: 0.36747
+## 250 Valdecoxib
+Affinity: -0.20757  -1.11078 (kcal/mol)
+RMSD: 2.91954
+CNNscore: 0.84180 
+CNNaffinity: 4.30759
+CNNvariance: 0.61130
+## 251 Voriconazole
+Affinity: 0.00000  -1.32277 (kcal/mol)
+RMSD: 1.49334
+CNNscore: 0.79176 
+CNNaffinity: 4.67692
+CNNvariance: 0.63652
+## 252 Enalapril
+Affinity: -0.31311  -1.61140 (kcal/mol)
+RMSD: 7.61612
+CNNscore: 0.69950 
+CNNaffinity: 3.95955
+CNNvariance: 0.35592
+## 253 Nizatidine
+Affinity: -0.08333  -1.31253 (kcal/mol)
+RMSD: 4.32678
+CNNscore: 0.69642 
+CNNaffinity: 3.61598
+CNNvariance: 0.12850
+## 254 Diclofenac
+Affinity: -0.00245  -0.87902 (kcal/mol)
+RMSD: 0.99176
+CNNscore: 0.87571 
+CNNaffinity: 4.37498
+CNNvariance: 0.78157
+## 255 Lisuride
+Affinity: -0.13303  -0.45761 (kcal/mol)
+RMSD: 2.76250
+CNNscore: 0.80022 
+CNNaffinity: 4.09092
+CNNvariance: 0.42843
+## 256 Doxazosin
+Affinity: 0.00000  -0.47989 (kcal/mol)
+RMSD: 0.79336
+CNNscore: 0.68490 
+CNNaffinity: 4.36316
+CNNvariance: 0.81447
+## 257 Fluocinolone_acetonide
+Affinity: -0.01293  -0.30589 (kcal/mol)
+RMSD: 0.03635
+CNNscore: 0.80112 
+CNNaffinity: 4.10078
+CNNvariance: 0.07811
+## 258 Ethosuximide
+Affinity: 0.00000  -0.01626 (kcal/mol)
+RMSD: 0.00512
+CNNscore: 0.88128 
+CNNaffinity: 2.81982
+CNNvariance: 0.30091
+## 259 Ulobetasol
+Affinity: -0.40762  0.39255 (kcal/mol)
+RMSD: 4.56442
+CNNscore: 0.78101 
+CNNaffinity: 4.05641
+CNNvariance: 0.04667
+## 260 Labetalol
+Affinity: -0.07504  -1.01210 (kcal/mol)
+RMSD: 3.67856
+CNNscore: 0.73221 
+CNNaffinity: 3.50498
+CNNvariance: 0.34999
+## 261 Thiopental
+Affinity: 0.00000  0.20128 (kcal/mol)
+RMSD: 0.41640
+CNNscore: 0.78203 
+CNNaffinity: 3.35496
+CNNvariance: 0.40092
+## 262 Monobenzone
+Affinity: -0.03015  -0.63362 (kcal/mol)
+RMSD: 0.78021
+CNNscore: 0.89710 
+CNNaffinity: 3.32100
+CNNvariance: 0.49079
+## 263 Medroxyprogesterone_acetate
+Affinity: -0.79468  -0.62445 (kcal/mol)
+RMSD: 5.54237
+CNNscore: 0.77543 
+CNNaffinity: 4.51417
+CNNvariance: 0.31515
+## 264 Cisapride
+Affinity: -0.25489  -1.50496 (kcal/mol)
+RMSD: 3.65660
+CNNscore: 0.68306 
+CNNaffinity: 4.32787
+CNNvariance: 0.28967
+## 265 Sulindac
+Affinity: -0.00296  -0.99995 (kcal/mol)
+RMSD: 0.32458
+CNNscore: 0.81299 
+CNNaffinity: 4.75424
+CNNvariance: 0.86628
+## 266 Cyclothiazide
+Affinity: -0.16303  -0.32526 (kcal/mol)
+RMSD: 1.40429
+CNNscore: 0.80161 
+CNNaffinity: 4.42264
+CNNvariance: 0.89802
+## 267 Nafcillin
+Affinity: -0.01895  -1.41080 (kcal/mol)
+RMSD: 2.66302
+CNNscore: 0.73005 
+CNNaffinity: 4.17188
+CNNvariance: 0.50172
+## 268 Chloroquine
+Affinity: -0.18187  -1.15936 (kcal/mol)
+RMSD: 2.02689
+CNNscore: 0.80465 
+CNNaffinity: 4.03057
+CNNvariance: 0.30109
+## 269 Ethionamide
+Affinity: 0.00000  -0.10037 (kcal/mol)
+RMSD: 0.00989
+CNNscore: 0.87407 
+CNNaffinity: 3.08857
+CNNvariance: 0.39128
+## 270 Metaraminol
+Affinity: 0.00000  0.03550 (kcal/mol)
+RMSD: 0.08964
+CNNscore: 0.88728 
+CNNaffinity: 2.79154
+CNNvariance: 0.30763
+## 271 Butorphanol
+Affinity: -0.01735  -0.47997 (kcal/mol)
+RMSD: 0.52582
+CNNscore: 0.79676 
+CNNaffinity: 3.95038
+CNNvariance: 0.23463
+## 272 Bisoprolol
+Affinity: -0.00764  -2.36966 (kcal/mol)
+RMSD: 3.66351
+CNNscore: 0.77299 
+CNNaffinity: 3.55915
+CNNvariance: 0.27540
+## 273 Paramethadione
+Affinity: 0.00000  -0.04987 (kcal/mol)
+RMSD: 0.20904
+CNNscore: 0.89492 
+CNNaffinity: 2.87348
+CNNvariance: 0.38041
+## 274 Imatinib
+Affinity: -0.28994  -1.24652 (kcal/mol)
+RMSD: 3.01115
+CNNscore: 0.65016 
+CNNaffinity: 4.99297
+CNNvariance: 1.15548
+## 275 Triamcinolone
+Affinity: -0.14385  -0.06095 (kcal/mol)
+RMSD: 2.63322
+CNNscore: 0.79884 
+CNNaffinity: 3.76347
+CNNvariance: 0.12499
+## 276 Oxandrolone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82623 
+CNNaffinity: 3.84194
+CNNvariance: 0.24456
+## 277 Nicardipine
+Affinity: -0.49685  -3.66768 (kcal/mol)
+RMSD: 5.98425
+CNNscore: 0.63519 
+CNNaffinity: 4.69298
+CNNvariance: 0.40351
+## 278 Testosterone
+Affinity: -0.04144  0.00000 (kcal/mol)
+RMSD: 0.86135
+CNNscore: 0.82913 
+CNNaffinity: 3.81435
+CNNvariance: 0.25852
+## 279 Efavirenz
+Affinity: -0.01455  -0.81990 (kcal/mol)
+RMSD: 0.84029
+CNNscore: 0.81213 
+CNNaffinity: 4.22017
+CNNvariance: 0.72329
+## 280 Niacin
+Affinity: 0.00000  -0.02219 (kcal/mol)
+RMSD: 0.00287
+CNNscore: 0.91237 
+CNNaffinity: 2.68850
+CNNvariance: 0.33218
+## 281 Clorazepate
+Affinity: 0.00000  -0.83743 (kcal/mol)
+RMSD: 0.32579
+CNNscore: 0.85038 
+CNNaffinity: 3.91094
+CNNvariance: 0.62597
+## 282 Guanabenz
+Affinity: 0.00000  -0.25040 (kcal/mol)
+RMSD: 1.14778
+CNNscore: 0.84363 
+CNNaffinity: 3.28461
+CNNvariance: 0.38838
+## 283 Dexmedetomidine
+Affinity: -0.01339  -0.45834 (kcal/mol)
+RMSD: 0.52621
+CNNscore: 0.85788 
+CNNaffinity: 3.58609
+CNNvariance: 0.43170
+## 284 Sulfacetamide
+Affinity: -0.11808  -0.11439 (kcal/mol)
+RMSD: 3.51438
+CNNscore: 0.88959 
+CNNaffinity: 3.40111
+CNNvariance: 0.74776
+## 285 Prednisone
+Affinity: -0.01343  -0.36203 (kcal/mol)
+RMSD: 0.13933
+CNNscore: 0.81568 
+CNNaffinity: 4.06879
+CNNvariance: 0.31499
+## 286 Clofibrate
+Affinity: -0.00313  -0.49972 (kcal/mol)
+RMSD: 5.97948
+CNNscore: 0.87262 
+CNNaffinity: 3.46698
+CNNvariance: 0.48481
+## 287 Simvastatin
+Affinity: -0.55460  -2.02090 (kcal/mol)
+RMSD: 5.75441
+CNNscore: 0.70227 
+CNNaffinity: 4.42122
+CNNvariance: 0.13802
+## 288 Mebendazole
+Affinity: -0.17108  -0.84400 (kcal/mol)
+RMSD: 3.40804
+CNNscore: 0.83015 
+CNNaffinity: 3.95725
+CNNvariance: 0.81185
+## 289 Dyclonine
+Affinity: -0.26868  -1.42631 (kcal/mol)
+RMSD: 4.30194
+CNNscore: 0.80319 
+CNNaffinity: 3.83202
+CNNvariance: 0.19621
+## 290 Dextropropoxyphene
+Affinity: 0.00000  -2.11792 (kcal/mol)
+RMSD: 1.43859
+CNNscore: 0.75514 
+CNNaffinity: 4.04036
+CNNvariance: 0.22316
+## 291 Pentazocine
+Affinity: 0.00000  -0.67950 (kcal/mol)
+RMSD: 0.52585
+CNNscore: 0.81223 
+CNNaffinity: 3.88653
+CNNvariance: 0.21934
+## 292 Latanoprost
+Affinity: -0.37268  -4.23223 (kcal/mol)
+RMSD: 5.52708
+CNNscore: 0.68859 
+CNNaffinity: 4.00813
+CNNvariance: 0.04411
+## 293 Estrone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.85457 
+CNNaffinity: 3.96072
+CNNvariance: 0.41861
+## 294 Trazodone
+Affinity: -0.29158  -0.41231 (kcal/mol)
+RMSD: 2.50205
+CNNscore: 0.72165 
+CNNaffinity: 4.05533
+CNNvariance: 0.42389
+## 295 Mecamylamine
+Affinity: 0.00000  -0.06277 (kcal/mol)
+RMSD: 0.35773
+CNNscore: 0.86720 
+CNNaffinity: 2.93772
+CNNvariance: 0.12258
+## 296 Sevelamer
+Affinity: 0.00000  -0.02395 (kcal/mol)
+RMSD: 0.01111
+CNNscore: 0.88715 
+CNNaffinity: 2.14967
+CNNvariance: 0.11281
+## 297 Metaxalone
+Affinity: -0.00356  -0.27627 (kcal/mol)
+RMSD: 0.14009
+CNNscore: 0.85762 
+CNNaffinity: 3.22823
+CNNvariance: 0.40959
+## 298 Trimethobenzamide
+Affinity: -0.32371  -0.91746 (kcal/mol)
+RMSD: 3.59889
+CNNscore: 0.72379 
+CNNaffinity: 3.93342
+CNNvariance: 0.72768
+## 299 Flumethasone
+Affinity: -0.27634  -0.29879 (kcal/mol)
+RMSD: 4.49634
+CNNscore: 0.77504 
+CNNaffinity: 3.99634
+CNNvariance: 0.13207
+## 300 Sulfametopyrazine
+Affinity: -0.92290  -0.77779 (kcal/mol)
+RMSD: 7.44173
+CNNscore: 0.80721 
+CNNaffinity: 4.00996
+CNNvariance: 0.53921
+## 301 Nilutamide
+Affinity: -0.15863  -0.63228 (kcal/mol)
+RMSD: 3.97178
+CNNscore: 0.84948 
+CNNaffinity: 3.94259
+CNNvariance: 0.49106
+## 302 Sumatriptan
+Affinity: -0.21454  -0.48751 (kcal/mol)
+RMSD: 3.16909
+CNNscore: 0.84466 
+CNNaffinity: 3.68275
+CNNvariance: 0.41906
+## 303 Pirenzepine
+Affinity: -0.43471  -0.42948 (kcal/mol)
+RMSD: 5.08472
+CNNscore: 0.80653 
+CNNaffinity: 4.22093
+CNNvariance: 0.60732
+## 304 Chlorpropamide
+Affinity: 0.00000  -0.16918 (kcal/mol)
+RMSD: 0.16947
+CNNscore: 0.76485 
+CNNaffinity: 3.35545
+CNNvariance: 0.70448
+## 305 Galantamine
+Affinity: 0.00000  -0.06788 (kcal/mol)
+RMSD: 0.08891
+CNNscore: 0.88744 
+CNNaffinity: 3.75076
+CNNvariance: 0.32701
+## 306 Benzyl_Benzoate
+Affinity: 0.00000  -1.23903 (kcal/mol)
+RMSD: 2.59478
+CNNscore: 0.86928 
+CNNaffinity: 3.15629
+CNNvariance: 0.34830
+## 307 Isoflurophate
+Affinity: -0.00281  -0.43034 (kcal/mol)
+RMSD: 0.74054
+CNNscore: 0.88385 
+CNNaffinity: 2.90917
+CNNvariance: 0.55958
+## 308 Losartan
+Affinity: -0.39843  -1.87382 (kcal/mol)
+RMSD: 3.80348
+CNNscore: 0.69359 
+CNNaffinity: 4.79482
+CNNvariance: 0.39463
+## 309 Moricizine
+Affinity: 0.00000  -1.11330 (kcal/mol)
+RMSD: 0.97151
+CNNscore: 0.74216 
+CNNaffinity: 4.82135
+CNNvariance: 1.60622
+## 310 Warfarin
+Affinity: -0.00316  -0.71126 (kcal/mol)
+RMSD: 0.40056
+CNNscore: 0.87378 
+CNNaffinity: 4.47903
+CNNvariance: 0.87119
+## 311 Midazolam
+Affinity: -0.94071  -0.64518 (kcal/mol)
+RMSD: 6.06323
+CNNscore: 0.78724 
+CNNaffinity: 4.94718
+CNNvariance: 0.65341
+## 312 Trovafloxacin
+Affinity: 0.00000  -1.25526 (kcal/mol)
+RMSD: 0.75676
+CNNscore: 0.79160 
+CNNaffinity: 4.64948
+CNNvariance: 0.96418
+## 313 Fludrocortisone
+Affinity: -0.00349  -0.20970 (kcal/mol)
+RMSD: 0.08829
+CNNscore: 0.81060 
+CNNaffinity: 3.85821
+CNNvariance: 0.17290
+## 314 Mycophenolate_mofetil
+Affinity: -0.06556  -1.19158 (kcal/mol)
+RMSD: 3.53777
+CNNscore: 0.71279 
+CNNaffinity: 4.10580
+CNNvariance: 0.98892
+## 315 Flurazepam
+Affinity: -0.39455  -1.70707 (kcal/mol)
+RMSD: 7.27352
+CNNscore: 0.68076 
+CNNaffinity: 4.73373
+CNNvariance: 0.25428
+## 316 Moexipril
+Affinity: -0.00177  -3.28001 (kcal/mol)
+RMSD: 2.42172
+CNNscore: 0.64096 
+CNNaffinity: 4.75160
+CNNvariance: 0.49501
+## 317 Phentolamine
+Affinity: 0.00000  -0.98392 (kcal/mol)
+RMSD: 0.34711
+CNNscore: 0.85289 
+CNNaffinity: 3.83243
+CNNvariance: 0.43658
+## 318 Fluorescein
+Affinity: -0.01160  0.00000 (kcal/mol)
+RMSD: 0.00924
+CNNscore: 0.88806 
+CNNaffinity: 4.43722
+CNNvariance: 0.88014
+## 319 Furosemide
+Affinity: -0.00936  -0.77696 (kcal/mol)
+RMSD: 0.94285
+CNNscore: 0.83825 
+CNNaffinity: 3.98195
+CNNvariance: 1.05268
+## 320 Tizanidine
+Affinity: 0.00000  -0.35848 (kcal/mol)
+RMSD: 0.74979
+CNNscore: 0.86197 
+CNNaffinity: 3.64937
+CNNvariance: 0.63831
+## 321 Nitrofurantoin
+Affinity: -0.08757  -0.26551 (kcal/mol)
+RMSD: 2.86324
+CNNscore: 0.86787 
+CNNaffinity: 3.41138
+CNNvariance: 0.48077
+## 322 Eplerenone
+Affinity: -0.07819  -0.19705 (kcal/mol)
+RMSD: 1.56445
+CNNscore: 0.81298 
+CNNaffinity: 4.19044
+CNNvariance: 0.15112
+## 323 Naltrexone
+Affinity: -0.22374  -0.35882 (kcal/mol)
+RMSD: 5.98165
+CNNscore: 0.84464 
+CNNaffinity: 3.87168
+CNNvariance: 0.40668
+## 324 Delavirdine
+Affinity: -1.34145  -1.11260 (kcal/mol)
+RMSD: 7.30117
+CNNscore: 0.75695 
+CNNaffinity: 4.63426
+CNNvariance: 0.38435
+## 325 Tamsulosin
+Affinity: -0.25049  -1.74628 (kcal/mol)
+RMSD: 5.31319
+CNNscore: 0.74363 
+CNNaffinity: 4.17609
+CNNvariance: 0.39604
+## 326 Sufentanil
+Affinity: -0.16772  -0.96220 (kcal/mol)
+RMSD: 3.60034
+CNNscore: 0.69658 
+CNNaffinity: 4.41847
+CNNvariance: 0.18963
+## 327 Ibandronate
+Affinity: -0.20948  -1.38642 (kcal/mol)
+RMSD: 6.17329
+CNNscore: 0.62666 
+CNNaffinity: 3.39979
+CNNvariance: 0.62696
+## 328 Diethylcarbamazine
+Affinity: -0.01059  -0.13436 (kcal/mol)
+RMSD: 0.24684
+CNNscore: 0.87786 
+CNNaffinity: 3.02450
+CNNvariance: 0.21336
+## 329 Flurbiprofen
+Affinity: -0.17752  -0.66029 (kcal/mol)
+RMSD: 3.10959
+CNNscore: 0.85874 
+CNNaffinity: 3.55907
+CNNvariance: 0.36251
+## 330 Oxacillin
+Affinity: 0.00000  -1.28685 (kcal/mol)
+RMSD: 4.21659
+CNNscore: 0.71884 
+CNNaffinity: 4.45251
+CNNvariance: 1.01767
+## 331 Paroxetine
+Affinity: -0.49762  -0.66408 (kcal/mol)
+RMSD: 5.35286
+CNNscore: 0.76597 
+CNNaffinity: 3.88078
+CNNvariance: 0.08920
+## 332 Nedocromil
+Affinity: -1.50315  -0.90809 (kcal/mol)
+RMSD: 7.07556
+CNNscore: 0.76185 
+CNNaffinity: 4.63104
+CNNvariance: 0.37431
+## 333 Norethisterone
+Affinity: -0.04977  -0.23098 (kcal/mol)
+RMSD: 1.36055
+CNNscore: 0.82378 
+CNNaffinity: 4.04816
+CNNvariance: 0.30172
+## 334 Azatadine
+Affinity: -0.13337  0.00000 (kcal/mol)
+RMSD: 3.60009
+CNNscore: 0.84305 
+CNNaffinity: 4.21412
+CNNvariance: 0.22122
+## 335 Clodronic_acid
+Affinity: 0.00000  -0.46803 (kcal/mol)
+RMSD: 0.01217
+CNNscore: 0.79184 
+CNNaffinity: 3.00050
+CNNvariance: 0.92270
+## 336 Procaine
+Affinity: -0.94708  -1.00504 (kcal/mol)
+RMSD: 7.11416
+CNNscore: 0.75293 
+CNNaffinity: 3.19781
+CNNvariance: 0.03139
+## 337 Lisinopril
+Affinity: -0.36038  -2.86154 (kcal/mol)
+RMSD: 4.82705
+CNNscore: 0.65125 
+CNNaffinity: 3.84023
+CNNvariance: 0.25649
+## 338 Methoxamine
+Affinity: -0.00927  -0.72584 (kcal/mol)
+RMSD: 0.97676
+CNNscore: 0.89164 
+CNNaffinity: 3.10137
+CNNvariance: 0.34495
+## 339 Imiquimod
+Affinity: 0.00000  -0.46021 (kcal/mol)
+RMSD: 0.34200
+CNNscore: 0.84725 
+CNNaffinity: 4.13294
+CNNvariance: 0.77483
+## 340 Trimipramine
+Affinity: -0.04106  -1.04629 (kcal/mol)
+RMSD: 1.97181
+CNNscore: 0.84920 
+CNNaffinity: 4.26727
+CNNvariance: 0.31164
+## 341 Diphemanil_Methylsulfate
+Affinity: -0.07350  -1.16330 (kcal/mol)
+RMSD: 3.42824
+CNNscore: 0.79057 
+CNNaffinity: 3.77960
+CNNvariance: 0.11450
+## 342 Thiabendazole
+Affinity: 0.00000  -0.13157 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88637 
+CNNaffinity: 3.58237
+CNNvariance: 0.84291
+## 343 Nateglinide
+Affinity: -0.62308  -2.04641 (kcal/mol)
+RMSD: 3.56691
+CNNscore: 0.73490 
+CNNaffinity: 3.82097
+CNNvariance: 0.34576
+## 344 Pralidoxime
+Affinity: 0.00000  -0.05874 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89898 
+CNNaffinity: 2.75935
+CNNvariance: 0.36900
+## 345 Risperidone
+Affinity: -0.91103  -0.74881 (kcal/mol)
+RMSD: 5.85611
+CNNscore: 0.72718 
+CNNaffinity: 4.84853
+CNNvariance: 0.24615
+## 346 Naftifine
+Affinity: -0.10296  -0.56956 (kcal/mol)
+RMSD: 2.70191
+CNNscore: 0.78399 
+CNNaffinity: 3.83725
+CNNvariance: 0.21033
+## 347 Esomeprazole
+Affinity: 0.00000  -1.09317 (kcal/mol)
+RMSD: 0.61332
+CNNscore: 0.83643 
+CNNaffinity: 4.51138
+CNNvariance: 0.56388
+## 348 Hetacillin
+Affinity: -0.21134  -0.37146 (kcal/mol)
+RMSD: 2.68501
+CNNscore: 0.76341 
+CNNaffinity: 3.96073
+CNNvariance: 0.29652
+## 349 Riluzole
+Affinity: -0.00287  -0.14360 (kcal/mol)
+RMSD: 0.04052
+CNNscore: 0.84723 
+CNNaffinity: 3.46303
+CNNvariance: 0.74052
+## 350 Hydrocortisone
+Affinity: -0.00311  -0.18728 (kcal/mol)
+RMSD: 0.08302
+CNNscore: 0.80843 
+CNNaffinity: 3.89561
+CNNvariance: 0.26617
+## 351 Zileuton
+Affinity: -0.01140  0.07648 (kcal/mol)
+RMSD: 0.15695
+CNNscore: 0.83424 
+CNNaffinity: 3.42287
+CNNvariance: 0.65413
+## 352 Modafinil
+Affinity: 0.00000  -1.16995 (kcal/mol)
+RMSD: 1.45388
+CNNscore: 0.79713 
+CNNaffinity: 3.60569
+CNNvariance: 0.51907
+## 353 Scopolamine
+Affinity: -0.01210  -1.08298 (kcal/mol)
+RMSD: 1.34777
+CNNscore: 0.83367 
+CNNaffinity: 3.39795
+CNNvariance: 0.15425
+## 354 Carbinoxamine
+Affinity: 0.00000  -1.11309 (kcal/mol)
+RMSD: 0.67457
+CNNscore: 0.81872 
+CNNaffinity: 3.80542
+CNNvariance: 0.45732
+## 355 Etodolac
+Affinity: 0.00000  -0.62838 (kcal/mol)
+RMSD: 0.63630
+CNNscore: 0.87040 
+CNNaffinity: 3.99010
+CNNvariance: 0.45028
+## 356 Prilocaine
+Affinity: -0.03187  -0.57995 (kcal/mol)
+RMSD: 1.56355
+CNNscore: 0.86022 
+CNNaffinity: 3.33667
+CNNvariance: 0.28417
+## 357 Epinastine
+Affinity: -0.00372  0.00000 (kcal/mol)
+RMSD: 0.00834
+CNNscore: 0.84761 
+CNNaffinity: 3.86728
+CNNvariance: 0.39247
+## 358 Tranylcypromine
+Affinity: 0.00000  0.04171 (kcal/mol)
+RMSD: 0.46789
+CNNscore: 0.87248 
+CNNaffinity: 2.68174
+CNNvariance: 0.17212
+## 359 Isoflurane
+Affinity: 0.00000  -0.16164 (kcal/mol)
+RMSD: 0.67320
+CNNscore: 0.89901 
+CNNaffinity: 2.79257
+CNNvariance: 0.49269
+## 360 Ethotoin
+Affinity: -0.00726  -0.40231 (kcal/mol)
+RMSD: 0.04678
+CNNscore: 0.87234 
+CNNaffinity: 3.25602
+CNNvariance: 0.41107
+## 361 Clopidogrel
+Affinity: -0.01061  -0.70004 (kcal/mol)
+RMSD: 2.99073
+CNNscore: 0.82385 
+CNNaffinity: 3.98668
+CNNvariance: 0.37003
+## 362 Methimazole
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88113 
+CNNaffinity: 2.56264
+CNNvariance: 0.36001
+## 363 Mometasone
+Affinity: -0.73119  -0.35046 (kcal/mol)
+RMSD: 6.92813
+CNNscore: 0.75350 
+CNNaffinity: 4.11358
+CNNvariance: 0.03524
+## 364 Metyrosine
+Affinity: -0.01031  -0.17348 (kcal/mol)
+RMSD: 1.63725
+CNNscore: 0.85835 
+CNNaffinity: 3.01557
+CNNvariance: 0.54007
+## 365 Olopatadine
+Affinity: -0.22144  -0.72512 (kcal/mol)
+RMSD: 5.16790
+CNNscore: 0.81561 
+CNNaffinity: 4.13071
+CNNvariance: 0.22201
+## 366 Hydrocortamate
+Affinity: 0.00000  -1.20165 (kcal/mol)
+RMSD: 0.48012
+CNNscore: 0.70420 
+CNNaffinity: 4.23730
+CNNvariance: 0.04237
+## 367 Alprostadil
+Affinity: -0.16266  -3.07390 (kcal/mol)
+RMSD: 5.32033
+CNNscore: 0.72132 
+CNNaffinity: 3.69327
+CNNvariance: 0.09637
+## 368 Clidinium
+Affinity: -0.02600  -1.74206 (kcal/mol)
+RMSD: 1.37141
+CNNscore: 0.78247 
+CNNaffinity: 3.70850
+CNNvariance: 0.10868
+## 369 Malathion
+Affinity: -0.02006  -1.28047 (kcal/mol)
+RMSD: 4.17844
+CNNscore: 0.76141 
+CNNaffinity: 3.29876
+CNNvariance: 0.76047
+## 370 Hydroflumethiazide
+Affinity: -0.21133  0.38386 (kcal/mol)
+RMSD: 4.36185
+CNNscore: 0.83760 
+CNNaffinity: 3.89363
+CNNvariance: 0.68617
+## 371 Tirofiban
+Affinity: -1.02321  -2.56184 (kcal/mol)
+RMSD: 6.88923
+CNNscore: 0.61452 
+CNNaffinity: 4.32733
+CNNvariance: 0.47369
+## 372 Oxcarbazepine
+Affinity: -0.00406  0.00000 (kcal/mol)
+RMSD: 0.04805
+CNNscore: 0.88563 
+CNNaffinity: 3.88496
+CNNvariance: 0.62353
+## 373 Nalidixic_acid
+Affinity: 0.00000  -0.44615 (kcal/mol)
+RMSD: 0.15823
+CNNscore: 0.89671 
+CNNaffinity: 3.63294
+CNNvariance: 0.51150
+## 374 Phenelzine
+Affinity: 0.00000  -0.05925 (kcal/mol)
+RMSD: 0.01080
+CNNscore: 0.84422 
+CNNaffinity: 2.56045
+CNNvariance: 0.15422
+## 375 Propantheline
+Affinity: -0.05676  -1.60896 (kcal/mol)
+RMSD: 1.55773
+CNNscore: 0.78205 
+CNNaffinity: 4.36422
+CNNvariance: 0.26096
+## 376 Estradiol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.86196 
+CNNaffinity: 3.78392
+CNNvariance: 0.32298
+## 377 Mefenamic_acid
+Affinity: -0.01689  -0.96410 (kcal/mol)
+RMSD: 2.20625
+CNNscore: 0.87899 
+CNNaffinity: 3.69261
+CNNvariance: 0.55786
+## 378 Naproxen
+Affinity: -0.04373  -0.31627 (kcal/mol)
+RMSD: 1.05782
+CNNscore: 0.87376 
+CNNaffinity: 3.43620
+CNNvariance: 0.52815
+## 379 Perindopril
+Affinity: -0.70624  -1.76206 (kcal/mol)
+RMSD: 7.32900
+CNNscore: 0.64797 
+CNNaffinity: 3.82747
+CNNvariance: 0.12376
+## 380 Uracil_mustard
+Affinity: -0.00926  -0.29937 (kcal/mol)
+RMSD: 0.84871
+CNNscore: 0.80848 
+CNNaffinity: 3.51002
+CNNvariance: 0.64669
+## 381 Tripelennamine
+Affinity: -0.01239  -0.90139 (kcal/mol)
+RMSD: 1.48471
+CNNscore: 0.83121 
+CNNaffinity: 3.59178
+CNNvariance: 0.31440
+## 382 Haloprogin
+Affinity: -0.29149  -0.15921 (kcal/mol)
+RMSD: 4.38267
+CNNscore: 0.86313 
+CNNaffinity: 4.06677
+CNNvariance: 0.61798
+## 383 Primidone
+Affinity: -0.01089  0.03160 (kcal/mol)
+RMSD: 0.33483
+CNNscore: 0.86432 
+CNNaffinity: 3.27116
+CNNvariance: 0.28841
+## 384 Tolazoline
+Affinity: 0.00000  -0.20562 (kcal/mol)
+RMSD: 0.19330
+CNNscore: 0.88223 
+CNNaffinity: 2.82039
+CNNvariance: 0.18502
+## 385 Tazarotene
+Affinity: -0.01329  -0.51019 (kcal/mol)
+RMSD: 0.74072
+CNNscore: 0.81047 
+CNNaffinity: 4.47663
+CNNvariance: 0.65068
+## 386 Halazepam
+Affinity: -0.02617  -0.79598 (kcal/mol)
+RMSD: 0.54871
+CNNscore: 0.81837 
+CNNaffinity: 4.37043
+CNNvariance: 0.53886
+## 387 Alfentanil
+Affinity: 0.00000  -1.13965 (kcal/mol)
+RMSD: 2.41658
+CNNscore: 0.66738 
+CNNaffinity: 4.46485
+CNNvariance: 0.61441
+## 388 Dicyclomine
+Affinity: -0.02628  -1.42772 (kcal/mol)
+RMSD: 2.20179
+CNNscore: 0.72794 
+CNNaffinity: 3.74470
+CNNvariance: 0.12019
+## 389 Minaprine
+Affinity: -0.11231  -0.55072 (kcal/mol)
+RMSD: 3.52084
+CNNscore: 0.82293 
+CNNaffinity: 3.82310
+CNNvariance: 0.27994
+## 390 Pentoxifylline
+Affinity: -0.01426  -0.45908 (kcal/mol)
+RMSD: 1.56481
+CNNscore: 0.86069 
+CNNaffinity: 3.95968
+CNNvariance: 0.81783
+## 391 Proparacaine
+Affinity: -0.10597  -1.11123 (kcal/mol)
+RMSD: 5.57691
+CNNscore: 0.80423 
+CNNaffinity: 3.73333
+CNNvariance: 0.37006
+## 392 Indapamide
+Affinity: -0.04749  -0.57551 (kcal/mol)
+RMSD: 1.66108
+CNNscore: 0.81451 
+CNNaffinity: 4.41365
+CNNvariance: 0.97269
+## 393 Tropicamide
+Affinity: -0.17444  -1.09829 (kcal/mol)
+RMSD: 3.65510
+CNNscore: 0.81694 
+CNNaffinity: 3.73208
+CNNvariance: 0.31971
+## 394 Biperiden
+Affinity: 0.00000  -1.73428 (kcal/mol)
+RMSD: 2.13892
+CNNscore: 0.74862 
+CNNaffinity: 3.80930
+CNNvariance: 0.08927
+## 395 Fentanyl
+Affinity: 0.00000  -1.02464 (kcal/mol)
+RMSD: 0.40839
+CNNscore: 0.76068 
+CNNaffinity: 4.03006
+CNNvariance: 0.38002
+## 396 Meloxicam
+Affinity: -0.02326  -0.62176 (kcal/mol)
+RMSD: 1.04197
+CNNscore: 0.80110 
+CNNaffinity: 3.96945
+CNNvariance: 0.67455
+## 397 Sodium_lauryl_sulfate
+Affinity: -0.03910  -1.79977 (kcal/mol)
+RMSD: 6.13244
+CNNscore: 0.74994 
+CNNaffinity: 3.47519
+CNNvariance: 0.37955
+## 398 Orciprenaline
+Affinity: 0.00000  -0.73925 (kcal/mol)
+RMSD: 3.80976
+CNNscore: 0.88004 
+CNNaffinity: 3.05521
+CNNvariance: 0.32386
+## 399 Rosoxacin
+Affinity: -0.12128  -0.76834 (kcal/mol)
+RMSD: 4.06133
+CNNscore: 0.86124 
+CNNaffinity: 4.00142
+CNNvariance: 0.70092
+## 400 Propofol
+Affinity: 0.00000  0.24819 (kcal/mol)
+RMSD: 0.00003
+CNNscore: 0.88599 
+CNNaffinity: 3.41747
+CNNvariance: 0.50038
+## 401 Carprofen
+Affinity: 0.00000  -0.25508 (kcal/mol)
+RMSD: 0.89139
+CNNscore: 0.87441 
+CNNaffinity: 3.85142
+CNNvariance: 0.69122
+## 402 Disulfiram
+Affinity: -0.00541  -0.74733 (kcal/mol)
+RMSD: 1.82850
+CNNscore: 0.70847 
+CNNaffinity: 3.69091
+CNNvariance: 0.48790
+## 403 Ethynodiol_diacetate
+Affinity: -0.07666  -0.81919 (kcal/mol)
+RMSD: 3.49590
+CNNscore: 0.77881 
+CNNaffinity: 4.60979
+CNNvariance: 0.48134
+## 404 Levomenthol
+Affinity: 0.00000  -0.19327 (kcal/mol)
+RMSD: 1.09313
+CNNscore: 0.87589 
+CNNaffinity: 2.94561
+CNNvariance: 0.30788
+## 405 Cinoxacin
+Affinity: 0.00000  -0.28931 (kcal/mol)
+RMSD: 0.54099
+CNNscore: 0.89683 
+CNNaffinity: 3.77305
+CNNvariance: 0.78162
+## 406 Diazepam
+Affinity: -0.65964  -0.47725 (kcal/mol)
+RMSD: 5.43515
+CNNscore: 0.81274 
+CNNaffinity: 3.99215
+CNNvariance: 0.30291
+## 407 Phenmetrazine
+Affinity: 0.00000  -0.27283 (kcal/mol)
+RMSD: 0.06477
+CNNscore: 0.87822 
+CNNaffinity: 2.78862
+CNNvariance: 0.14141
+## 408 Phensuximide
+Affinity: 0.00000  -0.29580 (kcal/mol)
+RMSD: 0.05136
+CNNscore: 0.88087 
+CNNaffinity: 3.20082
+CNNvariance: 0.44621
+## 409 Cefaclor
+Affinity: -0.27865  -0.91324 (kcal/mol)
+RMSD: 4.92936
+CNNscore: 0.72317 
+CNNaffinity: 3.68496
+CNNvariance: 0.44765
+## 410 Brompheniramine
+Affinity: -0.19307  -0.96030 (kcal/mol)
+RMSD: 1.99637
+CNNscore: 0.83554 
+CNNaffinity: 3.91047
+CNNvariance: 0.31448
+## 411 Clocortolone
+Affinity: -0.00346  -0.24631 (kcal/mol)
+RMSD: 0.29100
+CNNscore: 0.79321 
+CNNaffinity: 4.13406
+CNNvariance: 0.11090
+## 412 Tolazamide
+Affinity: -0.05712  0.17303 (kcal/mol)
+RMSD: 0.21702
+CNNscore: 0.74883 
+CNNaffinity: 3.98014
+CNNvariance: 0.47412
+## 413 Oxazepam
+Affinity: -0.01562  -0.47412 (kcal/mol)
+RMSD: 0.47323
+CNNscore: 0.85486 
+CNNaffinity: 3.72699
+CNNvariance: 0.39594
+## 414 Donepezil
+Affinity: 0.00000  -0.81624 (kcal/mol)
+RMSD: 2.99395
+CNNscore: 0.78834 
+CNNaffinity: 4.04565
+CNNvariance: 0.43357
+## 415 Nalbuphine
+Affinity: 0.00000  -0.35550 (kcal/mol)
+RMSD: 0.68962
+CNNscore: 0.84971 
+CNNaffinity: 3.90872
+CNNvariance: 0.35393
+## 416 Flurandrenolide
+Affinity: -0.13267  -0.31820 (kcal/mol)
+RMSD: 4.06701
+CNNscore: 0.81502 
+CNNaffinity: 4.05725
+CNNvariance: 0.10189
+## 417 Levamisole
+Affinity: 0.00000  -0.09906 (kcal/mol)
+RMSD: 0.06817
+CNNscore: 0.88159 
+CNNaffinity: 3.07613
+CNNvariance: 0.26908
+## 418 Methylphenobarbital
+Affinity: -0.01122  -0.63057 (kcal/mol)
+RMSD: 0.19134
+CNNscore: 0.83172 
+CNNaffinity: 3.57956
+CNNvariance: 0.50969
+## 419 Pseudoephedrine
+Affinity: 0.00000  -0.29643 (kcal/mol)
+RMSD: 0.16461
+CNNscore: 0.87075 
+CNNaffinity: 2.63229
+CNNvariance: 0.12608
+## 420 Levorphanol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.86134 
+CNNaffinity: 3.64671
+CNNvariance: 0.19326
+## 421 Chlorphenesin
+Affinity: 0.00000  -0.20560 (kcal/mol)
+RMSD: 2.58532
+CNNscore: 0.86175 
+CNNaffinity: 2.91364
+CNNvariance: 0.35312
+## 422 Terbinafine
+Affinity: -0.15812  -0.94898 (kcal/mol)
+RMSD: 5.72377
+CNNscore: 0.71341 
+CNNaffinity: 3.86888
+CNNvariance: 0.24054
+## 423 Penicillamine
+Affinity: 0.00000  0.12456 (kcal/mol)
+RMSD: 0.11156
+CNNscore: 0.88858 
+CNNaffinity: 2.54162
+CNNvariance: 0.24098
+## 424 Prednisolone
+Affinity: -0.11157  -0.07586 (kcal/mol)
+RMSD: 0.73958
+CNNscore: 0.81099 
+CNNaffinity: 3.84719
+CNNvariance: 0.16463
+## 425 Diflunisal
+Affinity: -0.07016  -0.76367 (kcal/mol)
+RMSD: 3.51464
+CNNscore: 0.86398 
+CNNaffinity: 3.54249
+CNNvariance: 0.46871
+## 426 Vardenafil
+Affinity: 0.00000  -2.02321 (kcal/mol)
+RMSD: 1.91284
+CNNscore: 0.67719 
+CNNaffinity: 5.53507
+CNNvariance: 1.25864
+## 427 Ranitidine
+Affinity: -0.40043  -0.94673 (kcal/mol)
+RMSD: 4.45711
+CNNscore: 0.73051 
+CNNaffinity: 3.41593
+CNNvariance: 0.15624
+## 428 Benzphetamine
+Affinity: 0.00000  -1.48097 (kcal/mol)
+RMSD: 3.25316
+CNNscore: 0.82671 
+CNNaffinity: 3.55768
+CNNvariance: 0.22945
+## 429 Ritodrine
+Affinity: -0.98495  -1.19369 (kcal/mol)
+RMSD: 6.27620
+CNNscore: 0.84941 
+CNNaffinity: 3.46494
+CNNvariance: 0.15410
+## 430 Dorzolamide
+Affinity: 0.00000  -0.45058 (kcal/mol)
+RMSD: 0.69259
+CNNscore: 0.78997 
+CNNaffinity: 3.83128
+CNNvariance: 0.77610
+## 431 Suprofen
+Affinity: -0.08873  -0.61797 (kcal/mol)
+RMSD: 4.24703
+CNNscore: 0.85933 
+CNNaffinity: 3.53819
+CNNvariance: 0.55178
+## 432 Terbutaline
+Affinity: 0.00000  -0.33398 (kcal/mol)
+RMSD: 2.57306
+CNNscore: 0.86748 
+CNNaffinity: 3.09175
+CNNvariance: 0.34700
+## 433 Loteprednol_etabonate
+Affinity: -1.17802  -1.35440 (kcal/mol)
+RMSD: 7.52037
+CNNscore: 0.68190 
+CNNaffinity: 4.22390
+CNNvariance: 0.07646
+## 434 Guaifenesin
+Affinity: -0.00957  -0.58923 (kcal/mol)
+RMSD: 2.38462
+CNNscore: 0.89193 
+CNNaffinity: 2.85295
+CNNvariance: 0.29364
+## 435 Eprosartan
+Affinity: -0.51606  -2.12284 (kcal/mol)
+RMSD: 3.72853
+CNNscore: 0.76568 
+CNNaffinity: 4.88746
+CNNvariance: 0.57144
+## 436 Chlorothiazide
+Affinity: -0.04773  -0.09206 (kcal/mol)
+RMSD: 1.17204
+CNNscore: 0.87201 
+CNNaffinity: 3.87194
+CNNvariance: 0.83423
+## 437 Quinapril
+Affinity: -0.13202  -1.61646 (kcal/mol)
+RMSD: 3.74365
+CNNscore: 0.67917 
+CNNaffinity: 4.38751
+CNNvariance: 0.43951
+## 438 Pemirolast
+Affinity: -0.06755  -0.20909 (kcal/mol)
+RMSD: 2.46554
+CNNscore: 0.84343 
+CNNaffinity: 3.70587
+CNNvariance: 0.75303
+## 439 Bumetanide
+Affinity: 0.00000  -1.63439 (kcal/mol)
+RMSD: 1.13092
+CNNscore: 0.84528 
+CNNaffinity: 4.43308
+CNNvariance: 1.04549
+## 440 Mechlorethamine
+Affinity: 0.00000  -0.02952 (kcal/mol)
+RMSD: 0.00703
+CNNscore: 0.83338 
+CNNaffinity: 2.41796
+CNNvariance: 0.20541
+## 441 Granisetron
+Affinity: -0.47346  -0.42949 (kcal/mol)
+RMSD: 4.73897
+CNNscore: 0.83326 
+CNNaffinity: 3.99462
+CNNvariance: 0.25120
+## 442 Dienestrol
+Affinity: -0.07835  -1.40967 (kcal/mol)
+RMSD: 3.72576
+CNNscore: 0.85701 
+CNNaffinity: 4.11165
+CNNvariance: 0.57832
+## 443 Sulfapyridine
+Affinity: -0.05400  -0.57365 (kcal/mol)
+RMSD: 1.86959
+CNNscore: 0.83948 
+CNNaffinity: 3.68694
+CNNvariance: 0.89440
+## 444 Oxybuprocaine
+Affinity: -0.22351  -1.58849 (kcal/mol)
+RMSD: 3.74781
+CNNscore: 0.81127 
+CNNaffinity: 3.96687
+CNNvariance: 0.39495
+## 445 Testolactone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82541 
+CNNaffinity: 3.95466
+CNNvariance: 0.28013
+## 446 Rimexolone
+Affinity: -0.02047  -0.49947 (kcal/mol)
+RMSD: 0.39427
+CNNscore: 0.79000 
+CNNaffinity: 4.35124
+CNNvariance: 0.26029
+## 447 Triazolam
+Affinity: 0.00000  -0.66159 (kcal/mol)
+RMSD: 0.28082
+CNNscore: 0.81667 
+CNNaffinity: 4.77930
+CNNvariance: 0.70006
+## 448 Remifentanil
+Affinity: -0.14667  -1.07583 (kcal/mol)
+RMSD: 4.11836
+CNNscore: 0.75627 
+CNNaffinity: 4.17066
+CNNvariance: 0.45865
+## 449 Etacrynic_acid
+Affinity: -0.20237  -1.07657 (kcal/mol)
+RMSD: 3.70480
+CNNscore: 0.86669 
+CNNaffinity: 3.84947
+CNNvariance: 0.44875
+## 450 Ondansetron
+Affinity: 0.00000  -0.29260 (kcal/mol)
+RMSD: 0.09550
+CNNscore: 0.84685 
+CNNaffinity: 4.18094
+CNNvariance: 0.51235
+## 451 Bimatoprost
+Affinity: -0.29741  -2.48277 (kcal/mol)
+RMSD: 6.09500
+CNNscore: 0.64990 
+CNNaffinity: 3.99797
+CNNvariance: 0.11962
+## 452 Cocaine
+Affinity: -0.27734  -0.70466 (kcal/mol)
+RMSD: 5.46713
+CNNscore: 0.80700 
+CNNaffinity: 3.61087
+CNNvariance: 0.12176
+## 453 Quinidine
+Affinity: -0.08792  -0.52388 (kcal/mol)
+RMSD: 2.30856
+CNNscore: 0.81930 
+CNNaffinity: 4.07852
+CNNvariance: 0.30860
+## 454 Zonisamide
+Affinity: 0.00000  -0.45102 (kcal/mol)
+RMSD: 0.36199
+CNNscore: 0.89114 
+CNNaffinity: 3.37864
+CNNvariance: 0.73380
+## 455 Tinidazole
+Affinity: 0.00000  -0.46826 (kcal/mol)
+RMSD: 1.10449
+CNNscore: 0.87252 
+CNNaffinity: 3.70790
+CNNvariance: 0.71313
+## 456 Amantadine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88309 
+CNNaffinity: 2.92237
+CNNvariance: 0.17151
+## 457 Metronidazole
+Affinity: 0.00000  -0.25405 (kcal/mol)
+RMSD: 0.43411
+CNNscore: 0.90690 
+CNNaffinity: 3.12157
+CNNvariance: 0.39393
+## 458 Dinoprostone
+Affinity: 0.00000  -3.28691 (kcal/mol)
+RMSD: 5.80825
+CNNscore: 0.67027 
+CNNaffinity: 3.71693
+CNNvariance: 0.16053
+## 459 Almotriptan
+Affinity: -0.02070  -0.82839 (kcal/mol)
+RMSD: 1.47520
+CNNscore: 0.80870 
+CNNaffinity: 3.93720
+CNNvariance: 0.53819
+## 460 Ketotifen
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82745 
+CNNaffinity: 4.06266
+CNNvariance: 0.28656
+## 461 Buprenorphine
+Affinity: -0.52978  -1.54642 (kcal/mol)
+RMSD: 4.37781
+CNNscore: 0.82074 
+CNNaffinity: 4.61370
+CNNvariance: 0.47623
+## 462 Cyclobenzaprine
+Affinity: 0.00000  -0.30239 (kcal/mol)
+RMSD: 0.56114
+CNNscore: 0.79882 
+CNNaffinity: 4.11969
+CNNvariance: 0.39272
+## 463 Phenoxybenzamine
+Affinity: -0.81711  -1.33645 (kcal/mol)
+RMSD: 8.65974
+CNNscore: 0.69453 
+CNNaffinity: 3.69531
+CNNvariance: 0.03647
+## 464 Misoprostol
+Affinity: -0.40853  -1.76550 (kcal/mol)
+RMSD: 7.75718
+CNNscore: 0.65481 
+CNNaffinity: 4.09983
+CNNvariance: 0.12805
+## 465 Maprotiline
+Affinity: 0.00000  -0.52191 (kcal/mol)
+RMSD: 0.49745
+CNNscore: 0.80259 
+CNNaffinity: 3.92092
+CNNvariance: 0.21436
+## 466 Oxymetazoline
+Affinity: -0.00701  0.04322 (kcal/mol)
+RMSD: 0.14258
+CNNscore: 0.81915 
+CNNaffinity: 3.92006
+CNNvariance: 0.47100
+## 467 Salicylic_acid
+Affinity: 0.00000  -0.24988 (kcal/mol)
+RMSD: 0.00365
+CNNscore: 0.90231 
+CNNaffinity: 2.71924
+CNNvariance: 0.37167
+## 468 Diethylpropion
+Affinity: -0.36531  -0.69350 (kcal/mol)
+RMSD: 4.33133
+CNNscore: 0.85966 
+CNNaffinity: 3.25954
+CNNvariance: 0.15484
+## 469 Salmeterol
+Affinity: -0.10773  -1.05129 (kcal/mol)
+RMSD: 2.99868
+CNNscore: 0.64278 
+CNNaffinity: 3.60803
+CNNvariance: 0.32146
+## 470 Meclofenamic_acid
+Affinity: 0.00000  -0.89539 (kcal/mol)
+RMSD: 0.46887
+CNNscore: 0.87453 
+CNNaffinity: 4.22370
+CNNvariance: 0.64626
+## 471 Methantheline
+Affinity: -0.37603  -1.27746 (kcal/mol)
+RMSD: 6.19787
+CNNscore: 0.78541 
+CNNaffinity: 4.00433
+CNNvariance: 0.12434
+## 472 Cycrimine
+Affinity: -0.02145  -1.24555 (kcal/mol)
+RMSD: 3.67453
+CNNscore: 0.76314 
+CNNaffinity: 3.85299
+CNNvariance: 0.26730
+## 473 Acetylsalicylic_acid
+Affinity: 0.00000  -0.56845 (kcal/mol)
+RMSD: 0.90914
+CNNscore: 0.90531 
+CNNaffinity: 2.98987
+CNNvariance: 0.41864
+## 474 Phenprocoumon
+Affinity: -0.02639  -0.60276 (kcal/mol)
+RMSD: 0.81139
+CNNscore: 0.88089 
+CNNaffinity: 4.40849
+CNNvariance: 0.86709
+## 475 Felbamate
+Affinity: 0.00000  -0.73735 (kcal/mol)
+RMSD: 1.17151
+CNNscore: 0.81145 
+CNNaffinity: 3.24834
+CNNvariance: 0.77144
+## 476 Naratriptan
+Affinity: -0.07100  -0.62187 (kcal/mol)
+RMSD: 3.74827
+CNNscore: 0.78475 
+CNNaffinity: 4.00530
+CNNvariance: 0.59099
+## 477 Rizatriptan
+Affinity: -0.07490  -0.66146 (kcal/mol)
+RMSD: 6.28607
+CNNscore: 0.84560 
+CNNaffinity: 3.82322
+CNNvariance: 0.50128
+## 478 Hydrocodone
+Affinity: 0.00000  -0.06880 (kcal/mol)
+RMSD: 0.00057
+CNNscore: 0.88396 
+CNNaffinity: 3.88595
+CNNvariance: 0.43967
+## 479 Norgestimate
+Affinity: -0.77189  -0.68194 (kcal/mol)
+RMSD: 5.55600
+CNNscore: 0.79860 
+CNNaffinity: 4.74689
+CNNvariance: 0.63005
+## 480 Methylprednisolone
+Affinity: -0.97212  -0.37460 (kcal/mol)
+RMSD: 6.12678
+CNNscore: 0.80810 
+CNNaffinity: 3.95796
+CNNvariance: 0.13767
+## 481 Pindolol
+Affinity: 0.00000  -0.25288 (kcal/mol)
+RMSD: 0.10174
+CNNscore: 0.76455 
+CNNaffinity: 3.16588
+CNNvariance: 0.47754
+## 482 Mepivacaine
+Affinity: -0.03048  -0.65579 (kcal/mol)
+RMSD: 1.02973
+CNNscore: 0.85947 
+CNNaffinity: 3.65991
+CNNvariance: 0.39552
+## 483 Zaleplon
+Affinity: -0.01734  -0.68987 (kcal/mol)
+RMSD: 1.02368
+CNNscore: 0.82764 
+CNNaffinity: 4.19184
+CNNvariance: 1.09484
+## 484 Apraclonidine
+Affinity: -0.06817  -0.33200 (kcal/mol)
+RMSD: 2.08983
+CNNscore: 0.88483 
+CNNaffinity: 3.67759
+CNNvariance: 0.40869
+## 485 Desloratadine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82656 
+CNNaffinity: 4.40857
+CNNvariance: 0.40250
+## 486 Alosetron
+Affinity: -0.06479  -0.43640 (kcal/mol)
+RMSD: 1.73046
+CNNscore: 0.84117 
+CNNaffinity: 4.08567
+CNNvariance: 0.45147
+## 487 Azelastine
+Affinity: -0.05847  -1.20478 (kcal/mol)
+RMSD: 3.29188
+CNNscore: 0.80408 
+CNNaffinity: 4.75692
+CNNvariance: 0.66436
+## 488 Ezetimibe
+Affinity: -0.11889  -1.39731 (kcal/mol)
+RMSD: 4.34753
+CNNscore: 0.76549 
+CNNaffinity: 4.49386
+CNNvariance: 0.40314
+## 489 Ethinylestradiol
+Affinity: -0.14434  -0.23041 (kcal/mol)
+RMSD: 3.96752
+CNNscore: 0.82649 
+CNNaffinity: 4.17559
+CNNvariance: 0.41113
+## 490 Lomefloxacin
+Affinity: -0.07035  -1.00518 (kcal/mol)
+RMSD: 2.54852
+CNNscore: 0.84150 
+CNNaffinity: 4.47062
+CNNvariance: 0.84166
+## 491 Cyclopentolate
+Affinity: 0.00000  -1.40501 (kcal/mol)
+RMSD: 1.37543
+CNNscore: 0.80462 
+CNNaffinity: 3.42453
+CNNvariance: 0.18543
+## 492 Ramelteon
+Affinity: 0.00000  -0.56561 (kcal/mol)
+RMSD: 1.20478
+CNNscore: 0.83652 
+CNNaffinity: 3.69633
+CNNvariance: 0.40341
+## 493 Physostigmine
+Affinity: -0.24677  -0.25608 (kcal/mol)
+RMSD: 4.98286
+CNNscore: 0.84584 
+CNNaffinity: 3.76798
+CNNvariance: 0.52901
+## 494 Formoterol
+Affinity: -0.08893  -1.57506 (kcal/mol)
+RMSD: 4.37890
+CNNscore: 0.78642 
+CNNaffinity: 3.88041
+CNNvariance: 0.38306
+## 495 Dimenhydrinate
+Affinity: -0.04104  -1.15482 (kcal/mol)
+RMSD: 2.28267
+CNNscore: 0.77004 
+CNNaffinity: 3.14940
+CNNvariance: 0.18711
+## 496 Glycopyrronium
+Affinity: -0.04585  -1.14418 (kcal/mol)
+RMSD: 3.30270
+CNNscore: 0.77807 
+CNNaffinity: 3.67723
+CNNvariance: 0.29107
+## 497 Rivastigmine
+Affinity: 0.00000  -0.71608 (kcal/mol)
+RMSD: 1.25024
+CNNscore: 0.84840 
+CNNaffinity: 3.41875
+CNNvariance: 0.43113
+## 498 Exemestane
+Affinity: -0.02584  0.00000 (kcal/mol)
+RMSD: 0.00517
+CNNscore: 0.82439 
+CNNaffinity: 4.12197
+CNNvariance: 0.40588
+## 499 Oxaprozin
+Affinity: 0.00000  -0.93794 (kcal/mol)
+RMSD: 0.65969
+CNNscore: 0.86489 
+CNNaffinity: 4.05101
+CNNvariance: 0.91933
+## 500 Azathioprine
+Affinity: -0.04617  -0.61758 (kcal/mol)
+RMSD: 1.71403
+CNNscore: 0.84544 
+CNNaffinity: 4.11986
+CNNvariance: 0.77790
+## 501 Gabapentin
+Affinity: 0.00000  -0.21158 (kcal/mol)
+RMSD: 0.92569
+CNNscore: 0.85617 
+CNNaffinity: 2.89495
+CNNvariance: 0.34447
+## 502 Cyclacillin
+Affinity: 0.00000  -0.67716 (kcal/mol)
+RMSD: 0.84892
+CNNscore: 0.75041 
+CNNaffinity: 3.77900
+CNNvariance: 0.78759
+## 503 Salbutamol
+Affinity: -0.05047  -0.27593 (kcal/mol)
+RMSD: 0.39625
+CNNscore: 0.85342 
+CNNaffinity: 3.08340
+CNNvariance: 0.30995
+## 504 Levobupivacaine
+Affinity: -0.02437  -1.16036 (kcal/mol)
+RMSD: 1.35838
+CNNscore: 0.78364 
+CNNaffinity: 4.04016
+CNNvariance: 0.31498
+## 505 Letrozole
+Affinity: 0.00000  -0.64954 (kcal/mol)
+RMSD: 0.23488
+CNNscore: 0.74313 
+CNNaffinity: 3.73340
+CNNvariance: 0.83003
+## 506 Ketoprofen
+Affinity: -0.15653  -0.74358 (kcal/mol)
+RMSD: 2.80930
+CNNscore: 0.86039 
+CNNaffinity: 3.55784
+CNNvariance: 0.44708
+## 507 Edrophonium
+Affinity: 0.00000  -0.24497 (kcal/mol)
+RMSD: 0.12042
+CNNscore: 0.89216 
+CNNaffinity: 2.91369
+CNNvariance: 0.29921
+## 508 Metyrapone
+Affinity: 0.00000  -0.59535 (kcal/mol)
+RMSD: 0.66195
+CNNscore: 0.87620 
+CNNaffinity: 3.83925
+CNNvariance: 0.73927
+## 509 Clobetasol_propionate
+Affinity: -1.09486  0.45909 (kcal/mol)
+RMSD: 6.56489
+CNNscore: 0.71063 
+CNNaffinity: 4.31902
+CNNvariance: 0.03087
+## 510 Sulfamethoxazole
+Affinity: -0.06393  -0.53478 (kcal/mol)
+RMSD: 3.29629
+CNNscore: 0.87272 
+CNNaffinity: 3.76166
+CNNvariance: 0.81847
+## 511 Glyburide
+Affinity: -0.94422  -0.55231 (kcal/mol)
+RMSD: 5.00645
+CNNscore: 0.68432 
+CNNaffinity: 4.54601
+CNNvariance: 0.59532
+## 512 Guanfacine
+Affinity: 0.00000  -0.56867 (kcal/mol)
+RMSD: 1.33869
+CNNscore: 0.82635 
+CNNaffinity: 3.37351
+CNNvariance: 0.26914
+## 513 Bethanechol
+Affinity: 0.00000  -0.23570 (kcal/mol)
+RMSD: 0.80014
+CNNscore: 0.85929 
+CNNaffinity: 2.57937
+CNNvariance: 0.29951
+## 514 Trichlormethiazide
+Affinity: -0.09958  -0.14357 (kcal/mol)
+RMSD: 3.18186
+CNNscore: 0.83550 
+CNNaffinity: 4.13321
+CNNvariance: 0.89857
+## 515 Felodipine
+Affinity: -0.04937  -1.72908 (kcal/mol)
+RMSD: 2.70779
+CNNscore: 0.77325 
+CNNaffinity: 4.06868
+CNNvariance: 0.13423
+## 516 Mycophenolic_acid
+Affinity: -0.43961  -0.81307 (kcal/mol)
+RMSD: 5.00323
+CNNscore: 0.82753 
+CNNaffinity: 3.98832
+CNNvariance: 0.57280
+## 517 Amlexanox
+Affinity: -0.05017  -0.48691 (kcal/mol)
+RMSD: 2.11284
+CNNscore: 0.85869 
+CNNaffinity: 4.15947
+CNNvariance: 1.04298
+## 518 Methoxyflurane
+Affinity: 0.00000  -0.03867 (kcal/mol)
+RMSD: 0.13445
+CNNscore: 0.89737 
+CNNaffinity: 2.56875
+CNNvariance: 0.36090
+## 519 Irbesartan
+Affinity: -1.18665  -2.44677 (kcal/mol)
+RMSD: 4.86088
+CNNscore: 0.64409 
+CNNaffinity: 5.07640
+CNNvariance: 0.27318
+## 520 Ethinamate
+Affinity: 0.00000  -0.29559 (kcal/mol)
+RMSD: 0.61060
+CNNscore: 0.85452 
+CNNaffinity: 3.06096
+CNNvariance: 0.43350
+## 521 Probenecid
+Affinity: -0.41411  -0.91333 (kcal/mol)
+RMSD: 5.62862
+CNNscore: 0.86074 
+CNNaffinity: 3.69269
+CNNvariance: 0.42534
+## 522 Mercaptopurine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.73270 
+CNNaffinity: 2.91136
+CNNvariance: 0.70556
+## 523 Procainamide
+Affinity: -0.33469  -0.74640 (kcal/mol)
+RMSD: 2.87193
+CNNscore: 0.85233 
+CNNaffinity: 3.27872
+CNNvariance: 0.20625
+## 524 Selegiline
+Affinity: -0.24247  -0.82757 (kcal/mol)
+RMSD: 4.79898
+CNNscore: 0.83083 
+CNNaffinity: 3.15390
+CNNvariance: 0.15744
+## 525 Fenofibrate
+Affinity: -0.03859  -1.38674 (kcal/mol)
+RMSD: 2.22212
+CNNscore: 0.80333 
+CNNaffinity: 4.10641
+CNNvariance: 0.58178
+## 526 Thalidomide
+Affinity: 0.00000  -0.25499 (kcal/mol)
+RMSD: 0.27707
+CNNscore: 0.85763 
+CNNaffinity: 3.66826
+CNNvariance: 0.74730
+## 527 Memantine
+Affinity: -0.00348  0.00000 (kcal/mol)
+RMSD: 0.01742
+CNNscore: 0.87258 
+CNNaffinity: 3.15242
+CNNvariance: 0.17740
+## 528 Gatifloxacin
+Affinity: -0.00658  -0.40259 (kcal/mol)
+RMSD: 0.64944
+CNNscore: 0.81345 
+CNNaffinity: 4.58724
+CNNvariance: 0.90057
+## 529 Lubiprostone
+Affinity: -0.28075  -2.10963 (kcal/mol)
+RMSD: 4.84047
+CNNscore: 0.74065 
+CNNaffinity: 4.06120
+CNNvariance: 0.32878
+## 530 Fluocinonide
+Affinity: -0.01558  -0.73342 (kcal/mol)
+RMSD: 1.36127
+CNNscore: 0.78327 
+CNNaffinity: 4.48245
+CNNvariance: 0.13733
+## 531 Abacavir
+Affinity: 0.00000  -0.67304 (kcal/mol)
+RMSD: 0.50691
+CNNscore: 0.79296 
+CNNaffinity: 3.89237
+CNNvariance: 0.68578
+## 532 Ibuprofen
+Affinity: 0.00000  -0.45068 (kcal/mol)
+RMSD: 0.42951
+CNNscore: 0.85169 
+CNNaffinity: 3.28387
+CNNvariance: 0.36445
+## 533 Benzylpenicillin
+Affinity: -0.85032  -0.95795 (kcal/mol)
+RMSD: 7.14733
+CNNscore: 0.76248 
+CNNaffinity: 3.65407
+CNNvariance: 0.28304
+## 534 Nitrendipine
+Affinity: -0.05129  -1.73281 (kcal/mol)
+RMSD: 1.61680
+CNNscore: 0.80536 
+CNNaffinity: 4.06326
+CNNvariance: 0.34934
+## 535 Tocainide
+Affinity: 0.00000  -0.26430 (kcal/mol)
+RMSD: 0.40040
+CNNscore: 0.88644 
+CNNaffinity: 3.22399
+CNNvariance: 0.31061
+## 536 Echothiophate
+Affinity: 0.00000  -0.34774 (kcal/mol)
+RMSD: 0.14201
+CNNscore: 0.81625 
+CNNaffinity: 2.96914
+CNNvariance: 0.35667
+## 537 Praziquantel
+Affinity: 0.00000  -0.27290 (kcal/mol)
+RMSD: 0.08162
+CNNscore: 0.75757 
+CNNaffinity: 3.94910
+CNNvariance: 0.70107
+## 538 Norfloxacin
+Affinity: 0.00000  -0.76742 (kcal/mol)
+RMSD: 0.71419
+CNNscore: 0.85465 
+CNNaffinity: 3.96243
+CNNvariance: 0.63346
+## 539 Amoxicillin
+Affinity: -0.33519  -0.78932 (kcal/mol)
+RMSD: 7.82221
+CNNscore: 0.77355 
+CNNaffinity: 3.82544
+CNNvariance: 0.71669
+## 540 Oxybutynin
+Affinity: -0.41336  -2.57616 (kcal/mol)
+RMSD: 6.65679
+CNNscore: 0.69671 
+CNNaffinity: 3.87166
+CNNvariance: 0.04224
+## 541 Melatonin
+Affinity: 0.00000  -0.33399 (kcal/mol)
+RMSD: 0.42670
+CNNscore: 0.88396 
+CNNaffinity: 3.51388
+CNNvariance: 0.43599
+## 542 Glipizide
+Affinity: -0.03764  -1.55415 (kcal/mol)
+RMSD: 2.24392
+CNNscore: 0.70542 
+CNNaffinity: 4.88008
+CNNvariance: 0.71337
+## 543 Clonazepam
+Affinity: -1.03255  -0.63362 (kcal/mol)
+RMSD: 6.16059
+CNNscore: 0.79550 
+CNNaffinity: 4.19413
+CNNvariance: 0.46976
+## 544 Diphenhydramine
+Affinity: 0.00000  -1.26166 (kcal/mol)
+RMSD: 1.09589
+CNNscore: 0.81542 
+CNNaffinity: 3.32307
+CNNvariance: 0.32239
+## 545 Tegaserod
+Affinity: -0.45102  -1.36151 (kcal/mol)
+RMSD: 7.66550
+CNNscore: 0.73355 
+CNNaffinity: 4.17579
+CNNvariance: 0.38592
+## 546 Vigabatrin
+Affinity: 0.00000  -0.30530 (kcal/mol)
+RMSD: 0.74685
+CNNscore: 0.76045 
+CNNaffinity: 2.39390
+CNNvariance: 0.32218
+## 547 Emedastine
+Affinity: 0.00000  -1.02846 (kcal/mol)
+RMSD: 0.78993
+CNNscore: 0.82052 
+CNNaffinity: 3.93973
+CNNvariance: 0.22607
+## 548 Pilocarpine
+Affinity: 0.00000  -0.44232 (kcal/mol)
+RMSD: 0.70180
+CNNscore: 0.87046 
+CNNaffinity: 3.42172
+CNNvariance: 0.47737
+## 549 Benzocaine
+Affinity: 0.00000  -0.30615 (kcal/mol)
+RMSD: 0.67490
+CNNscore: 0.90400 
+CNNaffinity: 3.00645
+CNNvariance: 0.44160
+## 550 Primaquine
+Affinity: 0.00000  -0.92172 (kcal/mol)
+RMSD: 0.56654
+CNNscore: 0.88346 
+CNNaffinity: 3.89577
+CNNvariance: 0.41027
+## 551 Iloprost
+Affinity: -0.44091  -1.63855 (kcal/mol)
+RMSD: 4.65678
+CNNscore: 0.72576 
+CNNaffinity: 4.04803
+CNNvariance: 0.40124
+## 552 Pentolinium
+Affinity: 0.00000  -1.19513 (kcal/mol)
+RMSD: 2.97235
+CNNscore: 0.82607 
+CNNaffinity: 3.33772
+CNNvariance: 0.09253
+## 553 Fluvastatin
+Affinity: -0.23310  -2.19709 (kcal/mol)
+RMSD: 5.69973
+CNNscore: 0.77427 
+CNNaffinity: 4.47548
+CNNvariance: 0.43223
+## 554 Oxamniquine
+Affinity: -0.02908  -0.39697 (kcal/mol)
+RMSD: 1.49391
+CNNscore: 0.86970 
+CNNaffinity: 3.61947
+CNNvariance: 0.28440
+## 555 Leflunomide
+Affinity: -0.14510  -0.48930 (kcal/mol)
+RMSD: 2.98443
+CNNscore: 0.83496 
+CNNaffinity: 3.61526
+CNNvariance: 0.44270
+## 556 Rosuvastatin
+Affinity: -0.32926  -2.75799 (kcal/mol)
+RMSD: 10.04058
+CNNscore: 0.74094 
+CNNaffinity: 4.77640
+CNNvariance: 1.03435
+## 557 Capecitabine
+Affinity: -0.32984  -0.28798 (kcal/mol)
+RMSD: 4.06826
+CNNscore: 0.85758 
+CNNaffinity: 3.93924
+CNNvariance: 0.59921
+## 558 Sibutramine
+Affinity: 0.00000  -1.05697 (kcal/mol)
+RMSD: 0.40170
+CNNscore: 0.78543 
+CNNaffinity: 4.01426
+CNNvariance: 0.35375
+## 559 Levocabastine
+Affinity: -0.00950  -0.78090 (kcal/mol)
+RMSD: 1.01861
+CNNscore: 0.75347 
+CNNaffinity: 4.83054
+CNNvariance: 0.53427
+## 560 Methyprylon
+Affinity: 0.00000  -0.06038 (kcal/mol)
+RMSD: 0.23690
+CNNscore: 0.88003 
+CNNaffinity: 3.01932
+CNNvariance: 0.21349
+## 561 Trilostane
+Affinity: 0.00000  -0.07714 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.81822 
+CNNaffinity: 3.82852
+CNNvariance: 0.24094
+## 562 Papaverine
+Affinity: -0.01329  -0.82793 (kcal/mol)
+RMSD: 0.32080
+CNNscore: 0.83431 
+CNNaffinity: 4.29674
+CNNvariance: 0.92657
+## 563 Chlorphenamine
+Affinity: -0.01932  -0.76077 (kcal/mol)
+RMSD: 2.29549
+CNNscore: 0.82873 
+CNNaffinity: 3.99622
+CNNvariance: 0.42132
+## 564 Nifedipine
+Affinity: 0.00000  -1.22834 (kcal/mol)
+RMSD: 0.69421
+CNNscore: 0.85559 
+CNNaffinity: 3.99978
+CNNvariance: 0.30471
+## 565 Trimethaphan
+Affinity: 0.00000  -0.91720 (kcal/mol)
+RMSD: 0.42953
+CNNscore: 0.70652 
+CNNaffinity: 4.21351
+CNNvariance: 0.33260
+## 566 Diazoxide
+Affinity: -0.01918  0.00000 (kcal/mol)
+RMSD: 0.90134
+CNNscore: 0.89946 
+CNNaffinity: 3.55093
+CNNvariance: 0.50109
+## 567 Gliclazide
+Affinity: 0.00000  -0.39816 (kcal/mol)
+RMSD: 0.29090
+CNNscore: 0.72841 
+CNNaffinity: 3.93389
+CNNvariance: 0.63136
+## 568 Phenacemide
+Affinity: 0.00000  -0.22645 (kcal/mol)
+RMSD: 0.10480
+CNNscore: 0.82771 
+CNNaffinity: 2.91840
+CNNvariance: 0.39355
+## 569 Proflavine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88659 
+CNNaffinity: 3.51938
+CNNvariance: 0.69364
+## 570 Tolbutamide
+Affinity: -0.05468  -0.37796 (kcal/mol)
+RMSD: 2.29324
+CNNscore: 0.78895 
+CNNaffinity: 3.54532
+CNNvariance: 0.52342
+## 571 Bicalutamide
+Affinity: -0.70571  -1.28568 (kcal/mol)
+RMSD: 4.70542
+CNNscore: 0.80762 
+CNNaffinity: 4.38900
+CNNvariance: 0.41435
+## 572 Rabeprazole
+Affinity: -0.30199  -1.10630 (kcal/mol)
+RMSD: 5.18998
+CNNscore: 0.81053 
+CNNaffinity: 4.43251
+CNNvariance: 1.07253
+## 573 Prednicarbate
+Affinity: -0.84798  -1.45264 (kcal/mol)
+RMSD: 6.24362
+CNNscore: 0.69186 
+CNNaffinity: 4.42737
+CNNvariance: 0.09403
+## 574 Proguanil
+Affinity: -0.22977  -0.58681 (kcal/mol)
+RMSD: 3.30633
+CNNscore: 0.81098 
+CNNaffinity: 3.51210
+CNNvariance: 0.31356
+## 575 Pioglitazone
+Affinity: -0.56287  -1.45570 (kcal/mol)
+RMSD: 6.53916
+CNNscore: 0.75355 
+CNNaffinity: 4.45685
+CNNvariance: 0.41691
+## 576 Tiludronic_acid
+Affinity: -0.01744  -0.80853 (kcal/mol)
+RMSD: 0.82003
+CNNscore: 0.75162 
+CNNaffinity: 3.57838
+CNNvariance: 1.16421
+## 577 Carvedilol
+Affinity: -0.05848  -2.41510 (kcal/mol)
+RMSD: 7.59744
+CNNscore: 0.77099 
+CNNaffinity: 4.55409
+CNNvariance: 0.19295
+## 578 Levofloxacin
+Affinity: -0.93526  -0.71976 (kcal/mol)
+RMSD: 4.77072
+CNNscore: 0.78891 
+CNNaffinity: 4.53791
+CNNvariance: 0.77158
+## 579 Cefapirin
+Affinity: -0.23553  -0.88915 (kcal/mol)
+RMSD: 2.97808
+CNNscore: 0.71323 
+CNNaffinity: 3.97857
+CNNvariance: 0.67087
+## 580 Cefadroxil
+Affinity: -0.19677  -0.84896 (kcal/mol)
+RMSD: 3.78656
+CNNscore: 0.77763 
+CNNaffinity: 3.74088
+CNNvariance: 0.60210
+## 581 Doxepin
+Affinity: -0.00328  -0.31602 (kcal/mol)
+RMSD: 0.40953
+CNNscore: 0.83986 
+CNNaffinity: 3.79619
+CNNvariance: 0.28890
+## 582 Diclofenamide
+Affinity: 0.00000  -0.13231 (kcal/mol)
+RMSD: 0.12096
+CNNscore: 0.82506 
+CNNaffinity: 3.83864
+CNNvariance: 0.96597
+## 583 Sulfoxone
+Affinity: -0.47770  -0.66091 (kcal/mol)
+RMSD: 3.76044
+CNNscore: 0.83852 
+CNNaffinity: 4.07286
+CNNvariance: 0.86580
+## 584 Diphenylpyraline
+Affinity: -0.02735  -1.30942 (kcal/mol)
+RMSD: 0.43226
+CNNscore: 0.81000 
+CNNaffinity: 3.58526
+CNNvariance: 0.18790
+## 585 Cloxacillin
+Affinity: -0.42155  -1.43852 (kcal/mol)
+RMSD: 5.27118
+CNNscore: 0.70338 
+CNNaffinity: 4.41468
+CNNvariance: 0.23003
+## 586 Flavoxate
+Affinity: -0.81784  -2.19789 (kcal/mol)
+RMSD: 6.98671
+CNNscore: 0.77095 
+CNNaffinity: 4.63724
+CNNvariance: 0.49922
+## 587 Nefazodone
+Affinity: -0.19924  -2.95229 (kcal/mol)
+RMSD: 5.98970
+CNNscore: 0.66231 
+CNNaffinity: 5.37398
+CNNvariance: 0.44671
+## 588 Cefprozil
+Affinity: -0.03610  -0.90353 (kcal/mol)
+RMSD: 2.54931
+CNNscore: 0.78008 
+CNNaffinity: 3.96648
+CNNvariance: 0.70192
+## 589 Desipramine
+Affinity: 0.00000  -0.70138 (kcal/mol)
+RMSD: 0.70479
+CNNscore: 0.86023 
+CNNaffinity: 3.82771
+CNNvariance: 0.22970
+## 590 Thiamylal
+Affinity: -0.00964  -0.75244 (kcal/mol)
+RMSD: 1.08303
+CNNscore: 0.76487 
+CNNaffinity: 3.49730
+CNNvariance: 0.35712
+## 591 Gemifloxacin
+Affinity: -0.98319  -0.42031 (kcal/mol)
+RMSD: 5.21538
+CNNscore: 0.79033 
+CNNaffinity: 4.49283
+CNNvariance: 0.30524
+## 592 Bupropion
+Affinity: 0.00000  -0.64692 (kcal/mol)
+RMSD: 1.63158
+CNNscore: 0.84266 
+CNNaffinity: 3.38483
+CNNvariance: 0.27591
+## 593 Bretylium
+Affinity: 0.00000  -0.20370 (kcal/mol)
+RMSD: 0.73115
+CNNscore: 0.86826 
+CNNaffinity: 3.08315
+CNNvariance: 0.23057
+## 594 Halothane
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89126 
+CNNaffinity: 2.59156
+CNNvariance: 0.44674
+## 595 Chloroprocaine
+Affinity: -0.20785  -1.24116 (kcal/mol)
+RMSD: 4.60429
+CNNscore: 0.82900 
+CNNaffinity: 3.64504
+CNNvariance: 0.27580
+## 596 Terazosin
+Affinity: 0.00000  -0.21098 (kcal/mol)
+RMSD: 0.38152
+CNNscore: 0.76440 
+CNNaffinity: 4.22164
+CNNvariance: 1.01333
+## 597 Ofloxacin
+Affinity: -0.29577  -0.53237 (kcal/mol)
+RMSD: 2.74134
+CNNscore: 0.83135 
+CNNaffinity: 4.41610
+CNNvariance: 0.81925
+## 598 Cilostazol
+Affinity: -0.16418  -1.22751 (kcal/mol)
+RMSD: 4.93452
+CNNscore: 0.71535 
+CNNaffinity: 4.52253
+CNNvariance: 0.39570
+## 599 Procarbazine
+Affinity: -0.09315  -0.29037 (kcal/mol)
+RMSD: 2.54965
+CNNscore: 0.81809 
+CNNaffinity: 3.08188
+CNNvariance: 0.31303
+## 600 Guanethidine
+Affinity: 0.00000  -0.13794 (kcal/mol)
+RMSD: 0.01096
+CNNscore: 0.84016 
+CNNaffinity: 2.96530
+CNNvariance: 0.24789
+## 601 Moclobemide
+Affinity: -0.17065  -0.48147 (kcal/mol)
+RMSD: 2.76073
+CNNscore: 0.80788 
+CNNaffinity: 3.18301
+CNNvariance: 0.14877
+## 602 Orphenadrine
+Affinity: 0.00000  -1.39681 (kcal/mol)
+RMSD: 1.42549
+CNNscore: 0.79389 
+CNNaffinity: 3.49779
+CNNvariance: 0.19188
+## 603 Phenobarbital
+Affinity: 0.00000  -0.17296 (kcal/mol)
+RMSD: 0.12390
+CNNscore: 0.81672 
+CNNaffinity: 3.43129
+CNNvariance: 0.43226
+## 604 Escitalopram
+Affinity: -0.14738  -1.12951 (kcal/mol)
+RMSD: 3.26186
+CNNscore: 0.79213 
+CNNaffinity: 3.94510
+CNNvariance: 0.25200
+## 605 Cyclizine
+Affinity: 0.00000  -0.60058 (kcal/mol)
+RMSD: 1.19066
+CNNscore: 0.77221 
+CNNaffinity: 3.52354
+CNNvariance: 0.18651
+## 606 Chlormezanone
+Affinity: 0.00000  -0.00588 (kcal/mol)
+RMSD: 0.23211
+CNNscore: 0.85669 
+CNNaffinity: 3.60263
+CNNvariance: 0.55861
+## 607 Podofilox
+Affinity: 0.18367  -0.89134 (kcal/mol)
+RMSD: 4.12179
+CNNscore: 0.83339 
+CNNaffinity: 4.22150
+CNNvariance: 0.80243
+## 608 Ifosfamide
+Affinity: 0.00000  -0.42759 (kcal/mol)
+RMSD: 0.57928
+CNNscore: 0.83793 
+CNNaffinity: 3.00774
+CNNvariance: 0.39632
+## 609 Propafenone
+Affinity: -0.02616  -2.58817 (kcal/mol)
+RMSD: 2.85253
+CNNscore: 0.72956 
+CNNaffinity: 3.80519
+CNNvariance: 0.13705
+## 610 Naloxone
+Affinity: 0.00000  -0.42056 (kcal/mol)
+RMSD: 0.76229
+CNNscore: 0.87683 
+CNNaffinity: 3.78769
+CNNvariance: 0.22874
+## 611 Domperidone
+Affinity: -0.72529  -1.84110 (kcal/mol)
+RMSD: 7.08806
+CNNscore: 0.72390 
+CNNaffinity: 5.07756
+CNNvariance: 0.41196
+## 612 Fluoxymesterone
+Affinity: -0.05175  0.00000 (kcal/mol)
+RMSD: 0.52656
+CNNscore: 0.82447 
+CNNaffinity: 3.78308
+CNNvariance: 0.11288
+## 613 Pergolide
+Affinity: 0.00000  -0.53797 (kcal/mol)
+RMSD: 0.31023
+CNNscore: 0.81948 
+CNNaffinity: 4.38537
+CNNvariance: 0.42188
+## 614 Ciclopirox
+Affinity: 0.00000  -0.40579 (kcal/mol)
+RMSD: 0.36374
+CNNscore: 0.87317 
+CNNaffinity: 3.66942
+CNNvariance: 0.60600
+## 615 Desflurane
+Affinity: 0.00000  -0.41753 (kcal/mol)
+RMSD: 1.29777
+CNNscore: 0.89759 
+CNNaffinity: 2.66508
+CNNvariance: 0.43538
+## 616 Clindamycin
+Affinity: -0.22052  -1.08871 (kcal/mol)
+RMSD: 3.04518
+CNNscore: 0.66458 
+CNNaffinity: 3.60953
+CNNvariance: 0.15952
+## 617 Dexfenfluramine
+Affinity: -0.38715  -0.87431 (kcal/mol)
+RMSD: 4.71894
+CNNscore: 0.79174 
+CNNaffinity: 3.13009
+CNNvariance: 0.05248
+## 618 Oxymorphone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89297 
+CNNaffinity: 3.58480
+CNNvariance: 0.24416
+## 619 Acebutolol
+Affinity: -0.06653  -1.39862 (kcal/mol)
+RMSD: 3.81185
+CNNscore: 0.72500 
+CNNaffinity: 3.72441
+CNNvariance: 0.77044
+## 620 Brinzolamide
+Affinity: -0.09363  -0.91766 (kcal/mol)
+RMSD: 3.00034
+CNNscore: 0.73078 
+CNNaffinity: 3.97411
+CNNvariance: 0.49370
+## 621 Flecainide
+Affinity: -0.37318  -2.21202 (kcal/mol)
+RMSD: 3.00156
+CNNscore: 0.75874 
+CNNaffinity: 3.93919
+CNNvariance: 0.22971
+## 622 Captopril
+Affinity: 0.00000  -0.31596 (kcal/mol)
+RMSD: 0.10357
+CNNscore: 0.86257 
+CNNaffinity: 3.14986
+CNNvariance: 0.41587
+## 623 Zopiclone
+Affinity: 0.00000  -0.98406 (kcal/mol)
+RMSD: 1.75676
+CNNscore: 0.79095 
+CNNaffinity: 4.48637
+CNNvariance: 1.35748
+## 624 Nadolol
+Affinity: -0.41276  -0.88376 (kcal/mol)
+RMSD: 4.91255
+CNNscore: 0.76933 
+CNNaffinity: 3.35838
+CNNvariance: 0.17788
+## 625 Flumazenil
+Affinity: 0.00000  -0.01514 (kcal/mol)
+RMSD: 0.06573
+CNNscore: 0.85725 
+CNNaffinity: 4.04291
+CNNvariance: 0.75764
+## 626 Lomustine
+Affinity: 0.00000  -0.52716 (kcal/mol)
+RMSD: 1.03020
+CNNscore: 0.82360 
+CNNaffinity: 3.42248
+CNNvariance: 0.63459
+## 627 Sparfloxacin
+Affinity: -0.02255  -0.80743 (kcal/mol)
+RMSD: 1.50313
+CNNscore: 0.80456 
+CNNaffinity: 4.88653
+CNNvariance: 1.29702
+## 628 Dezocine
+Affinity: -0.00778  0.00000 (kcal/mol)
+RMSD: 0.04702
+CNNscore: 0.83325 
+CNNaffinity: 3.60750
+CNNvariance: 0.27978
+## 629 Levobunolol
+Affinity: -0.00832  -1.54173 (kcal/mol)
+RMSD: 3.12436
+CNNscore: 0.81053 
+CNNaffinity: 3.68650
+CNNvariance: 0.22815
+## 630 Fomepizole
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88218 
+CNNaffinity: 2.41958
+CNNvariance: 0.23961
+## 631 Metipranolol
+Affinity: -0.26441  -0.55949 (kcal/mol)
+RMSD: 3.09932
+CNNscore: 0.82789 
+CNNaffinity: 3.62892
+CNNvariance: 0.40679
+## 632 Estazolam
+Affinity: 0.00000  -0.48192 (kcal/mol)
+RMSD: 0.32572
+CNNscore: 0.83337 
+CNNaffinity: 4.22653
+CNNvariance: 0.64470
+## 633 Finasteride
+Affinity: -0.06659  -0.12474 (kcal/mol)
+RMSD: 2.78388
+CNNscore: 0.72423 
+CNNaffinity: 4.16408
+CNNvariance: 0.45493
+## 634 Anastrozole
+Affinity: -0.02611  -0.93089 (kcal/mol)
+RMSD: 0.85114
+CNNscore: 0.75252 
+CNNaffinity: 3.98107
+CNNvariance: 0.51049
+## 635 Dantrolene
+Affinity: 0.00000  -0.79845 (kcal/mol)
+RMSD: 2.34036
+CNNscore: 0.82773 
+CNNaffinity: 4.02976
+CNNvariance: 0.82132
+## 636 Ketamine
+Affinity: 0.00000  -0.05795 (kcal/mol)
+RMSD: 0.21780
+CNNscore: 0.86924 
+CNNaffinity: 3.46978
+CNNvariance: 0.22061
+## 637 Budesonide
+Affinity: -0.51818  -0.57118 (kcal/mol)
+RMSD: 2.80632
+CNNscore: 0.76253 
+CNNaffinity: 4.14522
+CNNvariance: 0.15505
+## 638 Quetiapine
+Affinity: -0.04672  -0.90335 (kcal/mol)
+RMSD: 1.55542
+CNNscore: 0.70652 
+CNNaffinity: 4.06100
+CNNvariance: 0.71254
+## 639 Levacetylmethadol
+Affinity: -0.75166  -1.41943 (kcal/mol)
+RMSD: 6.61808
+CNNscore: 0.65178 
+CNNaffinity: 4.18648
+CNNvariance: 0.44859
+## 640 Encainide
+Affinity: -0.21829  -1.31796 (kcal/mol)
+RMSD: 4.92433
+CNNscore: 0.76349 
+CNNaffinity: 4.28932
+CNNvariance: 0.22326
+## 641 Pemoline
+Affinity: -0.00309  -0.18113 (kcal/mol)
+RMSD: 0.10162
+CNNscore: 0.86776 
+CNNaffinity: 2.94290
+CNNvariance: 0.33890
+## 642 Diphenidol
+Affinity: 0.00000  -2.40452 (kcal/mol)
+RMSD: 2.87137
+CNNscore: 0.75705 
+CNNaffinity: 3.74754
+CNNvariance: 0.11763
+## 643 Metoclopramide
+Affinity: 0.00000  -1.16750 (kcal/mol)
+RMSD: 2.63319
+CNNscore: 0.82130 
+CNNaffinity: 3.79306
+CNNvariance: 0.37875
+## 644 Dexamethasone
+Affinity: 0.00000  -0.17951 (kcal/mol)
+RMSD: 0.21528
+CNNscore: 0.80602 
+CNNaffinity: 3.94275
+CNNvariance: 0.11960
+## 645 Sevoflurane
+Affinity: 0.00000  -0.20359 (kcal/mol)
+RMSD: 0.00018
+CNNscore: 0.89922 
+CNNaffinity: 2.86735
+CNNvariance: 0.49837
+## 646 Bromodiphenhydramine
+Affinity: 0.00000  -1.16570 (kcal/mol)
+RMSD: 1.88248
+CNNscore: 0.79168 
+CNNaffinity: 3.57388
+CNNvariance: 0.29281
+## 647 Aripiprazole
+Affinity: -0.30691  -0.78096 (kcal/mol)
+RMSD: 3.87426
+CNNscore: 0.70963 
+CNNaffinity: 4.40110
+CNNvariance: 0.38450
+## 648 Epoprostenol
+Affinity: -0.41167  -1.16745 (kcal/mol)
+RMSD: 4.14208
+CNNscore: 0.76204 
+CNNaffinity: 3.76522
+CNNvariance: 0.24554
+## 649 Gemfibrozil
+Affinity: -0.14162  -0.68879 (kcal/mol)
+RMSD: 6.52351
+CNNscore: 0.81544 
+CNNaffinity: 3.48423
+CNNvariance: 0.35470
+## 650 Clomipramine
+Affinity: 0.00000  -0.68963 (kcal/mol)
+RMSD: 0.89544
+CNNscore: 0.82338 
+CNNaffinity: 4.21121
+CNNvariance: 0.36902
+## 651 Chloroxine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89353 
+CNNaffinity: 3.65345
+CNNvariance: 0.80405
+## 652 Bepridil
+Affinity: -0.30047  -1.46822 (kcal/mol)
+RMSD: 4.65474
+CNNscore: 0.67692 
+CNNaffinity: 4.52843
+CNNvariance: 0.27183
+## 653 Decamethonium
+Affinity: 0.00000  -1.31843 (kcal/mol)
+RMSD: 2.75206
+CNNscore: 0.72215 
+CNNaffinity: 3.17639
+CNNvariance: 0.12767
+## 654 Isocarboxazid
+Affinity: -0.02506  -0.48302 (kcal/mol)
+RMSD: 3.34102
+CNNscore: 0.85389 
+CNNaffinity: 3.41623
+CNNvariance: 0.34849
+## 655 Ergometrine
+Affinity: 0.00000  -0.37849 (kcal/mol)
+RMSD: 0.49768
+CNNscore: 0.83229 
+CNNaffinity: 3.97696
+CNNvariance: 0.59484
+## 656 Dasatinib
+Affinity: -0.53013  -0.93631 (kcal/mol)
+RMSD: 6.25724
+CNNscore: 0.71386 
+CNNaffinity: 4.86844
+CNNvariance: 0.97748
+## 657 Lisdexamfetamine
+Affinity: -0.66532  -1.23403 (kcal/mol)
+RMSD: 6.87870
+CNNscore: 0.76187 
+CNNaffinity: 3.41764
+CNNvariance: 0.24071
+## 658 Desonide
+Affinity: -0.00982  -0.31738 (kcal/mol)
+RMSD: 0.28064
+CNNscore: 0.79951 
+CNNaffinity: 4.07012
+CNNvariance: 0.17240
+## 659 Sitagliptin
+Affinity: -0.40427  -0.72686 (kcal/mol)
+RMSD: 2.81517
+CNNscore: 0.70518 
+CNNaffinity: 4.25156
+CNNvariance: 0.25543
+## 660 Paliperidone
+Affinity: -0.37301  -0.77059 (kcal/mol)
+RMSD: 3.90053
+CNNscore: 0.77333 
+CNNaffinity: 4.71739
+CNNvariance: 0.38338
+## 661 Sunitinib
+Affinity: -0.47093  -1.60564 (kcal/mol)
+RMSD: 4.34404
+CNNscore: 0.78617 
+CNNaffinity: 4.66109
+CNNvariance: 0.31976
+## 662 Varenicline
+Affinity: -0.05853  0.00000 (kcal/mol)
+RMSD: 1.71219
+CNNscore: 0.87442 
+CNNaffinity: 3.47593
+CNNvariance: 0.40268
+## 663 Arformoterol
+Affinity: 0.00000  -1.04895 (kcal/mol)
+RMSD: 1.30804
+CNNscore: 0.74899 
+CNNaffinity: 3.72409
+CNNvariance: 0.48630
+## 664 Hydralazine
+Affinity: 0.00000  -0.03940 (kcal/mol)
+RMSD: 0.00007
+CNNscore: 0.85707 
+CNNaffinity: 3.01321
+CNNvariance: 0.40863
+## 665 Lumiracoxib
+Affinity: 0.00000  -0.90268 (kcal/mol)
+RMSD: 0.94842
+CNNscore: 0.86978 
+CNNaffinity: 4.30554
+CNNvariance: 0.78831
+## 666 Fenoterol
+Affinity: -0.65829  -2.25235 (kcal/mol)
+RMSD: 6.98769
+CNNscore: 0.82900 
+CNNaffinity: 3.79158
+CNNvariance: 0.25708
+## 667 Pirbuterol
+Affinity: 0.00000  -0.86707 (kcal/mol)
+RMSD: 1.92849
+CNNscore: 0.89052 
+CNNaffinity: 3.31475
+CNNvariance: 0.39242
+## 668 Bismuth_Subsalicylate
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90555 
+CNNaffinity: 2.82090
+CNNvariance: 0.37143
+## 669 Practolol
+Affinity: -0.07619  -1.30770 (kcal/mol)
+RMSD: 4.48470
+CNNscore: 0.81745 
+CNNaffinity: 3.41560
+CNNvariance: 0.45303
+## 670 Sulfacytine
+Affinity: -0.27428  -0.71802 (kcal/mol)
+RMSD: 3.69942
+CNNscore: 0.86382 
+CNNaffinity: 4.00986
+CNNvariance: 0.84237
+## 671 Sulfadoxine
+Affinity: -0.27266  -0.79834 (kcal/mol)
+RMSD: 5.65635
+CNNscore: 0.83402 
+CNNaffinity: 4.10202
+CNNvariance: 0.79325
+## 672 Fosphenytoin
+Affinity: -0.00302  -1.31016 (kcal/mol)
+RMSD: 0.84329
+CNNscore: 0.74659 
+CNNaffinity: 4.02613
+CNNvariance: 1.22753
+## 673 Kava
+Affinity: 0.00000  -0.30816 (kcal/mol)
+RMSD: 0.02945
+CNNscore: 0.81655 
+CNNaffinity: 3.36144
+CNNvariance: 0.55155
+## 674 Polythiazide
+Affinity: -0.01753  -0.64320 (kcal/mol)
+RMSD: 0.41930
+CNNscore: 0.77534 
+CNNaffinity: 4.42824
+CNNvariance: 0.77923
+## 675 Quinethazone
+Affinity: -0.02193  -0.18443 (kcal/mol)
+RMSD: 0.65020
+CNNscore: 0.86310 
+CNNaffinity: 3.81619
+CNNvariance: 0.58489
+## 676 Cefoxitin
+Affinity: -0.57209  0.29302 (kcal/mol)
+RMSD: 3.86338
+CNNscore: 0.72637 
+CNNaffinity: 3.90323
+CNNvariance: 0.65151
+## 677 Cefradine
+Affinity: -0.68302  -0.86079 (kcal/mol)
+RMSD: 5.45965
+CNNscore: 0.73428 
+CNNaffinity: 3.81202
+CNNvariance: 0.41638
+## 678 Cilazapril
+Affinity: -0.37459  -2.26984 (kcal/mol)
+RMSD: 7.15702
+CNNscore: 0.65130 
+CNNaffinity: 4.34576
+CNNvariance: 0.49975
+## 679 Spirapril
+Affinity: -0.40915  -2.59050 (kcal/mol)
+RMSD: 5.16837
+CNNscore: 0.61845 
+CNNaffinity: 4.34603
+CNNvariance: 0.43627
+## 680 Amobarbital
+Affinity: 0.00000  -0.72616 (kcal/mol)
+RMSD: 1.23933
+CNNscore: 0.78288 
+CNNaffinity: 3.37280
+CNNvariance: 0.51160
+## 681 Butethal
+Affinity: 0.00000  -0.46009 (kcal/mol)
+RMSD: 0.75643
+CNNscore: 0.79973 
+CNNaffinity: 3.26543
+CNNvariance: 0.43136
+## 682 Mestranol
+Affinity: -0.02021  -0.26610 (kcal/mol)
+RMSD: 0.55951
+CNNscore: 0.82082 
+CNNaffinity: 4.18294
+CNNvariance: 0.34774
+## 683 Penbutolol
+Affinity: -0.00531  -1.17427 (kcal/mol)
+RMSD: 0.13154
+CNNscore: 0.75309 
+CNNaffinity: 3.61387
+CNNvariance: 0.17411
+## 684 Ephedrine
+Affinity: 0.00000  -0.26311 (kcal/mol)
+RMSD: 0.35809
+CNNscore: 0.86587 
+CNNaffinity: 2.64760
+CNNvariance: 0.13988
+## 685 Mephentermine
+Affinity: 0.00000  -0.05711 (kcal/mol)
+RMSD: 0.21134
+CNNscore: 0.82646 
+CNNaffinity: 2.78741
+CNNvariance: 0.20091
+## 686 Procaterol
+Affinity: -0.08970  -1.17422 (kcal/mol)
+RMSD: 3.96854
+CNNscore: 0.84459 
+CNNaffinity: 3.76980
+CNNvariance: 0.46257
+## 687 Rasagiline
+Affinity: 0.00000  -0.32670 (kcal/mol)
+RMSD: 0.15181
+CNNscore: 0.86013 
+CNNaffinity: 3.04349
+CNNvariance: 0.19233
+## 688 Glycodiazine
+Affinity: -0.08357  -0.76844 (kcal/mol)
+RMSD: 3.86257
+CNNscore: 0.81199 
+CNNaffinity: 3.89106
+CNNvariance: 0.86806
+## 689 Bezafibrate
+Affinity: -0.64290  -0.64718 (kcal/mol)
+RMSD: 3.70351
+CNNscore: 0.77259 
+CNNaffinity: 3.76832
+CNNvariance: 0.48746
+## 690 Colchicine
+Affinity: -0.37622  -0.74090 (kcal/mol)
+RMSD: 3.24303
+CNNscore: 0.79827 
+CNNaffinity: 4.58556
+CNNvariance: 0.62791
+## 691 Drospirenone
+Affinity: -0.00348  0.00000 (kcal/mol)
+RMSD: 0.03250
+CNNscore: 0.80751 
+CNNaffinity: 4.53341
+CNNvariance: 0.42955
+## 692 Salsalate
+Affinity: -0.03573  -1.22949 (kcal/mol)
+RMSD: 1.97299
+CNNscore: 0.89397 
+CNNaffinity: 3.50442
+CNNvariance: 0.73456
+## 693 Neostigmine
+Affinity: -0.01580  -0.39177 (kcal/mol)
+RMSD: 1.33230
+CNNscore: 0.86493 
+CNNaffinity: 3.19115
+CNNvariance: 0.41667
+## 694 Danazol
+Affinity: -0.82368  -0.24670 (kcal/mol)
+RMSD: 4.35511
+CNNscore: 0.80703 
+CNNaffinity: 4.59488
+CNNvariance: 0.43116
+## 695 Clenbuterol
+Affinity: -0.01171  -0.79679 (kcal/mol)
+RMSD: 1.32678
+CNNscore: 0.83023 
+CNNaffinity: 3.62947
+CNNvariance: 0.40710
+## 696 Tiotropium
+Affinity: -0.03712  -1.13318 (kcal/mol)
+RMSD: 3.24791
+CNNscore: 0.76344 
+CNNaffinity: 3.99937
+CNNvariance: 0.33273
+## 697 Acenocoumarol
+Affinity: -0.09170  -0.95031 (kcal/mol)
+RMSD: 2.90432
+CNNscore: 0.86612 
+CNNaffinity: 4.91809
+CNNvariance: 1.17928
+## 698 Testosterone_propionate
+Affinity: 0.00000  -0.53048 (kcal/mol)
+RMSD: 1.15318
+CNNscore: 0.79420 
+CNNaffinity: 4.41053
+CNNvariance: 0.41466
+## 699 Aminophenazone
+Affinity: 0.00000  -0.45807 (kcal/mol)
+RMSD: 0.45755
+CNNscore: 0.89079 
+CNNaffinity: 3.65388
+CNNvariance: 0.59671
+## 700 Ajmaline
+Affinity: 0.00000  -0.20497 (kcal/mol)
+RMSD: 0.19087
+CNNscore: 0.85611 
+CNNaffinity: 3.77133
+CNNvariance: 0.26816
+## 701 Amrinone
+Affinity: 0.00000  -0.15201 (kcal/mol)
+RMSD: 0.40370
+CNNscore: 0.87535 
+CNNaffinity: 3.39291
+CNNvariance: 0.74274
+## 702 Oxybenzone
+Affinity: 0.00000  -0.73146 (kcal/mol)
+RMSD: 0.42819
+CNNscore: 0.88778 
+CNNaffinity: 3.41092
+CNNvariance: 0.60805
+## 703 Almitrine
+Affinity: -0.38728  -1.16697 (kcal/mol)
+RMSD: 3.63071
+CNNscore: 0.59400 
+CNNaffinity: 5.01562
+CNNvariance: 0.15457
+## 704 Antipyrine
+Affinity: 0.00000  -0.29522 (kcal/mol)
+RMSD: 0.40009
+CNNscore: 0.90913 
+CNNaffinity: 3.44603
+CNNvariance: 0.60320
+## 705 Glutethimide
+Affinity: -0.00606  -0.19154 (kcal/mol)
+RMSD: 0.59151
+CNNscore: 0.84625 
+CNNaffinity: 3.37087
+CNNvariance: 0.36667
+## 706 Diamorphine
+Affinity: -0.35947  -0.64214 (kcal/mol)
+RMSD: 5.71097
+CNNscore: 0.85420 
+CNNaffinity: 4.14738
+CNNvariance: 0.22064
+## 707 Flunitrazepam
+Affinity: -0.01015  -0.75413 (kcal/mol)
+RMSD: 0.57984
+CNNscore: 0.86080 
+CNNaffinity: 4.23847
+CNNvariance: 0.65742
+## 708 Dihydrocodeine
+Affinity: 0.00000  -0.06911 (kcal/mol)
+RMSD: 0.00036
+CNNscore: 0.88923 
+CNNaffinity: 3.79075
+CNNvariance: 0.29968
+## 709 Bromazepam
+Affinity: 0.00000  -0.38257 (kcal/mol)
+RMSD: 0.46124
+CNNscore: 0.86575 
+CNNaffinity: 3.95920
+CNNvariance: 0.63052
+## 710 Clotiazepam
+Affinity: -0.84614  -0.70783 (kcal/mol)
+RMSD: 6.72896
+CNNscore: 0.74446 
+CNNaffinity: 4.47292
+CNNvariance: 0.49957
+## 711 Chloral_hydrate
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88904 
+CNNaffinity: 2.47416
+CNNvariance: 0.28946
+## 712 Dextroamphetamine
+Affinity: 0.00000  0.07784 (kcal/mol)
+RMSD: 0.10727
+CNNscore: 0.84873 
+CNNaffinity: 2.63463
+CNNvariance: 0.18492
+## 713 Metamfetamine
+Affinity: 0.00000  -0.26675 (kcal/mol)
+RMSD: 0.46829
+CNNscore: 0.83954 
+CNNaffinity: 2.65862
+CNNvariance: 0.15386
+## 714 Phendimetrazine
+Affinity: 0.00000  -0.28752 (kcal/mol)
+RMSD: 0.28172
+CNNscore: 0.87266 
+CNNaffinity: 2.92667
+CNNvariance: 0.20574
+## 715 Oxprenolol
+Affinity: -0.28427  -1.44716 (kcal/mol)
+RMSD: 7.06457
+CNNscore: 0.79794 
+CNNaffinity: 3.54561
+CNNvariance: 0.15152
+## 716 Sulfamerazine
+Affinity: -0.04351  -0.50576 (kcal/mol)
+RMSD: 1.59895
+CNNscore: 0.84585 
+CNNaffinity: 3.90834
+CNNvariance: 1.04353
+## 717 Sulfamethazine
+Affinity: -0.16256  -0.55693 (kcal/mol)
+RMSD: 4.91364
+CNNscore: 0.84854 
+CNNaffinity: 4.00796
+CNNvariance: 0.80114
+## 718 Ursodeoxycholic_acid
+Affinity: -0.63750  -0.50174 (kcal/mol)
+RMSD: 4.49505
+CNNscore: 0.81250 
+CNNaffinity: 4.29779
+CNNvariance: 0.20894
+## 719 Ketazolam
+Affinity: -0.01167  -0.45988 (kcal/mol)
+RMSD: 0.04289
+CNNscore: 0.80498 
+CNNaffinity: 4.37708
+CNNvariance: 0.38270
+## 720 Prazepam
+Affinity: -0.01577  -0.65623 (kcal/mol)
+RMSD: 0.39044
+CNNscore: 0.81661 
+CNNaffinity: 4.14843
+CNNvariance: 0.56375
+## 721 Solifenacin
+Affinity: -0.52073  -1.28380 (kcal/mol)
+RMSD: 4.58660
+CNNscore: 0.74765 
+CNNaffinity: 4.50232
+CNNvariance: 0.36873
+## 722 Nitrazepam
+Affinity: 0.00000  -0.57583 (kcal/mol)
+RMSD: 0.33652
+CNNscore: 0.86695 
+CNNaffinity: 3.91363
+CNNvariance: 0.57203
+## 723 Cilastatin
+Affinity: -0.43053  -1.66531 (kcal/mol)
+RMSD: 9.53346
+CNNscore: 0.61967 
+CNNaffinity: 3.71429
+CNNvariance: 0.71272
+## 724 Tiaprofenic_acid
+Affinity: 0.00000  -0.52413 (kcal/mol)
+RMSD: 0.55333
+CNNscore: 0.86999 
+CNNaffinity: 3.62324
+CNNvariance: 0.61000
+## 725 Bacampicillin
+Affinity: -0.61164  -1.36050 (kcal/mol)
+RMSD: 5.85652
+CNNscore: 0.70149 
+CNNaffinity: 4.21233
+CNNvariance: 0.41985
+## 726 Meticillin
+Affinity: -0.19641  -0.93115 (kcal/mol)
+RMSD: 3.86129
+CNNscore: 0.79090 
+CNNaffinity: 3.94634
+CNNvariance: 0.60829
+## 727 Pivampicillin
+Affinity: -0.15097  -1.90652 (kcal/mol)
+RMSD: 5.53468
+CNNscore: 0.62012 
+CNNaffinity: 4.29526
+CNNvariance: 0.35532
+## 728 Pivmecillinam
+Affinity: -0.69604  -1.25837 (kcal/mol)
+RMSD: 6.71768
+CNNscore: 0.66354 
+CNNaffinity: 4.39324
+CNNvariance: 0.28212
+## 729 Ticarcillin
+Affinity: -0.00850  -1.10621 (kcal/mol)
+RMSD: 3.99062
+CNNscore: 0.76158 
+CNNaffinity: 3.98185
+CNNvariance: 0.99227
+## 730 Deferasirox
+Affinity: -0.55960  -1.49725 (kcal/mol)
+RMSD: 5.51080
+CNNscore: 0.85854 
+CNNaffinity: 4.63296
+CNNvariance: 0.95877
+## 731 Hydroxychloroquine
+Affinity: -0.48325  -1.48808 (kcal/mol)
+RMSD: 7.03593
+CNNscore: 0.73688 
+CNNaffinity: 4.03490
+CNNvariance: 0.06399
+## 732 Amyl_Nitrite
+Affinity: 0.00000  -0.29949 (kcal/mol)
+RMSD: 2.35110
+CNNscore: 0.87601 
+CNNaffinity: 2.62328
+CNNvariance: 0.40264
+## 733 Alverine
+Affinity: -0.37453  -3.14822 (kcal/mol)
+RMSD: 5.13053
+CNNscore: 0.75331 
+CNNaffinity: 3.89513
+CNNvariance: 0.12195
+## 734 Molindone
+Affinity: -0.14940  -0.56257 (kcal/mol)
+RMSD: 3.39870
+CNNscore: 0.83479 
+CNNaffinity: 3.78995
+CNNvariance: 0.25479
+## 735 Phenindamine
+Affinity: 0.00000  -0.81620 (kcal/mol)
+RMSD: 0.01825
+CNNscore: 0.82076 
+CNNaffinity: 3.82608
+CNNvariance: 0.20607
+## 736 Pheniramine
+Affinity: 0.00000  -0.74389 (kcal/mol)
+RMSD: 0.80535
+CNNscore: 0.85768 
+CNNaffinity: 3.65354
+CNNvariance: 0.37008
+## 737 Isopropamide
+Affinity: -0.00266  -1.89566 (kcal/mol)
+RMSD: 1.62583
+CNNscore: 0.71127 
+CNNaffinity: 4.30926
+CNNvariance: 0.30205
+## 738 Pargyline
+Affinity: 0.00000  -0.52109 (kcal/mol)
+RMSD: 0.29198
+CNNscore: 0.85128 
+CNNaffinity: 2.86920
+CNNvariance: 0.24485
+## 739 Etoricoxib
+Affinity: 0.00000  -1.05407 (kcal/mol)
+RMSD: 0.57304
+CNNscore: 0.81617 
+CNNaffinity: 4.62700
+CNNvariance: 1.15919
+## 740 Prasterone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.83221 
+CNNaffinity: 3.85040
+CNNvariance: 0.25915
+## 741 Camphor
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88569 
+CNNaffinity: 3.01680
+CNNvariance: 0.34891
+## 742 Benzophenone
+Affinity: -0.00324  -0.46057 (kcal/mol)
+RMSD: 0.50467
+CNNscore: 0.89217 
+CNNaffinity: 3.13379
+CNNvariance: 0.38456
+## 743 Flufenamic_Acid
+Affinity: -0.34866  -0.90001 (kcal/mol)
+RMSD: 6.62980
+CNNscore: 0.85430 
+CNNaffinity: 3.76166
+CNNvariance: 0.40721
+## 744 Isopropyl_Alcohol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88509 
+CNNaffinity: 1.97798
+CNNvariance: 0.08164
+## 745 Aminobenzoic_acid
+Affinity: 0.00000  -0.03619 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90828 
+CNNaffinity: 2.74163
+CNNvariance: 0.35856
+## 746 Thymol
+Affinity: 0.00000  -0.19637 (kcal/mol)
+RMSD: 0.00118
+CNNscore: 0.89485 
+CNNaffinity: 3.08363
+CNNvariance: 0.42465
+## 747 Vorinostat
+Affinity: -0.08197  -1.02986 (kcal/mol)
+RMSD: 2.50454
+CNNscore: 0.69349 
+CNNaffinity: 3.47318
+CNNvariance: 0.87634
+## 748 Cholic_Acid
+Affinity: -0.03051  -0.90450 (kcal/mol)
+RMSD: 1.28476
+CNNscore: 0.77156 
+CNNaffinity: 4.06006
+CNNvariance: 0.32807
+## 749 Nicotinamide
+Affinity: 0.00000  -0.02425 (kcal/mol)
+RMSD: 0.00364
+CNNscore: 0.88669 
+CNNaffinity: 2.64641
+CNNvariance: 0.32517
+## 750 Resveratrol
+Affinity: -0.81712  -0.31646 (kcal/mol)
+RMSD: 5.44435
+CNNscore: 0.87325 
+CNNaffinity: 3.76378
+CNNvariance: 0.53696
+## 751 Pregnenolone
+Affinity: 0.00000  -0.03416 (kcal/mol)
+RMSD: 0.16353
+CNNscore: 0.81158 
+CNNaffinity: 4.06913
+CNNvariance: 0.25645
+## 752 D-Methionine
+Affinity: 0.00000  -0.04127 (kcal/mol)
+RMSD: 0.00402
+CNNscore: 0.80647 
+CNNaffinity: 2.34293
+CNNvariance: 0.15088
+## 753 Piretanide
+Affinity: 0.00000  -1.45468 (kcal/mol)
+RMSD: 0.44089
+CNNscore: 0.84021 
+CNNaffinity: 4.41832
+CNNvariance: 1.16296
+## 754 Oxitriptan
+Affinity: 0.00000  -0.34460 (kcal/mol)
+RMSD: 0.72967
+CNNscore: 0.88879 
+CNNaffinity: 3.34016
+CNNvariance: 0.61218
+## 755 Lauric_Acid
+Affinity: -0.03289  -1.52474 (kcal/mol)
+RMSD: 5.25573
+CNNscore: 0.79859 
+CNNaffinity: 3.15531
+CNNvariance: 0.39609
+## 756 Acetylcholine
+Affinity: 0.00000  -0.27190 (kcal/mol)
+RMSD: 0.74234
+CNNscore: 0.85956 
+CNNaffinity: 2.40857
+CNNvariance: 0.21237
+## 757 Acetic_acid
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89065 
+CNNaffinity: 2.02601
+CNNvariance: 0.09589
+## 758 Propyl_alcohol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88442 
+CNNaffinity: 2.02605
+CNNvariance: 0.08382
+## 759 Phenol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90289 
+CNNaffinity: 2.45724
+CNNvariance: 0.26765
+## 760 Deoxycholic_Acid
+Affinity: -0.95010  -0.79794 (kcal/mol)
+RMSD: 6.00332
+CNNscore: 0.76204 
+CNNaffinity: 4.40883
+CNNvariance: 0.12871
+## 761 Propanoic_acid
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89278 
+CNNaffinity: 2.24099
+CNNvariance: 0.17260
+## 762 Benzoic_Acid
+Affinity: 0.00000  -0.02418 (kcal/mol)
+RMSD: 0.00351
+CNNscore: 0.90031 
+CNNaffinity: 2.53329
+CNNvariance: 0.22868
+## 763 Eucalyptol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89441 
+CNNaffinity: 2.84888
+CNNvariance: 0.23862
+## 764 Berberine
+Affinity: 0.00000  0.45148 (kcal/mol)
+RMSD: 0.00042
+CNNscore: 0.86358 
+CNNaffinity: 4.38420
+CNNvariance: 1.14243
+## 765 Trioxsalen
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90244 
+CNNaffinity: 3.93517
+CNNvariance: 0.57045
+## 766 Thiotepa
+Affinity: 0.00000  1.05136 (kcal/mol)
+RMSD: 0.04503
+CNNscore: 0.75461 
+CNNaffinity: 2.77975
+CNNvariance: 0.48793
+## 767 Estriol
+Affinity: -0.00760  0.00000 (kcal/mol)
+RMSD: 0.45399
+CNNscore: 0.83675 
+CNNaffinity: 3.72563
+CNNvariance: 0.32116
+## 768 Estrone_sulfate
+Affinity: 0.00000  -0.22237 (kcal/mol)
+RMSD: 0.85846
+CNNscore: 0.83620 
+CNNaffinity: 4.30291
+CNNvariance: 0.46490
+## 769 Carboxin
+Affinity: -0.00385  -0.34755 (kcal/mol)
+RMSD: 1.02243
+CNNscore: 0.86091 
+CNNaffinity: 3.28508
+CNNvariance: 0.46196
+## 770 Nimesulide
+Affinity: 0.00000  -0.84663 (kcal/mol)
+RMSD: 1.20353
+CNNscore: 0.86836 
+CNNaffinity: 4.12035
+CNNvariance: 1.02570
+## 771 Clioquinol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88178 
+CNNaffinity: 3.74377
+CNNvariance: 0.81417
+## 772 Metamizole
+Affinity: -0.00324  -0.81895 (kcal/mol)
+RMSD: 0.46567
+CNNscore: 0.88840 
+CNNaffinity: 3.97996
+CNNvariance: 0.71347
+## 773 Nialamide
+Affinity: -0.67817  -2.14773 (kcal/mol)
+RMSD: 8.11419
+CNNscore: 0.76556 
+CNNaffinity: 3.79179
+CNNvariance: 0.22069
+## 774 Phenolphthalein
+Affinity: -0.04245  -1.17424 (kcal/mol)
+RMSD: 0.29505
+CNNscore: 0.86878 
+CNNaffinity: 3.96020
+CNNvariance: 0.50625
+## 775 Urethane
+Affinity: 0.00000  -0.07214 (kcal/mol)
+RMSD: 0.93999
+CNNscore: 0.88471 
+CNNaffinity: 2.20569
+CNNvariance: 0.13813
+## 776 Clofedanol
+Affinity: 0.00000  -0.60781 (kcal/mol)
+RMSD: 0.70335
+CNNscore: 0.80709 
+CNNaffinity: 3.69061
+CNNvariance: 0.35895
+## 777 Cyclandelate
+Affinity: -0.01068  -0.97943 (kcal/mol)
+RMSD: 1.94214
+CNNscore: 0.81466 
+CNNaffinity: 3.56838
+CNNvariance: 0.30223
+## 778 Cyproterone_acetate
+Affinity: -0.93646  -0.64078 (kcal/mol)
+RMSD: 4.86453
+CNNscore: 0.74937 
+CNNaffinity: 4.49763
+CNNvariance: 0.15046
+## 779 Debrisoquin
+Affinity: 0.00000  -0.06933 (kcal/mol)
+RMSD: 0.89401
+CNNscore: 0.88513 
+CNNaffinity: 2.87175
+CNNvariance: 0.12104
+## 780 Mepenzolate
+Affinity: 0.00000  -1.40449 (kcal/mol)
+RMSD: 0.82598
+CNNscore: 0.75651 
+CNNaffinity: 3.67900
+CNNvariance: 0.14870
+## 781 Tetrabenazine
+Affinity: -1.00201  -0.42173 (kcal/mol)
+RMSD: 6.47016
+CNNscore: 0.76615 
+CNNaffinity: 4.01900
+CNNvariance: 0.22240
+## 782 Celiprolol
+Affinity: -0.45480  -1.94270 (kcal/mol)
+RMSD: 7.19218
+CNNscore: 0.75068 
+CNNaffinity: 4.11070
+CNNvariance: 0.26965
+## 783 Febuxostat
+Affinity: -0.00546  -0.13687 (kcal/mol)
+RMSD: 0.14347
+CNNscore: 0.82229 
+CNNaffinity: 3.90502
+CNNvariance: 1.04870
+## 784 Nebivolol
+Affinity: 0.00000  -0.87199 (kcal/mol)
+RMSD: 3.35020
+CNNscore: 0.71289 
+CNNaffinity: 4.10548
+CNNvariance: 0.27871
+## 785 Huperzine_A
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.85849 
+CNNaffinity: 3.76951
+CNNvariance: 0.32632
+## 786 Lorcaserin
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.86405 
+CNNaffinity: 3.14830
+CNNvariance: 0.19562
+## 787 Vildagliptin
+Affinity: -0.33222  -0.79736 (kcal/mol)
+RMSD: 5.23751
+CNNscore: 0.81854 
+CNNaffinity: 3.71912
+CNNvariance: 0.34562
+## 788 Enoximone
+Affinity: -0.01085  -0.44404 (kcal/mol)
+RMSD: 1.00260
+CNNscore: 0.81984 
+CNNaffinity: 3.69140
+CNNvariance: 0.98873
+## 789 Bepotastine
+Affinity: -0.39715  -1.70766 (kcal/mol)
+RMSD: 4.69336
+CNNscore: 0.75658 
+CNNaffinity: 4.19348
+CNNvariance: 0.49742
+## 790 Milnacipran
+Affinity: 0.00000  -0.33378 (kcal/mol)
+RMSD: 0.31265
+CNNscore: 0.82992 
+CNNaffinity: 3.56217
+CNNvariance: 0.22652
+## 791 Ximelagatran
+Affinity: -0.21557  -2.97913 (kcal/mol)
+RMSD: 2.06844
+CNNscore: 0.61651 
+CNNaffinity: 4.36393
+CNNvariance: 0.32833
+## 792 Flibanserin
+Affinity: -0.66764  -0.80050 (kcal/mol)
+RMSD: 5.59098
+CNNscore: 0.68961 
+CNNaffinity: 4.29203
+CNNvariance: 0.19322
+## 793 Clevidipine
+Affinity: -0.93746  -2.73196 (kcal/mol)
+RMSD: 8.92231
+CNNscore: 0.63032 
+CNNaffinity: 4.24804
+CNNvariance: 0.08040
+## 794 Iloperidone
+Affinity: -0.33146  -1.07807 (kcal/mol)
+RMSD: 3.14488
+CNNscore: 0.77069 
+CNNaffinity: 4.78114
+CNNvariance: 0.30303
+## 795 Lofexidine
+Affinity: 0.00000  -0.46356 (kcal/mol)
+RMSD: 0.96557
+CNNscore: 0.85959 
+CNNaffinity: 3.72817
+CNNvariance: 0.43085
+## 796 Pirfenidone
+Affinity: -0.01780  -0.26460 (kcal/mol)
+RMSD: 0.78530
+CNNscore: 0.90981 
+CNNaffinity: 3.39866
+CNNvariance: 0.60523
+## 797 Ezogabine
+Affinity: -0.75864  -0.98551 (kcal/mol)
+RMSD: 5.74257
+CNNscore: 0.85463 
+CNNaffinity: 4.01027
+CNNvariance: 0.40134
+## 798 Ingenol_Mebutate
+Affinity: -0.13146  -1.13708 (kcal/mol)
+RMSD: 3.56391
+CNNscore: 0.67950 
+CNNaffinity: 4.00416
+CNNvariance: 0.27132
+## 799 Belinostat
+Affinity: -0.04026  -0.93498 (kcal/mol)
+RMSD: 3.08846
+CNNscore: 0.75888 
+CNNaffinity: 3.83083
+CNNvariance: 0.77809
+## 800 Ataluren
+Affinity: 0.00000  -0.14925 (kcal/mol)
+RMSD: 0.00132
+CNNscore: 0.87316 
+CNNaffinity: 3.86987
+CNNvariance: 1.15066
+## 801 Indacaterol
+Affinity: -0.67917  -4.07652 (kcal/mol)
+RMSD: 8.12913
+CNNscore: 0.73564 
+CNNaffinity: 4.34857
+CNNvariance: 0.10156
+## 802 Pretomanid
+Affinity: -0.32058  -0.56609 (kcal/mol)
+RMSD: 3.43036
+CNNscore: 0.77877 
+CNNaffinity: 3.94440
+CNNvariance: 0.39773
+## 803 Crisaborole
+Affinity: -0.00674  -0.46329 (kcal/mol)
+RMSD: 0.82803
+CNNscore: 0.79023 
+CNNaffinity: 3.49139
+CNNvariance: 1.16113
+## 804 Silver_sulfadiazine
+Affinity: -0.00295  -0.45733 (kcal/mol)
+RMSD: 1.13612
+CNNscore: 0.87914 
+CNNaffinity: 3.79125
+CNNvariance: 0.84697
+## 805 Methsuximide
+Affinity: 0.00000  -0.25771 (kcal/mol)
+RMSD: 0.21384
+CNNscore: 0.87497 
+CNNaffinity: 3.33671
+CNNvariance: 0.38724
+## 806 Rotigotine
+Affinity: 0.00000  -1.52141 (kcal/mol)
+RMSD: 3.43996
+CNNscore: 0.79266 
+CNNaffinity: 4.19730
+CNNvariance: 0.31767
+## 807 Pimavanserin
+Affinity: 0.00000  -2.86802 (kcal/mol)
+RMSD: 1.17123
+CNNscore: 0.70764 
+CNNaffinity: 4.67085
+CNNvariance: 0.29347
+## 808 Dexlansoprazole
+Affinity: -0.13753  -1.13620 (kcal/mol)
+RMSD: 3.79040
+CNNscore: 0.80560 
+CNNaffinity: 4.68466
+CNNvariance: 0.68410
+## 809 Brivaracetam
+Affinity: 0.00000  -0.69179 (kcal/mol)
+RMSD: 0.80376
+CNNscore: 0.81997 
+CNNaffinity: 3.45144
+CNNvariance: 0.47900
+## 810 Apremilast
+Affinity: -0.64647  0.14876 (kcal/mol)
+RMSD: 3.88739
+CNNscore: 0.80759 
+CNNaffinity: 4.57526
+CNNvariance: 0.55240
+## 811 Cariprazine
+Affinity: -0.27051  -0.57766 (kcal/mol)
+RMSD: 3.30142
+CNNscore: 0.63831 
+CNNaffinity: 4.08367
+CNNvariance: 0.49658
+## 812 Sertindole
+Affinity: 0.00000  -1.76692 (kcal/mol)
+RMSD: 2.95840
+CNNscore: 0.73919 
+CNNaffinity: 4.89510
+CNNvariance: 0.47833
+## 813 Sulfathiazole
+Affinity: -0.04812  -0.37644 (kcal/mol)
+RMSD: 3.27283
+CNNscore: 0.82687 
+CNNaffinity: 3.64466
+CNNvariance: 0.98198
+## 814 Mianserin
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.84264 
+CNNaffinity: 3.68956
+CNNvariance: 0.19692
+## 815 Sulfadimethoxine
+Affinity: -0.14761  -0.77327 (kcal/mol)
+RMSD: 3.58070
+CNNscore: 0.83987 
+CNNaffinity: 3.96695
+CNNvariance: 1.04716
+## 816 Nylidrin
+Affinity: -0.52793  -0.97036 (kcal/mol)
+RMSD: 3.88572
+CNNscore: 0.77625 
+CNNaffinity: 3.58700
+CNNvariance: 0.13372
+## 817 Pizotifen
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82253 
+CNNaffinity: 4.15506
+CNNvariance: 0.25912
+## 818 Noscapine
+Affinity: -0.04141  0.64111 (kcal/mol)
+RMSD: 1.04786
+CNNscore: 0.83007 
+CNNaffinity: 4.29925
+CNNvariance: 0.70596
+## 819 Rufinamide
+Affinity: -0.06878  -0.44453 (kcal/mol)
+RMSD: 2.40625
+CNNscore: 0.85680 
+CNNaffinity: 3.60145
+CNNvariance: 0.58455
+## 820 Alogliptin
+Affinity: 0.00000  0.19646 (kcal/mol)
+RMSD: 0.07380
+CNNscore: 0.81333 
+CNNaffinity: 4.24676
+CNNvariance: 0.38965
+## 821 Tapentadol
+Affinity: -0.00308  -0.62833 (kcal/mol)
+RMSD: 0.92216
+CNNscore: 0.84453 
+CNNaffinity: 3.34418
+CNNvariance: 0.25286
+## 822 Silodosin
+Affinity: -0.32729  -4.83883 (kcal/mol)
+RMSD: 7.01620
+CNNscore: 0.70037 
+CNNaffinity: 4.60352
+CNNvariance: 0.11338
+## 823 Prasugrel
+Affinity: -0.27002  0.07669 (kcal/mol)
+RMSD: 3.67343
+CNNscore: 0.77447 
+CNNaffinity: 4.33904
+CNNvariance: 0.41595
+## 824 Asenapine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.86865 
+CNNaffinity: 4.03372
+CNNvariance: 0.44500
+## 825 Vernakalant
+Affinity: -0.06472  -1.65056 (kcal/mol)
+RMSD: 1.57550
+CNNscore: 0.75280 
+CNNaffinity: 3.95800
+CNNvariance: 0.16830
+## 826 Lacosamide
+Affinity: 0.00000  -1.11403 (kcal/mol)
+RMSD: 0.60019
+CNNscore: 0.83512 
+CNNaffinity: 3.20468
+CNNvariance: 0.28698
+## 827 Rivaroxaban
+Affinity: -0.23787  -0.72419 (kcal/mol)
+RMSD: 3.80458
+CNNscore: 0.76164 
+CNNaffinity: 4.05082
+CNNvariance: 0.58508
+## 828 Nalmefene
+Affinity: -0.05262  -0.39045 (kcal/mol)
+RMSD: 1.18809
+CNNscore: 0.85837 
+CNNaffinity: 4.04391
+CNNvariance: 0.30740
+## 829 Avanafil
+Affinity: 0.00000  -2.68838 (kcal/mol)
+RMSD: 1.90724
+CNNscore: 0.74601 
+CNNaffinity: 5.13952
+CNNvariance: 1.21154
+## 830 Hexaminolevulinate
+Affinity: 0.00000  -0.83007 (kcal/mol)
+RMSD: 2.21667
+CNNscore: 0.78290 
+CNNaffinity: 2.96264
+CNNvariance: 0.39801
+## 831 Sitaxentan
+Affinity: -0.09902  -1.59553 (kcal/mol)
+RMSD: 3.92469
+CNNscore: 0.81476 
+CNNaffinity: 4.94751
+CNNvariance: 1.15299
+## 832 Alvimopan
+Affinity: -0.17247  -2.59731 (kcal/mol)
+RMSD: 4.53232
+CNNscore: 0.71504 
+CNNaffinity: 4.27059
+CNNvariance: 0.58026
+## 833 Levocetirizine
+Affinity: -0.63452  -1.13751 (kcal/mol)
+RMSD: 6.12361
+CNNscore: 0.65501 
+CNNaffinity: 4.00500
+CNNvariance: 0.12935
+## 834 Amisulpride
+Affinity: -0.14696  -1.28434 (kcal/mol)
+RMSD: 2.66703
+CNNscore: 0.82125 
+CNNaffinity: 4.10100
+CNNvariance: 0.50182
+## 835 Dapagliflozin
+Affinity: -0.00574  -1.62515 (kcal/mol)
+RMSD: 7.46866
+CNNscore: 0.67417 
+CNNaffinity: 3.82382
+CNNvariance: 0.58980
+## 836 Saxagliptin
+Affinity: 0.00000  -0.30616 (kcal/mol)
+RMSD: 0.41868
+CNNscore: 0.78575 
+CNNaffinity: 3.92479
+CNNvariance: 0.30921
+## 837 Ambrisentan
+Affinity: -0.00492  -0.65251 (kcal/mol)
+RMSD: 0.74131
+CNNscore: 0.80960 
+CNNaffinity: 4.60403
+CNNvariance: 0.62505
+## 838 Armodafinil
+Affinity: -0.01333  -0.69487 (kcal/mol)
+RMSD: 1.30330
+CNNscore: 0.79992 
+CNNaffinity: 3.56517
+CNNvariance: 0.40129
+## 839 Etravirine
+Affinity: -0.00257  -0.29300 (kcal/mol)
+RMSD: 1.00087
+CNNscore: 0.79937 
+CNNaffinity: 4.99614
+CNNvariance: 0.97138
+## 840 Prucalopride
+Affinity: -0.07300  -1.00539 (kcal/mol)
+RMSD: 1.97411
+CNNscore: 0.81395 
+CNNaffinity: 4.09458
+CNNvariance: 0.47231
+## 841 Pazopanib
+Affinity: -0.42019  -0.63435 (kcal/mol)
+RMSD: 4.49542
+CNNscore: 0.75594 
+CNNaffinity: 4.78425
+CNNvariance: 1.22555
+## 842 Agomelatine
+Affinity: 0.00000  -0.46889 (kcal/mol)
+RMSD: 1.62524
+CNNscore: 0.84535 
+CNNaffinity: 3.54045
+CNNvariance: 0.44955
+## 843 Apixaban
+Affinity: -0.15071  -1.31610 (kcal/mol)
+RMSD: 3.25792
+CNNscore: 0.77030 
+CNNaffinity: 4.82407
+CNNvariance: 1.27137
+## 844 Axitinib
+Affinity: -1.01367  -1.14782 (kcal/mol)
+RMSD: 7.12130
+CNNscore: 0.78775 
+CNNaffinity: 5.19191
+CNNvariance: 0.83804
+## 845 Dalfampridine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91206 
+CNNaffinity: 2.50702
+CNNvariance: 0.31484
+## 846 Safinamide
+Affinity: -0.43827  -1.31722 (kcal/mol)
+RMSD: 5.02265
+CNNscore: 0.81212 
+CNNaffinity: 3.87679
+CNNvariance: 0.22225
+## 847 Vilazodone
+Affinity: -0.09482  -0.78200 (kcal/mol)
+RMSD: 3.40607
+CNNscore: 0.64884 
+CNNaffinity: 4.21629
+CNNvariance: 0.48205
+## 848 Mepyramine
+Affinity: -0.03822  -1.00305 (kcal/mol)
+RMSD: 3.44030
+CNNscore: 0.81994 
+CNNaffinity: 3.77687
+CNNvariance: 0.36422
+## 849 Xylometazoline
+Affinity: -0.51832  -0.48266 (kcal/mol)
+RMSD: 4.83852
+CNNscore: 0.78311 
+CNNaffinity: 3.67425
+CNNvariance: 0.20729
+## 850 Artemether
+Affinity: 0.00000  -0.09258 (kcal/mol)
+RMSD: 0.16515
+CNNscore: 0.84405 
+CNNaffinity: 3.53955
+CNNvariance: 0.30195
+## 851 Betahistine
+Affinity: 0.00000  -0.07602 (kcal/mol)
+RMSD: 0.00673
+CNNscore: 0.88047 
+CNNaffinity: 2.68640
+CNNvariance: 0.24294
+## 852 Desvenlafaxine
+Affinity: 0.00000  -0.65808 (kcal/mol)
+RMSD: 0.64373
+CNNscore: 0.82322 
+CNNaffinity: 3.49689
+CNNvariance: 0.37813
+## 853 Dexmethylphenidate
+Affinity: 0.00000  -0.85432 (kcal/mol)
+RMSD: 0.59547
+CNNscore: 0.84156 
+CNNaffinity: 3.24709
+CNNvariance: 0.37350
+## 854 Iobenguane
+Affinity: 0.00000  -0.10691 (kcal/mol)
+RMSD: 0.10212
+CNNscore: 0.83762 
+CNNaffinity: 2.95418
+CNNvariance: 0.21599
+## 855 Isometheptene
+Affinity: 0.00000  -0.42260 (kcal/mol)
+RMSD: 1.58111
+CNNscore: 0.80676 
+CNNaffinity: 2.65960
+CNNvariance: 0.18425
+## 856 Methacholine
+Affinity: 0.00000  -0.28000 (kcal/mol)
+RMSD: 0.96388
+CNNscore: 0.87518 
+CNNaffinity: 2.58333
+CNNvariance: 0.20876
+## 857 Methyltestosterone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.82048 
+CNNaffinity: 3.90578
+CNNvariance: 0.24374
+## 858 Naphazoline
+Affinity: 0.00000  -0.33727 (kcal/mol)
+RMSD: 0.28777
+CNNscore: 0.84326 
+CNNaffinity: 3.28390
+CNNvariance: 0.30752
+## 859 Norelgestromin
+Affinity: -0.02547  -0.28784 (kcal/mol)
+RMSD: 0.05000
+CNNscore: 0.80115 
+CNNaffinity: 4.15722
+CNNvariance: 0.31846
+## 860 Propylhexedrine
+Affinity: 0.00000  -0.31835 (kcal/mol)
+RMSD: 1.35133
+CNNscore: 0.84438 
+CNNaffinity: 2.82833
+CNNvariance: 0.17389
+## 861 Fospropofol
+Affinity: -0.00308  -1.13706 (kcal/mol)
+RMSD: 0.23839
+CNNscore: 0.77180 
+CNNaffinity: 3.83966
+CNNvariance: 0.78117
+## 862 Stanozolol
+Affinity: -0.12056  0.00000 (kcal/mol)
+RMSD: 1.47754
+CNNscore: 0.79427 
+CNNaffinity: 4.38217
+CNNvariance: 0.30647
+## 863 Lornoxicam
+Affinity: -0.01058  -0.84312 (kcal/mol)
+RMSD: 0.63977
+CNNscore: 0.80941 
+CNNaffinity: 4.15493
+CNNvariance: 0.68492
+## 864 Sulfaphenazole
+Affinity: -0.01883  -1.19988 (kcal/mol)
+RMSD: 1.54164
+CNNscore: 0.85354 
+CNNaffinity: 4.29233
+CNNvariance: 1.02955
+## 865 Aceclofenac
+Affinity: -0.02951  -1.25483 (kcal/mol)
+RMSD: 1.57274
+CNNscore: 0.83427 
+CNNaffinity: 4.14196
+CNNvariance: 0.94235
+## 866 Drotaverine
+Affinity: -0.60847  -1.41036 (kcal/mol)
+RMSD: 6.98332
+CNNscore: 0.75596 
+CNNaffinity: 4.42612
+CNNvariance: 0.15375
+## 867 Pinacidil
+Affinity: -0.09674  -0.84770 (kcal/mol)
+RMSD: 3.89248
+CNNscore: 0.80795 
+CNNaffinity: 3.70313
+CNNvariance: 0.28301
+## 868 Tetryzoline
+Affinity: 0.00000  -0.17671 (kcal/mol)
+RMSD: 0.29300
+CNNscore: 0.84954 
+CNNaffinity: 3.25342
+CNNvariance: 0.27299
+## 869 Bendamustine
+Affinity: -0.62154  -1.14574 (kcal/mol)
+RMSD: 5.44393
+CNNscore: 0.81425 
+CNNaffinity: 4.17493
+CNNvariance: 0.35468
+## 870 Benzyl_alcohol
+Affinity: 0.00000  -0.00999 (kcal/mol)
+RMSD: 0.00074
+CNNscore: 0.88963 
+CNNaffinity: 2.38709
+CNNvariance: 0.16346
+## 871 Besifloxacin
+Affinity: -0.91066  -0.45078 (kcal/mol)
+RMSD: 4.37178
+CNNscore: 0.82526 
+CNNaffinity: 4.96621
+CNNvariance: 0.74803
+## 872 Capsaicin
+Affinity: -0.86446  -1.18687 (kcal/mol)
+RMSD: 6.32752
+CNNscore: 0.72818 
+CNNaffinity: 3.83649
+CNNvariance: 0.18554
+## 873 Chenodeoxycholic_acid
+Affinity: -0.54629  -0.57165 (kcal/mol)
+RMSD: 4.66509
+CNNscore: 0.80171 
+CNNaffinity: 4.22928
+CNNvariance: 0.19271
+## 874 Desoxycorticosterone_acetate
+Affinity: -0.79581  -0.42618 (kcal/mol)
+RMSD: 4.97994
+CNNscore: 0.79389 
+CNNaffinity: 4.41509
+CNNvariance: 0.22210
+## 875 Dimercaprol
+Affinity: 0.00000  -0.03600 (kcal/mol)
+RMSD: 0.35138
+CNNscore: 0.85478 
+CNNaffinity: 2.27354
+CNNvariance: 0.13163
+## 876 Halcinonide
+Affinity: 0.00000  -0.37591 (kcal/mol)
+RMSD: 0.12443
+CNNscore: 0.76625 
+CNNaffinity: 4.22094
+CNNvariance: 0.08110
+## 877 Hexocyclium
+Affinity: -0.00328  -0.99572 (kcal/mol)
+RMSD: 1.24523
+CNNscore: 0.68661 
+CNNaffinity: 3.56171
+CNNvariance: 0.09275
+## 878 Lodoxamide
+Affinity: -0.10925  -0.61659 (kcal/mol)
+RMSD: 3.45088
+CNNscore: 0.86068 
+CNNaffinity: 3.78656
+CNNvariance: 1.02607
+## 879 Mebutamate
+Affinity: 0.00000  -0.67206 (kcal/mol)
+RMSD: 1.08410
+CNNscore: 0.78899 
+CNNaffinity: 3.28509
+CNNvariance: 0.72633
+## 880 Methylnaltrexone
+Affinity: 0.00000  -0.33635 (kcal/mol)
+RMSD: 0.24930
+CNNscore: 0.84812 
+CNNaffinity: 3.95983
+CNNvariance: 0.32214
+## 881 Niclosamide
+Affinity: -0.00321  -0.72545 (kcal/mol)
+RMSD: 0.69663
+CNNscore: 0.86799 
+CNNaffinity: 4.14594
+CNNvariance: 1.05010
+## 882 Phenyl_aminosalicylate
+Affinity: -0.00959  -0.65081 (kcal/mol)
+RMSD: 0.67636
+CNNscore: 0.90697 
+CNNaffinity: 3.57032
+CNNvariance: 0.86700
+## 883 Pyrithione
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.87965 
+CNNaffinity: 2.68214
+CNNvariance: 0.49644
+## 884 Phenylbutyric_acid
+Affinity: 0.00000  -0.43682 (kcal/mol)
+RMSD: 1.66806
+CNNscore: 0.87486 
+CNNaffinity: 2.95714
+CNNvariance: 0.41449
+## 885 Sulfameter
+Affinity: 0.00000  -0.56018 (kcal/mol)
+RMSD: 1.47786
+CNNscore: 0.84292 
+CNNaffinity: 3.95415
+CNNvariance: 1.03986
+## 886 Tiopronin
+Affinity: 0.00000  -0.09374 (kcal/mol)
+RMSD: 0.00836
+CNNscore: 0.89163 
+CNNaffinity: 2.62237
+CNNvariance: 0.43724
+## 887 Unoprostone
+Affinity: 0.00000  -3.72391 (kcal/mol)
+RMSD: 2.91216
+CNNscore: 0.67125 
+CNNaffinity: 3.82950
+CNNvariance: 0.13437
+## 888 Chloramphenicol_succinate
+Affinity: -0.65561  -1.40436 (kcal/mol)
+RMSD: 5.74529
+CNNscore: 0.73278 
+CNNaffinity: 3.71937
+CNNvariance: 0.43364
+## 889 Flavone
+Affinity: 0.00000  -0.26605 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90538 
+CNNaffinity: 3.70350
+CNNvariance: 0.76041
+## 890 Parecoxib
+Affinity: -0.04324  -1.26961 (kcal/mol)
+RMSD: 1.51554
+CNNscore: 0.78008 
+CNNaffinity: 4.42671
+CNNvariance: 1.35900
+## 891 Salicylamide
+Affinity: 0.00000  -0.25324 (kcal/mol)
+RMSD: 0.00314
+CNNscore: 0.89282 
+CNNaffinity: 2.73002
+CNNvariance: 0.34093
+## 892 Antazoline
+Affinity: 0.00000  -0.92885 (kcal/mol)
+RMSD: 0.11729
+CNNscore: 0.83733 
+CNNaffinity: 3.66255
+CNNvariance: 0.20793
+## 893 Dimetindene
+Affinity: 0.00000  -1.02279 (kcal/mol)
+RMSD: 0.28181
+CNNscore: 0.81585 
+CNNaffinity: 4.25116
+CNNvariance: 0.34009
+## 894 Dichloroacetic_Acid
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90100 
+CNNaffinity: 2.32668
+CNNvariance: 0.18504
+## 895 Triflusal
+Affinity: -0.05928  -0.93872 (kcal/mol)
+RMSD: 2.90444
+CNNscore: 0.86794 
+CNNaffinity: 3.32940
+CNNvariance: 0.50403
+## 896 Lurasidone
+Affinity: 0.00000  -1.42433 (kcal/mol)
+RMSD: 0.79764
+CNNscore: 0.63293 
+CNNaffinity: 5.20563
+CNNvariance: 0.39030
+## 897 Tafluprost
+Affinity: -0.40856  -4.38145 (kcal/mol)
+RMSD: 5.74972
+CNNscore: 0.66071 
+CNNaffinity: 4.27643
+CNNvariance: 0.05698
+## 898 Ioflupane_I-123
+Affinity: 0.00000  -0.74924 (kcal/mol)
+RMSD: 0.34578
+CNNscore: 0.77621 
+CNNaffinity: 4.15739
+CNNvariance: 0.27428
+## 899 Deferiprone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90400 
+CNNaffinity: 2.85291
+CNNvariance: 0.37260
+## 900 Vismodegib
+Affinity: -0.46916  -0.82915 (kcal/mol)
+RMSD: 4.62757
+CNNscore: 0.81406 
+CNNaffinity: 4.82152
+CNNvariance: 0.75046
+## 901 Pitavastatin
+Affinity: -0.37712  -2.29539 (kcal/mol)
+RMSD: 5.37331
+CNNscore: 0.73203 
+CNNaffinity: 4.77655
+CNNvariance: 0.33457
+## 902 Rilpivirine
+Affinity: -0.48146  -0.87763 (kcal/mol)
+RMSD: 3.39181
+CNNscore: 0.78101 
+CNNaffinity: 4.64859
+CNNvariance: 0.67676
+## 903 Fingolimod
+Affinity: -0.67815  -3.09794 (kcal/mol)
+RMSD: 6.19514
+CNNscore: 0.65231 
+CNNaffinity: 3.84179
+CNNvariance: 0.29352
+## 904 Gabapentin_enacarbil
+Affinity: -0.11730  -1.53009 (kcal/mol)
+RMSD: 3.70991
+CNNscore: 0.69950 
+CNNaffinity: 3.74475
+CNNvariance: 0.71414
+## 905 Ruxolitinib
+Affinity: -0.31823  -0.63098 (kcal/mol)
+RMSD: 5.26909
+CNNscore: 0.79288 
+CNNaffinity: 4.40302
+CNNvariance: 0.67035
+## 906 Teriflunomide
+Affinity: 0.00000  -0.74229 (kcal/mol)
+RMSD: 0.62857
+CNNscore: 0.82686 
+CNNaffinity: 3.34253
+CNNvariance: 0.33584
+## 907 Linagliptin
+Affinity: 0.00000  -1.15030 (kcal/mol)
+RMSD: 0.59737
+CNNscore: 0.76112 
+CNNaffinity: 5.14689
+CNNvariance: 0.82091
+## 908 Perampanel
+Affinity: 0.00000  -1.13042 (kcal/mol)
+RMSD: 0.60454
+CNNscore: 0.83213 
+CNNaffinity: 4.88069
+CNNvariance: 1.39386
+## 909 Mirabegron
+Affinity: -0.31279  -1.37769 (kcal/mol)
+RMSD: 4.05720
+CNNscore: 0.69046 
+CNNaffinity: 3.94129
+CNNvariance: 0.43472
+## 910 Tofacitinib
+Affinity: 0.00000  -0.67448 (kcal/mol)
+RMSD: 0.45496
+CNNscore: 0.76142 
+CNNaffinity: 4.05319
+CNNvariance: 0.47243
+## 911 Aclidinium
+Affinity: -0.02100  -2.40604 (kcal/mol)
+RMSD: 3.44469
+CNNscore: 0.66841 
+CNNaffinity: 5.01782
+CNNvariance: 0.38848
+## 912 Enzalutamide
+Affinity: -0.00869  -0.77778 (kcal/mol)
+RMSD: 0.90395
+CNNscore: 0.74429 
+CNNaffinity: 4.68007
+CNNvariance: 1.60555
+## 913 Formestane
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.83439 
+CNNaffinity: 3.83836
+CNNvariance: 0.24429
+## 914 Canagliflozin
+Affinity: -0.15673  -1.14229 (kcal/mol)
+RMSD: 5.98526
+CNNscore: 0.71233 
+CNNaffinity: 4.47711
+CNNvariance: 0.43732
+## 915 Afatinib
+Affinity: -0.09636  -0.29184 (kcal/mol)
+RMSD: 0.48489
+CNNscore: 0.63739 
+CNNaffinity: 5.10683
+CNNvariance: 1.26432
+## 916 Levomilnacipran
+Affinity: 0.00000  -0.55535 (kcal/mol)
+RMSD: 0.89931
+CNNscore: 0.83535 
+CNNaffinity: 3.63544
+CNNvariance: 0.28429
+## 917 Dolutegravir
+Affinity: -0.01391  -0.73580 (kcal/mol)
+RMSD: 1.86059
+CNNscore: 0.76406 
+CNNaffinity: 4.40921
+CNNvariance: 0.77473
+## 918 Riociguat
+Affinity: -0.96092  -1.34614 (kcal/mol)
+RMSD: 5.69468
+CNNscore: 0.78507 
+CNNaffinity: 5.04490
+CNNvariance: 0.61975
+## 919 Chlorcyclizine
+Affinity: -0.03692  -0.54448 (kcal/mol)
+RMSD: 1.88957
+CNNscore: 0.75567 
+CNNaffinity: 3.63917
+CNNvariance: 0.25197
+## 920 Isoxsuprine
+Affinity: -0.03202  -1.15725 (kcal/mol)
+RMSD: 2.71716
+CNNscore: 0.81776 
+CNNaffinity: 3.68238
+CNNvariance: 0.23415
+## 921 Isoaminile
+Affinity: 0.00000  -0.77949 (kcal/mol)
+RMSD: 0.82246
+CNNscore: 0.80781 
+CNNaffinity: 3.60824
+CNNvariance: 0.30502
+## 922 Ifenprodil
+Affinity: -0.06270  -0.86962 (kcal/mol)
+RMSD: 1.28813
+CNNscore: 0.79151 
+CNNaffinity: 3.77844
+CNNvariance: 0.31790
+## 923 Hexetidine
+Affinity: -0.27348  -1.77037 (kcal/mol)
+RMSD: 6.40069
+CNNscore: 0.65679 
+CNNaffinity: 3.96620
+CNNvariance: 0.09309
+## 924 Gemeprost
+Affinity: -0.11740  -1.50342 (kcal/mol)
+RMSD: 1.81680
+CNNscore: 0.70334 
+CNNaffinity: 3.89808
+CNNvariance: 0.39967
+## 925 Fursultiamine
+Affinity: -0.27249  -1.66489 (kcal/mol)
+RMSD: 7.22877
+CNNscore: 0.69059 
+CNNaffinity: 4.19391
+CNNvariance: 0.30805
+## 926 Fluocortolone
+Affinity: 0.00000  -0.25087 (kcal/mol)
+RMSD: 0.99519
+CNNscore: 0.81443 
+CNNaffinity: 4.10245
+CNNvariance: 0.20109
+## 927 Fluclorolone_acetonide
+Affinity: -0.13351  -0.36660 (kcal/mol)
+RMSD: 4.43747
+CNNscore: 0.78229 
+CNNaffinity: 4.30770
+CNNvariance: 0.14133
+## 928 Floctafenine
+Affinity: -0.01033  -2.06401 (kcal/mol)
+RMSD: 1.23135
+CNNscore: 0.81681 
+CNNaffinity: 4.32048
+CNNvariance: 0.66160
+## 929 Fenbufen
+Affinity: -0.54015  -0.86637 (kcal/mol)
+RMSD: 3.79385
+CNNscore: 0.85404 
+CNNaffinity: 3.52936
+CNNvariance: 0.37483
+## 930 Etidocaine
+Affinity: -0.02900  -1.11326 (kcal/mol)
+RMSD: 1.55941
+CNNscore: 0.78187 
+CNNaffinity: 3.75526
+CNNvariance: 0.21756
+## 931 Ethoheptazine
+Affinity: 0.00000  -1.00612 (kcal/mol)
+RMSD: 0.90552
+CNNscore: 0.83390 
+CNNaffinity: 3.47809
+CNNvariance: 0.19462
+## 932 Articaine
+Affinity: -0.02157  -0.98628 (kcal/mol)
+RMSD: 2.18324
+CNNscore: 0.81521 
+CNNaffinity: 3.45769
+CNNvariance: 0.34422
+## 933 Canrenoic_acid
+Affinity: -0.25930  -0.30985 (kcal/mol)
+RMSD: 2.67956
+CNNscore: 0.80560 
+CNNaffinity: 4.18938
+CNNvariance: 0.36047
+## 934 Butriptyline
+Affinity: 0.00000  -1.26285 (kcal/mol)
+RMSD: 0.73234
+CNNscore: 0.76383 
+CNNaffinity: 4.03411
+CNNvariance: 0.21174
+## 935 Bromhexine
+Affinity: -0.05324  -0.84040 (kcal/mol)
+RMSD: 2.88276
+CNNscore: 0.83080 
+CNNaffinity: 4.02458
+CNNvariance: 0.35198
+## 936 Bisacodyl
+Affinity: 0.00000  -1.32205 (kcal/mol)
+RMSD: 0.72082
+CNNscore: 0.83393 
+CNNaffinity: 4.68223
+CNNvariance: 0.83791
+## 937 Suvorexant
+Affinity: -0.76136  -1.20535 (kcal/mol)
+RMSD: 5.91482
+CNNscore: 0.66859 
+CNNaffinity: 5.16041
+CNNvariance: 0.71148
+## 938 Empagliflozin
+Affinity: -0.62523  -1.55655 (kcal/mol)
+RMSD: 5.49510
+CNNscore: 0.67373 
+CNNaffinity: 3.93690
+CNNvariance: 0.41203
+## 939 Eliglustat
+Affinity: -0.32578  -2.91193 (kcal/mol)
+RMSD: 5.45689
+CNNscore: 0.66410 
+CNNaffinity: 4.21045
+CNNvariance: 0.14385
+## 940 Efinaconazole
+Affinity: -0.10844  -1.28544 (kcal/mol)
+RMSD: 3.22720
+CNNscore: 0.73914 
+CNNaffinity: 4.29176
+CNNvariance: 0.20124
+## 941 Tavaborole
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.87711 
+CNNaffinity: 2.88510
+CNNvariance: 0.48889
+## 942 Finafloxacin
+Affinity: -0.03785  -0.45555 (kcal/mol)
+RMSD: 2.22872
+CNNscore: 0.81524 
+CNNaffinity: 4.57958
+CNNvariance: 0.98148
+## 943 Ibrutinib
+Affinity: -0.05908  -0.81128 (kcal/mol)
+RMSD: 0.58751
+CNNscore: 0.75300 
+CNNaffinity: 5.09714
+CNNvariance: 0.75759
+## 944 Idelalisib
+Affinity: -0.01267  -1.76952 (kcal/mol)
+RMSD: 2.33698
+CNNscore: 0.78689 
+CNNaffinity: 5.84710
+CNNvariance: 1.12883
+## 945 Amorolfine
+Affinity: -0.57329  -1.36245 (kcal/mol)
+RMSD: 6.61686
+CNNscore: 0.72806 
+CNNaffinity: 4.04545
+CNNvariance: 0.21733
+## 946 Ciprofibrate
+Affinity: -0.05337  -0.44577 (kcal/mol)
+RMSD: 3.02760
+CNNscore: 0.84797 
+CNNaffinity: 3.61435
+CNNvariance: 0.47831
+## 947 Vortioxetine
+Affinity: -0.02232  -0.89611 (kcal/mol)
+RMSD: 0.26976
+CNNscore: 0.81334 
+CNNaffinity: 4.10044
+CNNvariance: 0.35548
+## 948 Trimetazidine
+Affinity: 0.00000  -0.56953 (kcal/mol)
+RMSD: 5.11730
+CNNscore: 0.84575 
+CNNaffinity: 3.38997
+CNNvariance: 0.16809
+## 949 Tibolone
+Affinity: 0.00000  -0.24011 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.81181 
+CNNaffinity: 4.29051
+CNNvariance: 0.47480
+## 950 Tasimelteon
+Affinity: -0.40942  -0.25191 (kcal/mol)
+RMSD: 4.90382
+CNNscore: 0.83716 
+CNNaffinity: 3.54682
+CNNvariance: 0.36870
+## 951 Palbociclib
+Affinity: 0.00000  -0.43078 (kcal/mol)
+RMSD: 1.75672
+CNNscore: 0.76892 
+CNNaffinity: 5.08234
+CNNvariance: 1.58204
+## 952 Olaparib
+Affinity: -0.88552  -1.16753 (kcal/mol)
+RMSD: 9.56273
+CNNscore: 0.73583 
+CNNaffinity: 5.13446
+CNNvariance: 0.56934
+## 953 Olodaterol
+Affinity: -0.00211  -0.52833 (kcal/mol)
+RMSD: 0.71854
+CNNscore: 0.75124 
+CNNaffinity: 3.92200
+CNNvariance: 0.62128
+## 954 Vilanterol
+Affinity: 0.00000  -2.28078 (kcal/mol)
+RMSD: 6.34800
+CNNscore: 0.48244 
+CNNaffinity: 3.88282
+CNNvariance: 0.66833
+## 955 Ivabradine
+Affinity: -0.04171  -2.61562 (kcal/mol)
+RMSD: 5.32951
+CNNscore: 0.72363 
+CNNaffinity: 4.82408
+CNNvariance: 0.22367
+## 956 Benzydamine
+Affinity: -0.67436  -1.52280 (kcal/mol)
+RMSD: 6.62561
+CNNscore: 0.80311 
+CNNaffinity: 3.99614
+CNNvariance: 0.14673
+## 957 Tetracaine
+Affinity: -0.17825  -0.40733 (kcal/mol)
+RMSD: 2.48891
+CNNscore: 0.83355 
+CNNaffinity: 3.22932
+CNNvariance: 0.39313
+## 958 Eugenol
+Affinity: 0.00000  -0.21413 (kcal/mol)
+RMSD: 0.02248
+CNNscore: 0.89773 
+CNNaffinity: 3.14699
+CNNvariance: 0.45316
+## 959 Amylocaine
+Affinity: -0.03269  -0.59930 (kcal/mol)
+RMSD: 3.29503
+CNNscore: 0.85547 
+CNNaffinity: 3.30858
+CNNvariance: 0.28235
+## 960 Trimebutine
+Affinity: -0.81154  -2.02578 (kcal/mol)
+RMSD: 7.03104
+CNNscore: 0.71380 
+CNNaffinity: 4.19325
+CNNvariance: 0.17873
+## 961 Tixocortol
+Affinity: -0.00311  -0.25444 (kcal/mol)
+RMSD: 0.45485
+CNNscore: 0.78934 
+CNNaffinity: 3.98473
+CNNvariance: 0.21115
+## 962 Difluocortolone
+Affinity: -0.02926  -0.19750 (kcal/mol)
+RMSD: 1.44547
+CNNscore: 0.81435 
+CNNaffinity: 4.13205
+CNNvariance: 0.14577
+## 963 Benzoyl_peroxide
+Affinity: -0.09620  -0.27609 (kcal/mol)
+RMSD: 3.96602
+CNNscore: 0.88663 
+CNNaffinity: 3.21535
+CNNvariance: 0.36299
+## 964 Quinagolide
+Affinity: -0.16160  -0.83764 (kcal/mol)
+RMSD: 4.01696
+CNNscore: 0.69626 
+CNNaffinity: 4.47192
+CNNvariance: 0.80005
+## 965 Elvitegravir
+Affinity: -0.26398  -1.59512 (kcal/mol)
+RMSD: 4.56091
+CNNscore: 0.78818 
+CNNaffinity: 5.00208
+CNNvariance: 0.53949
+## 966 Diiodohydroxyquinoline
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.86899 
+CNNaffinity: 3.78095
+CNNvariance: 0.82012
+## 967 Paraldehyde
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90699 
+CNNaffinity: 2.48324
+CNNvariance: 0.20599
+## 968 Stiripentol
+Affinity: 0.00000  -0.32294 (kcal/mol)
+RMSD: 0.01404
+CNNscore: 0.86646 
+CNNaffinity: 3.45552
+CNNvariance: 0.51878
+## 969 Eslicarbazepine_acetate
+Affinity: -0.37133  -0.34215 (kcal/mol)
+RMSD: 4.21070
+CNNscore: 0.86258 
+CNNaffinity: 4.09635
+CNNvariance: 0.54414
+## 970 Zucapsaicin
+Affinity: 0.00000  -1.08384 (kcal/mol)
+RMSD: 3.15257
+CNNscore: 0.75569 
+CNNaffinity: 3.76419
+CNNvariance: 0.32957
+## 971 Dienogest
+Affinity: -0.01810  -0.17864 (kcal/mol)
+RMSD: 0.35963
+CNNscore: 0.80738 
+CNNaffinity: 4.01042
+CNNvariance: 0.20986
+## 972 Brexpiprazole
+Affinity: -0.44679  -0.80010 (kcal/mol)
+RMSD: 4.17656
+CNNscore: 0.68259 
+CNNaffinity: 4.34527
+CNNvariance: 0.81887
+## 973 Technetium_Tc-99m_mebrofenin
+Affinity: -0.21602  -0.94512 (kcal/mol)
+RMSD: 4.79977
+CNNscore: 0.75921 
+CNNaffinity: 3.66176
+CNNvariance: 0.61442
+## 974 Florbetaben_(18F)
+Affinity: -0.17171  -0.72566 (kcal/mol)
+RMSD: 2.83737
+CNNscore: 0.81508 
+CNNaffinity: 3.79758
+CNNvariance: 0.30107
+## 975 Florbetapir_(18F)
+Affinity: 0.00000  -1.69994 (kcal/mol)
+RMSD: 2.21265
+CNNscore: 0.76370 
+CNNaffinity: 3.84119
+CNNvariance: 0.33544
+## 976 Flutemetamol_(18F)
+Affinity: -0.00285  -0.20326 (kcal/mol)
+RMSD: 0.17999
+CNNscore: 0.86953 
+CNNaffinity: 3.90692
+CNNvariance: 1.11118
+## 977 Technetium_Tc-99m_disofenin
+Affinity: -0.01004  -1.89455 (kcal/mol)
+RMSD: 0.88391
+CNNscore: 0.73790 
+CNNaffinity: 3.95673
+CNNvariance: 0.86721
+## 978 Dosulepin
+Affinity: 0.00000  -0.29560 (kcal/mol)
+RMSD: 0.03926
+CNNscore: 0.80578 
+CNNaffinity: 4.04460
+CNNvariance: 0.30400
+## 979 Dasabuvir
+Affinity: -0.75193  -0.75580 (kcal/mol)
+RMSD: 4.27040
+CNNscore: 0.73517 
+CNNaffinity: 5.24271
+CNNvariance: 1.34578
+## 980 Viloxazine
+Affinity: -0.02944  -1.06071 (kcal/mol)
+RMSD: 3.10024
+CNNscore: 0.86691 
+CNNaffinity: 3.29775
+CNNvariance: 0.21592
+## 981 Lorpiprazole
+Affinity: -0.51951  -1.00513 (kcal/mol)
+RMSD: 3.62719
+CNNscore: 0.66961 
+CNNaffinity: 4.56526
+CNNvariance: 0.21028
+## 982 Moxisylyte
+Affinity: -0.16804  -1.15605 (kcal/mol)
+RMSD: 3.18217
+CNNscore: 0.82958 
+CNNaffinity: 3.78251
+CNNvariance: 0.26537
+## 983 Pholcodine
+Affinity: -0.17296  -0.87152 (kcal/mol)
+RMSD: 4.44953
+CNNscore: 0.81352 
+CNNaffinity: 3.99586
+CNNvariance: 0.10682
+## 984 Piracetam
+Affinity: 0.00000  -0.26900 (kcal/mol)
+RMSD: 0.33578
+CNNscore: 0.91445 
+CNNaffinity: 2.54194
+CNNvariance: 0.18286
+## 985 Dexibuprofen
+Affinity: -0.00528  -0.44007 (kcal/mol)
+RMSD: 0.80897
+CNNscore: 0.85248 
+CNNaffinity: 3.31583
+CNNvariance: 0.35640
+## 986 Dexketoprofen
+Affinity: -0.00661  -0.80510 (kcal/mol)
+RMSD: 0.73804
+CNNscore: 0.86439 
+CNNaffinity: 3.57520
+CNNvariance: 0.59364
+## 987 Tolfenamic_Acid
+Affinity: -0.24801  -0.94197 (kcal/mol)
+RMSD: 5.53107
+CNNscore: 0.85526 
+CNNaffinity: 3.98160
+CNNvariance: 0.47935
+## 988 Bisoxatin
+Affinity: 0.00000  -0.86992 (kcal/mol)
+RMSD: 0.07085
+CNNscore: 0.86915 
+CNNaffinity: 4.35981
+CNNvariance: 1.16350
+## 989 Nicorandil
+Affinity: 0.00000  -0.21100 (kcal/mol)
+RMSD: 0.03217
+CNNscore: 0.86115 
+CNNaffinity: 3.19905
+CNNvariance: 0.60521
+## 990 Zotepine
+Affinity: 0.00000  -0.42401 (kcal/mol)
+RMSD: 1.41545
+CNNscore: 0.79940 
+CNNaffinity: 4.19770
+CNNvariance: 0.50134
+## 991 Lacidipine
+Affinity: -0.01735  -2.98407 (kcal/mol)
+RMSD: 0.84123
+CNNscore: 0.68274 
+CNNaffinity: 4.53158
+CNNvariance: 0.21993
+## 992 Methylene_blue
+Affinity: 0.00000  -0.14573 (kcal/mol)
+RMSD: 0.25536
+CNNscore: 0.82464 
+CNNaffinity: 4.06418
+CNNvariance: 1.43948
+## 993 Moxonidine
+Affinity: -0.00655  -0.38839 (kcal/mol)
+RMSD: 2.45379
+CNNscore: 0.85104 
+CNNaffinity: 3.48426
+CNNvariance: 0.51375
+## 994 Gimeracil
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90865 
+CNNaffinity: 2.87619
+CNNvariance: 0.54950
+## 995 Picosulfuric_acid
+Affinity: 0.00000  -1.40484 (kcal/mol)
+RMSD: 1.13772
+CNNscore: 0.82346 
+CNNaffinity: 4.75886
+CNNvariance: 0.76873
+## 996 Phenylacetic_acid
+Affinity: 0.00000  -0.00895 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89565 
+CNNaffinity: 2.75567
+CNNvariance: 0.37113
+## 997 Artesunate
+Affinity: -0.07326  -0.56869 (kcal/mol)
+RMSD: 3.95710
+CNNscore: 0.79781 
+CNNaffinity: 4.06985
+CNNvariance: 0.51922
+## 998 Activated_charcoal
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88881 
+CNNaffinity: 1.85500
+CNNvariance: 0.06847
+## 999 Lumacaftor
+Affinity: -0.53645  -0.84614 (kcal/mol)
+RMSD: 4.73662
+CNNscore: 0.81726 
+CNNaffinity: 4.90886
+CNNvariance: 0.92580
+## 1000 Molsidomine
+Affinity: -0.09298  -0.47842 (kcal/mol)
+RMSD: 5.17465
+CNNscore: 0.86778 
+CNNaffinity: 3.42695
+CNNvariance: 0.57300
+## 1001 Sacubitril
+Affinity: -0.45634  -1.77472 (kcal/mol)
+RMSD: 4.39044
+CNNscore: 0.66784 
+CNNaffinity: 4.28416
+CNNvariance: 0.37841
+## 1002 Butylscopolamine
+Affinity: -0.26971  -1.74125 (kcal/mol)
+RMSD: 4.32887
+CNNscore: 0.76180 
+CNNaffinity: 3.87604
+CNNvariance: 0.13452
+## 1003 Carindacillin
+Affinity: -0.78065  -1.60802 (kcal/mol)
+RMSD: 5.56906
+CNNscore: 0.66551 
+CNNaffinity: 4.95261
+CNNvariance: 0.74392
+## 1004 Osimertinib
+Affinity: -0.89072  -1.85316 (kcal/mol)
+RMSD: 7.27285
+CNNscore: 0.68063 
+CNNaffinity: 5.67143
+CNNvariance: 1.81248
+## 1005 Propoxycaine
+Affinity: -0.02816  -0.83691 (kcal/mol)
+RMSD: 3.15405
+CNNscore: 0.81721 
+CNNaffinity: 3.61154
+CNNvariance: 0.45068
+## 1006 Tipiracil
+Affinity: 0.00000  -0.35270 (kcal/mol)
+RMSD: 0.09500
+CNNscore: 0.82871 
+CNNaffinity: 3.57057
+CNNvariance: 0.65194
+## 1007 Pramocaine
+Affinity: -0.00255  -0.45827 (kcal/mol)
+RMSD: 0.08253
+CNNscore: 0.80831 
+CNNaffinity: 3.45680
+CNNvariance: 0.51584
+## 1008 Piperonyl_butoxide
+Affinity: -0.03828  -0.88699 (kcal/mol)
+RMSD: 2.05587
+CNNscore: 0.75297 
+CNNaffinity: 3.65168
+CNNvariance: 0.35450
+## 1009 Levobetaxolol
+Affinity: -0.39807  -2.34140 (kcal/mol)
+RMSD: 5.41228
+CNNscore: 0.76644 
+CNNaffinity: 3.53817
+CNNvariance: 0.13155
+## 1010 Hydroxyamphetamine
+Affinity: 0.00000  -0.18103 (kcal/mol)
+RMSD: 0.38234
+CNNscore: 0.88076 
+CNNaffinity: 2.81760
+CNNvariance: 0.30694
+## 1011 Sulfabenzamide
+Affinity: -0.03765  -0.21076 (kcal/mol)
+RMSD: 0.61874
+CNNscore: 0.84358 
+CNNaffinity: 3.60273
+CNNvariance: 0.83796
+## 1012 Propyliodone
+Affinity: -0.01795  -0.40516 (kcal/mol)
+RMSD: 1.97335
+CNNscore: 0.85415 
+CNNaffinity: 3.89120
+CNNvariance: 0.58040
+## 1013 Norethynodrel
+Affinity: 0.00000  -0.22703 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.81881 
+CNNaffinity: 4.15925
+CNNvariance: 0.41760
+## 1014 Lapyrium
+Affinity: 0.00000  -3.38410 (kcal/mol)
+RMSD: 5.27431
+CNNscore: 0.69294 
+CNNaffinity: 4.05212
+CNNvariance: 0.17220
+## 1015 Fluprednisolone
+Affinity: -0.30946  -0.04207 (kcal/mol)
+RMSD: 3.46864
+CNNscore: 0.83748 
+CNNaffinity: 3.84658
+CNNvariance: 0.09861
+## 1016 Meprednisone
+Affinity: -0.01162  0.42428 (kcal/mol)
+RMSD: 0.27831
+CNNscore: 0.80582 
+CNNaffinity: 4.10045
+CNNvariance: 0.29794
+## 1017 Norgestrel
+Affinity: -0.01707  -0.65528 (kcal/mol)
+RMSD: 1.76376
+CNNscore: 0.81265 
+CNNaffinity: 4.06590
+CNNvariance: 0.33958
+## 1018 Enalaprilat
+Affinity: -0.35592  -1.17765 (kcal/mol)
+RMSD: 4.43747
+CNNscore: 0.75118 
+CNNaffinity: 3.63951
+CNNvariance: 0.49909
+## 1019 Acrivastine
+Affinity: -0.27864  -1.42212 (kcal/mol)
+RMSD: 3.86638
+CNNscore: 0.79711 
+CNNaffinity: 4.48259
+CNNvariance: 0.48795
+## 1020 Avobenzone
+Affinity: 0.00000  -1.43843 (kcal/mol)
+RMSD: 1.02600
+CNNscore: 0.80840 
+CNNaffinity: 3.93797
+CNNvariance: 0.56285
+## 1021 Octinoxate
+Affinity: 0.00000  -1.51327 (kcal/mol)
+RMSD: 3.53339
+CNNscore: 0.78643 
+CNNaffinity: 3.87979
+CNNvariance: 0.44327
+## 1022 Simethicone
+Affinity: 0.00000  0.01802 (kcal/mol)
+RMSD: 0.14472
+CNNscore: 0.85957 
+CNNaffinity: 2.26616
+CNNvariance: 0.12002
+## 1023 Mequinol
+Affinity: 0.00000  -0.02152 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91382 
+CNNaffinity: 2.63561
+CNNvariance: 0.36600
+## 1024 Hydroquinone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90311 
+CNNaffinity: 2.48880
+CNNvariance: 0.34768
+## 1025 Methyl_salicylate
+Affinity: 0.00000  -0.14161 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90817 
+CNNaffinity: 2.72202
+CNNvariance: 0.30697
+## 1026 Dexchlorpheniramine_maleate
+Affinity: -0.02420  -0.87268 (kcal/mol)
+RMSD: 1.54596
+CNNscore: 0.84456 
+CNNaffinity: 3.97385
+CNNvariance: 0.38482
+## 1027 Ixazomib
+Affinity: -0.27917  -1.31860 (kcal/mol)
+RMSD: 5.72827
+CNNscore: 0.58667 
+CNNaffinity: 3.50833
+CNNvariance: 0.45955
+## 1028 Levmetamfetamine
+Affinity: 0.00000  -0.25196 (kcal/mol)
+RMSD: 0.39417
+CNNscore: 0.83829 
+CNNaffinity: 2.67913
+CNNvariance: 0.16734
+## 1029 Phenyl_salicylate
+Affinity: -0.05083  -0.63194 (kcal/mol)
+RMSD: 3.24277
+CNNscore: 0.90913 
+CNNaffinity: 3.35576
+CNNvariance: 0.55437
+## 1030 Resorcinol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90127 
+CNNaffinity: 2.49631
+CNNvariance: 0.34941
+## 1031 Meradimate
+Affinity: -0.62138  -1.03466 (kcal/mol)
+RMSD: 6.60700
+CNNscore: 0.81165 
+CNNaffinity: 4.03033
+CNNvariance: 0.35283
+## 1032 N-acetyltyrosine
+Affinity: -0.34023  -0.47513 (kcal/mol)
+RMSD: 5.99830
+CNNscore: 0.83915 
+CNNaffinity: 3.23771
+CNNvariance: 0.48091
+## 1033 Ensulizole
+Affinity: -0.02383  -0.23752 (kcal/mol)
+RMSD: 1.32806
+CNNscore: 0.89602 
+CNNaffinity: 3.90220
+CNNvariance: 0.83408
+Amiloxate | pose 1045 | ligand outside box
+## 1034 Chloroxylenol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88923 
+CNNaffinity: 2.97120
+CNNvariance: 0.39806
+## 1035 Oxyquinoline
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90609 
+CNNaffinity: 3.01125
+CNNvariance: 0.54467
+## 1036 Butamben
+Affinity: -0.01268  -0.47440 (kcal/mol)
+RMSD: 1.34855
+CNNscore: 0.88241 
+CNNaffinity: 3.18923
+CNNvariance: 0.51132
+## 1037 Pyrantel
+Affinity: 0.00000  -0.19251 (kcal/mol)
+RMSD: 0.00222
+CNNscore: 0.87115 
+CNNaffinity: 3.31281
+CNNvariance: 0.26944
+## 1038 Anthralin
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89586 
+CNNaffinity: 3.59457
+CNNvariance: 0.59585
+## 1039 Phenyltoloxamine
+Affinity: -0.76586  -1.00622 (kcal/mol)
+RMSD: 6.58438
+CNNscore: 0.77568 
+CNNaffinity: 3.65597
+CNNvariance: 0.09890
+## 1040 Tetrofosmin
+Affinity: -0.15219  -0.85308 (kcal/mol)
+RMSD: 3.18544
+CNNscore: 0.38632 
+CNNaffinity: 2.88995
+CNNvariance: 0.34522
+## 1041 Homatropine
+Affinity: -0.21820  -0.95035 (kcal/mol)
+RMSD: 3.68934
+CNNscore: 0.84637 
+CNNaffinity: 3.47958
+CNNvariance: 0.21937
+## 1042 Sulisobenzone
+Affinity: -0.04917  -1.17780 (kcal/mol)
+RMSD: 1.69720
+CNNscore: 0.88791 
+CNNaffinity: 3.81942
+CNNvariance: 0.84815
+## 1043 Pentoxyverine
+Affinity: -0.08720  -2.17535 (kcal/mol)
+RMSD: 4.36851
+CNNscore: 0.71872 
+CNNaffinity: 3.80621
+CNNvariance: 0.10238
+## 1044 Menthyl_salicylate
+Affinity: -0.75188  -1.46327 (kcal/mol)
+RMSD: 8.14676
+CNNscore: 0.78369 
+CNNaffinity: 3.82736
+CNNvariance: 0.36042
+## 1045 Amiloxate
+Affinity: -1.11398  -0.84497 (kcal/mol)
+RMSD: 7.97646
+CNNscore: 0.76285 
+CNNaffinity: 3.89145
+CNNvariance: 0.57275
+## 1046 Enzacamene
+Affinity: -0.32533  -0.53671 (kcal/mol)
+RMSD: 5.36253
+CNNscore: 0.83391 
+CNNaffinity: 3.97276
+CNNvariance: 0.38319
+## 1047 Dioxybenzone
+Affinity: -0.13073  -0.76023 (kcal/mol)
+RMSD: 4.30656
+CNNscore: 0.88622 
+CNNaffinity: 3.43553
+CNNvariance: 0.49747
+## 1048 Thonzylamine
+Affinity: -0.55360  -0.98302 (kcal/mol)
+RMSD: 4.28097
+CNNscore: 0.81531 
+CNNaffinity: 3.81562
+CNNvariance: 0.52635
+## 1049 Cyclomethicone_5
+Affinity: -0.03263  0.00000 (kcal/mol)
+RMSD: 0.95218
+CNNscore: 0.64906 
+CNNaffinity: 2.69243
+CNNvariance: 0.06358
+## 1050 Hexylresorcinol
+Affinity: -0.00235  -0.85055 (kcal/mol)
+RMSD: 3.37051
+CNNscore: 0.87231 
+CNNaffinity: 3.34885
+CNNvariance: 0.48525
+## 1051 Methyl_undecenoyl_leucinate
+Affinity: -1.77220  -2.08175 (kcal/mol)
+RMSD: 11.26206
+CNNscore: 0.49678 
+CNNaffinity: 3.73696
+CNNvariance: 0.04471
+## 1052 DL-Methylephedrine
+Affinity: -0.00294  -0.33714 (kcal/mol)
+RMSD: 0.86413
+CNNscore: 0.86552 
+CNNaffinity: 2.77437
+CNNvariance: 0.21341
+## 1053 Diethyltoluamide
+Affinity: 0.00000  -0.42960 (kcal/mol)
+RMSD: 0.64249
+CNNscore: 0.86766 
+CNNaffinity: 3.18590
+CNNvariance: 0.32356
+## 1054 Vanillyl_butyl_ether
+Affinity: 0.00000  -0.95262 (kcal/mol)
+RMSD: 2.47848
+CNNscore: 0.88161 
+CNNaffinity: 3.29453
+CNNvariance: 0.52869
+## 1055 Phenoxyethanol
+Affinity: -0.01503  -0.17031 (kcal/mol)
+RMSD: 0.93863
+CNNscore: 0.88303 
+CNNaffinity: 2.54878
+CNNvariance: 0.26268
+## 1056 Methscopolamine
+Affinity: -0.05984  -1.54750 (kcal/mol)
+RMSD: 3.42522
+CNNscore: 0.81570 
+CNNaffinity: 3.43313
+CNNvariance: 0.07972
+## 1057 Glycol_salicylate
+Affinity: 0.00000  -0.37829 (kcal/mol)
+RMSD: 0.05082
+CNNscore: 0.90672 
+CNNaffinity: 2.86239
+CNNvariance: 0.40730
+## 1058 Dipyrithione
+Affinity: -0.27425  -0.42938 (kcal/mol)
+RMSD: 6.94554
+CNNscore: 0.86148 
+CNNaffinity: 3.76914
+CNNvariance: 0.51447
+## 1059 Tetradecyl_hydrogen_sulfate_(ester)
+Affinity: -0.29162  -1.90902 (kcal/mol)
+RMSD: 7.60172
+CNNscore: 0.67870 
+CNNaffinity: 3.88039
+CNNvariance: 0.31020
+## 1060 Kinetin
+Affinity: 0.00000  -0.21475 (kcal/mol)
+RMSD: 0.02679
+CNNscore: 0.83542 
+CNNaffinity: 3.55047
+CNNvariance: 0.66926
+## 1061 Guaiacol
+Affinity: 0.00000  -0.02682 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90958 
+CNNaffinity: 2.73628
+CNNvariance: 0.38498
+## 1062 Selexipag
+Affinity: -0.20095  -1.27508 (kcal/mol)
+RMSD: 3.69498
+CNNscore: 0.71584 
+CNNaffinity: 4.61417
+CNNvariance: 0.68411
+## 1063 Alectinib
+Affinity: -1.67603  -0.80189 (kcal/mol)
+RMSD: 7.01726
+CNNscore: 0.76577 
+CNNaffinity: 5.29712
+CNNvariance: 0.33387
+## 1064 Chlorobutanol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.86928 
+CNNaffinity: 2.62329
+CNNvariance: 0.39804
+## 1065 Lesinurad
+Affinity: 0.00000  -0.82938 (kcal/mol)
+RMSD: 0.85785
+CNNscore: 0.80247 
+CNNaffinity: 4.48969
+CNNvariance: 0.63840
+## 1066 Padimate_O
+Affinity: -0.09425  -1.97434 (kcal/mol)
+RMSD: 3.88680
+CNNscore: 0.80953 
+CNNaffinity: 3.66442
+CNNvariance: 0.35445
+## 1067 Pipradrol
+Affinity: 0.00000  -0.48379 (kcal/mol)
+RMSD: 0.29118
+CNNscore: 0.79587 
+CNNaffinity: 3.58788
+CNNvariance: 0.25596
+## 1068 Etafedrine
+Affinity: 0.00000  -0.67491 (kcal/mol)
+RMSD: 1.89602
+CNNscore: 0.85994 
+CNNaffinity: 2.89821
+CNNvariance: 0.17316
+## 1069 Thimerosal
+Affinity: 0.00000  -0.03175 (kcal/mol)
+RMSD: 0.42912
+CNNscore: 0.87751 
+CNNaffinity: 3.13588
+CNNvariance: 0.55819
+## 1070 Bilastine
+Affinity: -0.31938  -1.55838 (kcal/mol)
+RMSD: 3.51071
+CNNscore: 0.69670 
+CNNaffinity: 4.69251
+CNNvariance: 0.25613
+## 1071 Normethadone
+Affinity: -0.05642  -0.58889 (kcal/mol)
+RMSD: 4.14880
+CNNscore: 0.78428 
+CNNaffinity: 4.03550
+CNNvariance: 0.29312
+## 1072 Oxilofrine
+Affinity: 0.00000  -0.29126 (kcal/mol)
+RMSD: 0.56652
+CNNscore: 0.87340 
+CNNaffinity: 2.79722
+CNNvariance: 0.29427
+## 1073 Gestrinone
+Affinity: -0.63458  -0.39894 (kcal/mol)
+RMSD: 7.53761
+CNNscore: 0.77728 
+CNNaffinity: 4.20730
+CNNvariance: 0.23820
+## 1074 Dehydrocholic_acid
+Affinity: -0.61578  -0.64765 (kcal/mol)
+RMSD: 5.59948
+CNNscore: 0.77747 
+CNNaffinity: 4.45020
+CNNvariance: 0.36193
+## 1075 Laropiprant
+Affinity: -0.22454  -1.39509 (kcal/mol)
+RMSD: 4.15175
+CNNscore: 0.79182 
+CNNaffinity: 5.06094
+CNNvariance: 0.83872
+## 1076 Isavuconazole
+Affinity: -0.05253  -1.76630 (kcal/mol)
+RMSD: 2.54208
+CNNscore: 0.77252 
+CNNaffinity: 5.29721
+CNNvariance: 0.74285
+## 1077 Nomegestrol
+Affinity: -0.99917  -0.13533 (kcal/mol)
+RMSD: 5.82874
+CNNscore: 0.81696 
+CNNaffinity: 4.19421
+CNNvariance: 0.23374
+## 1078 Amifampridine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88430 
+CNNaffinity: 2.54523
+CNNvariance: 0.42714
+## 1079 Pitolisant
+Affinity: -0.89503  -1.42496 (kcal/mol)
+RMSD: 8.27725
+CNNscore: 0.63874 
+CNNaffinity: 3.70481
+CNNvariance: 0.08282
+## 1080 Tafamidis
+Affinity: 0.00000  -0.27656 (kcal/mol)
+RMSD: 0.12603
+CNNscore: 0.84656 
+CNNaffinity: 4.03429
+CNNvariance: 1.11668
+## 1081 Curcumin
+Affinity: -0.25995  -1.61176 (kcal/mol)
+RMSD: 4.62698
+CNNscore: 0.81539 
+CNNaffinity: 4.31987
+CNNvariance: 0.48608
+## 1082 Tropisetron
+Affinity: -0.01847  -0.80851 (kcal/mol)
+RMSD: 1.55483
+CNNscore: 0.86655 
+CNNaffinity: 3.84806
+CNNvariance: 0.43262
+## 1083 Acalabrutinib
+Affinity: -1.02144  -1.37228 (kcal/mol)
+RMSD: 4.12087
+CNNscore: 0.71942 
+CNNaffinity: 5.21650
+CNNvariance: 1.34459
+## 1084 Ribociclib
+Affinity: -0.00943  -0.67201 (kcal/mol)
+RMSD: 2.39022
+CNNscore: 0.76548 
+CNNaffinity: 4.79064
+CNNvariance: 1.63999
+## 1085 Rilmenidine
+Affinity: 0.00000  -0.46435 (kcal/mol)
+RMSD: 0.31270
+CNNscore: 0.86031 
+CNNaffinity: 3.15619
+CNNvariance: 0.40784
+## 1086 Benfotiamine
+Affinity: -0.04262  -2.15251 (kcal/mol)
+RMSD: 2.35082
+CNNscore: 0.64414 
+CNNaffinity: 4.60914
+CNNvariance: 0.64318
+## 1087 Clobetasol
+Affinity: -0.86699  0.37369 (kcal/mol)
+RMSD: 5.43682
+CNNscore: 0.79688 
+CNNaffinity: 4.01011
+CNNvariance: 0.07282
+## 1088 Talazoparib
+Affinity: -0.96134  -0.53206 (kcal/mol)
+RMSD: 5.78954
+CNNscore: 0.77283 
+CNNaffinity: 5.34764
+CNNvariance: 1.32135
+## 1089 Zytron
+Affinity: 0.00000  0.08239 (kcal/mol)
+RMSD: 1.31658
+CNNscore: 0.78258 
+CNNaffinity: 3.73704
+CNNvariance: 0.56147
+## 1090 Capmatinib
+Affinity: -0.38418  -1.09173 (kcal/mol)
+RMSD: 7.18866
+CNNscore: 0.79739 
+CNNaffinity: 5.20552
+CNNvariance: 0.76687
+## 1091 Niraparib
+Affinity: -0.00393  -0.81663 (kcal/mol)
+RMSD: 0.02820
+CNNscore: 0.81161 
+CNNaffinity: 4.02283
+CNNvariance: 0.95106
+## 1092 Bictegravir
+Affinity: -0.56649  -0.88922 (kcal/mol)
+RMSD: 4.44487
+CNNscore: 0.78688 
+CNNaffinity: 4.70750
+CNNvariance: 0.58655
+## 1093 Baricitinib
+Affinity: -0.03383  -0.39344 (kcal/mol)
+RMSD: 3.04344
+CNNscore: 0.78256 
+CNNaffinity: 4.69686
+CNNvariance: 1.00967
+## 1094 Esketamine
+Affinity: 0.00000  -0.05704 (kcal/mol)
+RMSD: 0.22159
+CNNscore: 0.86972 
+CNNaffinity: 3.50685
+CNNvariance: 0.23718
+## 1095 Ertugliflozin
+Affinity: -0.33247  -1.59961 (kcal/mol)
+RMSD: 4.00463
+CNNscore: 0.73579 
+CNNaffinity: 4.06193
+CNNvariance: 0.23618
+## 1096 Apalutamide
+Affinity: -0.79818  -1.07091 (kcal/mol)
+RMSD: 7.26733
+CNNscore: 0.76310 
+CNNaffinity: 5.11457
+CNNvariance: 1.15238
+## 1097 Valbenazine
+Affinity: -0.03505  -1.83007 (kcal/mol)
+RMSD: 2.05038
+CNNscore: 0.71678 
+CNNaffinity: 4.43199
+CNNvariance: 0.28612
+## 1098 Deflazacort
+Affinity: -1.09035  -0.38674 (kcal/mol)
+RMSD: 5.82030
+CNNscore: 0.74405 
+CNNaffinity: 4.30908
+CNNvariance: 0.03883
+## 1099 Delafloxacin
+Affinity: -0.25623  -1.14731 (kcal/mol)
+RMSD: 3.41967
+CNNscore: 0.78877 
+CNNaffinity: 5.07188
+CNNvariance: 1.74318
+## 1100 Duvelisib
+Affinity: 0.00000  -1.58227 (kcal/mol)
+RMSD: 1.53188
+CNNscore: 0.78937 
+CNNaffinity: 5.61272
+CNNvariance: 1.00393
+## 1101 Binimetinib
+Affinity: 0.00000  -1.77409 (kcal/mol)
+RMSD: 0.93345
+CNNscore: 0.78891 
+CNNaffinity: 4.98710
+CNNvariance: 1.44711
+## 1102 Glasdegib
+Affinity: -0.09056  -0.63611 (kcal/mol)
+RMSD: 3.18506
+CNNscore: 0.76471 
+CNNaffinity: 4.13145
+CNNvariance: 0.35301
+## 1103 Benznidazole
+Affinity: -0.19823  -0.93377 (kcal/mol)
+RMSD: 5.32009
+CNNscore: 0.82705 
+CNNaffinity: 3.60693
+CNNvariance: 0.43722
+## 1104 Tecovirimat
+Affinity: -0.37805  -0.61730 (kcal/mol)
+RMSD: 3.57245
+CNNscore: 0.73215 
+CNNaffinity: 4.46098
+CNNvariance: 0.80821
+## 1105 Vaborbactam
+Affinity: 0.00000  -0.96496 (kcal/mol)
+RMSD: 1.63691
+CNNscore: 0.72132 
+CNNaffinity: 3.48784
+CNNvariance: 0.79437
+## 1106 Lorlatinib
+Affinity: -0.03310  -0.14869 (kcal/mol)
+RMSD: 0.36667
+CNNscore: 0.76479 
+CNNaffinity: 5.25824
+CNNvariance: 1.11214
+## 1107 Deutetrabenazine
+Affinity: 0.00000  -0.31355 (kcal/mol)
+RMSD: 0.21907
+CNNscore: 0.83603 
+CNNaffinity: 4.00675
+CNNvariance: 0.75056
+## 1108 Edaravone
+Affinity: 0.00000  -0.08546 (kcal/mol)
+RMSD: 0.26398
+CNNscore: 0.90172 
+CNNaffinity: 3.26508
+CNNvariance: 0.48741
+## 1109 Propiverine
+Affinity: -0.02984  -1.37998 (kcal/mol)
+RMSD: 1.56175
+CNNscore: 0.76947 
+CNNaffinity: 4.24259
+CNNvariance: 0.30354
+## 1110 Nefopam
+Affinity: 0.00000  -0.34093 (kcal/mol)
+RMSD: 0.07814
+CNNscore: 0.83074 
+CNNaffinity: 3.39213
+CNNvariance: 0.23864
+## 1111 P-nitrobiphenyl
+Affinity: -0.04441  -0.38784 (kcal/mol)
+RMSD: 3.02033
+CNNscore: 0.88277 
+CNNaffinity: 3.43858
+CNNvariance: 0.49862
+## 1112 Doravirine
+Affinity: -0.56259  -1.05975 (kcal/mol)
+RMSD: 5.56431
+CNNscore: 0.79017 
+CNNaffinity: 4.67559
+CNNvariance: 0.59183
+## 1113 Cantharidin
+Affinity: -0.02295  0.00000 (kcal/mol)
+RMSD: 1.11329
+CNNscore: 0.89400 
+CNNaffinity: 2.89233
+CNNvariance: 0.20190
+## 1114 Rucaparib
+Affinity: -0.42545  -0.62502 (kcal/mol)
+RMSD: 4.47889
+CNNscore: 0.84614 
+CNNaffinity: 4.01950
+CNNvariance: 0.36055
+## 1115 Temocillin
+Affinity: -0.68863  -0.22016 (kcal/mol)
+RMSD: 5.37267
+CNNscore: 0.74468 
+CNNaffinity: 4.02734
+CNNvariance: 0.65184
+## 1116 Betrixaban
+Affinity: 0.00000  -1.35269 (kcal/mol)
+RMSD: 1.18310
+CNNscore: 0.67808 
+CNNaffinity: 4.44893
+CNNvariance: 1.03146
+## 1117 Bromperidol
+Affinity: -0.18775  -1.46860 (kcal/mol)
+RMSD: 3.12628
+CNNscore: 0.74448 
+CNNaffinity: 4.13695
+CNNvariance: 0.12758
+## 1118 Lynestrenol
+Affinity: -0.02559  -0.22981 (kcal/mol)
+RMSD: 0.10939
+CNNscore: 0.80834 
+CNNaffinity: 3.99569
+CNNvariance: 0.28325
+## 1119 Piritramide
+Affinity: -1.31317  -1.27582 (kcal/mol)
+RMSD: 9.74998
+CNNscore: 0.62700 
+CNNaffinity: 4.81802
+CNNvariance: 0.26677
+## 1120 Oxetacaine
+Affinity: -0.02994  -2.22903 (kcal/mol)
+RMSD: 1.01786
+CNNscore: 0.59533 
+CNNaffinity: 4.45021
+CNNvariance: 0.17050
+## 1121 Benzodiazepine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88119 
+CNNaffinity: 2.97361
+CNNvariance: 0.29654
+## 1122 Mebeverine
+Affinity: 0.00000  -3.98006 (kcal/mol)
+RMSD: 4.85407
+CNNscore: 0.74556 
+CNNaffinity: 4.46016
+CNNvariance: 0.19688
+## 1123 Protionamide
+Affinity: -0.00692  -0.24772 (kcal/mol)
+RMSD: 0.11907
+CNNscore: 0.87388 
+CNNaffinity: 3.25559
+CNNvariance: 0.46749
+## 1124 Fenpropidin
+Affinity: -0.27321  -0.86824 (kcal/mol)
+RMSD: 3.88825
+CNNscore: 0.77538 
+CNNaffinity: 3.74575
+CNNvariance: 0.12788
+## 1125 Dinoprost
+Affinity: -0.36236  -2.06668 (kcal/mol)
+RMSD: 5.95176
+CNNscore: 0.68794 
+CNNaffinity: 3.67754
+CNNvariance: 0.13293
+## 1126 Perflubutane
+Affinity: 0.00000  -0.21764 (kcal/mol)
+RMSD: 0.16046
+CNNscore: 0.87783 
+CNNaffinity: 3.05574
+CNNvariance: 0.71521
+## 1127 Secnidazole
+Affinity: 0.00000  -0.59472 (kcal/mol)
+RMSD: 0.53183
+CNNscore: 0.90028 
+CNNaffinity: 3.27826
+CNNvariance: 0.52067
+## 1128 Pegvaliase
+Affinity: -0.12341  -1.07472 (kcal/mol)
+RMSD: 3.00424
+CNNscore: 0.43003 
+CNNaffinity: 2.94970
+CNNvariance: 0.65902
+## 1129 Benperidol
+Affinity: -0.33648  -1.12097 (kcal/mol)
+RMSD: 3.80504
+CNNscore: 0.76710 
+CNNaffinity: 4.37837
+CNNvariance: 0.22372
+## 1130 Nicoboxil
+Affinity: 0.00000  -1.14383 (kcal/mol)
+RMSD: 2.55624
+CNNscore: 0.85760 
+CNNaffinity: 3.24600
+CNNvariance: 0.47798
+## 1131 Ozenoxacin
+Affinity: -0.72195  -0.91613 (kcal/mol)
+RMSD: 4.99812
+CNNscore: 0.83179 
+CNNaffinity: 4.58432
+CNNvariance: 0.78253
+## 1132 Isoxaflutole
+Affinity: 0.00000  -0.53370 (kcal/mol)
+RMSD: 1.38135
+CNNscore: 0.82587 
+CNNaffinity: 4.46258
+CNNvariance: 0.79277
+## 1133 Methylprednisone
+Affinity: -0.71215  -0.36019 (kcal/mol)
+RMSD: 3.95298
+CNNscore: 0.83185 
+CNNaffinity: 4.07400
+CNNvariance: 0.14997
+## 1134 Parthenolide
+Affinity: -0.04020  0.00000 (kcal/mol)
+RMSD: 0.54782
+CNNscore: 0.83028 
+CNNaffinity: 3.47188
+CNNvariance: 0.23568
+## 1135 Norflurane
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91777 
+CNNaffinity: 2.38623
+CNNvariance: 0.28327
+## 1136 Pentafluoropropane
+Affinity: 0.00000  -0.07081 (kcal/mol)
+RMSD: 0.00009
+CNNscore: 0.90711 
+CNNaffinity: 2.63293
+CNNvariance: 0.40699
+## 1137 Levosalbutamol
+Affinity: -0.01224  -0.25371 (kcal/mol)
+RMSD: 0.16603
+CNNscore: 0.83382 
+CNNaffinity: 2.98570
+CNNvariance: 0.39716
+## 1138 Levomenol
+Affinity: 0.00000  -1.28610 (kcal/mol)
+RMSD: 2.01162
+CNNscore: 0.81148 
+CNNaffinity: 3.29619
+CNNvariance: 0.24282
+## 1139 Parachlorophenol
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.90614 
+CNNaffinity: 2.69672
+CNNvariance: 0.43688
+## 1140 Clobetasone
+Affinity: 0.00000  0.66128 (kcal/mol)
+RMSD: 0.02735
+CNNscore: 0.79093 
+CNNaffinity: 4.13705
+CNNvariance: 0.13710
+## 1141 Terpin_hydrate
+Affinity: 0.00000  -0.13321 (kcal/mol)
+RMSD: 0.00250
+CNNscore: 0.87170 
+CNNaffinity: 2.82542
+CNNvariance: 0.23027
+## 1142 Alclofenac
+Affinity: -0.03799  -0.60509 (kcal/mol)
+RMSD: 2.36273
+CNNscore: 0.87711 
+CNNaffinity: 3.44981
+CNNvariance: 0.53509
+## 1143 Ethyl_chloride
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91037 
+CNNaffinity: 2.14216
+CNNvariance: 0.14355
+## 1144 Dichlorobenzyl_alcohol
+Affinity: 0.00000  -0.02824 (kcal/mol)
+RMSD: 0.01060
+CNNscore: 0.89248 
+CNNaffinity: 2.91393
+CNNvariance: 0.42308
+## 1145 Trichloroethylene
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91046 
+CNNaffinity: 2.44715
+CNNvariance: 0.33785
+## 1146 Pheneticillin
+Affinity: 0.00000  -0.74934 (kcal/mol)
+RMSD: 1.00195
+CNNscore: 0.76065 
+CNNaffinity: 3.92884
+CNNvariance: 0.70873
+## 1147 Bufexamac
+Affinity: -0.06489  -0.63537 (kcal/mol)
+RMSD: 2.57453
+CNNscore: 0.82505 
+CNNaffinity: 3.30351
+CNNvariance: 0.51365
+## 1148 Bendazac
+Affinity: -0.12168  -0.86495 (kcal/mol)
+RMSD: 4.81770
+CNNscore: 0.87818 
+CNNaffinity: 3.73076
+CNNvariance: 0.57132
+## 1149 Cyclopenthiazide
+Affinity: -0.02701  -0.37321 (kcal/mol)
+RMSD: 1.41500
+CNNscore: 0.75359 
+CNNaffinity: 4.32899
+CNNvariance: 1.37926
+## 1150 Mephenesin
+Affinity: 0.00000  -0.15715 (kcal/mol)
+RMSD: 0.01407
+CNNscore: 0.88197 
+CNNaffinity: 2.88960
+CNNvariance: 0.44584
+## 1151 Methoxyphenamine
+Affinity: 0.00000  -0.32955 (kcal/mol)
+RMSD: 0.55929
+CNNscore: 0.86389 
+CNNaffinity: 2.92000
+CNNvariance: 0.28161
+## 1152 Benorilate
+Affinity: -0.00226  -1.31871 (kcal/mol)
+RMSD: 4.92961
+CNNscore: 0.87324 
+CNNaffinity: 3.96454
+CNNvariance: 0.77162
+## 1153 Acemetacin
+Affinity: -0.18517  -1.29716 (kcal/mol)
+RMSD: 3.04507
+CNNscore: 0.82905 
+CNNaffinity: 4.46159
+CNNvariance: 0.84356
+## 1154 Iodoform
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.87630 
+CNNaffinity: 2.58198
+CNNvariance: 0.48828
+## 1155 Artemotil
+Affinity: 0.00000  -0.22434 (kcal/mol)
+RMSD: 0.05618
+CNNscore: 0.82867 
+CNNaffinity: 3.66120
+CNNvariance: 0.29380
+## 1156 Anethole_trithione
+Affinity: 0.00000  -0.18138 (kcal/mol)
+RMSD: 0.56208
+CNNscore: 0.79483 
+CNNaffinity: 3.48349
+CNNvariance: 0.85156
+## 1157 Dimazole
+Affinity: -0.41224  -0.84225 (kcal/mol)
+RMSD: 4.88580
+CNNscore: 0.80818 
+CNNaffinity: 3.95564
+CNNvariance: 0.32330
+## 1158 Fluticasone
+Affinity: 0.00000  -0.43317 (kcal/mol)
+RMSD: 0.41496
+CNNscore: 0.79396 
+CNNaffinity: 4.15902
+CNNvariance: 0.13834
+## 1159 Lormetazepam
+Affinity: -0.00721  -0.63955 (kcal/mol)
+RMSD: 0.47639
+CNNscore: 0.83303 
+CNNaffinity: 4.06866
+CNNvariance: 0.66901
+## 1160 Fenofibric_acid
+Affinity: -0.20333  -0.91183 (kcal/mol)
+RMSD: 2.22333
+CNNscore: 0.84947 
+CNNaffinity: 3.78126
+CNNvariance: 0.58038
+## 1161 Enasidenib
+Affinity: -0.27804  -1.23177 (kcal/mol)
+RMSD: 4.41012
+CNNscore: 0.76137 
+CNNaffinity: 5.14337
+CNNvariance: 0.55529
+## 1162 Methyl_nicotinate
+Affinity: 0.00000  -0.05404 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91300 
+CNNaffinity: 2.74424
+CNNvariance: 0.33223
+## 1163 Amylmetacresol
+Affinity: 0.00000  -0.56797 (kcal/mol)
+RMSD: 1.19806
+CNNscore: 0.88009 
+CNNaffinity: 3.36922
+CNNvariance: 0.46156
+## 1164 Netarsudil
+Affinity: -1.43606  -3.35442 (kcal/mol)
+RMSD: 8.77649
+CNNscore: 0.65080 
+CNNaffinity: 4.96690
+CNNvariance: 0.20429
+## 1165 Estradiol_acetate
+Affinity: -0.56945  -0.23171 (kcal/mol)
+RMSD: 4.91818
+CNNscore: 0.84597 
+CNNaffinity: 4.12917
+CNNvariance: 0.33587
+## 1166 Quaternium-24
+Affinity: -0.12252  -3.34073 (kcal/mol)
+RMSD: 7.44594
+CNNscore: 0.65015 
+CNNaffinity: 3.91220
+CNNvariance: 0.08447
+## 1167 Racemethionine
+Affinity: 0.00000  -0.24338 (kcal/mol)
+RMSD: 1.25630
+CNNscore: 0.84353 
+CNNaffinity: 2.41137
+CNNvariance: 0.20497
+## 1168 Benzoin
+Affinity: 0.00000  -0.83133 (kcal/mol)
+RMSD: 3.07710
+CNNscore: 0.86830 
+CNNaffinity: 3.12802
+CNNvariance: 0.29268
+## 1169 Acetyl_sulfisoxazole
+Affinity: 0.00000  -0.67736 (kcal/mol)
+RMSD: 0.46632
+CNNscore: 0.88137 
+CNNaffinity: 4.19826
+CNNvariance: 0.80323
+## 1170 Bisphenol_A_diglycidyl_ether
+Affinity: -0.06611  -1.43598 (kcal/mol)
+RMSD: 2.38697
+CNNscore: 0.81035 
+CNNaffinity: 3.96165
+CNNvariance: 0.36417
+## 1171 Butylparaben
+Affinity: -0.00235  -0.17104 (kcal/mol)
+RMSD: 0.00536
+CNNscore: 0.89398 
+CNNaffinity: 3.15458
+CNNvariance: 0.52686
+## 1172 Phenylethyl_resorcinol
+Affinity: 0.00000  -0.44953 (kcal/mol)
+RMSD: 0.13900
+CNNscore: 0.88337 
+CNNaffinity: 3.57787
+CNNvariance: 0.60357
+## 1173 Synthetic_Camphor
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88933 
+CNNaffinity: 3.03236
+CNNvariance: 0.35437
+## 1174 Dipentamethylenethiuram_disulfide
+Affinity: -0.17511  -0.69399 (kcal/mol)
+RMSD: 4.37971
+CNNscore: 0.67476 
+CNNaffinity: 4.04768
+CNNvariance: 0.31774
+## 1175 alpha-Amyl_cinnamaldehyde
+Affinity: -0.10859  -0.55887 (kcal/mol)
+RMSD: 2.90172
+CNNscore: 0.85005 
+CNNaffinity: 3.43602
+CNNvariance: 0.31220
+## 1176 Benzylparaben
+Affinity: -0.04086  -1.16836 (kcal/mol)
+RMSD: 4.70423
+CNNscore: 0.86697 
+CNNaffinity: 3.29314
+CNNvariance: 0.51962
+## 1177 Propylparaben
+Affinity: -0.03900  -0.43734 (kcal/mol)
+RMSD: 2.97083
+CNNscore: 0.89456 
+CNNaffinity: 2.98622
+CNNvariance: 0.44174
+## 1178 Tetramethylthiuram_monosulfide
+Affinity: -0.01516  -0.40958 (kcal/mol)
+RMSD: 1.01487
+CNNscore: 0.82248 
+CNNaffinity: 2.81984
+CNNvariance: 0.25217
+## 1179 Geraniol
+Affinity: 0.00000  -0.45633 (kcal/mol)
+RMSD: 0.97158
+CNNscore: 0.84969 
+CNNaffinity: 2.88050
+CNNvariance: 0.31475
+## 1180 Cinnamaldehyde
+Affinity: 0.00000  -0.10964 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.89249 
+CNNaffinity: 2.79848
+CNNvariance: 0.28139
+## 1181 Cinnamyl_alcohol
+Affinity: 0.00000  -0.11218 (kcal/mol)
+RMSD: 0.00385
+CNNscore: 0.88957 
+CNNaffinity: 2.72866
+CNNvariance: 0.25682
+## 1182 Hydroxycitronellal
+Affinity: -0.02893  -0.99793 (kcal/mol)
+RMSD: 3.42424
+CNNscore: 0.84004 
+CNNaffinity: 2.81970
+CNNvariance: 0.35057
+## 1183 Isoeugenol
+Affinity: 0.00000  -0.23702 (kcal/mol)
+RMSD: 0.47565
+CNNscore: 0.89623 
+CNNaffinity: 3.13060
+CNNvariance: 0.45794
+## 1184 Diphenylguanidine
+Affinity: -0.12276  -0.78675 (kcal/mol)
+RMSD: 4.78157
+CNNscore: 0.86366 
+CNNaffinity: 3.49718
+CNNvariance: 0.23059
+## 1185 Ditiocarb_Zinc
+Affinity: -0.01561  -0.71606 (kcal/mol)
+RMSD: 2.22179
+CNNscore: 0.69877 
+CNNaffinity: 3.51790
+CNNvariance: 0.29099
+## 1186 Zinc_Dibutyldithiocarbamate
+Affinity: -0.30882  -2.34200 (kcal/mol)
+RMSD: 1.48080
+CNNscore: 0.50449 
+CNNaffinity: 4.24970
+CNNvariance: 0.32862
+## 1187 Methylchloroisothiazolinone
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.88851 
+CNNaffinity: 2.73934
+CNNvariance: 0.46792
+## 1188 Bromothalonil
+Affinity: -0.01162  -0.12605 (kcal/mol)
+RMSD: 1.54719
+CNNscore: 0.78060 
+CNNaffinity: 2.79649
+CNNvariance: 0.27629
+## 1189 Thiohexam
+Affinity: -0.02450  -0.22042 (kcal/mol)
+RMSD: 1.40803
+CNNscore: 0.73868 
+CNNaffinity: 3.65339
+CNNvariance: 0.93408
+## 1190 Morpholinylmercaptobenzothiazole
+Affinity: 0.00000  -0.20989 (kcal/mol)
+RMSD: 0.18099
+CNNscore: 0.81737 
+CNNaffinity: 3.44060
+CNNvariance: 0.78492
+## 1191 Methylparaben
+Affinity: 0.00000  -0.06960 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.91284 
+CNNaffinity: 2.81083
+CNNvariance: 0.41067
+## 1192 Hydrocortisone_acetate
+Affinity: -0.04699  -0.63866 (kcal/mol)
+RMSD: 2.17858
+CNNscore: 0.80217 
+CNNaffinity: 4.11918
+CNNvariance: 0.28682
+## 1193 Hydrocortisone_butyrate
+Affinity: -0.49741  -1.02845 (kcal/mol)
+RMSD: 5.20767
+CNNscore: 0.75208 
+CNNaffinity: 4.21478
+CNNvariance: 0.11594
+## 1194 Hydrocortisone_cypionate
+Affinity: -0.77209  -1.69046 (kcal/mol)
+RMSD: 3.76107
+CNNscore: 0.73776 
+CNNaffinity: 4.51066
+CNNvariance: 0.06810
+## 1195 Hydrocortisone_phosphate
+Affinity: -0.14902  -0.67801 (kcal/mol)
+RMSD: 5.56743
+CNNscore: 0.75198 
+CNNaffinity: 4.09966
+CNNvariance: 0.68007
+## 1196 Hydrocortisone_probutate
+Affinity: -0.55879  -1.83983 (kcal/mol)
+RMSD: 5.52347
+CNNscore: 0.74162 
+CNNaffinity: 4.47634
+CNNvariance: 0.13391
+## 1197 Hydrocortisone_valerate
+Affinity: -0.51325  -1.94519 (kcal/mol)
+RMSD: 4.44501
+CNNscore: 0.74014 
+CNNaffinity: 4.23606
+CNNvariance: 0.07133
+## 1198 Hydrocortisone_succinate
+Affinity: -0.06864  -0.34598 (kcal/mol)
+RMSD: 0.68722
+CNNscore: 0.80906 
+CNNaffinity: 4.15694
+CNNvariance: 0.40139
+## 1199 Tedizolid
+Affinity: -0.00247  -0.79688 (kcal/mol)
+RMSD: 1.12930
+CNNscore: 0.80099 
+CNNaffinity: 4.17823
+CNNvariance: 0.97679
+## 1200 Eslicarbazepine
+Affinity: 0.00000  0.00000 (kcal/mol)
+RMSD: 0.00000
+CNNscore: 0.87745 
+CNNaffinity: 3.75270
+CNNvariance: 0.48374
+## 1201 Loteprednol
+Affinity: 0.00000  -0.49375 (kcal/mol)
+RMSD: 0.43410
+CNNscore: 0.79431 
+CNNaffinity: 4.08649
+CNNvariance: 0.24882
+## 1202 Oxyphenisatin_acetate
+Affinity: -0.19056  -1.30600 (kcal/mol)
+RMSD: 1.72807
+CNNscore: 0.82793 
+CNNaffinity: 4.82374
+CNNvariance: 0.98926
+## 1203 Prednisolone_phosphate
+Affinity: -0.76327  -0.88360 (kcal/mol)
+RMSD: 5.95195
+CNNscore: 0.75590 
+CNNaffinity: 4.16234
+CNNvariance: 0.35905
+## 1204 Prednisolone_tebutate
+Affinity: -0.04799  -0.81693 (kcal/mol)
+RMSD: 0.95553
+CNNscore: 0.73889 
+CNNaffinity: 4.37747
+CNNvariance: 0.28927
+## 1205 Diloxanide_furoate
+Affinity: -0.30305  -0.39049 (kcal/mol)
+RMSD: 3.67486
+CNNscore: 0.86710 
+CNNaffinity: 3.73851
+CNNvariance: 0.58417
+## 1206 Methylprednisolone_aceponate
+Affinity: -1.05714  -1.53559 (kcal/mol)
+RMSD: 5.46414
+CNNscore: 0.70617 
+CNNaffinity: 4.36936
+CNNvariance: 0.06233
+## 1207 Methylprednisolone_hemisuccinate
+Affinity: -0.64656  -1.34181 (kcal/mol)
+RMSD: 5.80826
+CNNscore: 0.76505 
+CNNaffinity: 4.31193
+CNNvariance: 0.20255
+## 1208 Prednisone_acetate
+Affinity: -0.47029  -0.77769 (kcal/mol)
+RMSD: 5.02043
+CNNscore: 0.78074 
+CNNaffinity: 4.17971
+CNNvariance: 0.10079
+## 1209 Dexamethasone_acetate
+Affinity: -0.83429  -0.58418 (kcal/mol)
+RMSD: 3.81114
+CNNscore: 0.77819 
+CNNaffinity: 4.03309
+CNNvariance: 0.05036
+## 1210 Menadiol_diphosphate
+Affinity: -0.05960  -0.54321 (kcal/mol)
+RMSD: 3.40018
+CNNscore: 0.82822 
+CNNaffinity: 3.81101
+CNNvariance: 1.25974
+## 1211 Chlorphenesin_carbamate
+Affinity: -0.15884  -0.22239 (kcal/mol)
+RMSD: 3.64597
+CNNscore: 0.85441 
+CNNaffinity: 2.96249
+CNNvariance: 0.29704
+## 1212 Paramethasone_acetate
+Affinity: -0.52512  -0.58728 (kcal/mol)
+RMSD: 4.06614
+CNNscore: 0.79077 
+CNNaffinity: 4.07031
+CNNvariance: 0.10230
+## 1213 Betamethasone_phosphate
+Affinity: 0.00000  -0.07060 (kcal/mol)
+RMSD: 0.42958
+CNNscore: 0.74056 
+CNNaffinity: 4.20155
+CNNvariance: 0.45326
+## 1214 Larotrectinib
+Affinity: -1.05504  -1.55978 (kcal/mol)
+RMSD: 5.88323
+CNNscore: 0.72421 
+CNNaffinity: 5.06426
+CNNvariance: 0.40827

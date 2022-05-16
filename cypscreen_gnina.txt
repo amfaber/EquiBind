@@ -1,0 +1,6129 @@
+              _             
+             (_)            
+   __ _ _ __  _ _ __   __ _ 
+  / _` | '_ \| | '_ \ / _` |
+ | (_| | | | | | | | | (_| |
+  \__, |_| |_|_|_| |_|\__,_|
+   __/ |                    
+  |___/                     
+SOURCE MODIFIED
+
+gnina  master:b9ae032+   Built May  3 2022.
+gnina is based on smina and AutoDock Vina.
+Please cite appropriately.
+
+Commandline: gnina -l /home/amfaber/equibind/data/results/unit_test/output.sdf -r /home/amfaber/cyp_screen/protein.pdb --minimize --autobox_ligand /home/amfaber/equibind/data/results/unit_test/output.sdf
+L-Tryptophan | pose 6 | ligand outside box
+Biotin | pose 2 | ligand outside box
+Affinity: -2.72297  -0.12015 (kcal/mol)
+RMSD: 4.85310
+CNNscore: 0.64252 
+CNNaffinity: 3.05331
+CNNvariance: 0.08479
+Affinity: 38.62435  -0.01480 (kcal/mol)
+RMSD: 1.56651
+CNNscore: 0.01668 
+CNNaffinity: 2.83794
+CNNvariance: 0.48304
+Affinity: -3.15579  -0.08586 (kcal/mol)
+RMSD: 5.58302
+CNNscore: 0.32397 
+CNNaffinity: 2.49811
+CNNvariance: 0.25241
+Affinity: -4.58035  -0.24164 (kcal/mol)
+RMSD: 5.71898
+CNNscore: 0.12153 
+CNNaffinity: 2.90237
+CNNvariance: 0.56570
+Affinity: 19.26880  -0.05976 (kcal/mol)
+RMSD: 2.15043
+CNNscore: 0.44605 
+CNNaffinity: 3.31855
+CNNvariance: 0.17370
+Flunisolide | pose 16 | ligand outside box
+Affinity: -3.57964  -0.83847 (kcal/mol)
+RMSD: 7.24013
+CNNscore: 0.36294 
+CNNaffinity: 3.77483
+CNNvariance: 0.03975
+Affinity: -0.61743  0.47487 (kcal/mol)
+RMSD: 7.13583
+CNNscore: 0.47864 
+CNNaffinity: 4.16804
+CNNvariance: 3.08444
+Affinity: -3.63848  -0.22670 (kcal/mol)
+RMSD: 4.20082
+CNNscore: 0.59646 
+CNNaffinity: 3.45696
+CNNvariance: 0.40549
+Affinity: -2.40065  -0.12306 (kcal/mol)
+RMSD: 5.92248
+CNNscore: 0.70153 
+CNNaffinity: 4.36497
+CNNvariance: 0.25109
+Affinity: -2.76781  -0.35500 (kcal/mol)
+RMSD: 5.91993
+CNNscore: 0.58629 
+CNNaffinity: 3.81314
+CNNvariance: 0.09295
+Affinity: -4.38481  -0.17191 (kcal/mol)
+RMSD: 6.64297
+CNNscore: 0.56575 
+CNNaffinity: 3.74108
+CNNvariance: 0.25855
+Affinity: 19.71122  0.17159 (kcal/mol)
+RMSD: 1.91331
+CNNscore: 0.38378 
+CNNaffinity: 3.54182
+CNNvariance: 0.44522
+Affinity: -1.21486  -1.15932 (kcal/mol)
+RMSD: 8.33167
+CNNscore: 0.69758 
+CNNaffinity: 4.66079
+CNNvariance: 0.62628
+Affinity: -3.64309  -1.38579 (kcal/mol)
+RMSD: 9.31745
+CNNscore: 0.53338 
+CNNaffinity: 4.21126
+CNNvariance: 0.24250
+Affinity: -2.44549  -0.63193 (kcal/mol)
+RMSD: 9.80047
+CNNscore: 0.66896 
+CNNaffinity: 5.00867
+CNNvariance: 0.23206
+Affinity: -4.50309  -1.30727 (kcal/mol)
+RMSD: 9.50346
+CNNscore: 0.27324 
+CNNaffinity: 4.21714
+CNNvariance: 0.26129
+Affinity: -4.19536  -0.21951 (kcal/mol)
+RMSD: 8.61011
+CNNscore: 0.68567 
+CNNaffinity: 4.69851
+CNNvariance: 0.01190
+Betaxolol | pose 28 | ligand outside box
+Affinity: -4.93064  -0.35760 (kcal/mol)
+RMSD: 3.80643
+CNNscore: 0.09927 
+CNNaffinity: 3.16052
+CNNvariance: 0.35859
+Affinity: -2.84453  -0.17063 (kcal/mol)
+RMSD: 6.14091
+CNNscore: 0.66601 
+CNNaffinity: 2.88065
+CNNvariance: 0.30529
+Affinity: 33.85205  -0.17843 (kcal/mol)
+RMSD: 4.77888
+CNNscore: 0.19299 
+CNNaffinity: 4.10690
+CNNvariance: 1.41209
+Affinity: -2.01269  0.00000 (kcal/mol)
+RMSD: 5.34185
+CNNscore: 0.61248 
+CNNaffinity: 2.87236
+CNNvariance: 0.08331
+Affinity: -0.90545  -0.18624 (kcal/mol)
+RMSD: 0.45335
+CNNscore: 0.69250 
+CNNaffinity: 4.14941
+CNNvariance: 0.35075
+Affinity: -2.99244  -0.81551 (kcal/mol)
+RMSD: 8.39162
+CNNscore: 0.42834 
+CNNaffinity: 3.40990
+CNNvariance: 0.46483
+Affinity: -5.08238  -1.57557 (kcal/mol)
+RMSD: 6.65519
+CNNscore: 0.11659 
+CNNaffinity: 4.55294
+CNNvariance: 0.46487
+Affinity: -1.76110  0.00409 (kcal/mol)
+RMSD: 1.10891
+CNNscore: 0.68158 
+CNNaffinity: 2.88526
+CNNvariance: 0.08647
+Affinity: -1.29629  0.11179 (kcal/mol)
+RMSD: 4.35357
+CNNscore: 0.70502 
+CNNaffinity: 2.99449
+CNNvariance: 0.45018
+Affinity: -2.01393  -1.13615 (kcal/mol)
+RMSD: 3.50915
+CNNscore: 0.62510 
+CNNaffinity: 4.09208
+CNNvariance: 0.19696
+Affinity: -1.00264  -0.68492 (kcal/mol)
+RMSD: 1.27071
+CNNscore: 0.83501 
+CNNaffinity: 3.59295
+CNNvariance: 0.14615
+Affinity: -1.58081  -0.93343 (kcal/mol)
+RMSD: 10.51764
+CNNscore: 0.59094 
+CNNaffinity: 4.10885
+CNNvariance: 0.48322
+Affinity: -4.38858  -0.40023 (kcal/mol)
+RMSD: 7.46574
+CNNscore: 0.14689 
+CNNaffinity: 4.11372
+CNNvariance: 0.29069
+Affinity: -2.92774  -1.07713 (kcal/mol)
+RMSD: 8.57880
+CNNscore: 0.70045 
+CNNaffinity: 3.81988
+CNNvariance: 0.08037
+Affinity: 38.52052  -0.61485 (kcal/mol)
+RMSD: 2.51399
+CNNscore: 0.00038 
+CNNaffinity: 3.44409
+CNNvariance: 3.30964
+Affinity: -1.63505  -1.33590 (kcal/mol)
+RMSD: 6.97107
+CNNscore: 0.80267 
+CNNaffinity: 5.65338
+CNNvariance: 0.59828
+Affinity: -1.10922  -0.38282 (kcal/mol)
+RMSD: 9.27094
+CNNscore: 0.63323 
+CNNaffinity: 4.24421
+CNNvariance: 0.30386
+Affinity: -2.91969  -0.42711 (kcal/mol)
+RMSD: 5.51857
+CNNscore: 0.63689 
+CNNaffinity: 4.47918
+CNNvariance: 0.55230
+Affinity: -1.92645  -0.27028 (kcal/mol)
+RMSD: 6.98724
+CNNscore: 0.69991 
+CNNaffinity: 4.02721
+CNNvariance: 0.09680
+Lovastatin | pose 47 | ligand outside box
+Affinity: -5.30582  -1.17404 (kcal/mol)
+RMSD: 5.47473
+CNNscore: 0.24032 
+CNNaffinity: 4.42557
+CNNvariance: 0.50501
+Affinity: -2.57337  -1.13800 (kcal/mol)
+RMSD: 6.82396
+CNNscore: 0.53901 
+CNNaffinity: 5.26001
+CNNvariance: 0.25663
+Affinity: -3.29508  -1.02231 (kcal/mol)
+RMSD: 5.82253
+CNNscore: 0.67022 
+CNNaffinity: 4.94368
+CNNvariance: 0.35816
+Affinity: -0.96263  -1.06446 (kcal/mol)
+RMSD: 5.70992
+CNNscore: 0.75459 
+CNNaffinity: 4.17350
+CNNvariance: 0.02609
+Affinity: -5.37343  -0.95550 (kcal/mol)
+RMSD: 7.02892
+CNNscore: 0.24840 
+CNNaffinity: 4.72243
+CNNvariance: 0.48371
+Affinity: -1.84300  -0.19877 (kcal/mol)
+RMSD: 6.93339
+CNNscore: 0.74451 
+CNNaffinity: 3.25507
+CNNvariance: 0.13137
+Affinity: -4.83877  0.06316 (kcal/mol)
+RMSD: 7.68548
+CNNscore: 0.16316 
+CNNaffinity: 4.66566
+CNNvariance: 0.20200
+Affinity: -3.11594  -0.87184 (kcal/mol)
+RMSD: 7.58553
+CNNscore: 0.39277 
+CNNaffinity: 3.65933
+CNNvariance: 0.29754
+Affinity: -2.39618  0.30704 (kcal/mol)
+RMSD: 5.73701
+CNNscore: 0.56494 
+CNNaffinity: 5.23022
+CNNvariance: 0.70606
+Affinity: 85.27959  0.30066 (kcal/mol)
+RMSD: 6.17262
+CNNscore: 0.00383 
+CNNaffinity: 4.30899
+CNNvariance: 1.39103
+Affinity: -1.29918  -0.18782 (kcal/mol)
+RMSD: 6.28109
+CNNscore: 0.81640 
+CNNaffinity: 3.22120
+CNNvariance: 0.10673
+Affinity: -1.80335  -1.00964 (kcal/mol)
+RMSD: 9.70192
+CNNscore: 0.51838 
+CNNaffinity: 5.53514
+CNNvariance: 0.35413
+Affinity: -3.02284  -0.20499 (kcal/mol)
+RMSD: 5.39807
+CNNscore: 0.61398 
+CNNaffinity: 3.03646
+CNNvariance: 0.05418
+Affinity: -2.79180  -0.31303 (kcal/mol)
+RMSD: 5.69082
+CNNscore: 0.52410 
+CNNaffinity: 3.22789
+CNNvariance: 0.09211
+Affinity: -5.03609  -0.49277 (kcal/mol)
+RMSD: 8.05702
+CNNscore: 0.33491 
+CNNaffinity: 3.63030
+CNNvariance: 0.41759
+Affinity: -0.83464  -0.18702 (kcal/mol)
+RMSD: 3.71103
+CNNscore: 0.87009 
+CNNaffinity: 4.33144
+CNNvariance: 0.38430
+Affinity: 20.46379  -0.25933 (kcal/mol)
+RMSD: 6.62812
+CNNscore: 0.56569 
+CNNaffinity: 3.92490
+CNNvariance: 0.19070
+Affinity: -3.60336  -0.56315 (kcal/mol)
+RMSD: 6.82258
+CNNscore: 0.41880 
+CNNaffinity: 3.93983
+CNNvariance: 0.65416
+Affinity: -2.11499  -0.34818 (kcal/mol)
+RMSD: 6.51985
+CNNscore: 0.66841 
+CNNaffinity: 4.24852
+CNNvariance: 0.24742
+Affinity: -2.93739  -0.32325 (kcal/mol)
+RMSD: 5.65591
+CNNscore: 0.42325 
+CNNaffinity: 3.42247
+CNNvariance: 0.32519
+Affinity: -2.51746  -0.28767 (kcal/mol)
+RMSD: 5.28533
+CNNscore: 0.40025 
+CNNaffinity: 3.15236
+CNNvariance: 0.05355
+Affinity: -1.27050  0.05873 (kcal/mol)
+RMSD: 4.11782
+CNNscore: 0.85289 
+CNNaffinity: 4.37765
+CNNvariance: 0.37531
+Affinity: -3.88302  -0.06358 (kcal/mol)
+RMSD: 8.47678
+CNNscore: 0.65661 
+CNNaffinity: 4.62732
+CNNvariance: 0.06591
+Affinity: -2.67807  -0.66695 (kcal/mol)
+RMSD: 4.05622
+CNNscore: 0.62193 
+CNNaffinity: 3.87327
+CNNvariance: 0.35355
+Affinity: -3.67525  -1.15313 (kcal/mol)
+RMSD: 3.27996
+CNNscore: 0.33181 
+CNNaffinity: 4.07181
+CNNvariance: 0.52126
+Affinity: 44.17635  -0.23861 (kcal/mol)
+RMSD: 1.37329
+CNNscore: 0.14090 
+CNNaffinity: 2.72758
+CNNvariance: 0.13603
+Affinity: -2.68395  -1.31525 (kcal/mol)
+RMSD: 6.33916
+CNNscore: 0.54033 
+CNNaffinity: 4.33709
+CNNvariance: 0.51952
+Affinity: -2.86521  -0.50021 (kcal/mol)
+RMSD: 2.12474
+CNNscore: 0.73695 
+CNNaffinity: 4.61655
+CNNvariance: 0.09087
+Affinity: -4.78744  -1.00154 (kcal/mol)
+RMSD: 7.76043
+CNNscore: 0.41195 
+CNNaffinity: 5.64429
+CNNvariance: 0.61903
+Affinity: -4.66601  -0.38383 (kcal/mol)
+RMSD: 5.50048
+CNNscore: 0.31330 
+CNNaffinity: 3.54770
+CNNvariance: 0.41675
+Affinity: 39.66790  -0.41994 (kcal/mol)
+RMSD: 5.77829
+CNNscore: 0.54859 
+CNNaffinity: 5.54186
+CNNvariance: 1.34517
+Affinity: 98.06012  0.45999 (kcal/mol)
+RMSD: 2.82789
+CNNscore: 0.00114 
+CNNaffinity: 4.74272
+CNNvariance: 2.42202
+Affinity: -4.59782  -1.13401 (kcal/mol)
+RMSD: 7.05297
+CNNscore: 0.42798 
+CNNaffinity: 4.16836
+CNNvariance: 0.22745
+Affinity: -2.02892  0.00000 (kcal/mol)
+RMSD: 6.24181
+CNNscore: 0.68115 
+CNNaffinity: 3.98773
+CNNvariance: 0.29570
+Affinity: -3.47705  -0.44280 (kcal/mol)
+RMSD: 4.24000
+CNNscore: 0.64283 
+CNNaffinity: 4.17318
+CNNvariance: 0.78127
+Affinity: -3.71848  -0.35296 (kcal/mol)
+RMSD: 6.83864
+CNNscore: 0.38520 
+CNNaffinity: 3.68424
+CNNvariance: 0.12704
+Raltitrexed | pose 83 | ligand outside box
+Affinity: -2.63836  -0.06369 (kcal/mol)
+RMSD: 9.33977
+CNNscore: 0.62252 
+CNNaffinity: 3.61298
+CNNvariance: 0.15623
+Affinity: 16.85448  1.67930 (kcal/mol)
+RMSD: 4.43480
+CNNscore: 0.46511 
+CNNaffinity: 3.30238
+CNNvariance: 0.13314
+Affinity: -4.61135  -0.95632 (kcal/mol)
+RMSD: 3.29913
+CNNscore: 0.35696 
+CNNaffinity: 4.83988
+CNNvariance: 0.45970
+Affinity: -2.15676  -1.47083 (kcal/mol)
+RMSD: 4.94449
+CNNscore: 0.58943 
+CNNaffinity: 3.68432
+CNNvariance: 0.09626
+Affinity: -4.36018  -1.20102 (kcal/mol)
+RMSD: 3.92852
+CNNscore: 0.35675 
+CNNaffinity: 4.71071
+CNNvariance: 0.19852
+Affinity: -3.73483  -1.73445 (kcal/mol)
+RMSD: 2.97063
+CNNscore: 0.53189 
+CNNaffinity: 5.35758
+CNNvariance: 0.24456
+Affinity: -4.51963  0.57415 (kcal/mol)
+RMSD: 5.71604
+CNNscore: 0.21767 
+CNNaffinity: 4.67503
+CNNvariance: 0.27128
+Affinity: -2.18560  -0.39256 (kcal/mol)
+RMSD: 4.89527
+CNNscore: 0.57351 
+CNNaffinity: 3.45275
+CNNvariance: 0.17215
+Affinity: -0.33462  -0.58037 (kcal/mol)
+RMSD: 2.68145
+CNNscore: 0.87480 
+CNNaffinity: 3.62847
+CNNvariance: 0.11654
+Affinity: -3.14008  -0.67328 (kcal/mol)
+RMSD: 7.87564
+CNNscore: 0.49703 
+CNNaffinity: 3.94048
+CNNvariance: 0.38931
+Affinity: -3.09420  -0.87704 (kcal/mol)
+RMSD: 4.90824
+CNNscore: 0.49566 
+CNNaffinity: 3.59333
+CNNvariance: 0.24330
+Affinity: -1.40227  1.60272 (kcal/mol)
+RMSD: 5.91265
+CNNscore: 0.62196 
+CNNaffinity: 4.70795
+CNNvariance: 0.47721
+Affinity: 74.87901  0.54810 (kcal/mol)
+RMSD: 5.26273
+CNNscore: 0.00066 
+CNNaffinity: 4.07758
+CNNvariance: 2.07004
+Affinity: -2.42980  0.00000 (kcal/mol)
+RMSD: 2.93658
+CNNscore: 0.69867 
+CNNaffinity: 3.90300
+CNNvariance: 0.10085
+Affinity: -2.11736  -0.71127 (kcal/mol)
+RMSD: 5.50139
+CNNscore: 0.66082 
+CNNaffinity: 4.06081
+CNNvariance: 0.27362
+Affinity: -2.35581  -0.79592 (kcal/mol)
+RMSD: 3.05808
+CNNscore: 0.71946 
+CNNaffinity: 4.07908
+CNNvariance: 0.06281
+Affinity: -0.68238  0.29053 (kcal/mol)
+RMSD: 8.43857
+CNNscore: 0.73917 
+CNNaffinity: 4.24784
+CNNvariance: 0.05200
+Affinity: -2.12265  -1.42676 (kcal/mol)
+RMSD: 6.89221
+CNNscore: 0.83105 
+CNNaffinity: 4.92956
+CNNvariance: 0.25900
+Affinity: -4.11322  -0.12042 (kcal/mol)
+RMSD: 3.61282
+CNNscore: 0.11248 
+CNNaffinity: 2.77401
+CNNvariance: 0.31868
+Affinity: -4.76919  -0.06292 (kcal/mol)
+RMSD: 6.29830
+CNNscore: 0.23200 
+CNNaffinity: 4.49714
+CNNvariance: 0.20555
+Affinity: 96.77437  0.31945 (kcal/mol)
+RMSD: 5.32557
+CNNscore: 0.00210 
+CNNaffinity: 4.46298
+CNNvariance: 5.67626
+Affinity: -1.66183  -0.46523 (kcal/mol)
+RMSD: 3.12691
+CNNscore: 0.70440 
+CNNaffinity: 3.67481
+CNNvariance: 0.35904
+Affinity: -1.85307  -1.22303 (kcal/mol)
+RMSD: 8.21501
+CNNscore: 0.60922 
+CNNaffinity: 4.76818
+CNNvariance: 0.61835
+Affinity: -4.05129  -0.59540 (kcal/mol)
+RMSD: 1.91985
+CNNscore: 0.25038 
+CNNaffinity: 4.00199
+CNNvariance: 0.15480
+Affinity: -3.26535  -0.40249 (kcal/mol)
+RMSD: 1.52832
+CNNscore: 0.40759 
+CNNaffinity: 3.65694
+CNNvariance: 0.05058
+Affinity: -3.74066  -0.22264 (kcal/mol)
+RMSD: 4.34105
+CNNscore: 0.46327 
+CNNaffinity: 2.90765
+CNNvariance: 0.32899
+Affinity: -3.40429  -0.57810 (kcal/mol)
+RMSD: 4.90543
+CNNscore: 0.37310 
+CNNaffinity: 3.82621
+CNNvariance: 0.23291
+Affinity: 26.74682  0.23006 (kcal/mol)
+RMSD: 2.84650
+CNNscore: 0.38087 
+CNNaffinity: 3.20307
+CNNvariance: 0.16014
+Affinity: -4.14681  -1.11894 (kcal/mol)
+RMSD: 8.05918
+CNNscore: 0.42786 
+CNNaffinity: 5.37145
+CNNvariance: 0.62968
+Affinity: -1.11441  -0.09949 (kcal/mol)
+RMSD: 4.92535
+CNNscore: 0.86399 
+CNNaffinity: 4.00914
+CNNvariance: 0.50231
+Affinity: 77.28522  0.47255 (kcal/mol)
+RMSD: 6.13025
+CNNscore: 0.02525 
+CNNaffinity: 3.27372
+CNNvariance: 3.16623
+Affinity: -3.31298  0.00000 (kcal/mol)
+RMSD: 3.85274
+CNNscore: 0.48524 
+CNNaffinity: 4.11242
+CNNvariance: 0.18594
+Affinity: -4.67987  -0.74672 (kcal/mol)
+RMSD: 5.23154
+CNNscore: 0.28981 
+CNNaffinity: 4.14546
+CNNvariance: 0.44822
+Affinity: -3.72256  0.61549 (kcal/mol)
+RMSD: 8.04816
+CNNscore: 0.36312 
+CNNaffinity: 3.69919
+CNNvariance: 0.34654
+Affinity: -1.61397  -0.98873 (kcal/mol)
+RMSD: 5.54511
+CNNscore: 0.72187 
+CNNaffinity: 4.45360
+CNNvariance: 0.60936
+Affinity: -2.11057  -0.32664 (kcal/mol)
+RMSD: 4.34170
+CNNscore: 0.59731 
+CNNaffinity: 4.29002
+CNNvariance: 0.22108
+Megestrol acetate | pose 119 | ligand outside box
+Affinity: -3.53304  -0.52941 (kcal/mol)
+RMSD: 4.46235
+CNNscore: 0.27618 
+CNNaffinity: 3.18035
+CNNvariance: 0.45611
+Affinity: -3.69145  -0.20340 (kcal/mol)
+RMSD: 6.45875
+CNNscore: 0.33907 
+CNNaffinity: 2.98171
+CNNvariance: 0.12533
+Affinity: -3.03339  -0.69535 (kcal/mol)
+RMSD: 6.25844
+CNNscore: 0.57398 
+CNNaffinity: 4.89840
+CNNvariance: 0.60024
+Affinity: -4.90696  -0.68197 (kcal/mol)
+RMSD: 8.56493
+CNNscore: 0.19593 
+CNNaffinity: 3.95623
+CNNvariance: 0.44078
+Affinity: -3.01870  -1.46893 (kcal/mol)
+RMSD: 6.30356
+CNNscore: 0.28466 
+CNNaffinity: 4.60941
+CNNvariance: 0.15783
+Affinity: -3.85587  -0.47057 (kcal/mol)
+RMSD: 7.09444
+CNNscore: 0.38126 
+CNNaffinity: 3.91546
+CNNvariance: 0.42693
+Affinity: -4.73028  -0.33424 (kcal/mol)
+RMSD: 7.92667
+CNNscore: 0.47590 
+CNNaffinity: 3.13219
+CNNvariance: 0.71199
+Affinity: -4.04448  -0.50988 (kcal/mol)
+RMSD: 9.48453
+CNNscore: 0.77452 
+CNNaffinity: 4.72974
+CNNvariance: 0.51713
+Affinity: 18.60322  0.00000 (kcal/mol)
+RMSD: 3.65484
+CNNscore: 0.55902 
+CNNaffinity: 4.00576
+CNNvariance: 0.23746
+Affinity: 29.30604  1.42248 (kcal/mol)
+RMSD: 7.96656
+CNNscore: 0.53407 
+CNNaffinity: 5.75662
+CNNvariance: 0.72196
+Levonorgestrel | pose 129 | ligand outside box
+Affinity: -5.56618  -0.15256 (kcal/mol)
+RMSD: 6.50699
+CNNscore: 0.25277 
+CNNaffinity: 4.04493
+CNNvariance: 0.64815
+Affinity: 42.99379  1.60633 (kcal/mol)
+RMSD: 8.52880
+CNNscore: 0.09861 
+CNNaffinity: 4.39738
+CNNvariance: 0.72555
+Affinity: -2.64303  0.00000 (kcal/mol)
+RMSD: 3.80682
+CNNscore: 0.40475 
+CNNaffinity: 3.86656
+CNNvariance: 0.36981
+Affinity: -3.40118  -0.42197 (kcal/mol)
+RMSD: 3.05731
+CNNscore: 0.83931 
+CNNaffinity: 4.74330
+CNNvariance: 0.68439
+Affinity: -1.37499  0.00000 (kcal/mol)
+RMSD: 4.52507
+CNNscore: 0.65564 
+CNNaffinity: 3.70989
+CNNvariance: 0.49753
+Affinity: -1.82235  -0.47944 (kcal/mol)
+RMSD: 6.05077
+CNNscore: 0.65529 
+CNNaffinity: 4.13027
+CNNvariance: 0.40498
+Affinity: -5.12372  -0.23615 (kcal/mol)
+RMSD: 3.04190
+CNNscore: 0.26198 
+CNNaffinity: 4.06477
+CNNvariance: 0.67965
+Dydrogesterone | pose 136 | ligand outside box
+Dydrogesterone | pose 136 | ligand outside box
+Affinity: -3.34377  -0.36252 (kcal/mol)
+RMSD: 4.34805
+CNNscore: 0.59575 
+CNNaffinity: 3.96415
+CNNvariance: 0.04421
+Affinity: -3.08488  -0.32105 (kcal/mol)
+RMSD: 8.77578
+CNNscore: 0.52099 
+CNNaffinity: 4.72535
+CNNvariance: 0.47871
+Affinity: -2.60528  -0.52047 (kcal/mol)
+RMSD: 4.84931
+CNNscore: 0.80688 
+CNNaffinity: 4.63983
+CNNvariance: 0.06927
+Affinity: -0.73211  -0.90789 (kcal/mol)
+RMSD: 6.84258
+CNNscore: 0.84114 
+CNNaffinity: 3.95382
+CNNvariance: 0.08076
+Affinity: 110.87097  0.57529 (kcal/mol)
+RMSD: 8.54651
+CNNscore: 0.00233 
+CNNaffinity: 3.99804
+CNNvariance: 4.72574
+Affinity: -2.60111  0.00000 (kcal/mol)
+RMSD: 1.90410
+CNNscore: 0.60801 
+CNNaffinity: 3.93149
+CNNvariance: 0.29681
+Affinity: -3.00257  -0.57610 (kcal/mol)
+RMSD: 5.73229
+CNNscore: 0.51831 
+CNNaffinity: 3.55193
+CNNvariance: 0.14259
+Affinity: -3.39546  -1.31544 (kcal/mol)
+RMSD: 5.62795
+CNNscore: 0.14762 
+CNNaffinity: 3.37378
+CNNvariance: 0.72826
+Affinity: -3.96991  -0.98177 (kcal/mol)
+RMSD: 5.14535
+CNNscore: 0.66254 
+CNNaffinity: 4.51870
+CNNvariance: 0.05051
+Affinity: -2.47877  -1.14314 (kcal/mol)
+RMSD: 6.42611
+CNNscore: 0.61947 
+CNNaffinity: 3.82862
+CNNvariance: 0.20005
+Affinity: -4.76117  -0.30027 (kcal/mol)
+RMSD: 4.43305
+CNNscore: 0.29014 
+CNNaffinity: 4.35210
+CNNvariance: 0.26101
+Affinity: 19.27588  0.29259 (kcal/mol)
+RMSD: 8.70654
+CNNscore: 0.28972 
+CNNaffinity: 4.42799
+CNNvariance: 0.39408
+Affinity: 33.65642  0.40097 (kcal/mol)
+RMSD: 5.73351
+CNNscore: 0.23976 
+CNNaffinity: 4.98682
+CNNvariance: 1.37948
+Griseofulvin | pose 149 | ligand outside box
+Affinity: -2.90723  -1.51237 (kcal/mol)
+RMSD: 4.29480
+CNNscore: 0.69785 
+CNNaffinity: 4.06088
+CNNvariance: 0.18357
+Affinity: -3.27935  0.00000 (kcal/mol)
+RMSD: 3.97383
+CNNscore: 0.76415 
+CNNaffinity: 3.70685
+CNNvariance: 0.09130
+Affinity: -5.99603  -0.45528 (kcal/mol)
+RMSD: 6.74486
+CNNscore: 0.24350 
+CNNaffinity: 4.30334
+CNNvariance: 0.45403
+Affinity: -0.88846  -1.40896 (kcal/mol)
+RMSD: 6.30581
+CNNscore: 0.72284 
+CNNaffinity: 3.73415
+CNNvariance: 0.08248
+Affinity: 28.13647  -0.12248 (kcal/mol)
+RMSD: 3.54530
+CNNscore: 0.05472 
+CNNaffinity: 3.53976
+CNNvariance: 0.44651
+Affinity: -2.89200  -0.20958 (kcal/mol)
+RMSD: 4.05803
+CNNscore: 0.46806 
+CNNaffinity: 3.03178
+CNNvariance: 0.39539
+Affinity: -3.21374  -0.23545 (kcal/mol)
+RMSD: 4.63299
+CNNscore: 0.51974 
+CNNaffinity: 4.38502
+CNNvariance: 0.07773
+Affinity: -3.73819  -1.71453 (kcal/mol)
+RMSD: 6.71246
+CNNscore: 0.31833 
+CNNaffinity: 4.45972
+CNNvariance: 0.22666
+Affinity: -1.30364  -0.90885 (kcal/mol)
+RMSD: 6.66762
+CNNscore: 0.70997 
+CNNaffinity: 3.62211
+CNNvariance: 0.23320
+Affinity: -3.28478  0.86658 (kcal/mol)
+RMSD: 7.41428
+CNNscore: 0.64980 
+CNNaffinity: 4.82892
+CNNvariance: 0.14071
+Affinity: -1.23860  1.12458 (kcal/mol)
+RMSD: 6.05175
+CNNscore: 0.46763 
+CNNaffinity: 2.92799
+CNNvariance: 0.21417
+Affinity: 77.26257  0.25168 (kcal/mol)
+RMSD: 5.64993
+CNNscore: 0.02766 
+CNNaffinity: 4.26267
+CNNvariance: 1.06507
+Affinity: -3.47319  -2.36749 (kcal/mol)
+RMSD: 7.35341
+CNNscore: 0.36374 
+CNNaffinity: 4.66446
+CNNvariance: 0.04329
+Affinity: -3.83938  -0.90889 (kcal/mol)
+RMSD: 4.50456
+CNNscore: 0.58980 
+CNNaffinity: 5.15870
+CNNvariance: 0.18388
+Affinity: -1.80643  -0.31055 (kcal/mol)
+RMSD: 1.14329
+CNNscore: 0.79685 
+CNNaffinity: 4.58210
+CNNvariance: 0.28281
+Affinity: -0.77584  -0.05458 (kcal/mol)
+RMSD: 0.33337
+CNNscore: 0.80019 
+CNNaffinity: 3.95800
+CNNvariance: 0.13571
+Affinity: -3.12321  -0.33282 (kcal/mol)
+RMSD: 2.76048
+CNNscore: 0.54731 
+CNNaffinity: 4.82029
+CNNvariance: 0.22394
+Affinity: -1.28097  0.88897 (kcal/mol)
+RMSD: 7.95662
+CNNscore: 0.56346 
+CNNaffinity: 4.26001
+CNNvariance: 0.87478
+Affinity: -2.24624  -2.01740 (kcal/mol)
+RMSD: 6.24553
+CNNscore: 0.59662 
+CNNaffinity: 4.51816
+CNNvariance: 0.10462
+Triprolidine | pose 168 | ligand outside box
+Affinity: -3.27189  -0.24948 (kcal/mol)
+RMSD: 7.47521
+CNNscore: 0.49996 
+CNNaffinity: 3.75336
+CNNvariance: 0.41229
+Affinity: -5.55193  -1.30743 (kcal/mol)
+RMSD: 7.56890
+CNNscore: 0.05059 
+CNNaffinity: 3.71247
+CNNvariance: 0.52300
+Affinity: -3.50777  -0.70117 (kcal/mol)
+RMSD: 4.44893
+CNNscore: 0.43494 
+CNNaffinity: 3.85783
+CNNvariance: 0.23514
+Affinity: -3.19016  -0.82717 (kcal/mol)
+RMSD: 6.81692
+CNNscore: 0.64790 
+CNNaffinity: 3.83104
+CNNvariance: 0.05365
+Affinity: -1.02016  -0.10623 (kcal/mol)
+RMSD: 2.68121
+CNNscore: 0.71917 
+CNNaffinity: 3.57140
+CNNvariance: 0.35966
+Affinity: 95.45586  -0.43299 (kcal/mol)
+RMSD: 4.37710
+CNNscore: 0.00548 
+CNNaffinity: 5.55075
+CNNvariance: 4.13359
+Affinity: -1.91826  -0.64238 (kcal/mol)
+RMSD: 7.47919
+CNNscore: 0.77272 
+CNNaffinity: 3.31980
+CNNvariance: 0.11485
+Affinity: -4.03852  -0.32595 (kcal/mol)
+RMSD: 5.30444
+CNNscore: 0.32830 
+CNNaffinity: 3.09202
+CNNvariance: 0.43544
+Affinity: -4.95187  -0.84405 (kcal/mol)
+RMSD: 7.44223
+CNNscore: 0.18482 
+CNNaffinity: 3.40028
+CNNvariance: 1.04701
+Affinity: -3.73297  -0.29180 (kcal/mol)
+RMSD: 7.51109
+CNNscore: 0.32270 
+CNNaffinity: 4.02837
+CNNvariance: 0.24806
+Affinity: -3.85678  -1.07940 (kcal/mol)
+RMSD: 7.49225
+CNNscore: 0.19601 
+CNNaffinity: 3.97936
+CNNvariance: 0.18919
+Affinity: -0.80266  -0.74435 (kcal/mol)
+RMSD: 5.15021
+CNNscore: 0.47940 
+CNNaffinity: 4.10535
+CNNvariance: 0.22270
+Affinity: -2.76725  0.00000 (kcal/mol)
+RMSD: 3.53014
+CNNscore: 0.34428 
+CNNaffinity: 3.24372
+CNNvariance: 0.16070
+Affinity: -3.09079  0.00000 (kcal/mol)
+RMSD: 3.21254
+CNNscore: 0.57708 
+CNNaffinity: 4.14967
+CNNvariance: 0.12407
+Affinity: -4.01842  0.01747 (kcal/mol)
+RMSD: 7.96032
+CNNscore: 0.47921 
+CNNaffinity: 5.11938
+CNNvariance: 0.72565
+Affinity: -5.08807  -2.78062 (kcal/mol)
+RMSD: 3.94980
+CNNscore: 0.10617 
+CNNaffinity: 4.87969
+CNNvariance: 0.38888
+Affinity: -0.90103  -0.17512 (kcal/mol)
+RMSD: 7.30179
+CNNscore: 0.75271 
+CNNaffinity: 4.55678
+CNNvariance: 0.66631
+Nabumetone | pose 185 | ligand outside box
+Affinity: -3.95623  0.89453 (kcal/mol)
+RMSD: 7.40390
+CNNscore: 0.57333 
+CNNaffinity: 4.46653
+CNNvariance: 0.03285
+Affinity: 31.46205  1.10130 (kcal/mol)
+RMSD: 6.57011
+CNNscore: 0.02198 
+CNNaffinity: 3.36586
+CNNvariance: 0.23876
+Affinity: -4.28664  -0.79567 (kcal/mol)
+RMSD: 2.17058
+CNNscore: 0.45789 
+CNNaffinity: 4.00351
+CNNvariance: 0.21691
+Affinity: -1.87671  -1.33232 (kcal/mol)
+RMSD: 8.43219
+CNNscore: 0.81323 
+CNNaffinity: 4.81917
+CNNvariance: 0.14311
+Affinity: -2.84064  -1.07474 (kcal/mol)
+RMSD: 8.14262
+CNNscore: 0.51143 
+CNNaffinity: 4.13488
+CNNvariance: 0.15862
+Affinity: -3.05292  -2.00152 (kcal/mol)
+RMSD: 7.31427
+CNNscore: 0.73946 
+CNNaffinity: 4.62771
+CNNvariance: 0.18280
+Affinity: -4.14321  -0.46267 (kcal/mol)
+RMSD: 5.64001
+CNNscore: 0.22388 
+CNNaffinity: 3.52355
+CNNvariance: 0.46141
+Affinity: 12.39702  -0.06464 (kcal/mol)
+RMSD: 1.27383
+CNNscore: 0.41607 
+CNNaffinity: 4.47911
+CNNvariance: 0.49017
+Affinity: -3.72819  0.56233 (kcal/mol)
+RMSD: 3.84901
+CNNscore: 0.39706 
+CNNaffinity: 4.14242
+CNNvariance: 0.17081
+Affinity: -4.84678  -0.55482 (kcal/mol)
+RMSD: 4.99159
+CNNscore: 0.42260 
+CNNaffinity: 4.25666
+CNNvariance: 0.16980
+Affinity: -2.95257  -0.91075 (kcal/mol)
+RMSD: 4.93608
+CNNscore: 0.61133 
+CNNaffinity: 3.91141
+CNNvariance: 0.16429
+Affinity: 55.55183  -0.23590 (kcal/mol)
+RMSD: 4.49121
+CNNscore: 0.02290 
+CNNaffinity: 2.48318
+CNNvariance: 0.81697
+Affinity: -4.05550  -0.60885 (kcal/mol)
+RMSD: 3.63178
+CNNscore: 0.21231 
+CNNaffinity: 3.20986
+CNNvariance: 0.55433
+Affinity: -3.53273  -0.02771 (kcal/mol)
+RMSD: 5.08062
+CNNscore: 0.67843 
+CNNaffinity: 4.49933
+CNNvariance: 0.10940
+Affinity: -3.77144  -0.43143 (kcal/mol)
+RMSD: 5.35997
+CNNscore: 0.45988 
+CNNaffinity: 4.05664
+CNNvariance: 0.26877
+Affinity: -2.93243  -0.52341 (kcal/mol)
+RMSD: 3.83289
+CNNscore: 0.58689 
+CNNaffinity: 4.05230
+CNNvariance: 0.30833
+Affinity: -4.48197  -1.14965 (kcal/mol)
+RMSD: 8.28986
+CNNscore: 0.18813 
+CNNaffinity: 3.54428
+CNNvariance: 0.62870
+Affinity: -3.89312  -0.65259 (kcal/mol)
+RMSD: 4.87996
+CNNscore: 0.33621 
+CNNaffinity: 3.65253
+CNNvariance: 0.20280
+Affinity: -4.99331  -0.08300 (kcal/mol)
+RMSD: 7.16589
+CNNscore: 0.42817 
+CNNaffinity: 5.26795
+CNNvariance: 0.92031
+Affinity: -2.99753  -0.43580 (kcal/mol)
+RMSD: 4.94291
+CNNscore: 0.67690 
+CNNaffinity: 4.27154
+CNNvariance: 0.17998
+Oxycodone | pose 205 | ligand outside box
+Affinity: -3.28046  -0.86546 (kcal/mol)
+RMSD: 6.74018
+CNNscore: 0.42159 
+CNNaffinity: 3.76590
+CNNvariance: 0.29173
+Affinity: 48.96498  -0.11349 (kcal/mol)
+RMSD: 4.18199
+CNNscore: 0.00549 
+CNNaffinity: 2.91794
+CNNvariance: 1.79992
+Affinity: -0.54941  -0.16175 (kcal/mol)
+RMSD: 5.27877
+CNNscore: 0.90856 
+CNNaffinity: 3.60449
+CNNvariance: 0.19281
+Affinity: -3.83383  -1.15586 (kcal/mol)
+RMSD: 3.76761
+CNNscore: 0.49172 
+CNNaffinity: 5.04754
+CNNvariance: 0.23801
+Affinity: -2.96637  -0.23081 (kcal/mol)
+RMSD: 5.89404
+CNNscore: 0.54037 
+CNNaffinity: 4.33301
+CNNvariance: 0.20350
+Affinity: -3.93169  -1.40948 (kcal/mol)
+RMSD: 6.97169
+CNNscore: 0.21157 
+CNNaffinity: 4.72918
+CNNvariance: 0.18629
+Affinity: -3.88676  -0.73030 (kcal/mol)
+RMSD: 3.75046
+CNNscore: 0.65984 
+CNNaffinity: 4.54450
+CNNvariance: 0.02892
+Dextromethorphan | pose 212 | ligand outside box
+Affinity: 40.06276  -0.21890 (kcal/mol)
+RMSD: 5.50854
+CNNscore: 0.01228 
+CNNaffinity: 3.38569
+CNNvariance: 2.67546
+Affinity: -0.45481  0.77234 (kcal/mol)
+RMSD: 6.89375
+CNNscore: 0.60093 
+CNNaffinity: 3.93623
+CNNvariance: 0.25482
+Affinity: -1.31505  -1.26570 (kcal/mol)
+RMSD: 6.37340
+CNNscore: 0.75127 
+CNNaffinity: 4.87903
+CNNvariance: 0.33880
+Affinity: -4.46892  -0.57223 (kcal/mol)
+RMSD: 6.50661
+CNNscore: 0.15791 
+CNNaffinity: 4.69531
+CNNvariance: 0.26893
+Affinity: -4.38746  -0.08989 (kcal/mol)
+RMSD: 4.38018
+CNNscore: 0.61568 
+CNNaffinity: 4.10161
+CNNvariance: 0.22324
+Affinity: -5.85919  -0.35917 (kcal/mol)
+RMSD: 7.49254
+CNNscore: 0.55400 
+CNNaffinity: 4.64266
+CNNvariance: 0.37476
+Affinity: 24.09123  0.48627 (kcal/mol)
+RMSD: 5.22979
+CNNscore: 0.29440 
+CNNaffinity: 3.76741
+CNNvariance: 0.48544
+Affinity: -4.41313  -1.34813 (kcal/mol)
+RMSD: 2.45567
+CNNscore: 0.39057 
+CNNaffinity: 4.11788
+CNNvariance: 0.47707
+Affinity: -5.26773  -0.40792 (kcal/mol)
+RMSD: 7.81644
+CNNscore: 0.51560 
+CNNaffinity: 4.75633
+CNNvariance: 0.07072
+Affinity: -0.61481  0.62349 (kcal/mol)
+RMSD: 6.63809
+CNNscore: 0.49270 
+CNNaffinity: 4.67336
+CNNvariance: 0.80567
+Rofecoxib | pose 222 | ligand outside box
+Affinity: -2.71580  -0.16525 (kcal/mol)
+RMSD: 4.98246
+CNNscore: 0.68896 
+CNNaffinity: 2.95600
+CNNvariance: 0.07151
+Affinity: 44.59631  -0.05865 (kcal/mol)
+RMSD: 7.09256
+CNNscore: 0.10238 
+CNNaffinity: 4.65947
+CNNvariance: 0.99635
+Affinity: -4.57342  -0.59489 (kcal/mol)
+RMSD: 4.69368
+CNNscore: 0.06615 
+CNNaffinity: 3.49547
+CNNvariance: 0.44745
+Affinity: 56.23272  -0.05823 (kcal/mol)
+RMSD: 7.38582
+CNNscore: 0.09876 
+CNNaffinity: 5.26137
+CNNvariance: 1.81997
+Affinity: -2.01474  -0.84229 (kcal/mol)
+RMSD: 5.91684
+CNNscore: 0.79815 
+CNNaffinity: 3.68554
+CNNvariance: 0.04420
+Affinity: -3.30127  -0.48688 (kcal/mol)
+RMSD: 5.73382
+CNNscore: 0.77861 
+CNNaffinity: 5.05919
+CNNvariance: 0.39628
+Affinity: 1.90311  0.25423 (kcal/mol)
+RMSD: 8.53549
+CNNscore: 0.51479 
+CNNaffinity: 4.62710
+CNNvariance: 0.19890
+Affinity: 54.06537  0.98483 (kcal/mol)
+RMSD: 4.31740
+CNNscore: 0.00229 
+CNNaffinity: 4.02794
+CNNvariance: 1.20981
+Affinity: -3.61684  -1.31669 (kcal/mol)
+RMSD: 4.32658
+CNNscore: 0.49732 
+CNNaffinity: 5.21436
+CNNvariance: 0.36026
+Affinity: -3.14284  -0.36568 (kcal/mol)
+RMSD: 7.18363
+CNNscore: 0.38835 
+CNNaffinity: 3.24435
+CNNvariance: 0.37955
+Affinity: 17.48475  -0.14107 (kcal/mol)
+RMSD: 4.37649
+CNNscore: 0.71390 
+CNNaffinity: 5.97980
+CNNvariance: 0.61184
+Affinity: -2.90172  -0.50091 (kcal/mol)
+RMSD: 9.11584
+CNNscore: 0.35880 
+CNNaffinity: 4.01120
+CNNvariance: 0.63094
+Affinity: -1.99401  -0.12553 (kcal/mol)
+RMSD: 4.93098
+CNNscore: 0.51570 
+CNNaffinity: 2.94624
+CNNvariance: 0.14792
+Affinity: -3.80528  -0.17197 (kcal/mol)
+RMSD: 6.07048
+CNNscore: 0.43802 
+CNNaffinity: 4.70230
+CNNvariance: 0.19005
+Affinity: -4.09588  -3.09348 (kcal/mol)
+RMSD: 6.28247
+CNNscore: 0.12012 
+CNNaffinity: 4.58424
+CNNvariance: 0.39358
+Affinity: -5.48172  -0.31785 (kcal/mol)
+RMSD: 6.91877
+CNNscore: 0.22784 
+CNNaffinity: 4.47247
+CNNvariance: 0.17731
+Affinity: -2.86847  -0.25229 (kcal/mol)
+RMSD: 7.11943
+CNNscore: 0.41495 
+CNNaffinity: 2.93181
+CNNvariance: 0.41492
+Affinity: 95.22181  0.69255 (kcal/mol)
+RMSD: 8.15297
+CNNscore: 0.00038 
+CNNaffinity: 3.69885
+CNNvariance: 1.42715
+Affinity: -3.35259  -0.80301 (kcal/mol)
+RMSD: 5.40298
+CNNscore: 0.38075 
+CNNaffinity: 3.10540
+CNNvariance: 0.21786
+Atropine | pose 241 | ligand outside box
+Affinity: 31.12447  -0.12186 (kcal/mol)
+RMSD: 3.31948
+CNNscore: 0.38591 
+CNNaffinity: 3.96271
+CNNvariance: 0.56974
+Affinity: -0.44857  0.45849 (kcal/mol)
+RMSD: 0.46946
+CNNscore: 0.93006 
+CNNaffinity: 3.62841
+CNNvariance: 0.36208
+Affinity: -4.42556  -0.49192 (kcal/mol)
+RMSD: 8.09850
+CNNscore: 0.35659 
+CNNaffinity: 3.89394
+CNNvariance: 0.17800
+Affinity: -2.09499  -0.30347 (kcal/mol)
+RMSD: 4.81272
+CNNscore: 0.61486 
+CNNaffinity: 4.39744
+CNNvariance: 0.44789
+Affinity: -2.77764  -0.16118 (kcal/mol)
+RMSD: 6.60316
+CNNscore: 0.38624 
+CNNaffinity: 2.71637
+CNNvariance: 0.36966
+Affinity: -0.90592  0.63932 (kcal/mol)
+RMSD: 11.24939
+CNNscore: 0.71208 
+CNNaffinity: 4.16544
+CNNvariance: 0.22394
+Affinity: -3.96237  -1.06405 (kcal/mol)
+RMSD: 4.14669
+CNNscore: 0.31405 
+CNNaffinity: 4.33625
+CNNvariance: 0.34996
+Affinity: -2.05422  -0.27135 (kcal/mol)
+RMSD: 3.70527
+CNNscore: 0.76345 
+CNNaffinity: 4.87774
+CNNvariance: 0.54532
+Affinity: -2.97754  0.00000 (kcal/mol)
+RMSD: 5.47822
+CNNscore: 0.63884 
+CNNaffinity: 3.82451
+CNNvariance: 0.19128
+Affinity: -0.74190  0.06752 (kcal/mol)
+RMSD: 0.62884
+CNNscore: 0.73400 
+CNNaffinity: 3.93542
+CNNvariance: 0.90901
+Affinity: -3.12227  -1.13920 (kcal/mol)
+RMSD: 6.46210
+CNNscore: 0.44529 
+CNNaffinity: 3.45562
+CNNvariance: 0.53820
+Affinity: -0.95208  0.73087 (kcal/mol)
+RMSD: 8.00956
+CNNscore: 0.48217 
+CNNaffinity: 4.19033
+CNNvariance: 0.16131
+Affinity: -4.58610  -0.28084 (kcal/mol)
+RMSD: 6.72708
+CNNscore: 0.14244 
+CNNaffinity: 3.40352
+CNNvariance: 0.60078
+Affinity: 37.24973  -0.15927 (kcal/mol)
+RMSD: 5.94833
+CNNscore: 0.14783 
+CNNaffinity: 4.76549
+CNNvariance: 1.24767
+Affinity: -1.92012  -0.28981 (kcal/mol)
+RMSD: 6.40015
+CNNscore: 0.60379 
+CNNaffinity: 3.47460
+CNNvariance: 0.08557
+Affinity: -0.30663  -0.38514 (kcal/mol)
+RMSD: 7.57548
+CNNscore: 0.78479 
+CNNaffinity: 3.83461
+CNNvariance: 0.33835
+Ulobetasol | pose 257 | ligand outside box
+Ulobetasol | pose 257 | ligand outside box
+Ulobetasol | pose 257 | ligand outside box
+Affinity: -4.41453  -1.01993 (kcal/mol)
+RMSD: 7.41321
+CNNscore: 0.24790 
+CNNaffinity: 4.14930
+CNNvariance: 0.15378
+Affinity: -1.59866  -0.63273 (kcal/mol)
+RMSD: 8.33348
+CNNscore: 0.73134 
+CNNaffinity: 3.53149
+CNNvariance: 0.12595
+Affinity: -4.18188  -1.12647 (kcal/mol)
+RMSD: 3.98934
+CNNscore: 0.47334 
+CNNaffinity: 4.41881
+CNNvariance: 0.13432
+Affinity: -4.25713  -0.89925 (kcal/mol)
+RMSD: 6.87418
+CNNscore: 0.32731 
+CNNaffinity: 5.24846
+CNNvariance: 0.09491
+Medroxyprogesterone acetate | pose 261 | ligand outside box
+Affinity: -2.63301  -1.31282 (kcal/mol)
+RMSD: 6.99721
+CNNscore: 0.56596 
+CNNaffinity: 4.04636
+CNNvariance: 0.43229
+Affinity: -2.35173  -0.70548 (kcal/mol)
+RMSD: 5.01500
+CNNscore: 0.57415 
+CNNaffinity: 3.86824
+CNNvariance: 0.20212
+Affinity: -3.43835  -0.74871 (kcal/mol)
+RMSD: 4.11981
+CNNscore: 0.34724 
+CNNaffinity: 4.26345
+CNNvariance: 0.17375
+Affinity: -4.48597  -0.70176 (kcal/mol)
+RMSD: 5.82425
+CNNscore: 0.51165 
+CNNaffinity: 4.87553
+CNNvariance: 0.18823
+Affinity: -2.97592  0.84486 (kcal/mol)
+RMSD: 6.50805
+CNNscore: 0.46385 
+CNNaffinity: 5.40207
+CNNvariance: 0.75135
+Affinity: -4.42343  -0.28332 (kcal/mol)
+RMSD: 8.59192
+CNNscore: 0.31877 
+CNNaffinity: 4.72084
+CNNvariance: 0.10142
+Affinity: -3.24400  -0.04547 (kcal/mol)
+RMSD: 4.77508
+CNNscore: 0.46175 
+CNNaffinity: 2.81969
+CNNvariance: 0.20190
+Affinity: 98.94605  1.14134 (kcal/mol)
+RMSD: 6.33136
+CNNscore: 0.00233 
+CNNaffinity: 5.10531
+CNNvariance: 4.35962
+Affinity: -1.19743  -0.85073 (kcal/mol)
+RMSD: 7.87081
+CNNscore: 0.71217 
+CNNaffinity: 3.62603
+CNNvariance: 0.07136
+Affinity: -2.81284  0.49294 (kcal/mol)
+RMSD: 3.51231
+CNNscore: 0.46932 
+CNNaffinity: 3.47182
+CNNvariance: 0.17994
+Affinity: -4.31700  -0.22014 (kcal/mol)
+RMSD: 6.98589
+CNNscore: 0.43538 
+CNNaffinity: 3.34814
+CNNvariance: 0.40823
+Affinity: 93.59329  -0.23230 (kcal/mol)
+RMSD: 8.43654
+CNNscore: 0.03446 
+CNNaffinity: 3.28807
+CNNvariance: 3.01724
+Affinity: -1.33442  -0.26300 (kcal/mol)
+RMSD: 8.03961
+CNNscore: 0.66605 
+CNNaffinity: 4.39450
+CNNvariance: 0.10630
+Oxandrolone | pose 274 | ligand outside box
+Affinity: -2.77953  -0.95653 (kcal/mol)
+RMSD: 3.06030
+CNNscore: 0.69781 
+CNNaffinity: 4.83232
+CNNvariance: 0.37158
+Affinity: -0.95496  -0.00007 (kcal/mol)
+RMSD: 0.47786
+CNNscore: 0.82958 
+CNNaffinity: 4.61386
+CNNvariance: 1.02562
+Affinity: -2.46142  -1.11627 (kcal/mol)
+RMSD: 5.23334
+CNNscore: 0.60070 
+CNNaffinity: 4.38846
+CNNvariance: 0.07781
+Affinity: -2.87507  -1.59259 (kcal/mol)
+RMSD: 5.56566
+CNNscore: 0.33387 
+CNNaffinity: 4.32063
+CNNvariance: 0.16480
+Niacin | pose 278 | ligand outside box
+Affinity: -0.45060  -0.09497 (kcal/mol)
+RMSD: 1.31953
+CNNscore: 0.79704 
+CNNaffinity: 3.24394
+CNNvariance: 0.17801
+Affinity: 38.57841  0.50036 (kcal/mol)
+RMSD: 2.82028
+CNNscore: 0.09947 
+CNNaffinity: 3.48605
+CNNvariance: 0.39306
+Affinity: -4.95197  -0.48909 (kcal/mol)
+RMSD: 8.40702
+CNNscore: 0.31147 
+CNNaffinity: 4.13175
+CNNvariance: 0.25876
+Affinity: -3.02498  -1.11069 (kcal/mol)
+RMSD: 11.18036
+CNNscore: 0.42339 
+CNNaffinity: 3.75977
+CNNvariance: 0.42496
+Sulfacetamide | pose 282 | ligand outside box
+Affinity: -2.84676  -0.04972 (kcal/mol)
+RMSD: 3.68635
+CNNscore: 0.63570 
+CNNaffinity: 3.01634
+CNNvariance: 0.24985
+Prednisone | pose 283 | ligand outside box
+Affinity: -2.56887  -0.72636 (kcal/mol)
+RMSD: 8.85875
+CNNscore: 0.56958 
+CNNaffinity: 5.46402
+CNNvariance: 0.34371
+Affinity: -3.50079  -0.09423 (kcal/mol)
+RMSD: 8.73429
+CNNscore: 0.51287 
+CNNaffinity: 3.92240
+CNNvariance: 0.13458
+Affinity: -3.24911  0.00000 (kcal/mol)
+RMSD: 7.97463
+CNNscore: 0.56801 
+CNNaffinity: 4.66895
+CNNvariance: 0.39519
+Affinity: -3.76042  -1.58707 (kcal/mol)
+RMSD: 7.22051
+CNNscore: 0.42780 
+CNNaffinity: 5.00132
+CNNvariance: 0.41358
+Affinity: -4.57119  0.00000 (kcal/mol)
+RMSD: 6.42824
+CNNscore: 0.49950 
+CNNaffinity: 4.58575
+CNNvariance: 0.14591
+Affinity: -3.97932  -0.69966 (kcal/mol)
+RMSD: 5.44124
+CNNscore: 0.53063 
+CNNaffinity: 4.58380
+CNNvariance: 0.38712
+Affinity: 16.15371  -0.01800 (kcal/mol)
+RMSD: 5.05527
+CNNscore: 0.57661 
+CNNaffinity: 3.80584
+CNNvariance: 0.15723
+Affinity: -3.78082  -0.83562 (kcal/mol)
+RMSD: 5.78413
+CNNscore: 0.41278 
+CNNaffinity: 3.86151
+CNNvariance: 0.13601
+Affinity: -2.23838  -0.25284 (kcal/mol)
+RMSD: 4.75588
+CNNscore: 0.63209 
+CNNaffinity: 3.48746
+CNNvariance: 0.22557
+Affinity: -2.16099  -0.25520 (kcal/mol)
+RMSD: 8.49125
+CNNscore: 0.67189 
+CNNaffinity: 3.99585
+CNNvariance: 0.24366
+Affinity: 12.60586  0.48318 (kcal/mol)
+RMSD: 7.45207
+CNNscore: 0.23866 
+CNNaffinity: 3.22231
+CNNvariance: 0.05228
+Affinity: -1.28603  -0.07587 (kcal/mol)
+RMSD: 11.21156
+CNNscore: 0.66861 
+CNNaffinity: 4.25635
+CNNvariance: 0.10176
+Affinity: -1.53526  -0.38783 (kcal/mol)
+RMSD: 9.61692
+CNNscore: 0.44327 
+CNNaffinity: 3.83343
+CNNvariance: 0.42323
+Affinity: -3.82222  -1.28648 (kcal/mol)
+RMSD: 7.00826
+CNNscore: 0.48219 
+CNNaffinity: 5.33272
+CNNvariance: 0.24347
+Affinity: -3.73590  -0.69676 (kcal/mol)
+RMSD: 3.94527
+CNNscore: 0.37635 
+CNNaffinity: 4.14644
+CNNvariance: 0.18884
+Affinity: -4.13068  -0.44062 (kcal/mol)
+RMSD: 9.01934
+CNNscore: 0.19307 
+CNNaffinity: 3.71034
+CNNvariance: 0.48270
+Affinity: -3.29065  -1.69929 (kcal/mol)
+RMSD: 6.73973
+CNNscore: 0.24318 
+CNNaffinity: 4.04503
+CNNvariance: 0.54749
+Affinity: -4.74401  -0.36764 (kcal/mol)
+RMSD: 4.62667
+CNNscore: 0.31443 
+CNNaffinity: 4.23627
+CNNvariance: 0.19883
+Affinity: -5.24047  -2.39526 (kcal/mol)
+RMSD: 6.21436
+CNNscore: 0.15541 
+CNNaffinity: 4.39521
+CNNvariance: 1.04203
+Affinity: -4.36731  0.00000 (kcal/mol)
+RMSD: 8.29148
+CNNscore: 0.51312 
+CNNaffinity: 4.41650
+CNNvariance: 0.08780
+Affinity: -2.49668  -0.55418 (kcal/mol)
+RMSD: 3.95443
+CNNscore: 0.77128 
+CNNaffinity: 4.19667
+CNNvariance: 0.31596
+Affinity: -2.14192  -0.06681 (kcal/mol)
+RMSD: 4.27518
+CNNscore: 0.41312 
+CNNaffinity: 3.10374
+CNNvariance: 0.13611
+Affinity: -2.53395  0.00000 (kcal/mol)
+RMSD: 5.32285
+CNNscore: 0.80731 
+CNNaffinity: 2.83244
+CNNvariance: 0.16569
+Affinity: -1.94409  -0.36755 (kcal/mol)
+RMSD: 6.88077
+CNNscore: 0.60203 
+CNNaffinity: 3.39563
+CNNvariance: 0.57458
+Affinity: -3.01936  -1.27112 (kcal/mol)
+RMSD: 6.40507
+CNNscore: 0.22482 
+CNNaffinity: 3.82177
+CNNvariance: 0.55760
+Affinity: 103.73572  -0.21148 (kcal/mol)
+RMSD: 2.63364
+CNNscore: 0.00064 
+CNNaffinity: 4.23250
+CNNvariance: 2.65957
+Affinity: -2.13740  -0.57652 (kcal/mol)
+RMSD: 8.04598
+CNNscore: 0.66183 
+CNNaffinity: 4.30772
+CNNvariance: 0.31220
+Affinity: -4.77997  -0.42865 (kcal/mol)
+RMSD: 7.24568
+CNNscore: 0.44969 
+CNNaffinity: 4.77944
+CNNvariance: 0.83794
+Fludrocortisone | pose 311 | ligand outside box
+Affinity: -3.07848  -0.56749 (kcal/mol)
+RMSD: 5.43868
+CNNscore: 0.63706 
+CNNaffinity: 3.86134
+CNNvariance: 0.20870
+Affinity: -1.35139  -0.50256 (kcal/mol)
+RMSD: 4.58323
+CNNscore: 0.86750 
+CNNaffinity: 4.47541
+CNNvariance: 0.36303
+Affinity: -3.15599  -0.15962 (kcal/mol)
+RMSD: 1.07325
+CNNscore: 0.51381 
+CNNaffinity: 3.57511
+CNNvariance: 0.02947
+Affinity: -3.49073  -0.09114 (kcal/mol)
+RMSD: 7.84316
+CNNscore: 0.58968 
+CNNaffinity: 3.73638
+CNNvariance: 0.12464
+Affinity: -4.24664  -0.51400 (kcal/mol)
+RMSD: 6.59585
+CNNscore: 0.34407 
+CNNaffinity: 2.96183
+CNNvariance: 0.90260
+Affinity: -2.90311  -0.38199 (kcal/mol)
+RMSD: 3.17589
+CNNscore: 0.38513 
+CNNaffinity: 2.67310
+CNNvariance: 0.11989
+Affinity: -2.25972  -1.87117 (kcal/mol)
+RMSD: 4.95392
+CNNscore: 0.84587 
+CNNaffinity: 5.18361
+CNNvariance: 0.06695
+Affinity: -2.98185  -1.09923 (kcal/mol)
+RMSD: 5.50173
+CNNscore: 0.37985 
+CNNaffinity: 4.71176
+CNNvariance: 0.06184
+Affinity: 17.98335  -0.33509 (kcal/mol)
+RMSD: 3.88002
+CNNscore: 0.37803 
+CNNaffinity: 3.78469
+CNNvariance: 0.30536
+Affinity: -2.91936  -0.55385 (kcal/mol)
+RMSD: 5.48875
+CNNscore: 0.53676 
+CNNaffinity: 4.82907
+CNNvariance: 0.10881
+Affinity: -4.41398  -1.11965 (kcal/mol)
+RMSD: 5.40653
+CNNscore: 0.34583 
+CNNaffinity: 5.04966
+CNNvariance: 0.07027
+Affinity: 55.54544  2.36001 (kcal/mol)
+RMSD: 6.75837
+CNNscore: 0.19388 
+CNNaffinity: 3.72571
+CNNvariance: 2.21248
+Affinity: -2.75703  -1.02248 (kcal/mol)
+RMSD: 3.97044
+CNNscore: 0.80384 
+CNNaffinity: 4.58882
+CNNvariance: 0.31379
+Affinity: -2.87918  -1.21629 (kcal/mol)
+RMSD: 8.04097
+CNNscore: 0.43545 
+CNNaffinity: 5.19534
+CNNvariance: 0.84508
+Affinity: -4.15885  -1.68849 (kcal/mol)
+RMSD: 6.09088
+CNNscore: 0.24794 
+CNNaffinity: 4.63819
+CNNvariance: 0.38064
+Affinity: -3.52927  -0.98096 (kcal/mol)
+RMSD: 6.47624
+CNNscore: 0.35597 
+CNNaffinity: 4.08217
+CNNvariance: 0.17692
+Affinity: -1.63816  0.00000 (kcal/mol)
+RMSD: 0.31693
+CNNscore: 0.85204 
+CNNaffinity: 4.55303
+CNNvariance: 0.45949
+Affinity: -3.45961  -0.70748 (kcal/mol)
+RMSD: 6.03320
+CNNscore: 0.33334 
+CNNaffinity: 3.55428
+CNNvariance: 0.21882
+Affinity: -1.28264  -0.31536 (kcal/mol)
+RMSD: 4.84007
+CNNscore: 0.79968 
+CNNaffinity: 4.03392
+CNNvariance: 0.54821
+Affinity: 30.27133  -0.25935 (kcal/mol)
+RMSD: 6.31701
+CNNscore: 0.28555 
+CNNaffinity: 4.58529
+CNNvariance: 0.60482
+Norethisterone | pose 331 | ligand outside box
+Affinity: -3.76152  -0.16155 (kcal/mol)
+RMSD: 8.33318
+CNNscore: 0.75068 
+CNNaffinity: 4.66840
+CNNvariance: 0.12033
+Affinity: -4.40326  -0.39285 (kcal/mol)
+RMSD: 4.40429
+CNNscore: 0.56931 
+CNNaffinity: 4.28093
+CNNvariance: 0.05570
+Affinity: -3.69324  -0.94025 (kcal/mol)
+RMSD: 4.28621
+CNNscore: 0.62330 
+CNNaffinity: 4.65172
+CNNvariance: 0.05065
+Affinity: -3.35147  -1.55776 (kcal/mol)
+RMSD: 5.55940
+CNNscore: 0.43855 
+CNNaffinity: 4.61070
+CNNvariance: 0.10281
+Affinity: -3.58145  -0.92276 (kcal/mol)
+RMSD: 5.03268
+CNNscore: 0.38877 
+CNNaffinity: 4.44083
+CNNvariance: 0.26427
+Affinity: -3.43479  -0.54200 (kcal/mol)
+RMSD: 6.72848
+CNNscore: 0.58568 
+CNNaffinity: 4.24884
+CNNvariance: 0.11883
+Affinity: -2.86673  -0.18206 (kcal/mol)
+RMSD: 7.19000
+CNNscore: 0.44359 
+CNNaffinity: 3.03195
+CNNvariance: 0.40359
+Affinity: -5.69910  -0.46378 (kcal/mol)
+RMSD: 6.06343
+CNNscore: 0.30970 
+CNNaffinity: 3.52126
+CNNvariance: 0.56658
+Affinity: -1.11536  -0.28935 (kcal/mol)
+RMSD: 9.35430
+CNNscore: 0.70120 
+CNNaffinity: 4.61235
+CNNvariance: 0.45310
+Affinity: -4.27541  -1.01913 (kcal/mol)
+RMSD: 6.46290
+CNNscore: 0.34340 
+CNNaffinity: 4.51714
+CNNvariance: 0.33468
+Affinity: -3.14238  -0.97875 (kcal/mol)
+RMSD: 3.85491
+CNNscore: 0.62670 
+CNNaffinity: 4.79033
+CNNvariance: 0.46973
+Affinity: -3.21065  -0.23099 (kcal/mol)
+RMSD: 10.05128
+CNNscore: 0.63445 
+CNNaffinity: 4.79349
+CNNvariance: 0.31284
+Affinity: -2.96545  0.00000 (kcal/mol)
+RMSD: 5.75872
+CNNscore: 0.71991 
+CNNaffinity: 4.30828
+CNNvariance: 0.21046
+Affinity: -3.02086  -0.46558 (kcal/mol)
+RMSD: 3.79732
+CNNscore: 0.54431 
+CNNaffinity: 4.00125
+CNNvariance: 1.75604
+Affinity: -2.88982  0.33452 (kcal/mol)
+RMSD: 4.72736
+CNNscore: 0.51998 
+CNNaffinity: 3.77296
+CNNvariance: 0.22766
+Affinity: -4.94626  -1.95418 (kcal/mol)
+RMSD: 5.22677
+CNNscore: 0.27294 
+CNNaffinity: 4.63713
+CNNvariance: 0.49781
+Affinity: -2.71161  -0.70355 (kcal/mol)
+RMSD: 3.01604
+CNNscore: 0.48868 
+CNNaffinity: 2.96071
+CNNvariance: 0.46485
+Affinity: -2.33851  -0.42358 (kcal/mol)
+RMSD: 6.21290
+CNNscore: 0.62899 
+CNNaffinity: 4.03230
+CNNvariance: 0.03788
+Affinity: -2.98013  -0.51880 (kcal/mol)
+RMSD: 4.49131
+CNNscore: 0.59986 
+CNNaffinity: 4.04116
+CNNvariance: 0.15292
+Affinity: -3.96138  -1.10530 (kcal/mol)
+RMSD: 4.42131
+CNNscore: 0.34887 
+CNNaffinity: 4.41479
+CNNvariance: 0.12653
+Affinity: -2.69390  -0.13150 (kcal/mol)
+RMSD: 2.92620
+CNNscore: 0.36094 
+CNNaffinity: 3.35576
+CNNvariance: 0.31939
+Affinity: -1.97942  -0.10191 (kcal/mol)
+RMSD: 6.51244
+CNNscore: 0.63801 
+CNNaffinity: 3.98664
+CNNvariance: 0.24458
+Affinity: -3.78820  -0.05169 (kcal/mol)
+RMSD: 6.95575
+CNNscore: 0.34345 
+CNNaffinity: 3.17767
+CNNvariance: 0.31661
+Affinity: -3.22479  -0.58796 (kcal/mol)
+RMSD: 7.29569
+CNNscore: 0.83497 
+CNNaffinity: 5.21057
+CNNvariance: 0.15265
+Affinity: -4.45704  -2.63765 (kcal/mol)
+RMSD: 4.23401
+CNNscore: 0.43190 
+CNNaffinity: 4.24805
+CNNvariance: 0.56243
+Affinity: -1.88974  -0.32930 (kcal/mol)
+RMSD: 6.54619
+CNNscore: 0.67627 
+CNNaffinity: 4.80576
+CNNvariance: 0.29204
+Affinity: -3.87930  -0.37309 (kcal/mol)
+RMSD: 5.54942
+CNNscore: 0.56363 
+CNNaffinity: 4.74957
+CNNvariance: 0.64710
+Affinity: -3.72530  -0.33900 (kcal/mol)
+RMSD: 5.59202
+CNNscore: 0.44524 
+CNNaffinity: 3.33784
+CNNvariance: 0.14012
+Affinity: 99.47887  0.79009 (kcal/mol)
+RMSD: 4.58360
+CNNscore: 0.00027 
+CNNaffinity: 3.42170
+CNNvariance: 2.03419
+Affinity: -4.15680  0.17538 (kcal/mol)
+RMSD: 4.04634
+CNNscore: 0.26199 
+CNNaffinity: 3.58371
+CNNvariance: 0.18833
+Affinity: -4.70361  -0.86793 (kcal/mol)
+RMSD: 5.89821
+CNNscore: 0.12290 
+CNNaffinity: 3.30604
+CNNvariance: 0.72668
+Affinity: -4.70570  -1.10754 (kcal/mol)
+RMSD: 6.74973
+CNNscore: 0.21846 
+CNNaffinity: 3.15064
+CNNvariance: 0.87607
+Affinity: -2.99869  -0.54136 (kcal/mol)
+RMSD: 3.59359
+CNNscore: 0.44869 
+CNNaffinity: 3.82000
+CNNvariance: 0.17158
+Affinity: -2.56685  -0.59729 (kcal/mol)
+RMSD: 3.04671
+CNNscore: 0.67783 
+CNNaffinity: 3.96888
+CNNvariance: 0.11592
+Affinity: -1.79766  -0.66939 (kcal/mol)
+RMSD: 8.19208
+CNNscore: 0.85320 
+CNNaffinity: 3.23186
+CNNvariance: 0.09986
+Affinity: -3.73304  0.00000 (kcal/mol)
+RMSD: 5.53659
+CNNscore: 0.49623 
+CNNaffinity: 3.93750
+CNNvariance: 0.23345
+Affinity: -2.98466  0.04934 (kcal/mol)
+RMSD: 2.22701
+CNNscore: 0.58170 
+CNNaffinity: 2.77749
+CNNvariance: 0.25919
+Affinity: -3.32161  -0.27706 (kcal/mol)
+RMSD: 4.43814
+CNNscore: 0.76218 
+CNNaffinity: 3.27359
+CNNvariance: 0.09930
+Affinity: 18.41874  0.26614 (kcal/mol)
+RMSD: 6.23765
+CNNscore: 0.62405 
+CNNaffinity: 5.40084
+CNNvariance: 0.62016
+Affinity: -1.68510  -0.01981 (kcal/mol)
+RMSD: 4.21834
+CNNscore: 0.69427 
+CNNaffinity: 4.21576
+CNNvariance: 0.17779
+Affinity: 20.13672  0.00000 (kcal/mol)
+RMSD: 3.70952
+CNNscore: 0.29520 
+CNNaffinity: 2.89347
+CNNvariance: 0.32594
+Affinity: 112.00842  0.48233 (kcal/mol)
+RMSD: 4.38770
+CNNscore: 0.00358 
+CNNaffinity: 2.92989
+CNNvariance: 2.25284
+Affinity: -4.23521  -0.08427 (kcal/mol)
+RMSD: 6.68922
+CNNscore: 0.27425 
+CNNaffinity: 3.08199
+CNNvariance: 0.13849
+Affinity: -3.24056  -0.50154 (kcal/mol)
+RMSD: 5.71554
+CNNscore: 0.44855 
+CNNaffinity: 4.24612
+CNNvariance: 0.08203
+Affinity: 82.41424  0.57211 (kcal/mol)
+RMSD: 5.54545
+CNNscore: 0.00311 
+CNNaffinity: 5.00299
+CNNvariance: 2.62568
+Affinity: -4.23713  -2.39460 (kcal/mol)
+RMSD: 4.87602
+CNNscore: 0.15576 
+CNNaffinity: 4.09367
+CNNvariance: 0.57938
+Perindopril | pose 377 | ligand outside box
+Affinity: -3.99224  -1.11931 (kcal/mol)
+RMSD: 6.00711
+CNNscore: 0.25675 
+CNNaffinity: 3.78726
+CNNvariance: 0.41570
+Affinity: -2.66581  -0.63985 (kcal/mol)
+RMSD: 7.72074
+CNNscore: 0.41421 
+CNNaffinity: 3.65892
+CNNvariance: 0.01386
+Affinity: -4.16079  0.42593 (kcal/mol)
+RMSD: 3.06494
+CNNscore: 0.21937 
+CNNaffinity: 3.76644
+CNNvariance: 0.17853
+Affinity: -1.84908  -1.75401 (kcal/mol)
+RMSD: 5.56074
+CNNscore: 0.54720 
+CNNaffinity: 4.88242
+CNNvariance: 0.53862
+Affinity: -1.45852  0.00000 (kcal/mol)
+RMSD: 0.56217
+CNNscore: 0.80446 
+CNNaffinity: 4.27826
+CNNvariance: 0.62451
+Affinity: -3.20720  -0.40044 (kcal/mol)
+RMSD: 6.66720
+CNNscore: 0.41252 
+CNNaffinity: 3.90712
+CNNvariance: 0.30379
+Affinity: -3.91030  -0.08348 (kcal/mol)
+RMSD: 4.52085
+CNNscore: 0.29901 
+CNNaffinity: 2.62507
+CNNvariance: 0.74883
+Affinity: -4.45766  -1.63006 (kcal/mol)
+RMSD: 6.96293
+CNNscore: 0.22291 
+CNNaffinity: 4.52815
+CNNvariance: 0.40477
+Affinity: -3.98713  0.00000 (kcal/mol)
+RMSD: 8.58720
+CNNscore: 0.61265 
+CNNaffinity: 4.53472
+CNNvariance: 0.29070
+Affinity: -4.73213  -0.63238 (kcal/mol)
+RMSD: 5.60891
+CNNscore: 0.29432 
+CNNaffinity: 3.69159
+CNNvariance: 0.29814
+Affinity: -4.21306  -0.10298 (kcal/mol)
+RMSD: 2.98068
+CNNscore: 0.66980 
+CNNaffinity: 3.62107
+CNNvariance: 0.18479
+Affinity: 12.81236  1.56872 (kcal/mol)
+RMSD: 9.06513
+CNNscore: 0.34210 
+CNNaffinity: 4.77267
+CNNvariance: 0.84658
+Affinity: -1.86124  -0.25682 (kcal/mol)
+RMSD: 4.58543
+CNNscore: 0.64589 
+CNNaffinity: 3.55857
+CNNvariance: 0.06148
+Affinity: -2.70174  -0.89435 (kcal/mol)
+RMSD: 4.54472
+CNNscore: 0.34178 
+CNNaffinity: 3.35827
+CNNvariance: 0.41816
+Affinity: -1.93329  -0.19909 (kcal/mol)
+RMSD: 5.80993
+CNNscore: 0.68200 
+CNNaffinity: 4.02316
+CNNvariance: 0.04066
+Affinity: 14.98292  0.16775 (kcal/mol)
+RMSD: 3.81872
+CNNscore: 0.51733 
+CNNaffinity: 3.61997
+CNNvariance: 0.06936
+Affinity: -3.75137  -0.17199 (kcal/mol)
+RMSD: 4.54579
+CNNscore: 0.37055 
+CNNaffinity: 2.95703
+CNNvariance: 0.64389
+Affinity: -3.56646  -0.44694 (kcal/mol)
+RMSD: 6.10774
+CNNscore: 0.59869 
+CNNaffinity: 4.70376
+CNNvariance: 0.05181
+Affinity: -4.63279  -0.35709 (kcal/mol)
+RMSD: 6.28793
+CNNscore: 0.39197 
+CNNaffinity: 4.55394
+CNNvariance: 0.30750
+Affinity: -3.10465  -0.90466 (kcal/mol)
+RMSD: 5.28329
+CNNscore: 0.58151 
+CNNaffinity: 4.80410
+CNNvariance: 0.05258
+Affinity: -1.15037  -1.05734 (kcal/mol)
+RMSD: 6.46304
+CNNscore: 0.79963 
+CNNaffinity: 4.08399
+CNNvariance: 0.06926
+Affinity: -4.05530  -0.79662 (kcal/mol)
+RMSD: 2.69078
+CNNscore: 0.52710 
+CNNaffinity: 4.09362
+CNNvariance: 0.17337
+Affinity: -1.91365  -0.43002 (kcal/mol)
+RMSD: 6.32068
+CNNscore: 0.81635 
+CNNaffinity: 4.02198
+CNNvariance: 0.17293
+Affinity: 43.66596  -0.24564 (kcal/mol)
+RMSD: 4.77902
+CNNscore: 0.00425 
+CNNaffinity: 4.25255
+CNNvariance: 1.65006
+Affinity: -4.30345  -0.53526 (kcal/mol)
+RMSD: 4.32394
+CNNscore: 0.60046 
+CNNaffinity: 4.58773
+CNNvariance: 0.05378
+Affinity: -4.82673  -1.02148 (kcal/mol)
+RMSD: 6.20628
+CNNscore: 0.13215 
+CNNaffinity: 3.38508
+CNNvariance: 1.03639
+Affinity: -2.39541  -1.68514 (kcal/mol)
+RMSD: 3.97307
+CNNscore: 0.65096 
+CNNaffinity: 4.00996
+CNNvariance: 0.17214
+Affinity: -1.17393  -0.76303 (kcal/mol)
+RMSD: 7.62821
+CNNscore: 0.73475 
+CNNaffinity: 4.59955
+CNNvariance: 0.32759
+Phensuximide | pose 405 | ligand outside box
+Affinity: -4.27326  -0.62315 (kcal/mol)
+RMSD: 1.17084
+CNNscore: 0.51602 
+CNNaffinity: 3.87178
+CNNvariance: 0.21681
+Affinity: 31.61960  -0.24892 (kcal/mol)
+RMSD: 7.62446
+CNNscore: 0.43323 
+CNNaffinity: 4.26406
+CNNvariance: 0.46467
+Affinity: -1.02684  -0.76659 (kcal/mol)
+RMSD: 5.38279
+CNNscore: 0.86346 
+CNNaffinity: 4.18344
+CNNvariance: 0.20307
+Clocortolone | pose 408 | ligand outside box
+Clocortolone | pose 408 | ligand outside box
+Clocortolone | pose 408 | ligand outside box
+Clocortolone | pose 408 | ligand outside box
+Clocortolone | pose 408 | ligand outside box
+Affinity: -2.69413  0.26409 (kcal/mol)
+RMSD: 5.29156
+CNNscore: 0.62876 
+CNNaffinity: 3.43438
+CNNvariance: 0.30989
+Affinity: -3.05550  -0.23674 (kcal/mol)
+RMSD: 2.69717
+CNNscore: 0.74079 
+CNNaffinity: 3.93365
+CNNvariance: 0.09071
+Affinity: -3.66696  -0.40854 (kcal/mol)
+RMSD: 2.97769
+CNNscore: 0.26172 
+CNNaffinity: 3.93760
+CNNvariance: 0.28985
+Affinity: -4.61175  -0.55893 (kcal/mol)
+RMSD: 9.35746
+CNNscore: 0.29927 
+CNNaffinity: 5.11095
+CNNvariance: 0.06995
+Affinity: -1.66228  -0.16276 (kcal/mol)
+RMSD: 4.21154
+CNNscore: 0.78149 
+CNNaffinity: 2.95031
+CNNvariance: 0.05119
+Affinity: -1.91754  -0.43102 (kcal/mol)
+RMSD: 4.15052
+CNNscore: 0.79528 
+CNNaffinity: 4.23781
+CNNvariance: 0.52186
+Affinity: -2.62255  -0.47499 (kcal/mol)
+RMSD: 4.89006
+CNNscore: 0.44301 
+CNNaffinity: 4.37154
+CNNvariance: 1.09848
+Affinity: -3.46265  -0.27159 (kcal/mol)
+RMSD: 7.51713
+CNNscore: 0.27108 
+CNNaffinity: 2.77717
+CNNvariance: 0.50538
+Affinity: 34.03101  0.18138 (kcal/mol)
+RMSD: 5.08434
+CNNscore: 0.26831 
+CNNaffinity: 4.34860
+CNNvariance: 0.50893
+Affinity: -3.98137  0.86089 (kcal/mol)
+RMSD: 1.88667
+CNNscore: 0.56634 
+CNNaffinity: 4.14923
+CNNvariance: 0.30310
+Affinity: -3.78452  -0.80720 (kcal/mol)
+RMSD: 5.32197
+CNNscore: 0.50782 
+CNNaffinity: 4.02834
+CNNvariance: 0.48783
+Terbinafine | pose 419 | ligand outside box
+Affinity: 78.70538  2.11855 (kcal/mol)
+RMSD: 9.08362
+CNNscore: 0.02904 
+CNNaffinity: 3.40483
+CNNvariance: 2.73455
+WARNING: not all movable atoms are within the search space
+Affinity: -3.92379  -0.59982 (kcal/mol)
+RMSD: 3.85411
+CNNscore: 0.43902 
+CNNaffinity: 4.26951
+CNNvariance: 0.09280
+Affinity: -1.95645  -0.38029 (kcal/mol)
+RMSD: 5.05104
+CNNscore: 0.78726 
+CNNaffinity: 4.13135
+CNNvariance: 0.51954
+Affinity: -3.38668  -0.39330 (kcal/mol)
+RMSD: 2.33697
+CNNscore: 0.78218 
+CNNaffinity: 4.32342
+CNNvariance: 0.14579
+Affinity: -3.21580  -0.41231 (kcal/mol)
+RMSD: 4.81910
+CNNscore: 0.68219 
+CNNaffinity: 4.16556
+CNNvariance: 0.32566
+Affinity: 85.70129  2.05840 (kcal/mol)
+RMSD: 2.55607
+CNNscore: 0.17770 
+CNNaffinity: 3.31117
+CNNvariance: 3.36428
+Affinity: -0.64302  -0.14064 (kcal/mol)
+RMSD: 2.25134
+CNNscore: 0.75232 
+CNNaffinity: 3.05085
+CNNvariance: 0.13673
+Affinity: -3.01523  0.09820 (kcal/mol)
+RMSD: 8.48936
+CNNscore: 0.46556 
+CNNaffinity: 3.89913
+CNNvariance: 0.16731
+Affinity: -4.92101  0.10152 (kcal/mol)
+RMSD: 5.14250
+CNNscore: 0.76755 
+CNNaffinity: 3.49152
+CNNvariance: 0.58284
+Affinity: 72.41954  0.00000 (kcal/mol)
+RMSD: 8.39192
+CNNscore: 0.00457 
+CNNaffinity: 3.94716
+CNNvariance: 1.01947
+Affinity: -2.79225  -0.18343 (kcal/mol)
+RMSD: 4.87955
+CNNscore: 0.67031 
+CNNaffinity: 3.10981
+CNNvariance: 0.12341
+Affinity: 59.15506  0.03233 (kcal/mol)
+RMSD: 5.16300
+CNNscore: 0.00080 
+CNNaffinity: 4.35129
+CNNvariance: 2.67770
+Affinity: 19.47050  1.38117 (kcal/mol)
+RMSD: 3.46558
+CNNscore: 0.51578 
+CNNaffinity: 3.82572
+CNNvariance: 0.37532
+Affinity: -3.51374  -0.13851 (kcal/mol)
+RMSD: 6.29172
+CNNscore: 0.77539 
+CNNaffinity: 4.40915
+CNNvariance: 0.04153
+Affinity: -2.75221  -0.59510 (kcal/mol)
+RMSD: 7.85500
+CNNscore: 0.32368 
+CNNaffinity: 3.88001
+CNNvariance: 0.73243
+Affinity: -3.93579  -1.52979 (kcal/mol)
+RMSD: 4.62409
+CNNscore: 0.24664 
+CNNaffinity: 5.53409
+CNNvariance: 0.17611
+Affinity: -1.16056  0.76707 (kcal/mol)
+RMSD: 6.17835
+CNNscore: 0.62813 
+CNNaffinity: 3.87998
+CNNvariance: 0.33408
+Affinity: -2.89102  -0.17461 (kcal/mol)
+RMSD: 6.27322
+CNNscore: 0.46969 
+CNNaffinity: 3.56919
+CNNvariance: 0.34499
+Affinity: -4.75778  -0.75988 (kcal/mol)
+RMSD: 5.80011
+CNNscore: 0.40179 
+CNNaffinity: 3.89888
+CNNvariance: 0.29941
+Affinity: -3.72192  -0.32395 (kcal/mol)
+RMSD: 7.11529
+CNNscore: 0.61769 
+CNNaffinity: 4.59803
+CNNvariance: 0.23804
+Affinity: -4.12337  -0.54060 (kcal/mol)
+RMSD: 2.77466
+CNNscore: 0.26768 
+CNNaffinity: 3.47808
+CNNvariance: 0.24233
+Affinity: -4.37306  -0.38915 (kcal/mol)
+RMSD: 3.89344
+CNNscore: 0.62457 
+CNNaffinity: 3.96421
+CNNvariance: 0.13158
+Affinity: 74.86336  1.85629 (kcal/mol)
+RMSD: 8.95466
+CNNscore: 0.00524 
+CNNaffinity: 4.43934
+CNNvariance: 3.35738
+Affinity: -3.39826  -0.60444 (kcal/mol)
+RMSD: 4.92013
+CNNscore: 0.36305 
+CNNaffinity: 2.88404
+CNNvariance: 0.28219
+Affinity: -2.96130  -1.78445 (kcal/mol)
+RMSD: 7.88179
+CNNscore: 0.73660 
+CNNaffinity: 4.99976
+CNNvariance: 0.10516
+Affinity: -3.03404  -0.08228 (kcal/mol)
+RMSD: 4.88647
+CNNscore: 0.49201 
+CNNaffinity: 4.15360
+CNNvariance: 0.14433
+Affinity: -2.71505  -3.76680 (kcal/mol)
+RMSD: 9.84149
+CNNscore: 0.59981 
+CNNaffinity: 4.24653
+CNNvariance: 0.20472
+Affinity: -2.16149  -0.20403 (kcal/mol)
+RMSD: 5.50262
+CNNscore: 0.57491 
+CNNaffinity: 4.03217
+CNNvariance: 0.21868
+Affinity: -2.36208  -1.58131 (kcal/mol)
+RMSD: 6.77647
+CNNscore: 0.54926 
+CNNaffinity: 4.87188
+CNNvariance: 0.73289
+Affinity: -1.50792  -0.10293 (kcal/mol)
+RMSD: 3.73329
+CNNscore: 0.65469 
+CNNaffinity: 2.60857
+CNNvariance: 0.04273
+Affinity: -4.65945  -0.62884 (kcal/mol)
+RMSD: 7.74063
+CNNscore: 0.22099 
+CNNaffinity: 4.12645
+CNNvariance: 0.38545
+Affinity: -3.53931  -1.33570 (kcal/mol)
+RMSD: 9.50103
+CNNscore: 0.37208 
+CNNaffinity: 4.17856
+CNNvariance: 0.27769
+Affinity: -3.15057  -0.56455 (kcal/mol)
+RMSD: 4.31942
+CNNscore: 0.63655 
+CNNaffinity: 3.88133
+CNNvariance: 0.10539
+Affinity: -2.14372  -0.15436 (kcal/mol)
+RMSD: 10.04634
+CNNscore: 0.47455 
+CNNaffinity: 4.66560
+CNNvariance: 0.81648
+Affinity: -3.00021  0.00000 (kcal/mol)
+RMSD: 9.83145
+CNNscore: 0.57198 
+CNNaffinity: 4.65764
+CNNvariance: 0.27586
+Affinity: 86.94196  -0.33096 (kcal/mol)
+RMSD: 4.60011
+CNNscore: 0.00717 
+CNNaffinity: 5.21289
+CNNvariance: 3.15071
+Affinity: -2.87129  -0.65017 (kcal/mol)
+RMSD: 4.18307
+CNNscore: 0.71663 
+CNNaffinity: 4.85664
+CNNvariance: 0.15104
+Affinity: -4.22975  -0.42922 (kcal/mol)
+RMSD: 4.86794
+CNNscore: 0.23297 
+CNNaffinity: 4.01180
+CNNvariance: 0.94788
+Affinity: -3.62682  -0.58907 (kcal/mol)
+RMSD: 7.45800
+CNNscore: 0.07113 
+CNNaffinity: 3.82646
+CNNvariance: 0.60504
+Buprenorphine | pose 458 | ligand outside box
+Buprenorphine | pose 458 | ligand outside box
+Affinity: -3.39244  -0.54651 (kcal/mol)
+RMSD: 3.67321
+CNNscore: 0.56797 
+CNNaffinity: 4.34073
+CNNvariance: 0.08458
+Affinity: -4.69031  -1.84234 (kcal/mol)
+RMSD: 2.14973
+CNNscore: 0.47136 
+CNNaffinity: 4.55297
+CNNvariance: 0.38028
+Affinity: -3.60995  0.63451 (kcal/mol)
+RMSD: 4.79114
+CNNscore: 0.50373 
+CNNaffinity: 4.06561
+CNNvariance: 0.26043
+Affinity: 7.78541  1.26715 (kcal/mol)
+RMSD: 4.15586
+CNNscore: 0.56654 
+CNNaffinity: 4.13689
+CNNvariance: 0.26264
+Affinity: -3.32539  -0.42188 (kcal/mol)
+RMSD: 4.95351
+CNNscore: 0.30169 
+CNNaffinity: 3.40948
+CNNvariance: 0.10304
+Affinity: 29.12368  -0.06636 (kcal/mol)
+RMSD: 3.34410
+CNNscore: 0.29358 
+CNNaffinity: 3.77393
+CNNvariance: 0.39444
+Affinity: 40.26167  0.00000 (kcal/mol)
+RMSD: 2.50789
+CNNscore: 0.03345 
+CNNaffinity: 3.23419
+CNNvariance: 1.11818
+Affinity: 15.84165  0.93310 (kcal/mol)
+RMSD: 6.86286
+CNNscore: 0.53380 
+CNNaffinity: 4.94128
+CNNvariance: 0.45340
+Affinity: -4.99545  -1.30151 (kcal/mol)
+RMSD: 4.63947
+CNNscore: 0.38222 
+CNNaffinity: 4.46692
+CNNvariance: 0.18686
+Affinity: -3.66565  -0.85424 (kcal/mol)
+RMSD: 6.78693
+CNNscore: 0.29420 
+CNNaffinity: 3.78721
+CNNvariance: 0.49723
+Methantheline | pose 468 | ligand outside box
+Affinity: -4.11676  0.00000 (kcal/mol)
+RMSD: 5.81284
+CNNscore: 0.42843 
+CNNaffinity: 3.99615
+CNNvariance: 0.23842
+Affinity: 111.88165  -0.61563 (kcal/mol)
+RMSD: 7.57178
+CNNscore: 0.00045 
+CNNaffinity: 3.33027
+CNNvariance: 2.37559
+Affinity: -3.87499  -0.31088 (kcal/mol)
+RMSD: 7.01302
+CNNscore: 0.46850 
+CNNaffinity: 3.97944
+CNNvariance: 0.15381
+Affinity: -3.63902  -1.61278 (kcal/mol)
+RMSD: 7.29577
+CNNscore: 0.19322 
+CNNaffinity: 3.59854
+CNNvariance: 0.54309
+Affinity: -2.20654  -2.07078 (kcal/mol)
+RMSD: 7.00621
+CNNscore: 0.59583 
+CNNaffinity: 4.61925
+CNNvariance: 0.36930
+Affinity: -4.60646  -0.46312 (kcal/mol)
+RMSD: 5.91875
+CNNscore: 0.26174 
+CNNaffinity: 4.21477
+CNNvariance: 0.31461
+Affinity: -4.05437  0.17287 (kcal/mol)
+RMSD: 8.03612
+CNNscore: 0.29300 
+CNNaffinity: 4.03682
+CNNvariance: 0.16755
+Affinity: 18.11734  -0.22845 (kcal/mol)
+RMSD: 5.71476
+CNNscore: 0.57679 
+CNNaffinity: 3.63586
+CNNvariance: 0.34012
+Norgestimate | pose 476 | ligand outside box
+Norgestimate | pose 476 | ligand outside box
+Affinity: -4.65182  -0.58805 (kcal/mol)
+RMSD: 4.51169
+CNNscore: 0.21325 
+CNNaffinity: 3.10157
+CNNvariance: 1.23076
+Methylprednisolone | pose 477 | ligand outside box
+Affinity: -4.89479  -3.13435 (kcal/mol)
+RMSD: 5.16489
+CNNscore: 0.20038 
+CNNaffinity: 4.37836
+CNNvariance: 0.98002
+Affinity: -3.56960  -0.88223 (kcal/mol)
+RMSD: 6.74103
+CNNscore: 0.29927 
+CNNaffinity: 4.23531
+CNNvariance: 0.08765
+Affinity: 95.67106  0.52250 (kcal/mol)
+RMSD: 6.15278
+CNNscore: 0.00044 
+CNNaffinity: 2.75450
+CNNvariance: 2.26729
+Affinity: -2.47631  -1.10578 (kcal/mol)
+RMSD: 4.42696
+CNNscore: 0.70056 
+CNNaffinity: 4.00774
+CNNvariance: 0.33832
+Affinity: 25.47058  -0.40622 (kcal/mol)
+RMSD: 6.18568
+CNNscore: 0.51350 
+CNNaffinity: 3.86248
+CNNvariance: 0.30441
+Affinity: -2.18554  0.32507 (kcal/mol)
+RMSD: 7.96981
+CNNscore: 0.61936 
+CNNaffinity: 4.67785
+CNNvariance: 1.53961
+Affinity: -4.16276  -0.24667 (kcal/mol)
+RMSD: 4.65124
+CNNscore: 0.33673 
+CNNaffinity: 3.60082
+CNNvariance: 0.07390
+Affinity: -2.81880  -0.38340 (kcal/mol)
+RMSD: 3.26053
+CNNscore: 0.84053 
+CNNaffinity: 4.34056
+CNNvariance: 0.06208
+Affinity: -3.31731  -0.61748 (kcal/mol)
+RMSD: 3.54378
+CNNscore: 0.37698 
+CNNaffinity: 4.04580
+CNNvariance: 0.32213
+Affinity: -1.23980  -0.06849 (kcal/mol)
+RMSD: 8.66755
+CNNscore: 0.82525 
+CNNaffinity: 4.16352
+CNNvariance: 0.53556
+Affinity: 110.14406  0.64176 (kcal/mol)
+RMSD: 7.89132
+CNNscore: 0.00034 
+CNNaffinity: 2.87113
+CNNvariance: 1.99120
+Affinity: -4.46276  -0.12473 (kcal/mol)
+RMSD: 7.77845
+CNNscore: 0.71203 
+CNNaffinity: 4.67376
+CNNvariance: 0.25922
+Affinity: -4.99161  -0.43034 (kcal/mol)
+RMSD: 6.30487
+CNNscore: 0.42735 
+CNNaffinity: 3.71393
+CNNvariance: 0.67918
+Affinity: -4.56754  -0.23402 (kcal/mol)
+RMSD: 4.50727
+CNNscore: 0.28981 
+CNNaffinity: 3.59720
+CNNvariance: 0.60462
+Affinity: -5.36316  -0.55372 (kcal/mol)
+RMSD: 6.59329
+CNNscore: 0.33854 
+CNNaffinity: 4.45050
+CNNvariance: 0.64434
+Affinity: -0.78092  -0.31046 (kcal/mol)
+RMSD: 3.43237
+CNNscore: 0.85709 
+CNNaffinity: 3.87800
+CNNvariance: 0.27753
+Affinity: -2.64373  0.00000 (kcal/mol)
+RMSD: 3.16254
+CNNscore: 0.69452 
+CNNaffinity: 4.62586
+CNNvariance: 0.25085
+Affinity: -2.74975  -0.42342 (kcal/mol)
+RMSD: 3.32806
+CNNscore: 0.62215 
+CNNaffinity: 4.16668
+CNNvariance: 0.07391
+Affinity: -2.21867  -1.03325 (kcal/mol)
+RMSD: 3.30498
+CNNscore: 0.72940 
+CNNaffinity: 4.86193
+CNNvariance: 0.15349
+Affinity: -5.57910  -1.05551 (kcal/mol)
+RMSD: 4.91499
+CNNscore: 0.18104 
+CNNaffinity: 4.51889
+CNNvariance: 0.39442
+Affinity: -3.92258  -0.23043 (kcal/mol)
+RMSD: 9.19299
+CNNscore: 0.62839 
+CNNaffinity: 4.64523
+CNNvariance: 0.54098
+Affinity: -5.55250  -0.85604 (kcal/mol)
+RMSD: 4.75963
+CNNscore: 0.19463 
+CNNaffinity: 4.65865
+CNNvariance: 0.27317
+Affinity: -3.39815  -0.52956 (kcal/mol)
+RMSD: 5.58238
+CNNscore: 0.19917 
+CNNaffinity: 3.42977
+CNNvariance: 0.51228
+Affinity: -1.30022  -0.35488 (kcal/mol)
+RMSD: 8.17892
+CNNscore: 0.75281 
+CNNaffinity: 4.14314
+CNNvariance: 0.43375
+Affinity: -5.01731  -0.30820 (kcal/mol)
+RMSD: 5.29611
+CNNscore: 0.31435 
+CNNaffinity: 3.67676
+CNNvariance: 0.64845
+Affinity: -6.50262  -0.67584 (kcal/mol)
+RMSD: 6.47019
+CNNscore: 0.09144 
+CNNaffinity: 3.93705
+CNNvariance: 0.84033
+Affinity: -4.62477  -1.05168 (kcal/mol)
+RMSD: 5.52013
+CNNscore: 0.31813 
+CNNaffinity: 3.35149
+CNNvariance: 1.26643
+Affinity: -3.07118  -1.00012 (kcal/mol)
+RMSD: 5.28413
+CNNscore: 0.44749 
+CNNaffinity: 3.60961
+CNNvariance: 0.48161
+Affinity: -3.96927  -0.23795 (kcal/mol)
+RMSD: 4.15687
+CNNscore: 0.21406 
+CNNaffinity: 3.46343
+CNNvariance: 0.63683
+Affinity: 114.16203  0.00000 (kcal/mol)
+RMSD: 2.54946
+CNNscore: 0.00025 
+CNNaffinity: 3.56439
+CNNvariance: 3.12336
+Affinity: -3.50273  -0.66880 (kcal/mol)
+RMSD: 9.52096
+CNNscore: 0.33814 
+CNNaffinity: 4.34898
+CNNvariance: 0.36344
+Affinity: -1.31655  -0.60308 (kcal/mol)
+RMSD: 1.99549
+CNNscore: 0.83406 
+CNNaffinity: 4.52154
+CNNvariance: 0.25001
+Affinity: -3.72127  -0.19210 (kcal/mol)
+RMSD: 4.44600
+CNNscore: 0.17337 
+CNNaffinity: 3.02484
+CNNvariance: 0.20454
+Affinity: -2.88152  -0.76149 (kcal/mol)
+RMSD: 5.89196
+CNNscore: 0.64494 
+CNNaffinity: 4.13995
+CNNvariance: 0.39829
+Affinity: -4.33894  -0.38305 (kcal/mol)
+RMSD: 3.42394
+CNNscore: 0.23806 
+CNNaffinity: 3.19942
+CNNvariance: 0.49137
+Affinity: -0.44930  12.77915 (kcal/mol)
+RMSD: 2.16755
+CNNscore: 0.80614 
+CNNaffinity: 4.12939
+CNNvariance: 0.23859
+Affinity: -2.26490  -0.61459 (kcal/mol)
+RMSD: 5.70427
+CNNscore: 0.73090 
+CNNaffinity: 4.45444
+CNNvariance: 0.23122
+Affinity: 43.64807  -0.19950 (kcal/mol)
+RMSD: 1.51047
+CNNscore: 0.02545 
+CNNaffinity: 2.97127
+CNNvariance: 0.44409
+Affinity: 40.35852  -0.19839 (kcal/mol)
+RMSD: 3.57664
+CNNscore: 0.05642 
+CNNaffinity: 3.66264
+CNNvariance: 1.52924
+Affinity: -2.66645  -0.61800 (kcal/mol)
+RMSD: 4.85867
+CNNscore: 0.65904 
+CNNaffinity: 4.44761
+CNNvariance: 0.18677
+Affinity: 86.81512  0.38875 (kcal/mol)
+RMSD: 6.02982
+CNNscore: 0.00818 
+CNNaffinity: 5.41682
+CNNvariance: 3.60521
+Affinity: -5.90083  -0.26438 (kcal/mol)
+RMSD: 3.68588
+CNNscore: 0.49113 
+CNNaffinity: 3.80668
+CNNvariance: 1.01042
+Affinity: -5.73318  -0.41317 (kcal/mol)
+RMSD: 3.99817
+CNNscore: 0.49331 
+CNNaffinity: 5.02381
+CNNvariance: 0.05622
+Affinity: -2.47331  -0.60506 (kcal/mol)
+RMSD: 3.99496
+CNNscore: 0.71600 
+CNNaffinity: 3.58379
+CNNvariance: 0.25201
+Affinity: 20.65425  0.54838 (kcal/mol)
+RMSD: 7.37482
+CNNscore: 0.34364 
+CNNaffinity: 4.31942
+CNNvariance: 0.76282
+Affinity: -1.39346  -0.18510 (kcal/mol)
+RMSD: 8.10567
+CNNscore: 0.56783 
+CNNaffinity: 4.39151
+CNNvariance: 0.46464
+Affinity: -2.15365  -0.29022 (kcal/mol)
+RMSD: 3.39534
+CNNscore: 0.61855 
+CNNaffinity: 4.63559
+CNNvariance: 0.54325
+Affinity: -4.08986  -0.55876 (kcal/mol)
+RMSD: 2.15450
+CNNscore: 0.30611 
+CNNaffinity: 3.92211
+CNNvariance: 0.10296
+Affinity: -3.17073  -0.48712 (kcal/mol)
+RMSD: 5.42952
+CNNscore: 0.56829 
+CNNaffinity: 4.28239
+CNNvariance: 0.46571
+Affinity: -1.54187  0.07479 (kcal/mol)
+RMSD: 5.03153
+CNNscore: 0.72348 
+CNNaffinity: 2.82999
+CNNvariance: 0.08324
+Affinity: 4.02628  1.63490 (kcal/mol)
+RMSD: 6.34374
+CNNscore: 0.53767 
+CNNaffinity: 5.42904
+CNNvariance: 1.82502
+Affinity: -3.33661  -0.22621 (kcal/mol)
+RMSD: 5.58285
+CNNscore: 0.38738 
+CNNaffinity: 3.35013
+CNNvariance: 0.12867
+Affinity: -3.07576  -0.94420 (kcal/mol)
+RMSD: 8.54033
+CNNscore: 0.43101 
+CNNaffinity: 3.76017
+CNNvariance: 0.21299
+Affinity: -2.68055  0.00000 (kcal/mol)
+RMSD: 5.77473
+CNNscore: 0.70464 
+CNNaffinity: 2.99306
+CNNvariance: 0.17275
+Affinity: -5.22718  -0.64315 (kcal/mol)
+RMSD: 6.49160
+CNNscore: 0.25759 
+CNNaffinity: 3.54623
+CNNvariance: 1.45392
+Affinity: -3.26254  -0.48854 (kcal/mol)
+RMSD: 4.44429
+CNNscore: 0.63053 
+CNNaffinity: 3.38988
+CNNvariance: 0.31694
+Affinity: -1.64965  -0.43706 (kcal/mol)
+RMSD: 7.79520
+CNNscore: 0.45812 
+CNNaffinity: 4.51655
+CNNvariance: 0.35481
+Affinity: -4.27724  -0.21923 (kcal/mol)
+RMSD: 7.76429
+CNNscore: 0.43413 
+CNNaffinity: 3.71995
+CNNvariance: 0.12384
+Affinity: 49.80148  0.00000 (kcal/mol)
+RMSD: 5.07413
+CNNscore: 0.05660 
+CNNaffinity: 4.19874
+CNNvariance: 1.86625
+Affinity: -4.36963  -0.35852 (kcal/mol)
+RMSD: 4.34098
+CNNscore: 0.15772 
+CNNaffinity: 4.82067
+CNNvariance: 0.27610
+Affinity: -3.70857  -1.72233 (kcal/mol)
+RMSD: 7.90262
+CNNscore: 0.50935 
+CNNaffinity: 4.50058
+CNNvariance: 0.01962
+Affinity: -4.15850  -0.47341 (kcal/mol)
+RMSD: 8.80975
+CNNscore: 0.27651 
+CNNaffinity: 4.91515
+CNNvariance: 0.05100
+Affinity: -1.44840  -0.20980 (kcal/mol)
+RMSD: 4.98996
+CNNscore: 0.72623 
+CNNaffinity: 4.51192
+CNNvariance: 0.55098
+Affinity: -3.58644  -0.36086 (kcal/mol)
+RMSD: 4.08195
+CNNscore: 0.71142 
+CNNaffinity: 3.73375
+CNNvariance: 0.14395
+Affinity: -3.10794  -0.74383 (kcal/mol)
+RMSD: 5.40922
+CNNscore: 0.56881 
+CNNaffinity: 4.17112
+CNNvariance: 0.21753
+Affinity: 16.61709  1.53871 (kcal/mol)
+RMSD: 7.26107
+CNNscore: 0.36505 
+CNNaffinity: 4.86407
+CNNvariance: 0.25853
+Affinity: -2.42248  -0.29202 (kcal/mol)
+RMSD: 4.23781
+CNNscore: 0.58458 
+CNNaffinity: 3.35239
+CNNvariance: 0.58520
+Affinity: -2.85563  -0.50927 (kcal/mol)
+RMSD: 5.78429
+CNNscore: 0.57103 
+CNNaffinity: 3.14912
+CNNvariance: 0.16834
+Affinity: -3.67621  0.25171 (kcal/mol)
+RMSD: 2.87850
+CNNscore: 0.50357 
+CNNaffinity: 4.03204
+CNNvariance: 0.09692
+Affinity: -3.65550  -0.53264 (kcal/mol)
+RMSD: 4.55187
+CNNscore: 0.56141 
+CNNaffinity: 4.51609
+CNNvariance: 0.25296
+Affinity: -3.80551  -1.04170 (kcal/mol)
+RMSD: 5.54850
+CNNscore: 0.43780 
+CNNaffinity: 4.29715
+CNNvariance: 0.29433
+Affinity: -1.00016  -0.29996 (kcal/mol)
+RMSD: 7.02302
+CNNscore: 0.67198 
+CNNaffinity: 3.81500
+CNNvariance: 0.06620
+Affinity: -4.58353  -0.26440 (kcal/mol)
+RMSD: 4.91933
+CNNscore: 0.22306 
+CNNaffinity: 3.47073
+CNNvariance: 0.55041
+Affinity: -0.85226  -0.49805 (kcal/mol)
+RMSD: 6.53313
+CNNscore: 0.47139 
+CNNaffinity: 4.34059
+CNNvariance: 0.17832
+Affinity: 47.93567  0.41561 (kcal/mol)
+RMSD: 2.29910
+CNNscore: 0.00472 
+CNNaffinity: 3.31043
+CNNvariance: 0.09923
+Affinity: 34.52172  -0.83177 (kcal/mol)
+RMSD: 3.02594
+CNNscore: 0.00663 
+CNNaffinity: 2.51703
+CNNvariance: 0.20785
+Rosuvastatin | pose 553 | ligand outside box
+Affinity: 25.45660  -0.47870 (kcal/mol)
+RMSD: 3.76119
+CNNscore: 0.02735 
+CNNaffinity: 4.15535
+CNNvariance: 0.20536
+Affinity: -1.61921  -0.06451 (kcal/mol)
+RMSD: 7.99761
+CNNscore: 0.64342 
+CNNaffinity: 2.88586
+CNNvariance: 0.24722
+Affinity: -1.98951  -0.39065 (kcal/mol)
+RMSD: 4.12672
+CNNscore: 0.63542 
+CNNaffinity: 4.03067
+CNNvariance: 0.02908
+Affinity: -3.02366  -0.03229 (kcal/mol)
+RMSD: 5.50093
+CNNscore: 0.55822 
+CNNaffinity: 3.77949
+CNNvariance: 0.13802
+Affinity: -1.03172  -0.14328 (kcal/mol)
+RMSD: 3.08595
+CNNscore: 0.65817 
+CNNaffinity: 3.07564
+CNNvariance: 0.31894
+Trilostane | pose 558 | ligand outside box
+Affinity: -1.20826  -0.55308 (kcal/mol)
+RMSD: 4.03407
+CNNscore: 0.80263 
+CNNaffinity: 4.21257
+CNNvariance: 0.31444
+Affinity: -2.69060  -0.83037 (kcal/mol)
+RMSD: 6.63676
+CNNscore: 0.49064 
+CNNaffinity: 4.78466
+CNNvariance: 0.84497
+Affinity: -2.03541  -0.13886 (kcal/mol)
+RMSD: 8.52714
+CNNscore: 0.43934 
+CNNaffinity: 3.44046
+CNNvariance: 0.30457
+Affinity: -4.27161  -1.85415 (kcal/mol)
+RMSD: 7.41714
+CNNscore: 0.16933 
+CNNaffinity: 4.28044
+CNNvariance: 0.38747
+Affinity: -3.18103  -0.70334 (kcal/mol)
+RMSD: 4.55042
+CNNscore: 0.58372 
+CNNaffinity: 3.57427
+CNNvariance: 0.19016
+Affinity: -4.30484  -0.51266 (kcal/mol)
+RMSD: 4.82487
+CNNscore: 0.26728 
+CNNaffinity: 3.32317
+CNNvariance: 0.66649
+Affinity: -2.33015  -1.03135 (kcal/mol)
+RMSD: 7.12802
+CNNscore: 0.83638 
+CNNaffinity: 5.07909
+CNNvariance: 0.08174
+Affinity: -1.78234  -0.24675 (kcal/mol)
+RMSD: 9.94167
+CNNscore: 0.93389 
+CNNaffinity: 4.19877
+CNNvariance: 0.20160
+Affinity: -2.00401  -0.42346 (kcal/mol)
+RMSD: 2.09902
+CNNscore: 0.71433 
+CNNaffinity: 3.81376
+CNNvariance: 0.08550
+Affinity: -5.66476  -0.76452 (kcal/mol)
+RMSD: 3.48676
+CNNscore: 0.43615 
+CNNaffinity: 4.93349
+CNNvariance: 0.20513
+Affinity: -2.16784  -0.05551 (kcal/mol)
+RMSD: 5.07464
+CNNscore: 0.61944 
+CNNaffinity: 3.40201
+CNNvariance: 0.05245
+Affinity: 1.56690  -0.07714 (kcal/mol)
+RMSD: 10.36394
+CNNscore: 0.61027 
+CNNaffinity: 4.23492
+CNNvariance: 0.10121
+Affinity: -4.08025  -0.92760 (kcal/mol)
+RMSD: 6.28289
+CNNscore: 0.45100 
+CNNaffinity: 4.66840
+CNNvariance: 0.13168
+Affinity: -0.71991  -0.34652 (kcal/mol)
+RMSD: 5.92474
+CNNscore: 0.79423 
+CNNaffinity: 3.99820
+CNNvariance: 0.12780
+Affinity: 54.73011  0.41809 (kcal/mol)
+RMSD: 6.53553
+CNNscore: 0.05575 
+CNNaffinity: 4.89556
+CNNvariance: 1.54476
+Affinity: -1.22870  -0.85652 (kcal/mol)
+RMSD: 6.37651
+CNNscore: 0.84317 
+CNNaffinity: 4.23374
+CNNvariance: 0.14400
+Affinity: -0.69841  0.00000 (kcal/mol)
+RMSD: 6.03186
+CNNscore: 0.64031 
+CNNaffinity: 3.77993
+CNNvariance: 0.28593
+Levofloxacin | pose 575 | ligand outside box
+Affinity: -3.22484  -0.52845 (kcal/mol)
+RMSD: 2.76005
+CNNscore: 0.44469 
+CNNaffinity: 4.50377
+CNNvariance: 0.78533
+Affinity: -4.57554  -0.00796 (kcal/mol)
+RMSD: 6.00674
+CNNscore: 0.29100 
+CNNaffinity: 2.87917
+CNNvariance: 0.54475
+Affinity: -2.05390  0.00000 (kcal/mol)
+RMSD: 4.60076
+CNNscore: 0.76916 
+CNNaffinity: 3.74749
+CNNvariance: 0.03595
+Affinity: -2.71891  -0.22334 (kcal/mol)
+RMSD: 7.01339
+CNNscore: 0.58353 
+CNNaffinity: 4.08666
+CNNvariance: 0.54948
+Affinity: -4.80567  1.09545 (kcal/mol)
+RMSD: 8.64889
+CNNscore: 0.29480 
+CNNaffinity: 4.38391
+CNNvariance: 0.21259
+Affinity: -1.48254  -1.31201 (kcal/mol)
+RMSD: 6.72782
+CNNscore: 0.65850 
+CNNaffinity: 4.72540
+CNNvariance: 0.32192
+Affinity: 95.22987  1.68531 (kcal/mol)
+RMSD: 3.20990
+CNNscore: 0.00030 
+CNNaffinity: 3.55087
+CNNvariance: 2.30212
+Affinity: -1.66575  -0.59867 (kcal/mol)
+RMSD: 5.72213
+CNNscore: 0.74288 
+CNNaffinity: 4.01352
+CNNvariance: 0.32834
+Affinity: -0.99235  0.62696 (kcal/mol)
+RMSD: 6.44678
+CNNscore: 0.76674 
+CNNaffinity: 4.35256
+CNNvariance: 0.21984
+Affinity: 29.85810  -0.25242 (kcal/mol)
+RMSD: 7.16776
+CNNscore: 0.43711 
+CNNaffinity: 4.08305
+CNNvariance: 1.17447
+Affinity: -5.20990  -0.58798 (kcal/mol)
+RMSD: 5.30645
+CNNscore: 0.20129 
+CNNaffinity: 4.15996
+CNNvariance: 0.45911
+Affinity: -2.20071  -0.46704 (kcal/mol)
+RMSD: 6.74046
+CNNscore: 0.69246 
+CNNaffinity: 4.94727
+CNNvariance: 0.67207
+Affinity: -2.36368  -0.96742 (kcal/mol)
+RMSD: 8.77123
+CNNscore: 0.85851 
+CNNaffinity: 4.36200
+CNNvariance: 0.39802
+Affinity: -3.48129  -0.05835 (kcal/mol)
+RMSD: 4.54748
+CNNscore: 0.71953 
+CNNaffinity: 4.34255
+CNNvariance: 0.36753
+Affinity: -3.84632  -0.39001 (kcal/mol)
+RMSD: 7.75667
+CNNscore: 0.31539 
+CNNaffinity: 3.78640
+CNNvariance: 0.34733
+Affinity: -3.49327  -0.10425 (kcal/mol)
+RMSD: 5.62905
+CNNscore: 0.27071 
+CNNaffinity: 4.08900
+CNNvariance: 0.12283
+Affinity: -3.61011  -0.54229 (kcal/mol)
+RMSD: 10.16749
+CNNscore: 0.38966 
+CNNaffinity: 4.46694
+CNNvariance: 0.59868
+Affinity: -4.84922  -0.98423 (kcal/mol)
+RMSD: 7.16470
+CNNscore: 0.46759 
+CNNaffinity: 3.92736
+CNNvariance: 0.50958
+Affinity: -1.90955  -1.43412 (kcal/mol)
+RMSD: 9.98131
+CNNscore: 0.67331 
+CNNaffinity: 5.08876
+CNNvariance: 0.92680
+Affinity: -2.18212  -1.10956 (kcal/mol)
+RMSD: 5.00417
+CNNscore: 0.74732 
+CNNaffinity: 4.61160
+CNNvariance: 0.19020
+Affinity: -3.80482  -1.20594 (kcal/mol)
+RMSD: 8.79109
+CNNscore: 0.58169 
+CNNaffinity: 5.91015
+CNNvariance: 0.81506
+Affinity: -2.58603  -1.09244 (kcal/mol)
+RMSD: 6.93982
+CNNscore: 0.74398 
+CNNaffinity: 4.16238
+CNNvariance: 0.35368
+Affinity: -3.40008  -0.58401 (kcal/mol)
+RMSD: 5.63002
+CNNscore: 0.27453 
+CNNaffinity: 3.75008
+CNNvariance: 0.24813
+Affinity: -1.81762  -0.54130 (kcal/mol)
+RMSD: 5.79635
+CNNscore: 0.62349 
+CNNaffinity: 3.89796
+CNNvariance: 0.42932
+Affinity: -4.35249  -0.20612 (kcal/mol)
+RMSD: 5.94917
+CNNscore: 0.18942 
+CNNaffinity: 4.15358
+CNNvariance: 0.24373
+Affinity: -3.72614  -0.66626 (kcal/mol)
+RMSD: 5.22304
+CNNscore: 0.44163 
+CNNaffinity: 3.34427
+CNNvariance: 0.48077
+Affinity: -3.49438  -0.18701 (kcal/mol)
+RMSD: 3.98120
+CNNscore: 0.78151 
+CNNaffinity: 3.52596
+CNNvariance: 0.61581
+Affinity: 22.29326  0.00000 (kcal/mol)
+RMSD: 4.40822
+CNNscore: 0.09989 
+CNNaffinity: 1.98651
+CNNvariance: 0.04170
+Affinity: -2.36008  -0.53595 (kcal/mol)
+RMSD: 6.19990
+CNNscore: 0.62944 
+CNNaffinity: 3.87143
+CNNvariance: 0.02692
+Affinity: -4.54109  -0.29357 (kcal/mol)
+RMSD: 3.52486
+CNNscore: 0.17468 
+CNNaffinity: 3.96098
+CNNvariance: 0.38906
+Affinity: -5.32244  -0.75234 (kcal/mol)
+RMSD: 4.56118
+CNNscore: 0.28486 
+CNNaffinity: 4.48622
+CNNvariance: 0.42597
+Affinity: -2.48750  -0.39834 (kcal/mol)
+RMSD: 5.80176
+CNNscore: 0.82492 
+CNNaffinity: 4.64615
+CNNvariance: 0.07307
+Affinity: -1.72103  -0.39407 (kcal/mol)
+RMSD: 5.39122
+CNNscore: 0.67857 
+CNNaffinity: 3.38832
+CNNvariance: 0.14609
+Affinity: -1.57615  -0.21444 (kcal/mol)
+RMSD: 5.27840
+CNNscore: 0.64021 
+CNNaffinity: 3.00157
+CNNvariance: 0.11397
+Affinity: -3.35302  -0.20625 (kcal/mol)
+RMSD: 4.85318
+CNNscore: 0.36396 
+CNNaffinity: 3.26950
+CNNvariance: 0.25907
+Affinity: -3.69955  0.92252 (kcal/mol)
+RMSD: 6.32924
+CNNscore: 0.36374 
+CNNaffinity: 3.74455
+CNNvariance: 0.51888
+Affinity: -2.86108  -0.15159 (kcal/mol)
+RMSD: 6.21016
+CNNscore: 0.51567 
+CNNaffinity: 3.53286
+CNNvariance: 0.17763
+Affinity: -3.42037  -1.11836 (kcal/mol)
+RMSD: 5.77633
+CNNscore: 0.48777 
+CNNaffinity: 3.90031
+CNNvariance: 0.16992
+Affinity: -5.51696  -0.23739 (kcal/mol)
+RMSD: 6.94020
+CNNscore: 0.39220 
+CNNaffinity: 3.76819
+CNNvariance: 0.91355
+Affinity: -5.34899  0.04868 (kcal/mol)
+RMSD: 5.06392
+CNNscore: 0.20067 
+CNNaffinity: 3.55939
+CNNvariance: 0.52886
+Affinity: -3.38787  -0.90584 (kcal/mol)
+RMSD: 3.92244
+CNNscore: 0.53018 
+CNNaffinity: 4.53323
+CNNvariance: 0.29577
+Affinity: -3.02447  -0.16979 (kcal/mol)
+RMSD: 4.23239
+CNNscore: 0.50682 
+CNNaffinity: 3.21948
+CNNvariance: 0.07748
+Brinzolamide | pose 617 | ligand outside box
+Affinity: -3.66626  -2.56443 (kcal/mol)
+RMSD: 7.45416
+CNNscore: 0.26050 
+CNNaffinity: 3.90694
+CNNvariance: 0.76902
+Affinity: -3.35861  -0.19370 (kcal/mol)
+RMSD: 4.29205
+CNNscore: 0.41710 
+CNNaffinity: 4.20309
+CNNvariance: 0.43919
+Affinity: -3.26309  -0.62552 (kcal/mol)
+RMSD: 9.15950
+CNNscore: 0.78862 
+CNNaffinity: 4.87372
+CNNvariance: 0.52082
+Affinity: 77.86603  0.00000 (kcal/mol)
+RMSD: 5.70247
+CNNscore: 0.20472 
+CNNaffinity: 5.95410
+CNNvariance: 2.83620
+Affinity: 65.36078  -0.25213 (kcal/mol)
+RMSD: 5.06879
+CNNscore: 0.01488 
+CNNaffinity: 4.89233
+CNNvariance: 3.08828
+Affinity: -3.11011  -0.40299 (kcal/mol)
+RMSD: 6.37747
+CNNscore: 0.48501 
+CNNaffinity: 4.26950
+CNNvariance: 0.14824
+Affinity: -3.14835  -0.28164 (kcal/mol)
+RMSD: 4.59005
+CNNscore: 0.62302 
+CNNaffinity: 2.90105
+CNNvariance: 0.14271
+Affinity: -3.65417  -1.18696 (kcal/mol)
+RMSD: 8.41045
+CNNscore: 0.38658 
+CNNaffinity: 3.76044
+CNNvariance: 0.36228
+Affinity: -3.87425  -0.56541 (kcal/mol)
+RMSD: 5.64783
+CNNscore: 0.41701 
+CNNaffinity: 3.29442
+CNNvariance: 0.54196
+Affinity: -2.14623  0.00000 (kcal/mol)
+RMSD: 5.49695
+CNNscore: 0.70874 
+CNNaffinity: 4.03669
+CNNvariance: 0.39179
+Affinity: -4.30205  -0.31968 (kcal/mol)
+RMSD: 4.98162
+CNNscore: 0.07398 
+CNNaffinity: 3.54503
+CNNvariance: 0.50747
+Affinity: 13.77664  1.20077 (kcal/mol)
+RMSD: 7.55697
+CNNscore: 0.51770 
+CNNaffinity: 4.79003
+CNNvariance: 0.03340
+Affinity: -4.55160  -1.81204 (kcal/mol)
+RMSD: 5.07809
+CNNscore: 0.21232 
+CNNaffinity: 4.33043
+CNNvariance: 0.22290
+Affinity: -3.28419  -0.39364 (kcal/mol)
+RMSD: 2.71450
+CNNscore: 0.48930 
+CNNaffinity: 3.50442
+CNNvariance: 0.08867
+Affinity: -4.88356  -0.71335 (kcal/mol)
+RMSD: 4.52969
+CNNscore: 0.31669 
+CNNaffinity: 4.81795
+CNNvariance: 0.20526
+Affinity: -2.36722  -1.09409 (kcal/mol)
+RMSD: 4.74281
+CNNscore: 0.74908 
+CNNaffinity: 3.49769
+CNNvariance: 0.13702
+Affinity: -3.37071  -0.28021 (kcal/mol)
+RMSD: 6.83244
+CNNscore: 0.42244 
+CNNaffinity: 4.31726
+CNNvariance: 0.28311
+Affinity: -1.72359  -0.28974 (kcal/mol)
+RMSD: 8.53070
+CNNscore: 0.69575 
+CNNaffinity: 3.80243
+CNNvariance: 0.16809
+Affinity: -1.97592  -0.41193 (kcal/mol)
+RMSD: 1.60807
+CNNscore: 0.84317 
+CNNaffinity: 5.16418
+CNNvariance: 0.73229
+Affinity: -3.57459  0.00000 (kcal/mol)
+RMSD: 5.86326
+CNNscore: 0.54447 
+CNNaffinity: 4.68900
+CNNvariance: 1.25898
+Affinity: -2.90130  -1.00480 (kcal/mol)
+RMSD: 5.16036
+CNNscore: 0.29282 
+CNNaffinity: 3.28193
+CNNvariance: 0.48896
+Pemoline | pose 638 | ligand outside box
+Affinity: -2.21081  0.00000 (kcal/mol)
+RMSD: 3.61674
+CNNscore: 0.57999 
+CNNaffinity: 2.72388
+CNNvariance: 0.25471
+Affinity: -4.34218  -0.69702 (kcal/mol)
+RMSD: 6.89520
+CNNscore: 0.41824 
+CNNaffinity: 4.01856
+CNNvariance: 0.62725
+Affinity: -2.57763  -0.38094 (kcal/mol)
+RMSD: 4.36623
+CNNscore: 0.68495 
+CNNaffinity: 4.53663
+CNNvariance: 0.12764
+Affinity: 115.95636  0.13657 (kcal/mol)
+RMSD: 3.24540
+CNNscore: 0.00033 
+CNNaffinity: 3.24742
+CNNvariance: 2.60512
+Affinity: -2.51052  -0.86911 (kcal/mol)
+RMSD: 6.20830
+CNNscore: 0.60350 
+CNNaffinity: 4.91484
+CNNvariance: 0.75782
+Affinity: -4.24796  -0.63507 (kcal/mol)
+RMSD: 9.55465
+CNNscore: 0.43866 
+CNNaffinity: 4.08121
+CNNvariance: 0.17355
+Affinity: -1.91119  -0.05165 (kcal/mol)
+RMSD: 6.84239
+CNNscore: 0.70120 
+CNNaffinity: 3.59993
+CNNvariance: 0.32389
+Affinity: 114.92470  1.38556 (kcal/mol)
+RMSD: 1.60190
+CNNscore: 0.00015 
+CNNaffinity: 2.98100
+CNNvariance: 2.84600
+Affinity: -1.29503  -0.43960 (kcal/mol)
+RMSD: 5.90452
+CNNscore: 0.66871 
+CNNaffinity: 4.41265
+CNNvariance: 0.56452
+Affinity: -3.88969  -1.50934 (kcal/mol)
+RMSD: 8.32848
+CNNscore: 0.15245 
+CNNaffinity: 4.19482
+CNNvariance: 0.35913
+Affinity: -0.83634  -2.14654 (kcal/mol)
+RMSD: 5.14573
+CNNscore: 0.73574 
+CNNaffinity: 4.59834
+CNNvariance: 0.34541
+Affinity: -2.69244  -0.00590 (kcal/mol)
+RMSD: 6.60911
+CNNscore: 0.53968 
+CNNaffinity: 3.24956
+CNNvariance: 0.20469
+Affinity: -4.49860  -2.05769 (kcal/mol)
+RMSD: 5.34033
+CNNscore: 0.19612 
+CNNaffinity: 3.97319
+CNNvariance: 0.58516
+Affinity: -2.07265  -0.74119 (kcal/mol)
+RMSD: 3.66038
+CNNscore: 0.80577 
+CNNaffinity: 3.89353
+CNNvariance: 0.11015
+Affinity: -2.77611  -0.42391 (kcal/mol)
+RMSD: 9.53423
+CNNscore: 0.79695 
+CNNaffinity: 4.41497
+CNNvariance: 0.12073
+Affinity: -2.91795  -0.43855 (kcal/mol)
+RMSD: 5.48314
+CNNscore: 0.53207 
+CNNaffinity: 2.93193
+CNNvariance: 0.16248
+Affinity: 0.56598  1.21198 (kcal/mol)
+RMSD: 6.38092
+CNNscore: 0.31602 
+CNNaffinity: 4.07221
+CNNvariance: 0.13613
+Affinity: -4.32941  -0.60515 (kcal/mol)
+RMSD: 3.03135
+CNNscore: 0.58813 
+CNNaffinity: 4.37841
+CNNvariance: 0.12432
+Affinity: -4.38017  -1.43939 (kcal/mol)
+RMSD: 8.16897
+CNNscore: 0.14514 
+CNNaffinity: 4.06622
+CNNvariance: 0.28998
+Affinity: -4.31925  -0.44786 (kcal/mol)
+RMSD: 6.30495
+CNNscore: 0.17597 
+CNNaffinity: 3.39524
+CNNvariance: 0.32947
+Affinity: -1.66664  -0.66578 (kcal/mol)
+RMSD: 7.84442
+CNNscore: 0.68352 
+CNNaffinity: 4.52867
+CNNvariance: 0.14689
+Affinity: -2.71725  0.00000 (kcal/mol)
+RMSD: 4.01886
+CNNscore: 0.65884 
+CNNaffinity: 3.57370
+CNNvariance: 0.06229
+Affinity: -2.23928  -0.75522 (kcal/mol)
+RMSD: 5.72370
+CNNscore: 0.53891 
+CNNaffinity: 4.45845
+CNNvariance: 0.18694
+Affinity: 18.53113  -0.35445 (kcal/mol)
+RMSD: 5.01195
+CNNscore: 0.21866 
+CNNaffinity: 5.01221
+CNNvariance: 0.69042
+Affinity: -4.36636  -0.23333 (kcal/mol)
+RMSD: 2.43653
+CNNscore: 0.31989 
+CNNaffinity: 3.43575
+CNNvariance: 0.31186
+Affinity: -3.65731  -0.27897 (kcal/mol)
+RMSD: 7.47654
+CNNscore: 0.52700 
+CNNaffinity: 4.50266
+CNNvariance: 0.35876
+Affinity: -4.38150  -1.15187 (kcal/mol)
+RMSD: 7.00136
+CNNscore: 0.04095 
+CNNaffinity: 4.99976
+CNNvariance: 0.36597
+Affinity: -2.51939  -0.23360 (kcal/mol)
+RMSD: 6.26384
+CNNscore: 0.80086 
+CNNaffinity: 3.64492
+CNNvariance: 0.43929
+Affinity: 91.06011  0.81742 (kcal/mol)
+RMSD: 7.16538
+CNNscore: 0.00249 
+CNNaffinity: 3.74317
+CNNvariance: 2.48053
+Affinity: -5.75059  -0.16422 (kcal/mol)
+RMSD: 7.28747
+CNNscore: 0.39430 
+CNNaffinity: 4.75925
+CNNvariance: 0.29986
+Affinity: -5.17824  -0.84668 (kcal/mol)
+RMSD: 8.83293
+CNNscore: 0.25792 
+CNNaffinity: 4.74327
+CNNvariance: 0.26545
+Affinity: -3.52696  -1.19841 (kcal/mol)
+RMSD: 4.09858
+CNNscore: 0.67502 
+CNNaffinity: 4.82940
+CNNvariance: 0.19169
+Affinity: -3.54161  0.00000 (kcal/mol)
+RMSD: 3.79930
+CNNscore: 0.38560 
+CNNaffinity: 3.99239
+CNNvariance: 0.09688
+Affinity: -2.62640  -0.37927 (kcal/mol)
+RMSD: 8.27785
+CNNscore: 0.60405 
+CNNaffinity: 4.16160
+CNNvariance: 0.12466
+Affinity: -2.99778  -0.03940 (kcal/mol)
+RMSD: 3.63775
+CNNscore: 0.51194 
+CNNaffinity: 3.38111
+CNNvariance: 0.18250
+Affinity: -3.76857  -0.52960 (kcal/mol)
+RMSD: 7.83726
+CNNscore: 0.31087 
+CNNaffinity: 4.23459
+CNNvariance: 0.14872
+Affinity: -4.57160  -0.31472 (kcal/mol)
+RMSD: 7.62513
+CNNscore: 0.13611 
+CNNaffinity: 3.53543
+CNNvariance: 0.31283
+Affinity: -1.16492  -0.56069 (kcal/mol)
+RMSD: 5.91800
+CNNscore: 0.74987 
+CNNaffinity: 3.27947
+CNNvariance: 0.15414
+Affinity: -2.52925  0.00000 (kcal/mol)
+RMSD: 4.81880
+CNNscore: 0.75461 
+CNNaffinity: 3.38657
+CNNvariance: 0.34797
+Affinity: -4.26811  -0.86006 (kcal/mol)
+RMSD: 3.59345
+CNNscore: 0.11158 
+CNNaffinity: 3.24880
+CNNvariance: 0.54775
+Affinity: -2.17476  -0.64074 (kcal/mol)
+RMSD: 5.42845
+CNNscore: 0.58321 
+CNNaffinity: 4.69859
+CNNvariance: 0.33190
+Mestranol | pose 679 | ligand outside box
+Affinity: -3.81315  -0.49591 (kcal/mol)
+RMSD: 5.89522
+CNNscore: 0.39107 
+CNNaffinity: 4.07018
+CNNvariance: 0.24878
+Affinity: 71.18037  -0.16103 (kcal/mol)
+RMSD: 2.72717
+CNNscore: 0.01948 
+CNNaffinity: 3.51414
+CNNvariance: 0.58645
+Affinity: -3.73759  -0.31647 (kcal/mol)
+RMSD: 6.42584
+CNNscore: 0.65493 
+CNNaffinity: 4.12379
+CNNvariance: 0.02562
+Affinity: -2.52399  -0.57779 (kcal/mol)
+RMSD: 7.54618
+CNNscore: 0.57060 
+CNNaffinity: 5.33186
+CNNvariance: 1.21048
+Affinity: -0.64085  -0.15309 (kcal/mol)
+RMSD: 0.75589
+CNNscore: 0.85981 
+CNNaffinity: 3.79554
+CNNvariance: 0.23254
+Affinity: -3.76024  0.41182 (kcal/mol)
+RMSD: 6.87140
+CNNscore: 0.31524 
+CNNaffinity: 4.10648
+CNNvariance: 0.35066
+Affinity: -1.66897  -0.69612 (kcal/mol)
+RMSD: 5.23318
+CNNscore: 0.85869 
+CNNaffinity: 4.24060
+CNNvariance: 0.52438
+Affinity: -2.14643  -1.29134 (kcal/mol)
+RMSD: 6.75489
+CNNscore: 0.63046 
+CNNaffinity: 4.49217
+CNNvariance: 0.19967
+Affinity: -2.68620  -1.78591 (kcal/mol)
+RMSD: 6.81982
+CNNscore: 0.68653 
+CNNaffinity: 4.64654
+CNNvariance: 0.44056
+Affinity: -2.27945  0.14799 (kcal/mol)
+RMSD: 2.41143
+CNNscore: 0.61002 
+CNNaffinity: 3.78877
+CNNvariance: 0.36668
+Affinity: -2.78146  -0.34117 (kcal/mol)
+RMSD: 4.04466
+CNNscore: 0.48491 
+CNNaffinity: 3.73517
+CNNvariance: 0.36890
+Affinity: -5.24528  -0.26586 (kcal/mol)
+RMSD: 7.09404
+CNNscore: 0.50278 
+CNNaffinity: 4.70384
+CNNvariance: 0.09963
+Affinity: -3.62256  -1.08831 (kcal/mol)
+RMSD: 7.96136
+CNNscore: 0.31003 
+CNNaffinity: 3.81860
+CNNvariance: 0.37042
+Affinity: -4.31401  -0.24191 (kcal/mol)
+RMSD: 5.61142
+CNNscore: 0.29229 
+CNNaffinity: 2.78985
+CNNvariance: 1.01068
+Affinity: -1.42268  -0.10884 (kcal/mol)
+RMSD: 5.69580
+CNNscore: 0.71108 
+CNNaffinity: 3.12962
+CNNvariance: 0.23770
+Affinity: -3.32518  -0.93199 (kcal/mol)
+RMSD: 3.04533
+CNNscore: 0.32878 
+CNNaffinity: 3.81852
+CNNvariance: 0.14599
+Affinity: -3.83346  -0.34270 (kcal/mol)
+RMSD: 4.66605
+CNNscore: 0.65635 
+CNNaffinity: 3.26999
+CNNvariance: 0.47160
+Affinity: -2.66080  -0.63188 (kcal/mol)
+RMSD: 3.17524
+CNNscore: 0.60480 
+CNNaffinity: 4.16142
+CNNvariance: 0.16390
+Affinity: -3.84276  -1.38583 (kcal/mol)
+RMSD: 4.70817
+CNNscore: 0.25636 
+CNNaffinity: 3.76721
+CNNvariance: 0.51830
+Affinity: -5.09320  -0.58726 (kcal/mol)
+RMSD: 3.87870
+CNNscore: 0.21897 
+CNNaffinity: 4.53565
+CNNvariance: 0.46006
+Affinity: 89.78017  0.00000 (kcal/mol)
+RMSD: 5.31213
+CNNscore: 0.01222 
+CNNaffinity: 5.73329
+CNNvariance: 3.14543
+Affinity: 36.84713  1.01419 (kcal/mol)
+RMSD: 5.87019
+CNNscore: 0.00982 
+CNNaffinity: 2.57993
+CNNvariance: 0.19229
+Affinity: 52.61333  -0.30700 (kcal/mol)
+RMSD: 4.63232
+CNNscore: 0.01625 
+CNNaffinity: 3.68721
+CNNvariance: 1.81273
+Affinity: 77.99117  -0.24670 (kcal/mol)
+RMSD: 5.51574
+CNNscore: 0.03160 
+CNNaffinity: 5.91953
+CNNvariance: 2.19572
+Affinity: -1.16430  -0.30610 (kcal/mol)
+RMSD: 4.37333
+CNNscore: 0.74901 
+CNNaffinity: 3.87533
+CNNvariance: 0.22482
+Affinity: -2.24932  -1.36218 (kcal/mol)
+RMSD: 1.81522
+CNNscore: 0.63223 
+CNNaffinity: 4.20671
+CNNvariance: 0.24527
+Affinity: -2.34244  0.57517 (kcal/mol)
+RMSD: 5.40119
+CNNscore: 0.64109 
+CNNaffinity: 5.39088
+CNNvariance: 2.53567
+Affinity: -5.40705  -0.61889 (kcal/mol)
+RMSD: 3.98362
+CNNscore: 0.28902 
+CNNaffinity: 4.84638
+CNNvariance: 0.10417
+Affinity: -3.63808  1.14846 (kcal/mol)
+RMSD: 4.18366
+CNNscore: 0.36661 
+CNNaffinity: 4.18187
+CNNvariance: 0.67986
+Affinity: -4.23370  0.18147 (kcal/mol)
+RMSD: 6.44574
+CNNscore: 0.36469 
+CNNaffinity: 4.11836
+CNNvariance: 0.30122
+Affinity: -2.09705  -0.13354 (kcal/mol)
+RMSD: 5.52263
+CNNscore: 0.62110 
+CNNaffinity: 3.58301
+CNNvariance: 0.25533
+Affinity: -3.14255  -0.61708 (kcal/mol)
+RMSD: 5.61389
+CNNscore: 0.48469 
+CNNaffinity: 3.32834
+CNNvariance: 0.28158
+Affinity: 13.17550  -0.08328 (kcal/mol)
+RMSD: 7.58169
+CNNscore: 0.38046 
+CNNaffinity: 4.92976
+CNNvariance: 0.30788
+Affinity: 18.69523  -0.11718 (kcal/mol)
+RMSD: 8.63767
+CNNscore: 0.42928 
+CNNaffinity: 3.57542
+CNNvariance: 0.21512
+Affinity: -3.21039  0.04941 (kcal/mol)
+RMSD: 3.97824
+CNNscore: 0.51030 
+CNNaffinity: 3.63495
+CNNvariance: 0.32045
+Affinity: -4.19542  -0.64791 (kcal/mol)
+RMSD: 3.79605
+CNNscore: 0.33660 
+CNNaffinity: 4.19308
+CNNvariance: 0.23174
+Affinity: 15.57207  0.23050 (kcal/mol)
+RMSD: 5.63306
+CNNscore: 0.54375 
+CNNaffinity: 4.44222
+CNNvariance: 0.51607
+Ketazolam | pose 716 | ligand outside box
+Affinity: -3.29918  -0.09010 (kcal/mol)
+RMSD: 6.59607
+CNNscore: 0.44131 
+CNNaffinity: 3.69511
+CNNvariance: 0.17949
+Affinity: -0.94306  -0.32614 (kcal/mol)
+RMSD: 2.88359
+CNNscore: 0.83408 
+CNNaffinity: 4.15778
+CNNvariance: 0.18451
+Affinity: 54.72408  0.79352 (kcal/mol)
+RMSD: 5.46050
+CNNscore: 0.11201 
+CNNaffinity: 5.25357
+CNNvariance: 2.03971
+Affinity: -1.91251  0.00000 (kcal/mol)
+RMSD: 6.10232
+CNNscore: 0.63834 
+CNNaffinity: 2.76248
+CNNvariance: 0.13861
+Affinity: -1.51541  -0.01750 (kcal/mol)
+RMSD: 4.47139
+CNNscore: 0.71100 
+CNNaffinity: 2.89335
+CNNvariance: 0.41080
+Affinity: -2.38912  -0.21711 (kcal/mol)
+RMSD: 7.11458
+CNNscore: 0.72402 
+CNNaffinity: 3.12829
+CNNvariance: 0.20905
+Bacampicillin | pose 722 | ligand outside box
+Affinity: -3.07816  -0.27300 (kcal/mol)
+RMSD: 4.12236
+CNNscore: 0.41473 
+CNNaffinity: 2.92263
+CNNvariance: 0.47143
+Affinity: -2.46348  -0.61213 (kcal/mol)
+RMSD: 3.19605
+CNNscore: 0.37817 
+CNNaffinity: 4.10620
+CNNvariance: 0.08162
+Affinity: -3.39137  -0.39907 (kcal/mol)
+RMSD: 4.23651
+CNNscore: 0.35007 
+CNNaffinity: 3.85067
+CNNvariance: 0.21246
+Affinity: -1.41839  -0.47737 (kcal/mol)
+RMSD: 7.25298
+CNNscore: 0.87026 
+CNNaffinity: 4.34315
+CNNvariance: 0.41214
+Affinity: -4.77218  -0.33110 (kcal/mol)
+RMSD: 6.38096
+CNNscore: 0.34806 
+CNNaffinity: 4.94696
+CNNvariance: 0.03735
+Affinity: 36.37941  -0.33229 (kcal/mol)
+RMSD: 6.88324
+CNNscore: 0.00556 
+CNNaffinity: 3.84315
+CNNvariance: 0.07034
+Affinity: 86.11748  0.26091 (kcal/mol)
+RMSD: 1.05094
+CNNscore: 0.01486 
+CNNaffinity: 2.78376
+CNNvariance: 0.73321
+Affinity: -5.47033  -1.02079 (kcal/mol)
+RMSD: 6.37125
+CNNscore: 0.20816 
+CNNaffinity: 4.37945
+CNNvariance: 0.34890
+Affinity: -5.61656  -0.57836 (kcal/mol)
+RMSD: 4.04873
+CNNscore: 0.11382 
+CNNaffinity: 3.67555
+CNNvariance: 0.54547
+Affinity: -3.93344  -0.83249 (kcal/mol)
+RMSD: 2.87985
+CNNscore: 0.53111 
+CNNaffinity: 4.16218
+CNNvariance: 0.25285
+Affinity: -4.24967  -0.30833 (kcal/mol)
+RMSD: 5.51725
+CNNscore: 0.24806 
+CNNaffinity: 3.42387
+CNNvariance: 0.34097
+Affinity: -1.23354  -1.06870 (kcal/mol)
+RMSD: 12.45974
+CNNscore: 0.77763 
+CNNaffinity: 4.45301
+CNNvariance: 0.54328
+Affinity: -1.93525  -1.00978 (kcal/mol)
+RMSD: 6.67164
+CNNscore: 0.67764 
+CNNaffinity: 4.14256
+CNNvariance: 0.43763
+Affinity: -4.01500  -1.00400 (kcal/mol)
+RMSD: 5.26701
+CNNscore: 0.74993 
+CNNaffinity: 4.53895
+CNNvariance: 0.06375
+Affinity: -2.47770  -1.55389 (kcal/mol)
+RMSD: 3.84986
+CNNscore: 0.43449 
+CNNaffinity: 4.43744
+CNNvariance: 0.05918
+Affinity: -3.27076  0.35818 (kcal/mol)
+RMSD: 9.02349
+CNNscore: 0.48531 
+CNNaffinity: 4.26060
+CNNvariance: 0.62374
+Affinity: -4.69093  -1.02845 (kcal/mol)
+RMSD: 6.31860
+CNNscore: 0.38635 
+CNNaffinity: 4.90639
+CNNvariance: 0.59118
+Affinity: -1.73892  -0.52543 (kcal/mol)
+RMSD: 6.14845
+CNNscore: 0.74163 
+CNNaffinity: 4.19279
+CNNvariance: 0.10274
+Affinity: 5.35176  0.59468 (kcal/mol)
+RMSD: 2.58957
+CNNscore: 0.59991 
+CNNaffinity: 3.09284
+CNNvariance: 0.18064
+Affinity: -2.78238  -0.40013 (kcal/mol)
+RMSD: 8.24705
+CNNscore: 0.53161 
+CNNaffinity: 4.17842
+CNNvariance: 0.11464
+Affinity: -1.60656  -0.58090 (kcal/mol)
+RMSD: 5.90577
+CNNscore: 0.73956 
+CNNaffinity: 3.95156
+CNNvariance: 0.30873
+Affinity: -2.67482  -0.81401 (kcal/mol)
+RMSD: 6.79211
+CNNscore: 0.65400 
+CNNaffinity: 3.71530
+CNNvariance: 0.11786
+Affinity: -3.43019  -0.78599 (kcal/mol)
+RMSD: 1.78564
+CNNscore: 0.26217 
+CNNaffinity: 3.64918
+CNNvariance: 0.26266
+Cholic Acid | pose 745 | ligand outside box
+Affinity: -4.32668  -1.18116 (kcal/mol)
+RMSD: 7.22177
+CNNscore: 0.11764 
+CNNaffinity: 4.20215
+CNNvariance: 0.58892
+Affinity: -1.73593  -0.41972 (kcal/mol)
+RMSD: 5.39720
+CNNscore: 0.65434 
+CNNaffinity: 3.31416
+CNNvariance: 0.58338
+Affinity: -2.59016  -1.04266 (kcal/mol)
+RMSD: 4.47789
+CNNscore: 0.71256 
+CNNaffinity: 5.05905
+CNNvariance: 0.15399
+Pregnenolone | pose 748 | ligand outside box
+Pregnenolone | pose 748 | ligand outside box
+Pregnenolone | pose 748 | ligand outside box
+Pregnenolone | pose 748 | ligand outside box
+Pregnenolone | pose 748 | ligand outside box
+Affinity: -3.46082  0.00000 (kcal/mol)
+RMSD: 7.25432
+CNNscore: 0.66415 
+CNNaffinity: 4.61372
+CNNvariance: 0.27233
+Affinity: 43.71140  0.00000 (kcal/mol)
+RMSD: 1.99209
+CNNscore: 0.10565 
+CNNaffinity: 2.88236
+CNNvariance: 0.14393
+Affinity: -3.28819  -0.45691 (kcal/mol)
+RMSD: 7.25053
+CNNscore: 0.39081 
+CNNaffinity: 2.89206
+CNNvariance: 0.38290
+Affinity: -4.59640  -0.74556 (kcal/mol)
+RMSD: 4.30149
+CNNscore: 0.31938 
+CNNaffinity: 3.53534
+CNNvariance: 0.51533
+Affinity: -2.12270  0.00000 (kcal/mol)
+RMSD: 6.57291
+CNNscore: 0.65405 
+CNNaffinity: 2.30124
+CNNvariance: 0.28011
+Affinity: -2.44023  -0.02721 (kcal/mol)
+RMSD: 6.79603
+CNNscore: 0.60593 
+CNNaffinity: 2.79482
+CNNvariance: 0.13593
+Affinity: -2.84849  -0.18128 (kcal/mol)
+RMSD: 4.92446
+CNNscore: 0.47452 
+CNNaffinity: 2.80346
+CNNvariance: 0.25663
+Affinity: -3.58840  -0.74711 (kcal/mol)
+RMSD: 6.51287
+CNNscore: 0.16245 
+CNNaffinity: 3.67749
+CNNvariance: 0.16548
+Affinity: 7.28324  -0.03516 (kcal/mol)
+RMSD: 12.33913
+CNNscore: 0.43982 
+CNNaffinity: 5.28970
+CNNvariance: 0.62489
+Affinity: -3.45605  -0.02448 (kcal/mol)
+RMSD: 6.11190
+CNNscore: 0.38567 
+CNNaffinity: 2.82777
+CNNvariance: 0.48327
+Affinity: -4.72939  -0.31136 (kcal/mol)
+RMSD: 5.54125
+CNNscore: 0.59686 
+CNNaffinity: 4.00047
+CNNvariance: 0.24444
+Benzoic Acid | pose 759 | ligand outside box
+Affinity: -0.94097  -0.14321 (kcal/mol)
+RMSD: 8.24472
+CNNscore: 0.69058 
+CNNaffinity: 4.77244
+CNNvariance: 0.97370
+WARNING: not all movable atoms are within the search space
+Affinity: -2.97920  -0.13786 (kcal/mol)
+RMSD: 4.15161
+CNNscore: 0.56782 
+CNNaffinity: 3.22933
+CNNvariance: 0.09348
+Affinity: -4.14742  -1.09414 (kcal/mol)
+RMSD: 6.00192
+CNNscore: 0.31671 
+CNNaffinity: 4.41197
+CNNvariance: 0.19222
+Affinity: -5.12278  -0.24994 (kcal/mol)
+RMSD: 5.49291
+CNNscore: 0.32902 
+CNNaffinity: 3.46663
+CNNvariance: 0.43178
+Affinity: -3.96486  -0.48195 (kcal/mol)
+RMSD: 6.60409
+CNNscore: 0.36382 
+CNNaffinity: 3.22177
+CNNvariance: 0.30217
+Affinity: -2.52967  -0.16807 (kcal/mol)
+RMSD: 5.67018
+CNNscore: 0.63242 
+CNNaffinity: 3.13665
+CNNvariance: 0.20955
+Estrone sulfate | pose 765 | ligand outside box
+Affinity: 7.13567  0.00000 (kcal/mol)
+RMSD: 3.18848
+CNNscore: 0.59060 
+CNNaffinity: 3.02053
+CNNvariance: 0.46189
+Affinity: -2.03361  0.00000 (kcal/mol)
+RMSD: 5.60056
+CNNscore: 0.75992 
+CNNaffinity: 2.41605
+CNNvariance: 0.18930
+Affinity: 20.48428  0.00000 (kcal/mol)
+RMSD: 3.28677
+CNNscore: 0.22586 
+CNNaffinity: 2.75261
+CNNvariance: 0.05708
+Affinity: -4.70173  -0.63619 (kcal/mol)
+RMSD: 9.64365
+CNNscore: 0.18678 
+CNNaffinity: 4.91994
+CNNvariance: 0.21682
+Affinity: 4.98257  0.00000 (kcal/mol)
+RMSD: 6.11393
+CNNscore: 0.67637 
+CNNaffinity: 3.33190
+CNNvariance: 0.24379
+Affinity: -0.77869  -0.02199 (kcal/mol)
+RMSD: 6.25972
+CNNscore: 0.59844 
+CNNaffinity: 2.97666
+CNNvariance: 0.62482
+Affinity: -2.01381  0.00000 (kcal/mol)
+RMSD: 6.49886
+CNNscore: 0.61763 
+CNNaffinity: 3.40073
+CNNvariance: 0.18063
+Affinity: -2.60806  -0.11051 (kcal/mol)
+RMSD: 4.79739
+CNNscore: 0.69972 
+CNNaffinity: 4.73233
+CNNvariance: 0.09324
+Affinity: -4.05524  0.00000 (kcal/mol)
+RMSD: 6.76248
+CNNscore: 0.41090 
+CNNaffinity: 4.25949
+CNNvariance: 0.07990
+Affinity: -3.68367  1.45038 (kcal/mol)
+RMSD: 5.04018
+CNNscore: 0.33154 
+CNNaffinity: 2.99285
+CNNvariance: 0.58086
+Affinity: 59.89974  0.00000 (kcal/mol)
+RMSD: 5.05232
+CNNscore: 0.19513 
+CNNaffinity: 5.65136
+CNNvariance: 1.81972
+Affinity: 31.10269  -0.03111 (kcal/mol)
+RMSD: 9.10617
+CNNscore: 0.13825 
+CNNaffinity: 4.03467
+CNNvariance: 0.26378
+Affinity: -4.86555  -0.34731 (kcal/mol)
+RMSD: 4.29740
+CNNscore: 0.44319 
+CNNaffinity: 3.30436
+CNNvariance: 0.50342
+Affinity: -4.07180  -0.74362 (kcal/mol)
+RMSD: 7.06419
+CNNscore: 0.20905 
+CNNaffinity: 3.94518
+CNNvariance: 0.27947
+Affinity: -3.09151  0.00000 (kcal/mol)
+RMSD: 5.28953
+CNNscore: 0.65964 
+CNNaffinity: 3.68848
+CNNvariance: 0.11165
+Affinity: -3.27038  -0.23895 (kcal/mol)
+RMSD: 6.55120
+CNNscore: 0.42137 
+CNNaffinity: 3.90740
+CNNvariance: 0.30078
+Affinity: -4.22127  -1.29688 (kcal/mol)
+RMSD: 5.14268
+CNNscore: 0.44807 
+CNNaffinity: 3.86695
+CNNvariance: 0.80929
+Affinity: -4.11080  -1.09948 (kcal/mol)
+RMSD: 7.01737
+CNNscore: 0.38905 
+CNNaffinity: 3.90992
+CNNvariance: 0.10805
+Affinity: -2.46543  -0.00795 (kcal/mol)
+RMSD: 5.37701
+CNNscore: 0.62874 
+CNNaffinity: 3.36349
+CNNvariance: 0.55266
+Affinity: -3.22515  -0.57444 (kcal/mol)
+RMSD: 4.80418
+CNNscore: 0.36791 
+CNNaffinity: 3.53437
+CNNvariance: 0.17607
+Affinity: -3.25683  -0.42843 (kcal/mol)
+RMSD: 4.19992
+CNNscore: 0.60356 
+CNNaffinity: 3.72681
+CNNvariance: 0.13944
+Affinity: -2.54765  -0.25982 (kcal/mol)
+RMSD: 8.45051
+CNNscore: 0.72068 
+CNNaffinity: 5.28762
+CNNvariance: 0.33678
+Affinity: -2.88033  -0.06109 (kcal/mol)
+RMSD: 4.30194
+CNNscore: 0.75231 
+CNNaffinity: 2.92629
+CNNvariance: 0.12467
+Affinity: -2.85708  -0.93458 (kcal/mol)
+RMSD: 6.17089
+CNNscore: 0.65739 
+CNNaffinity: 4.13221
+CNNvariance: 0.34987
+Affinity: -2.56073  -0.40002 (kcal/mol)
+RMSD: 2.51925
+CNNscore: 0.87740 
+CNNaffinity: 3.85775
+CNNvariance: 0.02477
+Affinity: -4.91933  -0.35842 (kcal/mol)
+RMSD: 4.11529
+CNNscore: 0.30412 
+CNNaffinity: 4.24068
+CNNvariance: 0.53466
+Iloperidone | pose 791 | ligand outside box
+Affinity: -2.08076  -0.53833 (kcal/mol)
+RMSD: 8.65731
+CNNscore: 0.68204 
+CNNaffinity: 4.70567
+CNNvariance: 0.41610
+Affinity: -3.19586  -1.24651 (kcal/mol)
+RMSD: 7.14960
+CNNscore: 0.69021 
+CNNaffinity: 4.70100
+CNNvariance: 0.23289
+Affinity: -3.46311  0.00000 (kcal/mol)
+RMSD: 1.74730
+CNNscore: 0.58446 
+CNNaffinity: 4.32977
+CNNvariance: 0.38353
+Ezogabine | pose 794 | ligand outside box
+Affinity: -2.71542  0.00000 (kcal/mol)
+RMSD: 3.09744
+CNNscore: 0.66200 
+CNNaffinity: 3.11536
+CNNvariance: 0.16248
+Affinity: -1.42222  -0.46757 (kcal/mol)
+RMSD: 6.91163
+CNNscore: 0.68693 
+CNNaffinity: 4.02549
+CNNvariance: 0.22777
+Affinity: -3.97329  -0.43246 (kcal/mol)
+RMSD: 5.06528
+CNNscore: 0.30471 
+CNNaffinity: 3.63183
+CNNvariance: 0.26199
+Affinity: -1.94715  -1.34169 (kcal/mol)
+RMSD: 2.03323
+CNNscore: 0.64627 
+CNNaffinity: 4.37765
+CNNvariance: 0.20112
+Affinity: -4.51202  0.56505 (kcal/mol)
+RMSD: 6.10706
+CNNscore: 0.49836 
+CNNaffinity: 4.16594
+CNNvariance: 0.36169
+Affinity: -3.44892  -1.73175 (kcal/mol)
+RMSD: 4.67640
+CNNscore: 0.26528 
+CNNaffinity: 4.64439
+CNNvariance: 0.24272
+Affinity: -3.57688  0.05721 (kcal/mol)
+RMSD: 10.24532
+CNNscore: 0.45505 
+CNNaffinity: 4.94745
+CNNvariance: 0.29663
+Affinity: -2.10210  -1.44296 (kcal/mol)
+RMSD: 7.55632
+CNNscore: 0.62358 
+CNNaffinity: 4.76124
+CNNvariance: 0.47128
+Affinity: -3.56167  0.09226 (kcal/mol)
+RMSD: 5.23089
+CNNscore: 0.64722 
+CNNaffinity: 5.22906
+CNNvariance: 0.12399
+Affinity: -2.47084  -0.45948 (kcal/mol)
+RMSD: 3.44216
+CNNscore: 0.58728 
+CNNaffinity: 4.10334
+CNNvariance: 0.51601
+Affinity: 51.39134  -0.07407 (kcal/mol)
+RMSD: 3.46014
+CNNscore: 0.05971 
+CNNaffinity: 2.35460
+CNNvariance: 0.21894
+Affinity: -0.73943  0.06107 (kcal/mol)
+RMSD: 5.40864
+CNNscore: 0.40113 
+CNNaffinity: 3.57529
+CNNvariance: 0.20819
+Affinity: -2.71452  -0.83959 (kcal/mol)
+RMSD: 7.43103
+CNNscore: 0.76384 
+CNNaffinity: 4.58569
+CNNvariance: 0.10412
+Affinity: -0.84408  -0.51035 (kcal/mol)
+RMSD: 7.59124
+CNNscore: 0.57537 
+CNNaffinity: 3.86094
+CNNvariance: 0.29267
+Affinity: -1.97419  -0.40318 (kcal/mol)
+RMSD: 8.70720
+CNNscore: 0.82076 
+CNNaffinity: 4.24500
+CNNvariance: 0.28792
+Affinity: -3.14438  -0.92029 (kcal/mol)
+RMSD: 5.27223
+CNNscore: 0.84269 
+CNNaffinity: 4.58161
+CNNvariance: 0.10585
+Affinity: -3.78543  -1.12921 (kcal/mol)
+RMSD: 6.00505
+CNNscore: 0.27418 
+CNNaffinity: 4.05163
+CNNvariance: 0.30827
+Affinity: -2.75368  -0.46059 (kcal/mol)
+RMSD: 5.84261
+CNNscore: 0.81617 
+CNNaffinity: 4.39775
+CNNvariance: 0.19370
+Affinity: 21.60720  -0.36487 (kcal/mol)
+RMSD: 6.98906
+CNNscore: 0.65172 
+CNNaffinity: 5.45781
+CNNvariance: 0.43546
+Affinity: -1.48146  -1.28330 (kcal/mol)
+RMSD: 3.80210
+CNNscore: 0.69278 
+CNNaffinity: 4.05395
+CNNvariance: 0.17595
+Affinity: -2.22499  -1.71033 (kcal/mol)
+RMSD: 4.17554
+CNNscore: 0.62365 
+CNNaffinity: 5.00360
+CNNvariance: 0.61361
+Affinity: 71.47305  -0.22860 (kcal/mol)
+RMSD: 5.43003
+CNNscore: 0.00420 
+CNNaffinity: 4.07281
+CNNvariance: 0.94265
+Affinity: -3.33167  -0.47327 (kcal/mol)
+RMSD: 5.14487
+CNNscore: 0.27399 
+CNNaffinity: 3.61091
+CNNvariance: 0.18378
+Affinity: -3.77003  -1.22479 (kcal/mol)
+RMSD: 7.54618
+CNNscore: 0.51977 
+CNNaffinity: 5.12009
+CNNvariance: 0.57787
+Affinity: -0.57020  0.42630 (kcal/mol)
+RMSD: 10.18453
+CNNscore: 0.53000 
+CNNaffinity: 4.13982
+CNNvariance: 0.20797
+Affinity: -2.19907  -1.11339 (kcal/mol)
+RMSD: 4.86617
+CNNscore: 0.80847 
+CNNaffinity: 4.97375
+CNNvariance: 0.02013
+Affinity: -2.46855  -0.31950 (kcal/mol)
+RMSD: 4.91816
+CNNscore: 0.50278 
+CNNaffinity: 3.77110
+CNNvariance: 0.10943
+Affinity: -3.61788  0.00000 (kcal/mol)
+RMSD: 4.56362
+CNNscore: 0.36410 
+CNNaffinity: 4.07371
+CNNvariance: 0.42006
+Affinity: -3.60400  -0.56729 (kcal/mol)
+RMSD: 7.74662
+CNNscore: 0.55039 
+CNNaffinity: 4.48854
+CNNvariance: 0.01586
+Affinity: -1.79159  -2.15903 (kcal/mol)
+RMSD: 6.99482
+CNNscore: 0.63875 
+CNNaffinity: 3.76469
+CNNvariance: 0.05570
+Affinity: -4.74324  0.00000 (kcal/mol)
+RMSD: 7.01914
+CNNscore: 0.37357 
+CNNaffinity: 4.44984
+CNNvariance: 0.21947
+Affinity: -1.46617  -0.34480 (kcal/mol)
+RMSD: 2.34183
+CNNscore: 0.83585 
+CNNaffinity: 4.45269
+CNNvariance: 0.58329
+Affinity: -1.20971  -0.43447 (kcal/mol)
+RMSD: 6.91266
+CNNscore: 0.87451 
+CNNaffinity: 3.85824
+CNNvariance: 0.21707
+Affinity: -3.09533  0.24938 (kcal/mol)
+RMSD: 2.04581
+CNNscore: 0.49677 
+CNNaffinity: 4.65909
+CNNvariance: 0.84573
+Affinity: -3.06223  -0.55519 (kcal/mol)
+RMSD: 6.08518
+CNNscore: 0.30628 
+CNNaffinity: 3.54983
+CNNvariance: 0.21182
+Affinity: -2.37814  -2.99448 (kcal/mol)
+RMSD: 5.52420
+CNNscore: 0.50026 
+CNNaffinity: 5.05306
+CNNvariance: 0.46364
+Affinity: -1.52663  -0.08806 (kcal/mol)
+RMSD: 4.45399
+CNNscore: 0.75803 
+CNNaffinity: 4.85472
+CNNvariance: 0.49574
+Affinity: -5.84448  0.00000 (kcal/mol)
+RMSD: 6.97585
+CNNscore: 0.12676 
+CNNaffinity: 3.93931
+CNNvariance: 0.65443
+Affinity: -0.31329  -0.65041 (kcal/mol)
+RMSD: 7.73540
+CNNscore: 0.84817 
+CNNaffinity: 3.99974
+CNNvariance: 0.25264
+Affinity: -4.54225  -0.55612 (kcal/mol)
+RMSD: 3.65519
+CNNscore: 0.30775 
+CNNaffinity: 3.38033
+CNNvariance: 0.40052
+Affinity: -2.87298  -0.84215 (kcal/mol)
+RMSD: 8.86735
+CNNscore: 0.61028 
+CNNaffinity: 4.50328
+CNNvariance: 0.30168
+Affinity: -5.58802  -0.42391 (kcal/mol)
+RMSD: 3.87308
+CNNscore: 0.56598 
+CNNaffinity: 4.51683
+CNNvariance: 0.23863
+Affinity: -1.35752  -2.23259 (kcal/mol)
+RMSD: 6.98462
+CNNscore: 0.80149 
+CNNaffinity: 5.41188
+CNNvariance: 0.37038
+Affinity: -2.89029  -1.01153 (kcal/mol)
+RMSD: 6.57132
+CNNscore: 0.50624 
+CNNaffinity: 3.53612
+CNNvariance: 0.14995
+Affinity: -4.01110  -1.89969 (kcal/mol)
+RMSD: 3.17559
+CNNscore: 0.40846 
+CNNaffinity: 5.25053
+CNNvariance: 0.21588
+Affinity: -4.98816  -1.27350 (kcal/mol)
+RMSD: 4.40215
+CNNscore: 0.28034 
+CNNaffinity: 4.79120
+CNNvariance: 0.34569
+Affinity: -5.14016  -0.77464 (kcal/mol)
+RMSD: 7.68921
+CNNscore: 0.27044 
+CNNaffinity: 4.25936
+CNNvariance: 0.82120
+Affinity: -2.66500  -1.04845 (kcal/mol)
+RMSD: 4.33431
+CNNscore: 0.55180 
+CNNaffinity: 4.67214
+CNNvariance: 0.45716
+Affinity: -6.22396  -0.97784 (kcal/mol)
+RMSD: 6.86000
+CNNscore: 0.09329 
+CNNaffinity: 3.91435
+CNNvariance: 0.63269
+Affinity: -5.18407  -0.08489 (kcal/mol)
+RMSD: 4.22965
+CNNscore: 0.27469 
+CNNaffinity: 4.43375
+CNNvariance: 0.08495
+Affinity: -5.24403  -0.49754 (kcal/mol)
+RMSD: 4.69130
+CNNscore: 0.37921 
+CNNaffinity: 4.54158
+CNNvariance: 0.55138
+Affinity: -3.59752  -0.84911 (kcal/mol)
+RMSD: 3.92005
+CNNscore: 0.43836 
+CNNaffinity: 3.87614
+CNNvariance: 0.12086
+Affinity: -6.01639  -0.74593 (kcal/mol)
+RMSD: 2.32723
+CNNscore: 0.08502 
+CNNaffinity: 4.93709
+CNNvariance: 0.14602
+Affinity: -2.39742  -1.04625 (kcal/mol)
+RMSD: 4.68082
+CNNscore: 0.73804 
+CNNaffinity: 4.32916
+CNNvariance: 0.12454
+Affinity: -3.23100  -0.57899 (kcal/mol)
+RMSD: 9.97889
+CNNscore: 0.52245 
+CNNaffinity: 5.38061
+CNNvariance: 0.31305
+Affinity: -3.57578  -0.42499 (kcal/mol)
+RMSD: 5.54292
+CNNscore: 0.55825 
+CNNaffinity: 3.87542
+CNNvariance: 0.34448
+Affinity: -4.19753  -1.29020 (kcal/mol)
+RMSD: 5.93782
+CNNscore: 0.51067 
+CNNaffinity: 5.00167
+CNNvariance: 0.15650
+Affinity: -3.35289  -1.09578 (kcal/mol)
+RMSD: 4.77691
+CNNscore: 0.73431 
+CNNaffinity: 5.42571
+CNNvariance: 0.46528
+Methacholine | pose 852 | ligand outside box
+Affinity: -2.72740  0.00000 (kcal/mol)
+RMSD: 4.94182
+CNNscore: 0.69026 
+CNNaffinity: 2.73864
+CNNvariance: 0.29271
+Affinity: -5.18621  -0.62591 (kcal/mol)
+RMSD: 4.39362
+CNNscore: 0.40175 
+CNNaffinity: 3.84845
+CNNvariance: 0.22908
+Affinity: -4.18396  -0.58289 (kcal/mol)
+RMSD: 2.93350
+CNNscore: 0.82778 
+CNNaffinity: 4.94656
+CNNvariance: 0.65278
+Affinity: -2.28352  -0.74033 (kcal/mol)
+RMSD: 6.07468
+CNNscore: 0.50809 
+CNNaffinity: 3.97243
+CNNvariance: 0.13239
+Affinity: -5.39088  -0.41268 (kcal/mol)
+RMSD: 4.03427
+CNNscore: 0.31844 
+CNNaffinity: 4.27570
+CNNvariance: 0.71971
+Affinity: 88.11063  0.16492 (kcal/mol)
+RMSD: 3.13514
+CNNscore: 0.00109 
+CNNaffinity: 2.64153
+CNNvariance: 1.47274
+Affinity: -3.03334  -0.08443 (kcal/mol)
+RMSD: 6.07401
+CNNscore: 0.40946 
+CNNaffinity: 2.88437
+CNNvariance: 0.32170
+Affinity: -2.93127  -0.59432 (kcal/mol)
+RMSD: 6.03772
+CNNscore: 0.67623 
+CNNaffinity: 3.56990
+CNNvariance: 0.06532
+Affinity: -4.61809  -0.30132 (kcal/mol)
+RMSD: 4.86186
+CNNscore: 0.30261 
+CNNaffinity: 3.60925
+CNNvariance: 0.61055
+Affinity: -0.95059  -0.15468 (kcal/mol)
+RMSD: 7.39740
+CNNscore: 0.81888 
+CNNaffinity: 3.22867
+CNNvariance: 0.16696
+Affinity: -0.54749  -0.26154 (kcal/mol)
+RMSD: 4.76313
+CNNscore: 0.77822 
+CNNaffinity: 2.75421
+CNNvariance: 0.12623
+Affinity: -2.24037  1.25878 (kcal/mol)
+RMSD: 3.55404
+CNNscore: 0.34582 
+CNNaffinity: 2.61578
+CNNvariance: 0.23472
+Affinity: 52.10363  0.00000 (kcal/mol)
+RMSD: 8.84752
+CNNscore: 0.03485 
+CNNaffinity: 4.54001
+CNNvariance: 0.60302
+Affinity: -1.95655  -0.32968 (kcal/mol)
+RMSD: 3.24290
+CNNscore: 0.66743 
+CNNaffinity: 3.74438
+CNNvariance: 0.98475
+Affinity: -5.03292  -0.27757 (kcal/mol)
+RMSD: 6.60460
+CNNscore: 0.28963 
+CNNaffinity: 4.82127
+CNNvariance: 0.06423
+Affinity: -1.03227  1.13635 (kcal/mol)
+RMSD: 6.93699
+CNNscore: 0.72607 
+CNNaffinity: 3.10480
+CNNvariance: 0.15214
+Affinity: -3.03502  -0.63550 (kcal/mol)
+RMSD: 6.71938
+CNNscore: 0.45285 
+CNNaffinity: 3.87408
+CNNvariance: 0.57215
+Affinity: 123.20995  0.00000 (kcal/mol)
+RMSD: 1.04721
+CNNscore: 0.00746 
+CNNaffinity: 3.41582
+CNNvariance: 3.66562
+Desoxycorticosterone acetate | pose 870 | ligand outside box
+Affinity: -1.92479  -0.36641 (kcal/mol)
+RMSD: 8.14172
+CNNscore: 0.60932 
+CNNaffinity: 4.79110
+CNNvariance: 0.76079
+Affinity: -3.65267  -1.63368 (kcal/mol)
+RMSD: 4.91064
+CNNscore: 0.40625 
+CNNaffinity: 4.56651
+CNNvariance: 0.24457
+Affinity: -4.42981  -1.08910 (kcal/mol)
+RMSD: 7.17972
+CNNscore: 0.26880 
+CNNaffinity: 4.29209
+CNNvariance: 0.17260
+Affinity: -3.16827  -0.79006 (kcal/mol)
+RMSD: 8.80229
+CNNscore: 0.33530 
+CNNaffinity: 4.28547
+CNNvariance: 0.21338
+Lodoxamide | pose 874 | ligand outside box
+Affinity: -2.17189  -0.31407 (kcal/mol)
+RMSD: 3.40495
+CNNscore: 0.68713 
+CNNaffinity: 4.44626
+CNNvariance: 0.60847
+Affinity: -3.95285  -0.17578 (kcal/mol)
+RMSD: 2.04272
+CNNscore: 0.35132 
+CNNaffinity: 3.29907
+CNNvariance: 0.19965
+Affinity: -1.72665  -0.54330 (kcal/mol)
+RMSD: 7.13495
+CNNscore: 0.63451 
+CNNaffinity: 4.37116
+CNNvariance: 0.08398
+Affinity: -2.77209  -0.01493 (kcal/mol)
+RMSD: 5.97406
+CNNscore: 0.57530 
+CNNaffinity: 2.47597
+CNNvariance: 0.30092
+Affinity: -2.27328  -0.15987 (kcal/mol)
+RMSD: 3.92147
+CNNscore: 0.56945 
+CNNaffinity: 5.39743
+CNNvariance: 1.37955
+Affinity: -4.20894  -0.81863 (kcal/mol)
+RMSD: 6.76477
+CNNscore: 0.46475 
+CNNaffinity: 4.24306
+CNNvariance: 0.06646
+Affinity: 68.86066  0.41788 (kcal/mol)
+RMSD: 7.28666
+CNNscore: 0.25382 
+CNNaffinity: 6.46671
+CNNvariance: 2.56897
+Affinity: -4.96552  -0.35720 (kcal/mol)
+RMSD: 9.70746
+CNNscore: 0.55382 
+CNNaffinity: 5.42470
+CNNvariance: 0.57843
+Affinity: -0.04381  -0.03607 (kcal/mol)
+RMSD: 0.14450
+CNNscore: 0.90722 
+CNNaffinity: 2.49062
+CNNvariance: 0.09798
+Affinity: 124.04093  -0.16887 (kcal/mol)
+RMSD: 5.82220
+CNNscore: 0.00358 
+CNNaffinity: 3.21143
+CNNvariance: 5.04952
+Affinity: -2.63801  -0.84801 (kcal/mol)
+RMSD: 4.66328
+CNNscore: 0.62390 
+CNNaffinity: 3.52310
+CNNvariance: 0.20198
+Affinity: 24.39093  1.02073 (kcal/mol)
+RMSD: 10.31858
+CNNscore: 0.02268 
+CNNaffinity: 3.02761
+CNNvariance: 0.24684
+Affinity: -4.03273  -0.53252 (kcal/mol)
+RMSD: 6.58846
+CNNscore: 0.24018 
+CNNaffinity: 4.10329
+CNNvariance: 0.16753
+Affinity: -0.45024  2.30492 (kcal/mol)
+RMSD: 6.92667
+CNNscore: 0.87258 
+CNNaffinity: 4.02841
+CNNvariance: 0.30631
+Affinity: -1.46707  0.02162 (kcal/mol)
+RMSD: 7.30431
+CNNscore: 0.50458 
+CNNaffinity: 4.88388
+CNNvariance: 0.38410
+Affinity: -4.79068  -0.52886 (kcal/mol)
+RMSD: 5.12204
+CNNscore: 0.32520 
+CNNaffinity: 3.33811
+CNNvariance: 0.69907
+Affinity: -2.68326  0.00000 (kcal/mol)
+RMSD: 5.73586
+CNNscore: 0.53986 
+CNNaffinity: 2.82339
+CNNvariance: 0.24277
+Affinity: 20.54857  0.39396 (kcal/mol)
+RMSD: 7.60254
+CNNscore: 0.52666 
+CNNaffinity: 4.39279
+CNNvariance: 0.38078
+Affinity: -0.57378  -0.42447 (kcal/mol)
+RMSD: 6.86490
+CNNscore: 0.72221 
+CNNaffinity: 3.82702
+CNNvariance: 0.19301
+Affinity: -1.64485  -0.16511 (kcal/mol)
+RMSD: 7.90329
+CNNscore: 0.64855 
+CNNaffinity: 3.17080
+CNNvariance: 0.19065
+Affinity: -2.37732  -2.32041 (kcal/mol)
+RMSD: 2.40523
+CNNscore: 0.62366 
+CNNaffinity: 4.41854
+CNNvariance: 0.12804
+Affinity: 44.90162  -0.56299 (kcal/mol)
+RMSD: 3.06245
+CNNscore: 0.01409 
+CNNaffinity: 3.03383
+CNNvariance: 1.31403
+Affinity: -1.61813  -0.26277 (kcal/mol)
+RMSD: 2.76838
+CNNscore: 0.91113 
+CNNaffinity: 4.25183
+CNNvariance: 0.37167
+Affinity: -4.59353  -0.88791 (kcal/mol)
+RMSD: 1.78144
+CNNscore: 0.46638 
+CNNaffinity: 4.51775
+CNNvariance: 0.06125
+Affinity: -4.25995  -0.22762 (kcal/mol)
+RMSD: 5.10505
+CNNscore: 0.24046 
+CNNaffinity: 2.53896
+CNNvariance: 0.53826
+Affinity: -5.03005  -0.61784 (kcal/mol)
+RMSD: 5.34783
+CNNscore: 0.25495 
+CNNaffinity: 3.48004
+CNNvariance: 0.88996
+Affinity: -2.69672  -0.95081 (kcal/mol)
+RMSD: 4.08982
+CNNscore: 0.61318 
+CNNaffinity: 4.18736
+CNNvariance: 0.09540
+Affinity: 1.75743  0.00000 (kcal/mol)
+RMSD: 3.62890
+CNNscore: 0.71004 
+CNNaffinity: 3.86961
+CNNvariance: 0.09794
+Affinity: 18.13984  -0.44774 (kcal/mol)
+RMSD: 6.08649
+CNNscore: 0.28713 
+CNNaffinity: 3.41958
+CNNvariance: 0.91175
+Affinity: -3.85179  -1.90794 (kcal/mol)
+RMSD: 3.04537
+CNNscore: 0.45068 
+CNNaffinity: 5.77246
+CNNvariance: 0.31968
+Affinity: -4.00959  -3.45301 (kcal/mol)
+RMSD: 7.17302
+CNNscore: 0.19475 
+CNNaffinity: 4.80061
+CNNvariance: 0.47027
+Affinity: -0.75813  -0.63123 (kcal/mol)
+RMSD: 5.89333
+CNNscore: 0.39005 
+CNNaffinity: 4.36084
+CNNvariance: 0.15405
+Affinity: -3.92214  0.00000 (kcal/mol)
+RMSD: 4.78578
+CNNscore: 0.14515 
+CNNaffinity: 3.05898
+CNNvariance: 0.54080
+Affinity: -0.94713  -0.39223 (kcal/mol)
+RMSD: 2.44605
+CNNscore: 0.47049 
+CNNaffinity: 4.74023
+CNNvariance: 0.31294
+Affinity: -4.04144  -1.76447 (kcal/mol)
+RMSD: 6.15393
+CNNscore: 0.16748 
+CNNaffinity: 4.82337
+CNNvariance: 0.04265
+Formestane | pose 909 | ligand outside box
+Formestane | pose 909 | ligand outside box
+Affinity: -5.12884  -0.81992 (kcal/mol)
+RMSD: 2.33113
+CNNscore: 0.47584 
+CNNaffinity: 5.53522
+CNNvariance: 1.37994
+Affinity: -4.23770  -2.55258 (kcal/mol)
+RMSD: 9.96143
+CNNscore: 0.17840 
+CNNaffinity: 3.79754
+CNNvariance: 0.63877
+Afatinib | pose 911 | ligand outside box
+Affinity: -2.25943  -1.34765 (kcal/mol)
+RMSD: 8.40272
+CNNscore: 0.72439 
+CNNaffinity: 4.34597
+CNNvariance: 0.28387
+Affinity: -4.10897  -0.36052 (kcal/mol)
+RMSD: 5.98858
+CNNscore: 0.34765 
+CNNaffinity: 4.48356
+CNNvariance: 0.13790
+Affinity: 68.11690  -0.37634 (kcal/mol)
+RMSD: 7.62424
+CNNscore: 0.00491 
+CNNaffinity: 3.41822
+CNNvariance: 1.06196
+Affinity: -1.34875  -0.59250 (kcal/mol)
+RMSD: 9.55632
+CNNscore: 0.74646 
+CNNaffinity: 5.61784
+CNNvariance: 0.17331
+Affinity: -3.45600  -1.00930 (kcal/mol)
+RMSD: 6.38674
+CNNscore: 0.51656 
+CNNaffinity: 5.35004
+CNNvariance: 0.58521
+Affinity: -2.35597  -1.06866 (kcal/mol)
+RMSD: 3.85370
+CNNscore: 0.76805 
+CNNaffinity: 4.62741
+CNNvariance: 0.72074
+Affinity: 18.31620  0.84805 (kcal/mol)
+RMSD: 6.38449
+CNNscore: 0.63217 
+CNNaffinity: 6.07091
+CNNvariance: 0.67050
+Affinity: -3.55027  -1.90833 (kcal/mol)
+RMSD: 7.59623
+CNNscore: 0.15817 
+CNNaffinity: 4.92093
+CNNvariance: 0.41124
+Affinity: 24.20258  1.94592 (kcal/mol)
+RMSD: 7.37425
+CNNscore: 0.13990 
+CNNaffinity: 5.02200
+CNNvariance: 0.19996
+Affinity: 6.84695  0.00000 (kcal/mol)
+RMSD: 9.02746
+CNNscore: 0.37414 
+CNNaffinity: 4.28865
+CNNvariance: 0.15046
+Affinity: -1.18576  -0.37862 (kcal/mol)
+RMSD: 8.65812
+CNNscore: 0.53775 
+CNNaffinity: 4.00524
+CNNvariance: 0.28573
+Affinity: -3.79488  -1.88640 (kcal/mol)
+RMSD: 7.93148
+CNNscore: 0.35785 
+CNNaffinity: 5.50008
+CNNvariance: 0.45768
+Affinity: -3.42210  -0.87903 (kcal/mol)
+RMSD: 5.85917
+CNNscore: 0.50378 
+CNNaffinity: 3.78570
+CNNvariance: 0.29328
+Affinity: -4.43140  -0.73489 (kcal/mol)
+RMSD: 4.90623
+CNNscore: 0.41667 
+CNNaffinity: 4.66098
+CNNvariance: 0.13847
+Affinity: -3.30809  -1.14149 (kcal/mol)
+RMSD: 6.90641
+CNNscore: 0.61798 
+CNNaffinity: 5.60442
+CNNvariance: 0.89055
+Affinity: -3.95986  -0.36545 (kcal/mol)
+RMSD: 3.70650
+CNNscore: 0.19285 
+CNNaffinity: 3.65758
+CNNvariance: 0.40827
+Affinity: -2.98447  -0.73881 (kcal/mol)
+RMSD: 6.50158
+CNNscore: 0.38328 
+CNNaffinity: 4.01811
+CNNvariance: 0.23593
+Affinity: -1.87129  -0.94383 (kcal/mol)
+RMSD: 3.98663
+CNNscore: 0.67039 
+CNNaffinity: 3.84109
+CNNvariance: 0.12159
+Affinity: -4.73163  -0.84672 (kcal/mol)
+RMSD: 5.80202
+CNNscore: 0.50997 
+CNNaffinity: 4.05058
+CNNvariance: 0.13363
+Affinity: -1.28781  -1.43540 (kcal/mol)
+RMSD: 6.92101
+CNNscore: 0.64765 
+CNNaffinity: 4.97693
+CNNvariance: 1.86387
+Affinity: -1.86302  -0.32788 (kcal/mol)
+RMSD: 5.14182
+CNNscore: 0.71287 
+CNNaffinity: 4.89898
+CNNvariance: 0.68712
+Affinity: -1.27219  -0.29285 (kcal/mol)
+RMSD: 6.80964
+CNNscore: 0.55678 
+CNNaffinity: 4.41207
+CNNvariance: 0.28855
+Affinity: 0.07450  0.54058 (kcal/mol)
+RMSD: 10.04167
+CNNscore: 0.52016 
+CNNaffinity: 5.29235
+CNNvariance: 0.43552
+Affinity: -2.33355  -0.16618 (kcal/mol)
+RMSD: 4.12532
+CNNscore: 0.67164 
+CNNaffinity: 4.87013
+CNNvariance: 0.20809
+Affinity: -2.42418  -1.79507 (kcal/mol)
+RMSD: 6.68717
+CNNscore: 0.59491 
+CNNaffinity: 4.45753
+CNNvariance: 0.09757
+Affinity: 7.10830  0.39694 (kcal/mol)
+RMSD: 5.17240
+CNNscore: 0.39208 
+CNNaffinity: 3.18995
+CNNvariance: 0.32355
+Affinity: -3.23057  -1.02240 (kcal/mol)
+RMSD: 4.42767
+CNNscore: 0.20574 
+CNNaffinity: 3.48098
+CNNvariance: 0.72835
+Finafloxacin | pose 938 | ligand outside box
+Affinity: -2.89571  -1.02869 (kcal/mol)
+RMSD: 4.72855
+CNNscore: 0.57453 
+CNNaffinity: 3.63765
+CNNvariance: 0.22494
+Affinity: -2.20484  -1.08382 (kcal/mol)
+RMSD: 4.84303
+CNNscore: 0.53955 
+CNNaffinity: 3.34077
+CNNvariance: 0.21558
+Affinity: 67.95903  -0.27315 (kcal/mol)
+RMSD: 7.46241
+CNNscore: 0.06484 
+CNNaffinity: 5.73223
+CNNvariance: 2.21572
+Affinity: -2.18911  -1.04087 (kcal/mol)
+RMSD: 6.98705
+CNNscore: 0.65126 
+CNNaffinity: 4.31885
+CNNvariance: 0.66352
+Affinity: -1.88823  -0.75553 (kcal/mol)
+RMSD: 7.48769
+CNNscore: 0.82898 
+CNNaffinity: 4.17438
+CNNvariance: 0.10514
+Affinity: -4.11106  -0.98631 (kcal/mol)
+RMSD: 8.46084
+CNNscore: 0.49853 
+CNNaffinity: 5.00552
+CNNvariance: 0.37634
+Affinity: -1.95977  -0.38885 (kcal/mol)
+RMSD: 11.02578
+CNNscore: 0.78536 
+CNNaffinity: 5.29210
+CNNvariance: 0.20516
+Affinity: -4.30584  -1.25433 (kcal/mol)
+RMSD: 8.27720
+CNNscore: 0.40704 
+CNNaffinity: 4.46221
+CNNvariance: 0.19994
+Affinity: -4.68937  -0.48307 (kcal/mol)
+RMSD: 6.10704
+CNNscore: 0.09135 
+CNNaffinity: 4.15343
+CNNvariance: 0.59118
+Affinity: -2.09089  -0.84006 (kcal/mol)
+RMSD: 10.67431
+CNNscore: 0.61161 
+CNNaffinity: 4.68766
+CNNvariance: 0.26521
+Affinity: -4.06301  0.00000 (kcal/mol)
+RMSD: 4.79869
+CNNscore: 0.34610 
+CNNaffinity: 2.87919
+CNNvariance: 0.12694
+Affinity: -3.94481  0.31975 (kcal/mol)
+RMSD: 11.34637
+CNNscore: 0.49682 
+CNNaffinity: 5.81293
+CNNvariance: 1.24300
+Affinity: -4.28767  -1.15410 (kcal/mol)
+RMSD: 8.70134
+CNNscore: 0.44389 
+CNNaffinity: 5.38097
+CNNvariance: 0.36496
+Affinity: 8.85215  -0.52635 (kcal/mol)
+RMSD: 0.80156
+CNNscore: 0.54686 
+CNNaffinity: 5.73801
+CNNvariance: 1.13168
+Affinity: 88.32005  9.12564 (kcal/mol)
+RMSD: 6.47369
+CNNscore: 0.00107 
+CNNaffinity: 3.76287
+CNNvariance: 3.21628
+Affinity: -3.35563  -0.27338 (kcal/mol)
+RMSD: 1.58403
+CNNscore: 0.42223 
+CNNaffinity: 3.53395
+CNNvariance: 0.47375
+Affinity: -2.16466  -0.88867 (kcal/mol)
+RMSD: 1.97800
+CNNscore: 0.67768 
+CNNaffinity: 3.97631
+CNNvariance: 0.18118
+Affinity: -2.78927  -0.58316 (kcal/mol)
+RMSD: 7.46480
+CNNscore: 0.44580 
+CNNaffinity: 3.39910
+CNNvariance: 0.36299
+Affinity: -2.93012  -0.24012 (kcal/mol)
+RMSD: 8.52485
+CNNscore: 0.65579 
+CNNaffinity: 4.90077
+CNNvariance: 0.70781
+Tixocortol | pose 957 | ligand outside box
+Affinity: 41.45012  0.09232 (kcal/mol)
+RMSD: 3.44035
+CNNscore: 0.14090 
+CNNaffinity: 5.00862
+CNNvariance: 1.26101
+Affinity: -3.13900  -0.53010 (kcal/mol)
+RMSD: 8.76471
+CNNscore: 0.52342 
+CNNaffinity: 5.77788
+CNNvariance: 0.78626
+Affinity: -5.62575  -0.73988 (kcal/mol)
+RMSD: 4.90571
+CNNscore: 0.36789 
+CNNaffinity: 5.12184
+CNNvariance: 0.10253
+Affinity: -3.84567  -0.91110 (kcal/mol)
+RMSD: 5.09479
+CNNscore: 0.63844 
+CNNaffinity: 4.16317
+CNNvariance: 0.22390
+Affinity: -3.99701  -1.07826 (kcal/mol)
+RMSD: 12.55638
+CNNscore: 0.57923 
+CNNaffinity: 4.57574
+CNNvariance: 0.20880
+Affinity: -4.44742  -0.92542 (kcal/mol)
+RMSD: 12.10989
+CNNscore: 0.44903 
+CNNaffinity: 4.72920
+CNNvariance: 0.24683
+Affinity: -4.91911  -0.69002 (kcal/mol)
+RMSD: 6.86585
+CNNscore: 0.34861 
+CNNaffinity: 4.07631
+CNNvariance: 0.82468
+Affinity: -1.87731  -0.70924 (kcal/mol)
+RMSD: 7.61941
+CNNscore: 0.70565 
+CNNaffinity: 3.94376
+CNNvariance: 0.18231
+Affinity: -2.84850  0.27189 (kcal/mol)
+RMSD: 7.22267
+CNNscore: 0.84203 
+CNNaffinity: 3.64048
+CNNvariance: 0.17985
+Affinity: -4.20554  -0.70548 (kcal/mol)
+RMSD: 5.54897
+CNNscore: 0.23530 
+CNNaffinity: 3.19145
+CNNvariance: 1.15413
+Affinity: -4.49756  -0.61782 (kcal/mol)
+RMSD: 4.73920
+CNNscore: 0.07092 
+CNNaffinity: 3.91410
+CNNvariance: 0.94604
+Affinity: -3.62130  -0.24779 (kcal/mol)
+RMSD: 8.42646
+CNNscore: 0.52212 
+CNNaffinity: 4.70307
+CNNvariance: 0.29151
+Affinity: 103.01892  0.67682 (kcal/mol)
+RMSD: 4.06101
+CNNscore: 0.00174 
+CNNaffinity: 4.02035
+CNNvariance: 2.50186
+Affinity: -4.26905  -1.16331 (kcal/mol)
+RMSD: 6.34275
+CNNscore: 0.25464 
+CNNaffinity: 3.12518
+CNNvariance: 0.57737
+Affinity: 44.04641  2.65715 (kcal/mol)
+RMSD: 1.99933
+CNNscore: 0.09542 
+CNNaffinity: 3.50274
+CNNvariance: 0.73345
+Affinity: -6.37456  -0.47026 (kcal/mol)
+RMSD: 2.05664
+CNNscore: 0.23538 
+CNNaffinity: 5.52541
+CNNvariance: 0.21643
+Affinity: -1.81614  0.00000 (kcal/mol)
+RMSD: 8.73130
+CNNscore: 0.63860 
+CNNaffinity: 4.33901
+CNNvariance: 0.62466
+Affinity: -2.32439  0.00000 (kcal/mol)
+RMSD: 3.80145
+CNNscore: 0.65044 
+CNNaffinity: 2.61876
+CNNvariance: 0.10128
+Affinity: -4.39856  -0.34393 (kcal/mol)
+RMSD: 4.44220
+CNNscore: 0.35192 
+CNNaffinity: 3.57082
+CNNvariance: 0.20020
+Affinity: -2.97268  -0.37135 (kcal/mol)
+RMSD: 4.99179
+CNNscore: 0.58094 
+CNNaffinity: 4.58879
+CNNvariance: 1.00191
+Affinity: -2.99400  -0.84940 (kcal/mol)
+RMSD: 5.51655
+CNNscore: 0.51339 
+CNNaffinity: 4.35906
+CNNvariance: 0.45407
+Affinity: 65.15740  1.53263 (kcal/mol)
+RMSD: 5.84939
+CNNscore: 0.09677 
+CNNaffinity: 5.98796
+CNNvariance: 3.01269
+Affinity: -4.17146  -1.13517 (kcal/mol)
+RMSD: 9.34555
+CNNscore: 0.46969 
+CNNaffinity: 4.97729
+CNNvariance: 0.19903
+Affinity: -3.47270  -0.75432 (kcal/mol)
+RMSD: 8.02926
+CNNscore: 0.57291 
+CNNaffinity: 4.10541
+CNNvariance: 0.18994
+Affinity: -2.22947  -0.72685 (kcal/mol)
+RMSD: 7.39218
+CNNscore: 0.66839 
+CNNaffinity: 4.37075
+CNNvariance: 0.57341
+Affinity: -4.45078  -0.19094 (kcal/mol)
+RMSD: 8.94899
+CNNscore: 0.24017 
+CNNaffinity: 3.88147
+CNNvariance: 0.18329
+Affinity: -1.58777  -0.22471 (kcal/mol)
+RMSD: 7.33033
+CNNscore: 0.72271 
+CNNaffinity: 4.33954
+CNNvariance: 0.30933
+Affinity: -2.18669  -0.61040 (kcal/mol)
+RMSD: 7.92627
+CNNscore: 0.77586 
+CNNaffinity: 6.06833
+CNNvariance: 1.42783
+Affinity: -2.28657  -1.02214 (kcal/mol)
+RMSD: 5.39214
+CNNscore: 0.66553 
+CNNaffinity: 3.53768
+CNNvariance: 0.10715
+Affinity: -4.56461  -0.91053 (kcal/mol)
+RMSD: 7.23399
+CNNscore: 0.20454 
+CNNaffinity: 4.80621
+CNNvariance: 0.36506
+Affinity: -3.73052  -0.61860 (kcal/mol)
+RMSD: 8.49753
+CNNscore: 0.33950 
+CNNaffinity: 3.97701
+CNNvariance: 0.31227
+Affinity: -3.09772  -0.35562 (kcal/mol)
+RMSD: 5.03351
+CNNscore: 0.78009 
+CNNaffinity: 4.21978
+CNNvariance: 0.31644
+Affinity: 9.09770  0.02948 (kcal/mol)
+RMSD: 6.58457
+CNNscore: 0.65031 
+CNNaffinity: 4.61464
+CNNvariance: 0.20459
+Affinity: -3.69522  -0.44859 (kcal/mol)
+RMSD: 7.03147
+CNNscore: 0.25405 
+CNNaffinity: 3.11123
+CNNvariance: 0.34614
+Affinity: 32.74545  -0.06769 (kcal/mol)
+RMSD: 2.98198
+CNNscore: 0.01446 
+CNNaffinity: 2.65941
+CNNvariance: 0.28099
+Affinity: -3.63017  -0.68950 (kcal/mol)
+RMSD: 3.53128
+CNNscore: 0.29974 
+CNNaffinity: 3.74173
+CNNvariance: 0.15525
+Affinity: -4.94020  -0.75827 (kcal/mol)
+RMSD: 6.26323
+CNNscore: 0.57159 
+CNNaffinity: 4.73133
+CNNvariance: 0.07212
+Affinity: 26.80339  0.21615 (kcal/mol)
+RMSD: 4.83747
+CNNscore: 0.37845 
+CNNaffinity: 4.40481
+CNNvariance: 0.42794
+Affinity: -2.79010  -0.59993 (kcal/mol)
+RMSD: 7.83137
+CNNscore: 0.59025 
+CNNaffinity: 4.66090
+CNNvariance: 0.30178
+Affinity: -2.38272  -2.66494 (kcal/mol)
+RMSD: 6.50444
+CNNscore: 0.53364 
+CNNaffinity: 4.69224
+CNNvariance: 0.20409
+Affinity: -1.90244  -0.34756 (kcal/mol)
+RMSD: 5.71281
+CNNscore: 0.66852 
+CNNaffinity: 4.34052
+CNNvariance: 0.26375
+Affinity: -3.39936  0.00000 (kcal/mol)
+RMSD: 4.65957
+CNNscore: 0.74358 
+CNNaffinity: 3.31120
+CNNvariance: 0.19439
+Pramocaine | pose 999 | ligand outside box
+Affinity: -3.84244  -1.20488 (kcal/mol)
+RMSD: 5.98052
+CNNscore: 0.45095 
+CNNaffinity: 4.92553
+CNNvariance: 0.20681
+Affinity: -2.78415  0.65262 (kcal/mol)
+RMSD: 6.91838
+CNNscore: 0.50929 
+CNNaffinity: 3.08679
+CNNvariance: 0.98281
+Levobetaxolol | pose 1001 | ligand outside box
+Affinity: -2.24566  -0.79597 (kcal/mol)
+RMSD: 5.25772
+CNNscore: 0.86342 
+CNNaffinity: 4.18086
+CNNvariance: 0.15216
+Affinity: -6.50237  -0.61986 (kcal/mol)
+RMSD: 4.53059
+CNNscore: 0.10518 
+CNNaffinity: 4.72057
+CNNvariance: 0.19722
+Affinity: -3.42694  -0.41732 (kcal/mol)
+RMSD: 3.66582
+CNNscore: 0.47575 
+CNNaffinity: 3.60680
+CNNvariance: 0.35920
+Affinity: -3.16895  -2.10256 (kcal/mol)
+RMSD: 4.48225
+CNNscore: 0.53473 
+CNNaffinity: 4.65896
+CNNvariance: 0.49367
+Affinity: -2.48525  -1.56425 (kcal/mol)
+RMSD: 7.28673
+CNNscore: 0.52641 
+CNNaffinity: 3.72131
+CNNvariance: 0.17869
+Affinity: -4.34449  -1.59616 (kcal/mol)
+RMSD: 8.64842
+CNNscore: 0.67255 
+CNNaffinity: 4.59990
+CNNvariance: 0.24415
+Affinity: -2.65822  -1.95441 (kcal/mol)
+RMSD: 9.89821
+CNNscore: 0.61778 
+CNNaffinity: 6.10947
+CNNvariance: 0.55290
+Meprednisone | pose 1008 | ligand outside box
+Affinity: -3.52700  -0.93872 (kcal/mol)
+RMSD: 8.92899
+CNNscore: 0.35828 
+CNNaffinity: 3.99967
+CNNvariance: 0.54742
+Affinity: -3.14317  -0.34651 (kcal/mol)
+RMSD: 3.25342
+CNNscore: 0.57103 
+CNNaffinity: 4.01209
+CNNvariance: 0.14439
+Affinity: 26.70166  -0.50736 (kcal/mol)
+RMSD: 8.49664
+CNNscore: 0.00687 
+CNNaffinity: 3.29415
+CNNvariance: 0.51644
+Acrivastine | pose 1011 | ligand outside box
+Affinity: 12.34577  -0.42092 (kcal/mol)
+RMSD: 9.60671
+CNNscore: 0.02918 
+CNNaffinity: 3.74198
+CNNvariance: 0.10633
+Affinity: -2.52250  1.15000 (kcal/mol)
+RMSD: 6.85298
+CNNscore: 0.43442 
+CNNaffinity: 4.05791
+CNNvariance: 0.23546
+Affinity: -1.75063  -0.17842 (kcal/mol)
+RMSD: 5.07370
+CNNscore: 0.65916 
+CNNaffinity: 3.09360
+CNNvariance: 0.34679
+Affinity: -5.34243  -0.22162 (kcal/mol)
+RMSD: 4.45012
+CNNscore: 0.28059 
+CNNaffinity: 3.92031
+CNNvariance: 0.31011
+Affinity: 7.85643  0.54091 (kcal/mol)
+RMSD: 6.56802
+CNNscore: 0.42419 
+CNNaffinity: 4.50584
+CNNvariance: 0.55705
+Affinity: -5.14935  -0.22703 (kcal/mol)
+RMSD: 9.14405
+CNNscore: 0.49015 
+CNNaffinity: 4.86692
+CNNvariance: 0.05362
+Methyl salicylate | pose 1017 | ligand outside box
+Affinity: -3.40775  -2.27493 (kcal/mol)
+RMSD: 7.48090
+CNNscore: 0.40140 
+CNNaffinity: 4.47695
+CNNvariance: 0.11996
+Dexchlorpheniramine maleate | pose 1018 | ligand outside box
+Affinity: -2.91989  1.07699 (kcal/mol)
+RMSD: 6.96813
+CNNscore: 0.77247 
+CNNaffinity: 4.43751
+CNNvariance: 0.13823
+Affinity: 49.18538  0.49876 (kcal/mol)
+RMSD: 7.11896
+CNNscore: 0.01594 
+CNNaffinity: 3.84215
+CNNvariance: 0.32305
+Affinity: -3.50566  -0.64794 (kcal/mol)
+RMSD: 6.12805
+CNNscore: 0.48233 
+CNNaffinity: 4.85730
+CNNvariance: 0.29522
+Affinity: -4.98225  -1.39831 (kcal/mol)
+RMSD: 7.09548
+CNNscore: 0.14335 
+CNNaffinity: 3.61272
+CNNvariance: 1.05756
+Affinity: -3.33815  -1.35976 (kcal/mol)
+RMSD: 6.54375
+CNNscore: 0.48443 
+CNNaffinity: 4.82552
+CNNvariance: 0.13105
+Affinity: 58.47038  2.93290 (kcal/mol)
+RMSD: 6.16703
+CNNscore: 0.00110 
+CNNaffinity: 2.58630
+CNNvariance: 0.41237
+Affinity: -2.58388  -0.95259 (kcal/mol)
+RMSD: 8.09143
+CNNscore: 0.57687 
+CNNaffinity: 4.06683
+CNNvariance: 0.04711
+Affinity: -0.44718  0.15919 (kcal/mol)
+RMSD: 4.69045
+CNNscore: 0.82217 
+CNNaffinity: 2.35788
+CNNvariance: 0.01794
+Affinity: 28.66672  -0.01557 (kcal/mol)
+RMSD: 5.93448
+CNNscore: 0.11717 
+CNNaffinity: 2.55526
+CNNvariance: 0.07192
+Affinity: 23.55249  0.00000 (kcal/mol)
+RMSD: 6.32361
+CNNscore: 0.46774 
+CNNaffinity: 3.40460
+CNNvariance: 0.03193
+Affinity: 20.00754  -0.28709 (kcal/mol)
+RMSD: 6.52390
+CNNscore: 0.55489 
+CNNaffinity: 3.96331
+CNNvariance: 0.16774
+Affinity: -3.87106  -0.75407 (kcal/mol)
+RMSD: 6.31329
+CNNscore: 0.41254 
+CNNaffinity: 3.97152
+CNNvariance: 0.35362
+Affinity: -3.66693  -1.00317 (kcal/mol)
+RMSD: 3.87654
+CNNscore: 0.26979 
+CNNaffinity: 3.74762
+CNNvariance: 0.09596
+Affinity: -2.91949  -0.26260 (kcal/mol)
+RMSD: 5.43812
+CNNscore: 0.62378 
+CNNaffinity: 3.11652
+CNNvariance: 0.30580
+Affinity: -5.11065  -0.41845 (kcal/mol)
+RMSD: 4.88525
+CNNscore: 0.36044 
+CNNaffinity: 3.25038
+CNNvariance: 0.77324
+Affinity: 22.01233  0.00000 (kcal/mol)
+RMSD: 2.26124
+CNNscore: 0.37674 
+CNNaffinity: 3.22871
+CNNvariance: 0.15725
+Affinity: -1.48203  -1.08709 (kcal/mol)
+RMSD: 6.21213
+CNNscore: 0.75759 
+CNNaffinity: 4.15028
+CNNvariance: 0.14772
+Affinity: 30.65621  0.33337 (kcal/mol)
+RMSD: 6.30861
+CNNscore: 0.34846 
+CNNaffinity: 4.66777
+CNNvariance: 0.43472
+Affinity: -3.68016  -0.22443 (kcal/mol)
+RMSD: 3.29151
+CNNscore: 0.79718 
+CNNaffinity: 4.13165
+CNNvariance: 0.06420
+Affinity: 47.19407  0.00000 (kcal/mol)
+RMSD: 1.73320
+CNNscore: 0.12757 
+CNNaffinity: 1.72965
+CNNvariance: 0.15479
+Affinity: -1.50568  0.00000 (kcal/mol)
+RMSD: 5.27854
+CNNscore: 0.64082 
+CNNaffinity: 3.17500
+CNNvariance: 0.05561
+Affinity: -3.23119  -0.84740 (kcal/mol)
+RMSD: 5.90675
+CNNscore: 0.35700 
+CNNaffinity: 3.17082
+CNNvariance: 0.47882
+Affinity: -2.70817  -0.21863 (kcal/mol)
+RMSD: 7.38367
+CNNscore: 0.54081 
+CNNaffinity: 3.52896
+CNNvariance: 0.14708
+Affinity: -3.16136  0.00000 (kcal/mol)
+RMSD: 4.35581
+CNNscore: 0.64157 
+CNNaffinity: 3.92660
+CNNvariance: 0.49616
+Affinity: -3.28459  -0.81651 (kcal/mol)
+RMSD: 6.28658
+CNNscore: 0.36380 
+CNNaffinity: 3.70828
+CNNvariance: 0.33662
+Affinity: -1.50121  -0.82618 (kcal/mol)
+RMSD: 6.75323
+CNNscore: 0.37477 
+CNNaffinity: 3.45676
+CNNvariance: 0.37548
+Affinity: -4.09530  0.20954 (kcal/mol)
+RMSD: 5.02860
+CNNscore: 0.36724 
+CNNaffinity: 3.74258
+CNNvariance: 0.30766
+Affinity: 13.99500  -0.80938 (kcal/mol)
+RMSD: 8.57659
+CNNscore: 0.29760 
+CNNaffinity: 3.41246
+CNNvariance: 0.39612
+Affinity: -4.65555  -1.35402 (kcal/mol)
+RMSD: 5.42641
+CNNscore: 0.20983 
+CNNaffinity: 3.93124
+CNNvariance: 0.56775
+Affinity: -4.47494  -0.91952 (kcal/mol)
+RMSD: 5.05894
+CNNscore: 0.39699 
+CNNaffinity: 3.71954
+CNNvariance: 0.17726
+Affinity: -0.53242  -0.40348 (kcal/mol)
+RMSD: 12.15810
+CNNscore: 0.57583 
+CNNaffinity: 3.35811
+CNNvariance: 0.08672
+Affinity: -5.06515  -0.38137 (kcal/mol)
+RMSD: 6.40756
+CNNscore: 0.30292 
+CNNaffinity: 4.21945
+CNNvariance: 0.13429
+Affinity: -2.35746  0.51588 (kcal/mol)
+RMSD: 4.87037
+CNNscore: 0.40241 
+CNNaffinity: 3.56491
+CNNvariance: 0.18898
+Affinity: -2.54566  -0.85328 (kcal/mol)
+RMSD: 4.39322
+CNNscore: 0.67324 
+CNNaffinity: 3.95832
+CNNvariance: 0.11033
+Affinity: -3.40875  0.00000 (kcal/mol)
+RMSD: 5.38056
+CNNscore: 0.38854 
+CNNaffinity: 2.98625
+CNNvariance: 0.13870
+Affinity: 26.49059  -0.28554 (kcal/mol)
+RMSD: 5.16298
+CNNscore: 0.48419 
+CNNaffinity: 5.26810
+CNNvariance: 1.08438
+Selexipag | pose 1054 | ligand outside box
+Affinity: -1.11508  -1.41643 (kcal/mol)
+RMSD: 5.94618
+CNNscore: 0.71624 
+CNNaffinity: 3.92101
+CNNvariance: 0.12655
+Affinity: -3.42614  0.25074 (kcal/mol)
+RMSD: 7.42563
+CNNscore: 0.43871 
+CNNaffinity: 3.13937
+CNNvariance: 0.42174
+Affinity: -2.60907  -0.07859 (kcal/mol)
+RMSD: 8.41138
+CNNscore: 0.50264 
+CNNaffinity: 3.19448
+CNNvariance: 0.44314
+Affinity: -3.04784  -0.33366 (kcal/mol)
+RMSD: 7.03953
+CNNscore: 0.49615 
+CNNaffinity: 3.20096
+CNNvariance: 0.28078
+Padimate O | pose 1058 | ligand outside box
+Affinity: -3.46961  -0.08437 (kcal/mol)
+RMSD: 5.77209
+CNNscore: 0.44212 
+CNNaffinity: 2.80692
+CNNvariance: 0.43189
+Affinity: -3.47850  -0.79677 (kcal/mol)
+RMSD: 5.81413
+CNNscore: 0.54235 
+CNNaffinity: 3.72308
+CNNvariance: 0.09370
+Affinity: -5.17267  -0.34236 (kcal/mol)
+RMSD: 4.20723
+CNNscore: 0.36627 
+CNNaffinity: 3.00377
+CNNvariance: 0.35935
+Affinity: 0.38359  0.43326 (kcal/mol)
+RMSD: 6.60064
+CNNscore: 0.49852 
+CNNaffinity: 3.80883
+CNNvariance: 0.19397
+Affinity: -2.54748  -2.14586 (kcal/mol)
+RMSD: 3.72564
+CNNscore: 0.48592 
+CNNaffinity: 4.06046
+CNNvariance: 0.10886
+Affinity: -3.75921  -0.56303 (kcal/mol)
+RMSD: 4.42399
+CNNscore: 0.41390 
+CNNaffinity: 3.94454
+CNNvariance: 0.31718
+Oxilofrine | pose 1064 | ligand outside box
+Affinity: 21.66656  -0.03241 (kcal/mol)
+RMSD: 2.94379
+CNNscore: 0.10840 
+CNNaffinity: 2.13023
+CNNvariance: 0.04062
+Affinity: 14.83846  1.68593 (kcal/mol)
+RMSD: 5.54261
+CNNscore: 0.14898 
+CNNaffinity: 5.03081
+CNNvariance: 0.21919
+Affinity: -5.57710  -0.62379 (kcal/mol)
+RMSD: 7.46812
+CNNscore: 0.42682 
+CNNaffinity: 5.42435
+CNNvariance: 0.11940
+Affinity: -0.41468  0.00000 (kcal/mol)
+RMSD: 0.14422
+CNNscore: 0.84074 
+CNNaffinity: 2.73466
+CNNvariance: 0.10615
+Isavuconazole | pose 1068 | ligand outside box
+Affinity: -4.48733  -0.52145 (kcal/mol)
+RMSD: 7.69063
+CNNscore: 0.18547 
+CNNaffinity: 4.41143
+CNNvariance: 0.53000
+Affinity: 8.89035  0.37057 (kcal/mol)
+RMSD: 8.40172
+CNNscore: 0.08692 
+CNNaffinity: 3.93063
+CNNvariance: 0.08535
+Affinity: -3.18038  -0.46080 (kcal/mol)
+RMSD: 4.52674
+CNNscore: 0.57630 
+CNNaffinity: 3.51736
+CNNvariance: 0.31768
+Affinity: -2.44176  0.06733 (kcal/mol)
+RMSD: 7.76670
+CNNscore: 0.52121 
+CNNaffinity: 3.51645
+CNNvariance: 0.19162
+Affinity: -2.65428  -0.51921 (kcal/mol)
+RMSD: 4.73478
+CNNscore: 0.66461 
+CNNaffinity: 3.43808
+CNNvariance: 0.12385
+Affinity: -3.43047  -1.69541 (kcal/mol)
+RMSD: 5.62979
+CNNscore: 0.64763 
+CNNaffinity: 4.72637
+CNNvariance: 0.08880
+Affinity: -5.12600  0.06993 (kcal/mol)
+RMSD: 5.85004
+CNNscore: 0.08213 
+CNNaffinity: 3.81606
+CNNvariance: 1.03332
+Affinity: -3.15021  -0.29412 (kcal/mol)
+RMSD: 8.78287
+CNNscore: 0.40769 
+CNNaffinity: 3.23375
+CNNvariance: 0.41096
+Affinity: 77.23539  -0.37213 (kcal/mol)
+RMSD: 6.04374
+CNNscore: 0.00378 
+CNNaffinity: 4.88642
+CNNvariance: 1.94434
+Affinity: 77.38467  0.62895 (kcal/mol)
+RMSD: 3.64869
+CNNscore: 0.10572 
+CNNaffinity: 5.98568
+CNNvariance: 2.87198
+Affinity: -4.22753  -0.92246 (kcal/mol)
+RMSD: 5.15819
+CNNscore: 0.31403 
+CNNaffinity: 5.14419
+CNNvariance: 0.18490
+Clobetasol | pose 1079 | ligand outside box
+Affinity: -3.94884  -1.21982 (kcal/mol)
+RMSD: 5.90547
+CNNscore: 0.52751 
+CNNaffinity: 5.71803
+CNNvariance: 0.86729
+Affinity: 81.87237  0.27583 (kcal/mol)
+RMSD: 8.64230
+CNNscore: 0.05965 
+CNNaffinity: 5.51426
+CNNvariance: 2.33094
+Affinity: -2.32623  0.00000 (kcal/mol)
+RMSD: 4.01668
+CNNscore: 0.51835 
+CNNaffinity: 2.86319
+CNNvariance: 0.11575
+Affinity: -3.21371  -0.63230 (kcal/mol)
+RMSD: 4.37885
+CNNscore: 0.70635 
+CNNaffinity: 4.10599
+CNNvariance: 0.20362
+Affinity: -4.05226  -0.24273 (kcal/mol)
+RMSD: 4.84101
+CNNscore: 0.34186 
+CNNaffinity: 3.83258
+CNNvariance: 0.09739
+Bictegravir | pose 1084 | ligand outside box
+Affinity: -2.71680  -1.00618 (kcal/mol)
+RMSD: 10.59321
+CNNscore: 0.54701 
+CNNaffinity: 4.32182
+CNNvariance: 0.20984
+Affinity: -4.11603  -0.61847 (kcal/mol)
+RMSD: 6.91684
+CNNscore: 0.39637 
+CNNaffinity: 3.92241
+CNNvariance: 0.17266
+Affinity: -2.77427  -1.26489 (kcal/mol)
+RMSD: 5.42085
+CNNscore: 0.57270 
+CNNaffinity: 5.67443
+CNNvariance: 0.44613
+Affinity: 9.82083  -0.02208 (kcal/mol)
+RMSD: 4.29150
+CNNscore: 0.39117 
+CNNaffinity: 5.02566
+CNNvariance: 0.56234
+Affinity: -3.88250  0.31219 (kcal/mol)
+RMSD: 5.46523
+CNNscore: 0.31045 
+CNNaffinity: 3.50333
+CNNvariance: 0.49798
+Valbenazine | pose 1089 | ligand outside box
+Affinity: -3.57352  -1.65385 (kcal/mol)
+RMSD: 6.93429
+CNNscore: 0.38409 
+CNNaffinity: 4.94292
+CNNvariance: 0.07444
+Affinity: 49.22223  1.21865 (kcal/mol)
+RMSD: 9.06170
+CNNscore: 0.02074 
+CNNaffinity: 4.55111
+CNNvariance: 0.23145
+Affinity: -5.06973  -0.46178 (kcal/mol)
+RMSD: 6.23225
+CNNscore: 0.41193 
+CNNaffinity: 5.83414
+CNNvariance: 0.37277
+Affinity: -1.83494  -0.57363 (kcal/mol)
+RMSD: 2.43137
+CNNscore: 0.58271 
+CNNaffinity: 4.06079
+CNNvariance: 0.54215
+Affinity: -6.84657  -0.78929 (kcal/mol)
+RMSD: 4.66673
+CNNscore: 0.19881 
+CNNaffinity: 5.13781
+CNNvariance: 0.38664
+Affinity: -3.20432  -0.83427 (kcal/mol)
+RMSD: 3.49635
+CNNscore: 0.85574 
+CNNaffinity: 4.48286
+CNNvariance: 0.22781
+Affinity: -5.76640  1.01304 (kcal/mol)
+RMSD: 8.51870
+CNNscore: 0.26695 
+CNNaffinity: 5.54352
+CNNvariance: 0.34624
+Affinity: -3.33790  -0.23174 (kcal/mol)
+RMSD: 5.12981
+CNNscore: 0.58149 
+CNNaffinity: 5.10328
+CNNvariance: 0.17034
+Affinity: -2.84207  -0.03870 (kcal/mol)
+RMSD: 4.87022
+CNNscore: 0.51073 
+CNNaffinity: 3.55325
+CNNvariance: 0.25351
+Affinity: -4.77547  -1.45210 (kcal/mol)
+RMSD: 6.67894
+CNNscore: 0.16751 
+CNNaffinity: 3.54648
+CNNvariance: 0.69410
+Affinity: 90.16925  -0.03594 (kcal/mol)
+RMSD: 3.10975
+CNNscore: 0.01386 
+CNNaffinity: 4.49769
+CNNvariance: 0.97619
+Affinity: 61.56310  -0.26822 (kcal/mol)
+RMSD: 7.52136
+CNNscore: 0.02473 
+CNNaffinity: 4.89624
+CNNvariance: 2.29872
+Affinity: 111.16644  -0.61401 (kcal/mol)
+RMSD: 3.10676
+CNNscore: 0.00033 
+CNNaffinity: 3.88850
+CNNvariance: 2.60109
+Nefopam | pose 1102 | ligand outside box
+Affinity: 48.39356  0.43280 (kcal/mol)
+RMSD: 4.85909
+CNNscore: 0.10336 
+CNNaffinity: 4.26419
+CNNvariance: 0.62559
+Affinity: -3.61340  -0.98978 (kcal/mol)
+RMSD: 5.29715
+CNNscore: 0.67715 
+CNNaffinity: 6.22406
+CNNvariance: 0.82569
+Affinity: -2.01414  -0.68742 (kcal/mol)
+RMSD: 3.66707
+CNNscore: 0.55354 
+CNNaffinity: 5.50644
+CNNvariance: 0.65481
+Affinity: -4.73220  -0.50021 (kcal/mol)
+RMSD: 6.89894
+CNNscore: 0.55936 
+CNNaffinity: 4.78152
+CNNvariance: 0.11145
+Affinity: 30.95433  -0.23146 (kcal/mol)
+RMSD: 3.73430
+CNNscore: 0.02909 
+CNNaffinity: 3.26612
+CNNvariance: 0.09846
+Affinity: 24.94473  -0.68985 (kcal/mol)
+RMSD: 7.54210
+CNNscore: 0.15066 
+CNNaffinity: 4.20250
+CNNvariance: 0.22128
+Affinity: -1.68523  -0.82040 (kcal/mol)
+RMSD: 7.93122
+CNNscore: 0.39793 
+CNNaffinity: 4.49823
+CNNvariance: 0.47696
+Affinity: -5.15883  -0.14869 (kcal/mol)
+RMSD: 4.49966
+CNNscore: 0.32735 
+CNNaffinity: 5.20735
+CNNvariance: 0.06859
+Affinity: -3.38731  0.04721 (kcal/mol)
+RMSD: 9.34907
+CNNscore: 0.49081 
+CNNaffinity: 4.54077
+CNNvariance: 0.31097
+Affinity: 15.92009  -0.10254 (kcal/mol)
+RMSD: 4.50763
+CNNscore: 0.74686 
+CNNaffinity: 4.98585
+CNNvariance: 0.26660
+Affinity: -4.48255  -0.81496 (kcal/mol)
+RMSD: 4.62566
+CNNscore: 0.33788 
+CNNaffinity: 4.36717
+CNNvariance: 0.27014
+Affinity: -2.46052  -0.32663 (kcal/mol)
+RMSD: 4.35820
+CNNscore: 0.73804 
+CNNaffinity: 3.46283
+CNNvariance: 0.10508
+Mebeverine | pose 1114 | ligand outside box
+Affinity: -3.59855  -0.38205 (kcal/mol)
+RMSD: 2.16491
+CNNscore: 0.62762 
+CNNaffinity: 3.54945
+CNNvariance: 0.29991
+Affinity: 18.75764  -0.57346 (kcal/mol)
+RMSD: 5.24239
+CNNscore: 0.04301 
+CNNaffinity: 4.45243
+CNNvariance: 0.02098
+Affinity: 31.78857  0.00000 (kcal/mol)
+RMSD: 7.04468
+CNNscore: 0.51950 
+CNNaffinity: 4.50729
+CNNvariance: 0.80992
+Affinity: -1.14231  -0.58751 (kcal/mol)
+RMSD: 9.95502
+CNNscore: 0.87669 
+CNNaffinity: 4.23611
+CNNvariance: 0.14597
+Affinity: -2.03152  0.07584 (kcal/mol)
+RMSD: 3.34510
+CNNscore: 0.63765 
+CNNaffinity: 4.19002
+CNNvariance: 0.31006
+Affinity: -5.91565  -0.93802 (kcal/mol)
+RMSD: 5.17011
+CNNscore: 0.04383 
+CNNaffinity: 4.61381
+CNNvariance: 0.48643
+Affinity: -5.83577  -0.76837 (kcal/mol)
+RMSD: 3.49928
+CNNscore: 0.21920 
+CNNaffinity: 4.14656
+CNNvariance: 0.35612
+Affinity: -5.12265  -0.22980 (kcal/mol)
+RMSD: 7.47246
+CNNscore: 0.66906 
+CNNaffinity: 4.74422
+CNNvariance: 0.03211
+Affinity: -1.49458  -0.31993 (kcal/mol)
+RMSD: 10.62028
+CNNscore: 0.73305 
+CNNaffinity: 4.82132
+CNNvariance: 0.27313
+Affinity: -2.64760  0.35983 (kcal/mol)
+RMSD: 9.12434
+CNNscore: 0.42480 
+CNNaffinity: 4.54181
+CNNvariance: 0.59529
+Affinity: -3.17662  0.00000 (kcal/mol)
+RMSD: 6.15105
+CNNscore: 0.45486 
+CNNaffinity: 2.82035
+CNNvariance: 0.34729
+Affinity: 9.68724  3.33435 (kcal/mol)
+RMSD: 6.90700
+CNNscore: 0.03663 
+CNNaffinity: 4.17441
+CNNvariance: 0.19264
+Affinity: -2.75385  -0.21543 (kcal/mol)
+RMSD: 6.55610
+CNNscore: 0.49877 
+CNNaffinity: 3.37370
+CNNvariance: 0.24674
+Affinity: -4.19777  -1.00061 (kcal/mol)
+RMSD: 4.13582
+CNNscore: 0.35716 
+CNNaffinity: 3.99089
+CNNvariance: 0.33149
+Affinity: -2.85892  -2.48183 (kcal/mol)
+RMSD: 6.25509
+CNNscore: 0.47013 
+CNNaffinity: 4.20614
+CNNvariance: 0.12461
+Affinity: 26.96930  1.28396 (kcal/mol)
+RMSD: 4.22613
+CNNscore: 0.15143 
+CNNaffinity: 2.22222
+CNNvariance: 0.22379
+Affinity: 14.21348  0.56110 (kcal/mol)
+RMSD: 5.00148
+CNNscore: 0.56925 
+CNNaffinity: 4.66325
+CNNvariance: 0.11489
+Affinity: -3.60560  -0.45997 (kcal/mol)
+RMSD: 4.11069
+CNNscore: 0.52287 
+CNNaffinity: 3.85441
+CNNvariance: 0.25208
+Clobetasone | pose 1132 | ligand outside box
+Affinity: -2.51330  -0.76598 (kcal/mol)
+RMSD: 4.07979
+CNNscore: 0.89478 
+CNNaffinity: 4.57475
+CNNvariance: 0.17969
+Affinity: -2.54978  -0.36703 (kcal/mol)
+RMSD: 7.55068
+CNNscore: 0.62768 
+CNNaffinity: 3.27647
+CNNvariance: 0.08910
+Affinity: -4.17935  -0.74360 (kcal/mol)
+RMSD: 7.45183
+CNNscore: 0.43788 
+CNNaffinity: 4.97786
+CNNvariance: 0.68084
+Affinity: -4.79941  -0.46555 (kcal/mol)
+RMSD: 5.68031
+CNNscore: 0.31525 
+CNNaffinity: 4.56296
+CNNvariance: 0.32697
+Affinity: 100.57669  -0.11687 (kcal/mol)
+RMSD: 2.45535
+CNNscore: 0.00034 
+CNNaffinity: 3.80889
+CNNvariance: 2.24589
+Affinity: -0.33141  0.00000 (kcal/mol)
+RMSD: 0.60895
+CNNscore: 0.87725 
+CNNaffinity: 3.68222
+CNNvariance: 0.30589
+Affinity: -3.06085  0.00000 (kcal/mol)
+RMSD: 5.95415
+CNNscore: 0.82422 
+CNNaffinity: 2.92451
+CNNvariance: 0.10799
+Affinity: -2.38713  -0.07776 (kcal/mol)
+RMSD: 5.91514
+CNNscore: 0.45563 
+CNNaffinity: 2.70909
+CNNvariance: 0.33493
+Affinity: -4.43235  -0.79002 (kcal/mol)
+RMSD: 3.80638
+CNNscore: 0.26166 
+CNNaffinity: 3.21598
+CNNvariance: 0.44920
+Affinity: -0.53941  -0.49092 (kcal/mol)
+RMSD: 5.58775
+CNNscore: 0.77461 
+CNNaffinity: 3.41588
+CNNvariance: 0.01868
+Affinity: -0.36842  0.00000 (kcal/mol)
+RMSD: 5.04174
+CNNscore: 0.85764 
+CNNaffinity: 2.72627
+CNNvariance: 0.08222
+Methoxyphenamine | pose 1143 | ligand outside box
+Affinity: 38.65814  0.81596 (kcal/mol)
+RMSD: 9.96544
+CNNscore: 0.03206 
+CNNaffinity: 3.75265
+CNNvariance: 0.90475
+Affinity: -0.47327  -0.13344 (kcal/mol)
+RMSD: 0.55657
+CNNscore: 0.87873 
+CNNaffinity: 2.96673
+CNNvariance: 0.13822
+Affinity: -2.30340  -0.50122 (kcal/mol)
+RMSD: 5.78158
+CNNscore: 0.46676 
+CNNaffinity: 3.50523
+CNNvariance: 0.14207
+Affinity: -0.93381  0.00000 (kcal/mol)
+RMSD: 5.87552
+CNNscore: 0.78787 
+CNNaffinity: 2.11710
+CNNvariance: 0.05367
+Artemotil | pose 1147 | ligand outside box
+Affinity: -0.12771  -0.05043 (kcal/mol)
+RMSD: 0.50963
+CNNscore: 0.92876 
+CNNaffinity: 2.98652
+CNNvariance: 0.10783
+Affinity: 7.36280  0.00000 (kcal/mol)
+RMSD: 4.98198
+CNNscore: 0.42730 
+CNNaffinity: 2.98370
+CNNvariance: 0.05040
+Affinity: -3.87116  -0.91301 (kcal/mol)
+RMSD: 7.13019
+CNNscore: 0.64042 
+CNNaffinity: 4.01665
+CNNvariance: 0.11892
+Affinity: -3.70162  -0.37129 (kcal/mol)
+RMSD: 5.03370
+CNNscore: 0.43113 
+CNNaffinity: 3.36723
+CNNvariance: 0.25359
+Affinity: -4.10759  -0.87392 (kcal/mol)
+RMSD: 4.46875
+CNNscore: 0.39316 
+CNNaffinity: 3.63303
+CNNvariance: 0.24957
+Fenofibric acid | pose 1152 | ligand outside box
+Affinity: -0.95723  0.22508 (kcal/mol)
+RMSD: 5.80112
+CNNscore: 0.78540 
+CNNaffinity: 4.58811
+CNNvariance: 0.59006
+Affinity: -3.10625  -0.36098 (kcal/mol)
+RMSD: 5.65629
+CNNscore: 0.44540 
+CNNaffinity: 2.73223
+CNNvariance: 0.36503
+Affinity: 6.37213  -0.02713 (kcal/mol)
+RMSD: 7.91857
+CNNscore: 0.61290 
+CNNaffinity: 3.19618
+CNNvariance: 0.49079
+Affinity: -5.29994  -0.90679 (kcal/mol)
+RMSD: 3.72382
+CNNscore: 0.21346 
+CNNaffinity: 3.72564
+CNNvariance: 0.49493
+Affinity: -1.83955  -1.45284 (kcal/mol)
+RMSD: 5.46117
+CNNscore: 0.84867 
+CNNaffinity: 4.90171
+CNNvariance: 0.27239
+Affinity: -2.04518  0.00000 (kcal/mol)
+RMSD: 4.27138
+CNNscore: 0.59364 
+CNNaffinity: 3.05797
+CNNvariance: 0.36922
+Affinity: 29.64586  0.66210 (kcal/mol)
+RMSD: 7.49172
+CNNscore: 0.23022 
+CNNaffinity: 3.52343
+CNNvariance: 0.60436
+Affinity: -3.30924  -0.16510 (kcal/mol)
+RMSD: 5.23312
+CNNscore: 0.29733 
+CNNaffinity: 3.38945
+CNNvariance: 0.33078
+Affinity: 72.59842  0.26337 (kcal/mol)
+RMSD: 5.20481
+CNNscore: 0.01079 
+CNNaffinity: 2.34861
+CNNvariance: 1.45216
+Affinity: 98.58681  -0.30513 (kcal/mol)
+RMSD: 4.09763
+CNNscore: 0.00051 
+CNNaffinity: 3.80476
+CNNvariance: 1.46615
+Affinity: -0.41511  -0.62876 (kcal/mol)
+RMSD: 8.94611
+CNNscore: 0.85184 
+CNNaffinity: 4.15181
+CNNvariance: 0.44259
+Affinity: 28.96381  2.29131 (kcal/mol)
+RMSD: 3.98583
+CNNscore: 0.10617 
+CNNaffinity: 3.41778
+CNNvariance: 0.34597
+Affinity: 24.64865  -1.14059 (kcal/mol)
+RMSD: 9.14832
+CNNscore: 0.09438 
+CNNaffinity: 5.18216
+CNNvariance: 0.08931
+Affinity: -2.60773  -0.07086 (kcal/mol)
+RMSD: 4.18688
+CNNscore: 0.56525 
+CNNaffinity: 2.80059
+CNNvariance: 0.26387
+Affinity: -3.29332  -0.29588 (kcal/mol)
+RMSD: 5.61299
+CNNscore: 0.47704 
+CNNaffinity: 3.09114
+CNNvariance: 0.44423
+Affinity: -2.48908  -1.32002 (kcal/mol)
+RMSD: 6.34580
+CNNscore: 0.79664 
+CNNaffinity: 4.80897
+CNNvariance: 0.33310
+Affinity: -5.86151  -0.17245 (kcal/mol)
+RMSD: 3.78638
+CNNscore: 0.34473 
+CNNaffinity: 4.53185
+CNNvariance: 0.25003
+Tetramethylthiuram monosulfide | pose 1169 | ligand outside box
+Affinity: -1.95385  -0.16243 (kcal/mol)
+RMSD: 5.97941
+CNNscore: 0.42287 
+CNNaffinity: 2.49719
+CNNvariance: 0.04844
+Affinity: -4.64358  -0.58188 (kcal/mol)
+RMSD: 6.45289
+CNNscore: 0.28901 
+CNNaffinity: 3.13046
+CNNvariance: 0.84077
+Affinity: 32.33802  0.10990 (kcal/mol)
+RMSD: 3.94612
+CNNscore: 0.09070 
+CNNaffinity: 3.36766
+CNNvariance: 0.17563
+Affinity: -2.06377  -1.31357 (kcal/mol)
+RMSD: 6.59136
+CNNscore: 0.69409 
+CNNaffinity: 4.27303
+CNNvariance: 0.17430
+Affinity: 28.96729  -0.51955 (kcal/mol)
+RMSD: 4.73338
+CNNscore: 0.37333 
+CNNaffinity: 4.70413
+CNNvariance: 0.94985
+Affinity: -6.14081  -0.54523 (kcal/mol)
+RMSD: 7.87125
+CNNscore: 0.23184 
+CNNaffinity: 3.52327
+CNNvariance: 0.60334
+Affinity: -4.66279  0.00000 (kcal/mol)
+RMSD: 4.45995
+CNNscore: 0.79664 
+CNNaffinity: 3.64980
+CNNvariance: 0.24407
+Affinity: -2.41398  -0.34206 (kcal/mol)
+RMSD: 7.79143
+CNNscore: 0.48973 
+CNNaffinity: 4.37312
+CNNvariance: 0.37434
+Affinity: -0.65701  -0.81799 (kcal/mol)
+RMSD: 8.36871
+CNNscore: 0.90141 
+CNNaffinity: 3.48384
+CNNvariance: 0.13782
+Affinity: -4.05919  -0.45783 (kcal/mol)
+RMSD: 4.29884
+CNNscore: 0.40218 
+CNNaffinity: 3.26194
+CNNvariance: 0.55361
+Affinity: -3.58750  -0.20975 (kcal/mol)
+RMSD: 7.44869
+CNNscore: 0.49663 
+CNNaffinity: 3.16922
+CNNvariance: 0.12088
+Affinity: -0.64629  -0.30913 (kcal/mol)
+RMSD: 6.32648
+CNNscore: 0.65010 
+CNNaffinity: 3.28915
+CNNvariance: 0.13761
+Affinity: -2.38298  -0.66933 (kcal/mol)
+RMSD: 5.74403
+CNNscore: 0.76090 
+CNNaffinity: 3.22420
+CNNvariance: 0.01138
+Affinity: 7.36438  -0.10232 (kcal/mol)
+RMSD: 7.76637
+CNNscore: 0.61494 
+CNNaffinity: 3.58133
+CNNvariance: 0.57686
+Affinity: -0.72576  -0.11072 (kcal/mol)
+RMSD: 6.63663
+CNNscore: 0.77425 
+CNNaffinity: 2.91880
+CNNvariance: 0.44665
+Affinity: -3.99979  -0.48151 (kcal/mol)
+RMSD: 4.76423
+CNNscore: 0.27178 
+CNNaffinity: 3.00950
+CNNvariance: 0.76018
+Affinity: -4.75884  0.51918 (kcal/mol)
+RMSD: 7.28176
+CNNscore: 0.67790 
+CNNaffinity: 3.64597
+CNNvariance: 0.42685
+Affinity: -4.53901  -0.87355 (kcal/mol)
+RMSD: 5.56036
+CNNscore: 0.36361 
+CNNaffinity: 3.55304
+CNNvariance: 0.63748
+Affinity: -2.49241  -0.69010 (kcal/mol)
+RMSD: 6.08125
+CNNscore: 0.45720 
+CNNaffinity: 4.03354
+CNNvariance: 0.20134
+Affinity: -1.92715  0.00000 (kcal/mol)
+RMSD: 2.82183
+CNNscore: 0.60536 
+CNNaffinity: 2.89649
+CNNvariance: 0.22167
+Affinity: -3.00793  -0.08289 (kcal/mol)
+RMSD: 3.85478
+CNNscore: 0.33696 
+CNNaffinity: 3.10630
+CNNvariance: 0.22980
+Affinity: -1.07204  -0.29182 (kcal/mol)
+RMSD: 3.81978
+CNNscore: 0.83213 
+CNNaffinity: 3.89896
+CNNvariance: 0.20896
+Affinity: -1.04971  -0.22573 (kcal/mol)
+RMSD: 3.34650
+CNNscore: 0.83454 
+CNNaffinity: 3.59672
+CNNvariance: 0.13051
+Affinity: 24.07697  -0.06413 (kcal/mol)
+RMSD: 2.92621
+CNNscore: 0.28272 
+CNNaffinity: 2.94343
+CNNvariance: 0.19283
+Affinity: 104.47722  -0.02816 (kcal/mol)
+RMSD: 3.95410
+CNNscore: 0.00073 
+CNNaffinity: 3.45907
+CNNvariance: 2.26403
+Affinity: 103.13879  3.69788 (kcal/mol)
+RMSD: 3.66430
+CNNscore: 0.00028 
+CNNaffinity: 4.09560
+CNNvariance: 2.77767
+Affinity: 51.66435  1.20693 (kcal/mol)
+RMSD: 10.79517
+CNNscore: 0.00965 
+CNNaffinity: 4.46638
+CNNvariance: 0.18771
+Affinity: -5.32872  -0.28006 (kcal/mol)
+RMSD: 5.31199
+CNNscore: 0.13673 
+CNNaffinity: 4.13621
+CNNvariance: 0.07272
+Affinity: 112.25969  -0.35647 (kcal/mol)
+RMSD: 0.91948
+CNNscore: 0.00001 
+CNNaffinity: 3.33508
+CNNvariance: 3.04628
+Affinity: 121.67797  -0.37276 (kcal/mol)
+RMSD: 2.25166
+CNNscore: 0.00005 
+CNNaffinity: 3.15764
+CNNvariance: 4.28880
+Affinity: 92.82596  0.20279 (kcal/mol)
+RMSD: 5.30720
+CNNscore: 0.00052 
+CNNaffinity: 3.58067
+CNNvariance: 1.30154
+Affinity: -1.86365  -0.72622 (kcal/mol)
+RMSD: 9.00838
+CNNscore: 0.65917 
+CNNaffinity: 4.43321
+CNNvariance: 0.28025
+Affinity: -2.83787  0.00000 (kcal/mol)
+RMSD: 3.59978
+CNNscore: 0.82384 
+CNNaffinity: 3.97346
+CNNvariance: 0.16544
+Affinity: 92.48686  0.40622 (kcal/mol)
+RMSD: 6.40574
+CNNscore: 0.00086 
+CNNaffinity: 3.86372
+CNNvariance: 1.36237
+Affinity: -4.19057  -1.22079 (kcal/mol)
+RMSD: 5.48426
+CNNscore: 0.42296 
+CNNaffinity: 4.80142
+CNNvariance: 0.47244
+Affinity: -4.12954  0.07853 (kcal/mol)
+RMSD: 8.08273
+CNNscore: 0.59697 
+CNNaffinity: 4.31634
+CNNvariance: 0.02491
+Affinity: 93.50861  1.16573 (kcal/mol)
+RMSD: 2.52999
+CNNscore: 0.00315 
+CNNaffinity: 4.18350
+CNNvariance: 2.09502
+Affinity: -3.21803  -0.15416 (kcal/mol)
+RMSD: 4.61519
+CNNscore: 0.45048 
+CNNaffinity: 3.77688
+CNNvariance: 0.19387
+Affinity: 1.28008  -0.39514 (kcal/mol)
+RMSD: 11.53759
+CNNscore: 0.44852 
+CNNaffinity: 5.10607
+CNNvariance: 0.56156
+Affinity: -5.20147  -0.74946 (kcal/mol)
+RMSD: 10.86071
+CNNscore: 0.41767 
+CNNaffinity: 4.69097
+CNNvariance: 0.24098
+Affinity: -5.81231  -0.33413 (kcal/mol)
+RMSD: 6.43200
+CNNscore: 0.43350 
+CNNaffinity: 4.72241
+CNNvariance: 0.16803
+Affinity: -3.79599  0.04459 (kcal/mol)
+RMSD: 8.35031
+CNNscore: 0.72142 
+CNNaffinity: 4.83802
+CNNvariance: 0.10905
+Affinity: -3.86518  -0.40096 (kcal/mol)
+RMSD: 3.46067
+CNNscore: 0.57093 
+CNNaffinity: 4.43881
+CNNvariance: 0.30663
+Affinity: 8.78077  -0.26526 (kcal/mol)
+RMSD: 4.81600
+CNNscore: 0.45373 
+CNNaffinity: 3.48003
+CNNvariance: 0.54256
+Affinity: -3.12260  0.47566 (kcal/mol)
+RMSD: 10.76294
+CNNscore: 0.54776 
+CNNaffinity: 4.88234
+CNNvariance: 0.20153
+Affinity: -6.01902  0.02106 (kcal/mol)
+RMSD: 6.93433
+CNNscore: 0.10001 
+CNNaffinity: 4.30152
+CNNvariance: 0.15994
+Affinity: -3.16084  -0.43674 (kcal/mol)
+RMSD: 5.08546
+CNNscore: 0.49933 
+CNNaffinity: 5.16755
+CNNvariance: 0.03883

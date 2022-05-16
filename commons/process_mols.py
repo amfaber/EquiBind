@@ -600,7 +600,6 @@ def get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords, use_rec_a
     else:
         return get_calpha_graph(rec, c_alpha_coords, n_coords, c_coords, rec_radius, c_alpha_max_neighbors)
 
-
 def get_lig_graph(mol, lig_coords, radius=20, max_neighbor=None):
     ################### Build the k-NN graph ##############################
     num_nodes = lig_coords.shape[0]
@@ -1280,3 +1279,15 @@ def read_molecule(molecule_file, sanitize=False, calc_charges=False, remove_hs=F
         return None
 
     return mol
+
+def read_molecules_from_sdf(molecule_file, sanitize = False, return_names = False):
+    supplier = Chem.SDMolSupplier(molecule_file, sanitize=False, removeHs=False)
+    mols = [mol for mol in supplier]
+    if sanitize:
+        [Chem.SanitizeMol(mol) for mol in mols]
+    if not return_names:
+        return mols
+    else:
+        names = [supplier.GetItemText(i).split("\n", 1)[0] for i in range(len(supplier))]
+        return mols, names
+    
