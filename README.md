@@ -10,7 +10,7 @@ ligand’s bound pose and orientation. EquiBind
 achieves significant speed-ups and better quality
 compared to traditional and recent baselines.
  If you have questions, don't hesitate to open an issue or ask me
-via [hannes.staerk@tum.de](hannes.staerk@tum.de)
+via [hstark@mit.edu](hstark@mit.edu)
 or [social media](https://hannes-stark.com/) or Octavian Ganea via [oct@mit.edu](oct@mit.edu). We are happy to hear from you!
 
 ![](.fig_intro.jpg)
@@ -19,11 +19,11 @@ or [social media](https://hannes-stark.com/) or Octavian Ganea via [oct@mit.edu]
 
 # Dataset
 
-Our preprocessed data (see dataset section in the paper Appendix) is available from [zenodo](https://zenodo.org/record/6034088). \
+Our preprocessed data (see dataset section in the paper Appendix) is available from [zenodo](https://zenodo.org/record/6408497). \
 The files in `data` contain the names for the time-based data split.
 
 If you want to train one of our models with the data then: 
-1. download it from [zenodo](https://zenodo.org/record/6034088) 
+1. download it from [zenodo](https://zenodo.org/record/6408497) 
 2. unzip the directory and place it into `data` such that you have the path `data/PDBBind`
 
 
@@ -31,7 +31,7 @@ If you want to train one of our models with the data then:
 
 ## Step 1: What you need as input
 
-Ligand files of the formats ``.mol2`` or ``.sdf`` or ``.pdbqt`` or ``.pdb`` whose names contain the string `ligand`. \
+Ligand files of the formats ``.mol2`` or ``.sdf`` or ``.pdbqt`` or ``.pdb`` whose names contain the string `ligand` (your ligand files should contain **all** hydrogens). \
 Receptor files of the format ``.pdb`` whose names contain the string `protein`.\
 For each complex you want to predict you need a directory containing the ligand and receptor file. Like this: 
 ```
