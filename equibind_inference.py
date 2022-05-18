@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import argparse
 import sys
 
@@ -15,10 +16,10 @@ from tqdm import tqdm
 from commons.geometry_utils import rigid_transform_Kabsch_3D, get_torsions, get_dihedral_vonMises, apply_changes
 from commons.logger import Logger
 from commons.process_mols import read_molecule, get_receptor, get_lig_graph_revised, \
-    get_rec_graph, get_receptor_atom_subgraph, get_receptor_from_cleaned, get_geometry_graph, get_geometry_graph_ring, \
+    get_rec_graph, get_receptor_atom_subgraph, get_geometry_graph, get_geometry_graph_ring, \
     get_receptor_inference, read_molecules_from_sdf
 
-from train import load_model
+#from train import load_model
 
 from datasets.pdbbind import PDBBind
 
@@ -47,9 +48,9 @@ from models.equibind import EquiBind
 
 def parse_arguments(arglist = None):
     p = argparse.ArgumentParser()
-    p.add_argument('--config', type=argparse.FileType(mode='r'), default='configs_clean/inference.yml')
+    p.add_argument('--config', type=argparse.FileType(mode='r'), default=None)
     p.add_argument('--checkpoint', type=str, help='path to .pt file in a checkpoint directory')
-    p.add_argument('--output_directory', type=str, default=None, help='path where to put the predicted results')
+    p.add_argument('-o', '--output_directory', type=str, default=None, help='path where to put the predicted results')
     p.add_argument('--run_dirs', type=list, default=["flexible_self_docking"], help='path directory with saved runs')
     p.add_argument('--fine_tune_dirs', type=list, default=[], help='path directory with saved finetuning runs')
     p.add_argument('--inference_path', type=str, help='path to some pdb files for which you want to run inference')
@@ -109,15 +110,14 @@ def parse_arguments(arglist = None):
     p.add_argument('--eval_on_test', type=bool, default=True, help='runs evaluation on test set if true')
     p.add_argument('--check_se3_invariance', type=bool, default=False, help='check it instead of generating files')
     p.add_argument('--num_confs', type=int, default=1, help='num_confs if using rdkit conformers')
-    # p.add_argument('--use_rdkit_coords', type=bool, default=None,
-    #                help='override the rkdit usage behavior of the used model')
+    p.add_argument('--use_rdkit_coords', action="store_true", help='override the rkdit usage behavior of the used model')
     p.add_argument('--no_skip', dest = "skip_in_output", action = "store_false", help = 'skip input files that already have corresponding folders in the output directory. Used to resume a large interrupted computation')
     p.add_argument('--PDBBind', action = "store_true", help = "Toggles whether or not to process in PDBBind mode or screening mode")
     p.add_argument("--no_run_corrections", dest = "run_corrections", action = "store_false", help = "possibility of turning off running fast point cloud ligand fitting")
-    p.add_argument("--no_use_rdkit_coords", action = "store_false", help = "Turn off rdkit coordinate randomization")
-    p.add_argument("--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
-    p.add_argument("--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
-
+    #p.add_argument("--no_use_rdkit_coords", action = "store_false", help = "Turn off rdkit coordinate randomization")
+    p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
+    p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
+    
     if arglist is None:
         return p.parse_args()
     else:
@@ -283,6 +283,7 @@ def inference_from_files(args):
 
 
     def screening_style():
+        assert args.output_directory, "An output directory should be specified"
         ligs, names = read_molecules_from_sdf(args.ligands_sdf, sanitize = True, return_names = True)
         n_ligs = len(ligs)
         rec_path = args.rec_pdb
@@ -359,7 +360,7 @@ def get_default_args(args):
     
     run_dir=args.run_dirs[0]
     #for run_dir in args.run_dirs:
-    args.checkpoint = f'runs/{run_dir}/best_checkpoint.pt'
+    args.checkpoint = os.path.join(os.path.dirname(__file__), f'runs/{run_dir}/best_checkpoint.pt')
     config_dict['checkpoint'] = f'runs/{run_dir}/best_checkpoint.pt'
     # overwrite args with args from checkpoint except for the args that were contained in the config file
     arg_dict = args.__dict__
@@ -377,6 +378,7 @@ def get_default_args(args):
 
 if __name__ == '__main__':
     args = parse_arguments()
+    
     args = get_default_args(args)
     
     inference_from_files(args)
