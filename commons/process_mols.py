@@ -1258,6 +1258,6 @@ def read_molecules_from_sdf(molecule_file, sanitize = False, return_names = Fals
     if not return_names:
         return mols
     else:
-        names = [supplier.GetItemText(i).split("\n", 1)[0] for i in range(len(supplier))]
+        names = [mol.GetProp("_Name") for mol in mols]
         return mols, names
     

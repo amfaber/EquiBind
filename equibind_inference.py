@@ -302,7 +302,7 @@ def inference_from_files(args):
         full_success_path = os.path.join(args.output_directory, "success.txt")
         if os.path.exists(full_output_path) and args.skip_in_output:
             supplier = Chem.SDMolSupplier(full_output_path)
-            to_skip = [supplier.GetItemText(i).split("\n", 1)[0] for i in range(len(supplier))]
+            to_skip = [mol.GetProp("_Name") for mol in supplier]
             skipping = True
         else:
             skipping = False
