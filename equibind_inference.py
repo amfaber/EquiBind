@@ -147,6 +147,8 @@ def inference_from_files(args):
     
 
     def run_equibind(lig, lig_graph, rec_graph, model):
+        name = lig.GetProp("_Name")
+
         if 'geometry_regularization' in dp and dp['geometry_regularization']:
             geometry_graph = get_geometry_graph(lig)
         elif 'geometry_regularization_ring' in dp and dp['geometry_regularization_ring']:
@@ -154,7 +156,6 @@ def inference_from_files(args):
         else:
             geometry_graph = None
 
-        start_lig_coords = lig_graph.ndata['x']
         # Randomly rotate and translate the ligand.
         rot_T, rot_b = random_rotation_translation(translation_distance=5)
         if (use_rdkit_coords):
@@ -170,20 +171,7 @@ def inference_from_files(args):
             geometry_graph = geometry_graph.to(device) if geometry_graph != None else None
             ligs_coords_pred_untuned, ligs_keypts, recs_keypts, rotations, translations, geom_reg_loss = model(
                 lig_graph.to(device), rec_graph.to(device), geometry_graph,
-                #complex_names=[name],
-                epoch=0
-                )
-
-            # for lig_coords_pred_untuned, lig_coords, lig_keypts, rec_keypts, rotation, translation in zip(
-            #         ligs_coords_pred_untuned, [start_lig_coords], ligs_keypts, recs_keypts, rotations,
-            #         translations, ):
-            #     all_intersection_losses_untuned.append(
-            #         compute_revised_intersection_loss(lig_coords_pred_untuned.detach().cpu(), rec_graph.ndata['x'],
-            #                                             alpha=0.2, beta=8, aggression=0))
-            #     all_ligs_coords_pred_untuned.append(lig_coords_pred_untuned.detach().cpu())
-            #     all_ligs_coords.append(lig_coords.detach().cpu())
-            #     all_ligs_keypts.append(((rotation @ (lig_keypts).T).T + translation).detach().cpu())
-            #     all_recs_keypts.append(rec_keypts.detach().cpu())
+                complex_names=[name])
 
             if args.run_corrections:
                 prediction = ligs_coords_pred_untuned[0].detach().cpu()
@@ -280,8 +268,17 @@ def inference_from_files(args):
                 if not os.path.exists(f'{args.output_directory}/{name}_failed'):
                     os.makedirs(f'{args.output_directory}/{name}_failed')
 
+    def predict_for_lig(lig, rec_graph, model):
+        name = lig.GetProp("_Name")
+        try:
+            lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
+                                              use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
+            opt_mol = run_equibind(lig, lig_graph, rec_graph, model)
+            return name, opt_mol
+        except Exception:
+            return name, None
 
-
+    
     def screening_style():
         assert args.output_directory, "An output directory should be specified"
         ligs, names = read_molecules_from_sdf(args.ligands_sdf, sanitize = True, return_names = True)
@@ -315,16 +312,24 @@ def inference_from_files(args):
                         if name in to_skip:
                             print(f"({i+1}/{n_ligs}) skipped {name}")
                             continue
-                    try:
-                        lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
-                                                        use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
-                        optimized_mol = run_equibind(lig, lig_graph, rec_graph, model)
-                        writer.write(optimized_mol)
+                    name, opt_mol = predict_for_lig(lig, rec_graph, model)
+                    if not opt_mol is None:
+                        writer.write(opt_mol)
                         success_file.write(f"{i} {name}\n")
-                    except Exception as e:
+                        print(f"({i+1}/{n_ligs}) Processed and wrote {name} to output.sdf")
+                    else:
                         print(f"({i+1}/{n_ligs}) Failed on {name}, printing to failed.txt")
                         failed_file.write(f"{i} {name}\n")
-                    print(f"({i+1}/{n_ligs}) Processed and wrote {name} to output.sdf")
+                    # try:
+                    #     lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
+                    #                                     use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
+                    #     optimized_mol = run_equibind(lig, lig_graph, rec_graph, model)
+                    #     writer.write(optimized_mol)
+                    #     success_file.write(f"{i} {name}\n")
+                    # except Exception as e:
+                    #     print(f"({i+1}/{n_ligs}) Failed on {name}, printing to failed.txt")
+                    #     failed_file.write(f"{i} {name}\n")
+                    
 
 
     
