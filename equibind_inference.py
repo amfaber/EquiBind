@@ -34,10 +34,6 @@ from torch.optim import *  # do not remove
 from commons.losses import *  # do not remove
 from torch.optim.lr_scheduler import *  # do not remove
 
-from torch.utils.data import DataLoader
-
-from trainer.metrics import Rsquared, MeanPredictorLoss, MAE, PearsonR, RMSD, RMSDfraction, CentroidDist, \
-    CentroidDistFraction, RMSDmedian, CentroidDistMedian
 
 # turn on for debugging C code like Segmentation Faults
 import faulthandler
@@ -127,6 +123,7 @@ def parse_arguments(arglist = None):
 def inference_from_files(args):
     seed_all(args.seed)
     device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
+    print(f"device = {device}")
     checkpoint = torch.load(args.checkpoint, map_location=device)
     # all_ligs_coords_corrected = []
     # all_intersection_losses = []
