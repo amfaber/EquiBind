@@ -334,16 +334,7 @@ def inference_from_files(args):
         PDBBind_style()
     else:
         screening_style()
-
-
-
-    # path = os.path.join(os.path.dirname(args.checkpoint), f'predictions_RDKit{use_rdkit_coords}.pt')
-    # print(f'Saving predictions to {path}')
-    # results = {'corrected_predictions': all_ligs_coords_corrected, 'initial_predictions': all_ligs_coords_pred_untuned,
-    #            'targets': all_ligs_coords, 'lig_keypts': all_ligs_keypts, 'rec_keypts': all_recs_keypts,
-    #            'names': all_names, 'intersection_losses_untuned': all_intersection_losses_untuned,
-    #            'intersection_losses': all_intersection_losses}
-    # torch.save(results, path)
+    
 
 
 def get_default_args(args):
