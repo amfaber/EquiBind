@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import sys
+from functools import partial
 
 from copy import copy, deepcopy
 
@@ -41,6 +42,8 @@ import faulthandler
 faulthandler.enable()
 
 from models.equibind import EquiBind
+
+
 
 def parse_arguments(arglist = None):
     p = argparse.ArgumentParser()
@@ -120,19 +123,119 @@ def parse_arguments(arglist = None):
         return p.parse_args(arglist)
 
 
+
+
+def run_equibind(lig, lig_graph, rec_graph, model, args):
+    dp = args.dataset_params
+    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
+    use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
+    name = lig.GetProp("_Name")
+
+    if 'geometry_regularization' in dp and dp['geometry_regularization']:
+        geometry_graph = get_geometry_graph(lig)
+    elif 'geometry_regularization_ring' in dp and dp['geometry_regularization_ring']:
+        geometry_graph = get_geometry_graph_ring(lig)
+    else:
+        geometry_graph = None
+
+    # Randomly rotate and translate the ligand.
+    rot_T, rot_b = random_rotation_translation(translation_distance=5)
+    if (use_rdkit_coords):
+        lig_coords_to_move = lig_graph.ndata['new_x']
+    else:
+        lig_coords_to_move = lig_graph.ndata['x']
+    mean_to_remove = lig_coords_to_move.mean(dim=0, keepdims=True)
+    input_coords = (rot_T @ (lig_coords_to_move - mean_to_remove).T).T + rot_b
+    lig_graph.ndata['new_x'] = input_coords
+    
+
+    with torch.no_grad():
+        geometry_graph = geometry_graph.to(device) if geometry_graph != None else None
+        ligs_coords_pred_untuned, ligs_keypts, recs_keypts, rotations, translations, geom_reg_loss = model(
+            lig_graph.to(device), rec_graph.to(device), geometry_graph,
+            complex_names=[name])
+
+        if args.run_corrections:
+            prediction = ligs_coords_pred_untuned[0].detach().cpu()
+            lig_input = deepcopy(lig)
+            conf = lig_input.GetConformer()
+            for i in range(lig_input.GetNumAtoms()):
+                x, y, z = input_coords.numpy()[i]
+                conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+
+            lig_equibind = deepcopy(lig)
+            conf = lig_equibind.GetConformer()
+            for i in range(lig_equibind.GetNumAtoms()):
+                x, y, z = prediction.numpy()[i]
+                conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+
+            coords_pred = lig_equibind.GetConformer().GetPositions()
+
+            Z_pt_cloud = coords_pred
+            rotable_bonds = get_torsions([lig_input])
+            new_dihedrals = np.zeros(len(rotable_bonds))
+            for idx, r in enumerate(rotable_bonds):
+                new_dihedrals[idx] = get_dihedral_vonMises(lig_input, lig_input.GetConformer(), r, Z_pt_cloud)
+            optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
+            optimized_conf = optimized_mol.GetConformer()
+            coords_pred_optimized = optimized_conf.GetPositions()
+            R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
+            coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
+            # all_ligs_coords_corrected.append(coords_pred_optimized)
+            for i in range(optimized_mol.GetNumAtoms()):
+                x, y, z = coords_pred_optimized[i]
+                optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+            return optimized_mol
+
+def predict_for_lig(lig, rec_graph, model, args):
+    dp = args.dataset_params
+    use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
+    name = lig.GetProp("_Name")
+    try:
+        lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
+                                            use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
+        opt_mol = run_equibind(lig, lig_graph, rec_graph, model, args)
+        print(f"{name} succeeded")
+        return name, opt_mol
+    except Exception:
+        print(f"{name} failed")
+        return name, None
+
+
+def load_statics(args):
+    
+
+    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
+    print(f"device = {device}")
+    checkpoint = torch.load(args.checkpoint, map_location=device)
+    dp = args.dataset_params
+
+    model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    model.to(device)
+    model.eval()
+
+    ligs = read_molecules_from_sdf(args.ligands_sdf, sanitize = True)
+    rec_path = args.rec_pdb
+    rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
+    rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
+                                use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
+                                surface_max_neighbors=dp['surface_max_neighbors'],
+                                surface_graph_cutoff=dp['surface_graph_cutoff'],
+                                surface_mesh_cutoff=dp['surface_mesh_cutoff'],
+                                c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
+
+    return ligs, rec_graph, model
+
+
+
+
+
 def inference_from_files(args):
     seed_all(args.seed)
     device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
     print(f"device = {device}")
     checkpoint = torch.load(args.checkpoint, map_location=device)
-    # all_ligs_coords_corrected = []
-    # all_intersection_losses = []
-    # all_intersection_losses_untuned = []
-    # all_ligs_coords_pred_untuned = []
-    # all_ligs_coords = []
-    # all_ligs_keypts = []
-    # all_recs_keypts = []
-    # all_names = []
     dp = args.dataset_params
     use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
 
@@ -140,167 +243,46 @@ def inference_from_files(args):
     model.load_state_dict(checkpoint['model_state_dict'])
     model.to(device)
     model.eval()
-    
-    
-
-    def run_equibind(lig, lig_graph, rec_graph, model):
-        name = lig.GetProp("_Name")
-
-        if 'geometry_regularization' in dp and dp['geometry_regularization']:
-            geometry_graph = get_geometry_graph(lig)
-        elif 'geometry_regularization_ring' in dp and dp['geometry_regularization_ring']:
-            geometry_graph = get_geometry_graph_ring(lig)
-        else:
-            geometry_graph = None
-
-        # Randomly rotate and translate the ligand.
-        rot_T, rot_b = random_rotation_translation(translation_distance=5)
-        if (use_rdkit_coords):
-            lig_coords_to_move = lig_graph.ndata['new_x']
-        else:
-            lig_coords_to_move = lig_graph.ndata['x']
-        mean_to_remove = lig_coords_to_move.mean(dim=0, keepdims=True)
-        input_coords = (rot_T @ (lig_coords_to_move - mean_to_remove).T).T + rot_b
-        lig_graph.ndata['new_x'] = input_coords
-        
-
-        with torch.no_grad():
-            geometry_graph = geometry_graph.to(device) if geometry_graph != None else None
-            ligs_coords_pred_untuned, ligs_keypts, recs_keypts, rotations, translations, geom_reg_loss = model(
-                lig_graph.to(device), rec_graph.to(device), geometry_graph,
-                complex_names=[name])
-
-            if args.run_corrections:
-                prediction = ligs_coords_pred_untuned[0].detach().cpu()
-                lig_input = deepcopy(lig)
-                conf = lig_input.GetConformer()
-                for i in range(lig_input.GetNumAtoms()):
-                    x, y, z = input_coords.numpy()[i]
-                    conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-
-                lig_equibind = deepcopy(lig)
-                conf = lig_equibind.GetConformer()
-                for i in range(lig_equibind.GetNumAtoms()):
-                    x, y, z = prediction.numpy()[i]
-                    conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-
-                coords_pred = lig_equibind.GetConformer().GetPositions()
-
-                Z_pt_cloud = coords_pred
-                rotable_bonds = get_torsions([lig_input])
-                new_dihedrals = np.zeros(len(rotable_bonds))
-                for idx, r in enumerate(rotable_bonds):
-                    new_dihedrals[idx] = get_dihedral_vonMises(lig_input, lig_input.GetConformer(), r, Z_pt_cloud)
-                optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
-                optimized_conf = optimized_mol.GetConformer()
-                coords_pred_optimized = optimized_conf.GetPositions()
-                R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
-                coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
-                # all_ligs_coords_corrected.append(coords_pred_optimized)
-                for i in range(optimized_mol.GetNumAtoms()):
-                    x, y, z = coords_pred_optimized[i]
-                    optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-                return optimized_mol
-
-
-    def PDBBind_style():
-        def load_lig_and_rec(idx, name):
-            print(f'\nProcessing {name}: complex {idx + 1} of {len(names)}')
-            file_names = os.listdir(os.path.join(args.inference_path, name))
-            rec_name = [i for i in file_names if 'rec.pdb' in i or 'protein' in i][0]
-            lig_names = [i for i in file_names if 'ligand' in i]
-            rec_path = os.path.join(args.inference_path, name, rec_name)
-            for lig_name in lig_names:
-                if not os.path.exists(os.path.join(args.inference_path, name, lig_name)):
-                    raise ValueError(f'Path does not exist: {os.path.join(args.inference_path, name, lig_name)}')
-                print(f'Trying to load {os.path.join(args.inference_path, name, lig_name)}')
-                lig = read_molecule(os.path.join(args.inference_path, name, lig_name), sanitize=True)
-                if lig != None:  # read mol2 file if sdf file cannot be sanitized
-                    used_lig = os.path.join(args.inference_path, name, lig_name)
-                    break
-            if lig_names == []: raise ValueError(f'No ligand files found. The ligand file has to contain \'ligand\'.')
-            if lig == None: raise ValueError(f'None of the ligand files could be read: {lig_names}')
-            print(f'Docking the receptor {os.path.join(args.inference_path, name, rec_name)}\nTo the ligand {used_lig}')
-            
-            rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
-            rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
-                                    use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
-                                    surface_max_neighbors=dp['surface_max_neighbors'],
-                                    surface_graph_cutoff=dp['surface_graph_cutoff'],
-                                    surface_mesh_cutoff=dp['surface_mesh_cutoff'],
-                                    c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
-            lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
-                                            use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
-            return lig, lig_graph, rec_graph
-        
-        def save_to_output(optimized_mol, name):
-            os.makedirs(f'{args.output_directory}/{name}', exist_ok=True)
-            block_optimized = Chem.MolToMolBlock(optimized_mol)
-            print(f'Writing prediction to {args.output_directory}/{name}/lig_equibind_corrected.sdf')
-            with open(f'{args.output_directory}/{name}/lig_equibind_corrected.sdf', "w") as newfile:
-                    newfile.write(block_optimized)
-
-        names = os.listdir(args.inference_path) if args.inference_path != None else tqdm(read_strings_from_txt('data/timesplit_test'))
-
-        check_skip = False
-        if os.path.exists(args.output_directory) and args.skip_in_output:
-            check_skip = True
-            to_skip = os.listdir(args.output_directory)
-            to_skip = [name.replace("_failed", "") for name in to_skip]
-        
-        for idx, name in enumerate(names):
-            if check_skip:
-                if name in to_skip:
-                    print(f"Skipping {name}")
-                    continue
-            try:
-                lig, lig_graph, rec_graph = load_lig_and_rec(idx, name)
-                optimized_mol = run_equibind(lig, lig_graph, rec_graph, model)
-                if args.output_directory:
-                    save_to_output(optimized_mol, name)
-                # all_names.append(name)
-            except Exception as e:
-                print(f"Something failed on {name}")
-                print(e)
-                if not os.path.exists(f'{args.output_directory}/{name}_failed'):
-                    os.makedirs(f'{args.output_directory}/{name}_failed')
-
-    def predict_for_lig(lig, rec_graph, model):
-        name = lig.GetProp("_Name")
-        try:
-            lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
-                                              use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
-            opt_mol = run_equibind(lig, lig_graph, rec_graph, model)
-            return name, opt_mol
-        except Exception:
-            return name, None
 
     
-    def screening_style():
-        assert args.output_directory, "An output directory should be specified"
-        ligs, names = read_molecules_from_sdf(args.ligands_sdf, sanitize = True, return_names = True)
-        n_ligs = len(ligs)
-        rec_path = args.rec_pdb
-        rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
-        rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
-                                    use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
-                                    surface_max_neighbors=dp['surface_max_neighbors'],
-                                    surface_graph_cutoff=dp['surface_graph_cutoff'],
-                                    surface_mesh_cutoff=dp['surface_mesh_cutoff'],
-                                    c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
-        
 
-        os.makedirs(args.output_directory, exist_ok = True)
-        full_output_path = os.path.join(args.output_directory, "output.sdf")
-        full_failed_path = os.path.join(args.output_directory, "failed.txt")
-        full_success_path = os.path.join(args.output_directory, "success.txt")
-        if os.path.exists(full_output_path) and args.skip_in_output:
-            supplier = Chem.SDMolSupplier(full_output_path)
-            to_skip = [mol.GetProp("_Name") for mol in supplier]
-            skipping = True
-        else:
-            skipping = False
+    assert args.output_directory, "An output directory should be specified"
+    ligs, names = read_molecules_from_sdf(args.ligands_sdf, sanitize = True, return_names = True)
+    n_ligs = len(ligs)
+    rec_path = args.rec_pdb
+    rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
+    rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
+                                use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
+                                surface_max_neighbors=dp['surface_max_neighbors'],
+                                surface_graph_cutoff=dp['surface_graph_cutoff'],
+                                surface_mesh_cutoff=dp['surface_mesh_cutoff'],
+                                c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
+    
+
+    os.makedirs(args.output_directory, exist_ok = True)
+    full_output_path = os.path.join(args.output_directory, "output.sdf")
+    full_failed_path = os.path.join(args.output_directory, "failed.txt")
+    full_success_path = os.path.join(args.output_directory, "success.txt")
+    if os.path.exists(full_output_path) and args.skip_in_output:
+        supplier = Chem.SDMolSupplier(full_output_path)
+        to_skip = {mol.GetProp("_Name") for mol in supplier}
+        non_skipped_ligs = [lig for lig in ligs if not lig.GetProp("_Name") in to_skip]
+        skipping = True
+    
+    with open(full_output_path, "a") as file, open(full_failed_path, "a") as failed_file, open(
+        full_success_path, "a") as success_file:
+        successes = []
+        failures = []
+        for res in results:
+            successes.append(res) if res[1] is not None else failures.append(res)
         
+        with Chem.SDWriter(file) as writer:
+            for name, mol in successes:
+                writer.write(mol)
+
+
+        return
+
         with open(full_output_path, "a") as file, open(full_failed_path, "a") as failed_file, open(
             full_success_path, "a") as success_file:
             with Chem.SDWriter(file) as writer:
@@ -317,23 +299,6 @@ def inference_from_files(args):
                     else:
                         print(f"({i+1}/{n_ligs}) Failed on {name}, printing to failed.txt")
                         failed_file.write(f"{i} {name}\n")
-                    # try:
-                    #     lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
-                    #                                     use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
-                    #     optimized_mol = run_equibind(lig, lig_graph, rec_graph, model)
-                    #     writer.write(optimized_mol)
-                    #     success_file.write(f"{i} {name}\n")
-                    # except Exception as e:
-                    #     print(f"({i+1}/{n_ligs}) Failed on {name}, printing to failed.txt")
-                    #     failed_file.write(f"{i} {name}\n")
-                    
-
-
-    
-    if args.PDBBind:
-        PDBBind_style()
-    else:
-        screening_style()
     
 
 
@@ -369,9 +334,32 @@ def get_default_args(args):
     args.model_parameters['noise_initial'] = 0
     return args
 
+from datasets import ligands
+
+
 if __name__ == '__main__':
+
     args = parse_arguments()
     
     args = get_default_args(args)
+    assert args.output_directory, "An output directory should be specified"
+    assert args.ligands_sdf, "No ligand sdf specified"
+    assert args.rec_pdb, "No protein specified"
+
+    seed_all(args.seed)
+
+    ligs, rec_graph, model = load_statics(args)
+
+    lig_data = ligands.Ligands(ligs[:5], args, n_jobs=1, verbose = 0)
+    print(lig_data[0][1].device, lig_data[0][2].to("cpu"))
+
+    lig_graph = lig_data[0][1]
+    geometry_graph = lig_data[0][2]
+    model(lig_graph, rec_graph, geometry_graph)
+
+    print("Statics loaded")
+    print(predict_for_lig(ligs[0], rec_graph, model, args))
+
     
-    inference_from_files(args)
+
+

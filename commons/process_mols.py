@@ -235,7 +235,8 @@ class AtomEncoder(torch.nn.Module):
 
     def forward(self, x):
         x_embedding = 0
-        assert x.shape[1] == self.num_categorical_features + self.num_scalar_features
+        print(f"x.shape[1] = {x.shape[1]}, self.num_categorical_features =  {self.num_categorical_features}, self.num_scalar_features = {self.num_scalar_features}")
+        assert x.shape[1] == self.num_categorical_features + self.num_scalar_features, f"x.shape[1] = {x.shape[1]}, self.num_categorical_features =  {self.num_categorical_features}, self.num_scalar_features = {self.num_scalar_features}"
         for i in range(self.num_categorical_features):
             x_embedding += self.atom_embedding_list[i](x[:, i].long())
             if i + 1 == self.n_feats_to_use:
@@ -853,6 +854,8 @@ def get_lig_graph_revised(mol, name, radius=20, max_neighbors=None, use_rdkit_co
             log(
                 f'The lig_radius {radius} was too small for one lig atom such that it had no neighbors. So we connected {i} to the closest other lig atom {dst}')
         assert i not in dst
+        if dst == []:
+            return None
         src = [i] * len(dst)
         src_list.extend(src)
         dst_list.extend(dst)
