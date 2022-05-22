@@ -40,12 +40,11 @@ from torch.utils.data import DataLoader
 
 # turn on for debugging C code like Segmentation Faults
 import faulthandler
+from datasets import ligands
 
 faulthandler.enable()
 
 from models.equibind import EquiBind
-
-
 
 def parse_arguments(arglist = None):
     p = argparse.ArgumentParser()    
@@ -118,6 +117,7 @@ def parse_arguments(arglist = None):
     #p.add_argument("--no_use_rdkit_coords", action = "store_false", help = "Turn off rdkit coordinate randomization")
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
+    p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
     
     cmdline_parser = deepcopy(p)
     args = p.parse_args(arglist)
@@ -127,71 +127,6 @@ def parse_arguments(arglist = None):
     cmdline_args = cmdline_parser.parse_args(arglist)
 
     return p.parse_args(arglist), set(cmdline_args.__dict__.keys())
-
-
-
-
-def run_equibind(lig, lig_graph, rec_graph, model, args):
-    dp = args.dataset_params
-    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
-    use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
-    name = lig.GetProp("_Name")
-
-    if 'geometry_regularization' in dp and dp['geometry_regularization']:
-        geometry_graph = get_geometry_graph(lig)
-    elif 'geometry_regularization_ring' in dp and dp['geometry_regularization_ring']:
-        geometry_graph = get_geometry_graph_ring(lig)
-    else:
-        geometry_graph = None
-
-    # Randomly rotate and translate the ligand.
-    rot_T, rot_b = random_rotation_translation(translation_distance=5)
-    if (use_rdkit_coords):
-        lig_coords_to_move = lig_graph.ndata['new_x']
-    else:
-        lig_coords_to_move = lig_graph.ndata['x']
-    mean_to_remove = lig_coords_to_move.mean(dim=0, keepdims=True)
-    input_coords = (rot_T @ (lig_coords_to_move - mean_to_remove).T).T + rot_b
-    lig_graph.ndata['new_x'] = input_coords
-    
-
-    with torch.no_grad():
-        geometry_graph = geometry_graph.to(device) if geometry_graph != None else None
-        ligs_coords_pred_untuned, ligs_keypts, recs_keypts, rotations, translations, geom_reg_loss = model(
-            lig_graph.to(device), rec_graph.to(device), geometry_graph,
-            complex_names=[name])
-
-        if args.run_corrections:
-            prediction = ligs_coords_pred_untuned[0].detach().cpu()
-            lig_input = deepcopy(lig)
-            conf = lig_input.GetConformer()
-            for i in range(lig_input.GetNumAtoms()):
-                x, y, z = input_coords.numpy()[i]
-                conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-
-            lig_equibind = deepcopy(lig)
-            conf = lig_equibind.GetConformer()
-            for i in range(lig_equibind.GetNumAtoms()):
-                x, y, z = prediction.numpy()[i]
-                conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-
-            coords_pred = lig_equibind.GetConformer().GetPositions()
-
-            Z_pt_cloud = coords_pred
-            rotable_bonds = get_torsions([lig_input])
-            new_dihedrals = np.zeros(len(rotable_bonds))
-            for idx, r in enumerate(rotable_bonds):
-                new_dihedrals[idx] = get_dihedral_vonMises(lig_input, lig_input.GetConformer(), r, Z_pt_cloud)
-            optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
-            optimized_conf = optimized_mol.GetConformer()
-            coords_pred_optimized = optimized_conf.GetPositions()
-            R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
-            coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
-            # all_ligs_coords_corrected.append(coords_pred_optimized)
-            for i in range(optimized_mol.GetNumAtoms()):
-                x, y, z = coords_pred_optimized[i]
-                optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-            return optimized_mol
 
 def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
     input_coords = lig_coord.detach().cpu()
@@ -225,21 +160,6 @@ def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
         x, y, z = coords_pred_optimized[i]
         optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
     return optimized_mol
-
-def predict_for_lig(lig, rec_graph, model, args):
-    dp = args.dataset_params
-    use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
-    name = lig.GetProp("_Name")
-    try:
-        lig_graph = get_lig_graph_revised(lig, name, max_neighbors=dp['lig_max_neighbors'],
-                                            use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
-        opt_mol = run_equibind(lig, lig_graph, rec_graph, model, args)
-        print(f"{name} succeeded")
-        return name, opt_mol
-    except Exception:
-        print(f"{name} failed")
-        return name, None
-
 
 def load_statics(args):
     device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
@@ -276,81 +196,6 @@ def load_statics(args):
 
     return ligs, rec_graph, model
 
-
-
-
-
-def inference_from_files(args):
-    seed_all(args.seed)
-    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
-    print(f"device = {device}")
-    checkpoint = torch.load(args.checkpoint, map_location=device)
-    dp = args.dataset_params
-    use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
-
-    model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
-    model.load_state_dict(checkpoint['model_state_dict'])
-    model.to(device)
-    model.eval()
-
-    
-
-    assert args.output_directory, "An output directory should be specified"
-    ligs, names = read_molecules_from_sdf(args.ligands_sdf, sanitize = True, return_names = True)
-    n_ligs = len(ligs)
-    rec_path = args.rec_pdb
-    rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
-    rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
-                                use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
-                                surface_max_neighbors=dp['surface_max_neighbors'],
-                                surface_graph_cutoff=dp['surface_graph_cutoff'],
-                                surface_mesh_cutoff=dp['surface_mesh_cutoff'],
-                                c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
-    
-
-    os.makedirs(args.output_directory, exist_ok = True)
-    full_output_path = os.path.join(args.output_directory, "output.sdf")
-    full_failed_path = os.path.join(args.output_directory, "failed.txt")
-    full_success_path = os.path.join(args.output_directory, "success.txt")
-    if os.path.exists(full_output_path) and args.skip_in_output:
-        supplier = Chem.SDMolSupplier(full_output_path)
-        to_skip = {mol.GetProp("_Name") for mol in supplier}
-        non_skipped_ligs = [lig for lig in ligs if not lig.GetProp("_Name") in to_skip]
-        skipping = True
-    
-    with open(full_output_path, "a") as file, open(full_failed_path, "a") as failed_file, open(
-        full_success_path, "a") as success_file:
-        successes = []
-        failures = []
-        for res in results:
-            successes.append(res) if res[1] is not None else failures.append(res)
-        
-        with Chem.SDWriter(file) as writer:
-            for name, mol in successes:
-                writer.write(mol)
-
-
-        return
-
-        with open(full_output_path, "a") as file, open(full_failed_path, "a") as failed_file, open(
-            full_success_path, "a") as success_file:
-            with Chem.SDWriter(file) as writer:
-                for i, (lig, name) in enumerate(zip(ligs, names)):
-                    if skipping:
-                        if name in to_skip:
-                            print(f"({i+1}/{n_ligs}) skipped {name}")
-                            continue
-                    name, opt_mol = predict_for_lig(lig, rec_graph, model)
-                    if not opt_mol is None:
-                        writer.write(opt_mol)
-                        success_file.write(f"{i} {name}\n")
-                        print(f"({i+1}/{n_ligs}) Processed and wrote {name} to output.sdf")
-                    else:
-                        print(f"({i+1}/{n_ligs}) Failed on {name}, printing to failed.txt")
-                        failed_file.write(f"{i} {name}\n")
-    
-
-
 def get_default_args(args, cmdline_args):
     if args.config:
         config_dict = yaml.load(args.config, Loader=yaml.FullLoader)
@@ -383,10 +228,6 @@ def get_default_args(args, cmdline_args):
     args.model_parameters['noise_initial'] = 0
     return args
 
-from datasets import ligands
-
-
-
 def _run(batch, model):
     ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs = batch
     failsafe = lig_graphs.ndata['feat']
@@ -418,7 +259,7 @@ def _run(batch, model):
     assert len(predictions) == len(out_ligs)
     return out_ligs, out_lig_coords, predictions, failures
 
-def io(dataloader):
+def io(dataloader, model, args):
     
     full_output_path = os.path.join(args.output_directory, "output.sdf")
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
@@ -444,10 +285,7 @@ def io(dataloader):
                     failed_file.write(failure.GetProp('_Name'))
                     failed_file.write("\n")
 
-
-
-if __name__ == '__main__':
-
+def main():
     args, cmdline_args = parse_arguments()
     
     args = get_default_args(args, cmdline_args)
@@ -459,23 +297,42 @@ if __name__ == '__main__':
     os.makedirs(args.output_directory, exist_ok = True)
 
     ligs, rec_graph, model = load_statics(args)
-    lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=4)
+    lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=args.n_workers_data_load)
 
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
     with open(full_failed_path, "a") as failed_file:
         for lig in lig_data.failed_ligs:
             failed_file.write(lig)
             failed_file.write("\n")
-
-    
+        
     lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate(rec_batch = True))
 
-    io(lig_loader)
+    io(lig_loader, model, args)
+
+if __name__ == '__main__':
+
+    main()
+
+    # args, cmdline_args = parse_arguments()
+    
+    # args = get_default_args(args, cmdline_args)
+    # assert args.output_directory, "An output directory should be specified"
+    # assert args.ligands_sdf, "No ligand sdf specified"
+    # assert args.rec_pdb, "No protein specified"
+    # seed_all(args.seed)
+
+    # os.makedirs(args.output_directory, exist_ok = True)
+
+    # ligs, rec_graph, model = load_statics(args)
+    # lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=args.n_workers_data_load)
+
+    # full_failed_path = os.path.join(args.output_directory, "failed.txt")
+    # with open(full_failed_path, "a") as failed_file:
+    #     for lig in lig_data.failed_ligs:
+    #         failed_file.write(lig)
+    #         failed_file.write("\n")
 
     
+    # lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate(rec_batch = True))
 
-
-
-    
-
-
+    # io(lig_loader)
