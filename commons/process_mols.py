@@ -235,7 +235,6 @@ class AtomEncoder(torch.nn.Module):
 
     def forward(self, x):
         x_embedding = 0
-        print(f"x.shape[1] = {x.shape[1]}, self.num_categorical_features =  {self.num_categorical_features}, self.num_scalar_features = {self.num_scalar_features}")
         assert x.shape[1] == self.num_categorical_features + self.num_scalar_features, f"x.shape[1] = {x.shape[1]}, self.num_categorical_features =  {self.num_categorical_features}, self.num_scalar_features = {self.num_scalar_features}"
         for i in range(self.num_categorical_features):
             x_embedding += self.atom_embedding_list[i](x[:, i].long())

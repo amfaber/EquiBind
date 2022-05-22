@@ -8,6 +8,7 @@ from copy import copy, deepcopy
 import os
 
 from dgl import load_graphs
+from pytest import cmdline
 
 from rdkit import Chem
 from rdkit.Chem import RemoveHs
@@ -34,6 +35,7 @@ from torch.nn import *  # do not remove
 from torch.optim import *  # do not remove
 from commons.losses import *  # do not remove
 from torch.optim.lr_scheduler import *  # do not remove
+from torch.utils.data import DataLoader
 
 
 # turn on for debugging C code like Segmentation Faults
@@ -46,7 +48,7 @@ from models.equibind import EquiBind
 
 
 def parse_arguments(arglist = None):
-    p = argparse.ArgumentParser()
+    p = argparse.ArgumentParser()    
     p.add_argument('--config', type=argparse.FileType(mode='r'), default=None)
     p.add_argument('--checkpoint', type=str, help='path to .pt file in a checkpoint directory')
     p.add_argument('-o', '--output_directory', type=str, default=None, help='path where to put the predicted results')
@@ -117,10 +119,14 @@ def parse_arguments(arglist = None):
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     
-    if arglist is None:
-        return p.parse_args()
-    else:
-        return p.parse_args(arglist)
+    cmdline_parser = deepcopy(p)
+    args = p.parse_args(arglist)
+    clear_defaults = {key: argparse.SUPPRESS for key in args.__dict__}
+    cmdline_parser.set_defaults(**clear_defaults)
+    cmdline_parser._defaults = {}
+    cmdline_args = cmdline_parser.parse_args(arglist)
+
+    return p.parse_args(arglist), set(cmdline_args.__dict__.keys())
 
 
 
@@ -187,6 +193,39 @@ def run_equibind(lig, lig_graph, rec_graph, model, args):
                 optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
             return optimized_mol
 
+def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
+    input_coords = lig_coord.detach().cpu()
+    prediction = ligs_coords_pred_untuned.detach().cpu()
+    lig_input = deepcopy(lig)
+    conf = lig_input.GetConformer()
+    for i in range(lig_input.GetNumAtoms()):
+        x, y, z = input_coords.numpy()[i]
+        conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+
+    lig_equibind = deepcopy(lig)
+    conf = lig_equibind.GetConformer()
+    for i in range(lig_equibind.GetNumAtoms()):
+        x, y, z = prediction.numpy()[i]
+        conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+
+    coords_pred = lig_equibind.GetConformer().GetPositions()
+
+    Z_pt_cloud = coords_pred
+    rotable_bonds = get_torsions([lig_input])
+    new_dihedrals = np.zeros(len(rotable_bonds))
+    for idx, r in enumerate(rotable_bonds):
+        new_dihedrals[idx] = get_dihedral_vonMises(lig_input, lig_input.GetConformer(), r, Z_pt_cloud)
+    optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
+    optimized_conf = optimized_mol.GetConformer()
+    coords_pred_optimized = optimized_conf.GetPositions()
+    R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
+    coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
+    # all_ligs_coords_corrected.append(coords_pred_optimized)
+    for i in range(optimized_mol.GetNumAtoms()):
+        x, y, z = coords_pred_optimized[i]
+        optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+    return optimized_mol
+
 def predict_for_lig(lig, rec_graph, model, args):
     dp = args.dataset_params
     use_rdkit_coords = args.use_rdkit_coords if args.use_rdkit_coords != None else args.dataset_params['use_rdkit_coords']
@@ -203,8 +242,6 @@ def predict_for_lig(lig, rec_graph, model, args):
 
 
 def load_statics(args):
-    
-
     device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
     print(f"device = {device}")
     checkpoint = torch.load(args.checkpoint, map_location=device)
@@ -216,6 +253,17 @@ def load_statics(args):
     model.eval()
 
     ligs = read_molecules_from_sdf(args.ligands_sdf, sanitize = True)
+    success_path = os.path.join(args.output_directory, "success.txt")
+    failed_path = os.path.join(args.output_directory, "failed.txt")
+    if os.path.exists(success_path) and os.path.exists(failed_path) and args.skip_in_output:
+        with open(success_path) as successes, open(failed_path) as failures:
+            previous_work = successes.read().splitlines()
+            previous_work += failures.read().splitlines()
+        [print(f"Skipping {lig}") for lig in previous_work]
+        previous_work = set(previous_work)
+        ligs = [lig for lig in ligs if lig.GetProp('_Name') not in previous_work]
+        print(f"{len(ligs)} ligands remain")
+
     rec_path = args.rec_pdb
     rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
     rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
@@ -224,6 +272,7 @@ def load_statics(args):
                                 surface_graph_cutoff=dp['surface_graph_cutoff'],
                                 surface_mesh_cutoff=dp['surface_mesh_cutoff'],
                                 c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
+    rec_graph = rec_graph.to(device)
 
     return ligs, rec_graph, model
 
@@ -302,7 +351,7 @@ def inference_from_files(args):
     
 
 
-def get_default_args(args):
+def get_default_args(args, cmdline_args):
     if args.config:
         config_dict = yaml.load(args.config, Loader=yaml.FullLoader)
         arg_dict = args.__dict__
@@ -325,7 +374,7 @@ def get_default_args(args):
     with open(os.path.join(os.path.dirname(args.checkpoint), 'train_arguments.yaml'), 'r') as arg_file:
         checkpoint_dict = yaml.load(arg_file, Loader=yaml.FullLoader)
     for key, value in checkpoint_dict.items():
-        if key not in config_dict.keys():
+        if (key not in config_dict.keys()) and (key not in cmdline_args):
             if isinstance(value, list):
                 for v in value:
                     arg_dict[key].append(v)
@@ -337,28 +386,95 @@ def get_default_args(args):
 from datasets import ligands
 
 
+
+def _run(batch, model):
+    ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs = batch
+    failsafe = lig_graphs.ndata['feat']
+    try:
+        predictions = model(lig_graphs, rec_graphs, geometry_graphs)[0]
+        # print(f"Succeeded for {[mol.GetProp('_Name') for mol in ligs]}")
+        out_ligs = ligs
+        out_lig_coords = lig_coords
+        failures = []
+    except AssertionError:
+        lig_graphs.ndata['feat'] = failsafe
+        lig_graphs, rec_graphs, geometry_graphs = (dgl.unbatch(lig_graphs),
+        dgl.unbatch(rec_graphs), dgl.unbatch(geometry_graphs))
+        predictions = []
+        out_ligs = []
+        out_lig_coords = []
+        failures = []
+        for lig, lig_coord, lig_graph, rec_graph, geometry_graph in zip(ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs):
+            try:
+                output = model(lig_graph, rec_graph, geometry_graph)
+                # print(f"Succeeded for {lig.GetProp('_Name')}")
+            except AssertionError as e:
+                failures.append(lig)
+                print(f"Failed for {lig.GetProp('_Name')}")
+            else:
+                out_ligs.append(lig)
+                out_lig_coords.append(lig_coord)
+                predictions.append(output[0][0])
+    assert len(predictions) == len(out_ligs)
+    return out_ligs, out_lig_coords, predictions, failures
+
+def io(dataloader):
+    
+    full_output_path = os.path.join(args.output_directory, "output.sdf")
+    full_failed_path = os.path.join(args.output_directory, "failed.txt")
+    full_success_path = os.path.join(args.output_directory, "success.txt")
+
+    with torch.no_grad(), open(full_output_path, "a") as file, open(
+        full_failed_path, "a") as failed_file, open(full_success_path, "a") as success_file:
+        with Chem.SDWriter(file) as writer:
+            i = 0
+            total_ligs = len(dataloader.dataset)
+            for batch in dataloader:
+                i += args.batch_size
+                print(f"Entering batch ending in index {min(i,total_ligs)}/{len(dataloader.dataset)}")
+                ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs = batch
+                out_ligs, out_lig_coords, predictions, failures = _run(batch, model)
+                opt_mols = [run_corrections(lig, lig_coord, prediction) for lig, lig_coord, prediction in zip(out_ligs, out_lig_coords, predictions)]
+                for mol in opt_mols:
+                    writer.write(mol)
+                    success_file.write(mol.GetProp('_Name'))
+                    success_file.write("\n")
+                    # print(f"written {mol.GetProp('_Name')} to output")
+                for failure in failures:
+                    failed_file.write(failure.GetProp('_Name'))
+                    failed_file.write("\n")
+
+
+
 if __name__ == '__main__':
 
-    args = parse_arguments()
+    args, cmdline_args = parse_arguments()
     
-    args = get_default_args(args)
+    args = get_default_args(args, cmdline_args)
     assert args.output_directory, "An output directory should be specified"
     assert args.ligands_sdf, "No ligand sdf specified"
     assert args.rec_pdb, "No protein specified"
-
     seed_all(args.seed)
 
+    os.makedirs(args.output_directory, exist_ok = True)
+
     ligs, rec_graph, model = load_statics(args)
+    lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=4)
 
-    lig_data = ligands.Ligands(ligs[:5], args, n_jobs=1, verbose = 0)
-    print(lig_data[0][1].device, lig_data[0][2].to("cpu"))
+    full_failed_path = os.path.join(args.output_directory, "failed.txt")
+    with open(full_failed_path, "a") as failed_file:
+        for lig in lig_data.failed_ligs:
+            failed_file.write(lig)
+            failed_file.write("\n")
 
-    lig_graph = lig_data[0][1]
-    geometry_graph = lig_data[0][2]
-    model(lig_graph, rec_graph, geometry_graph)
+    
+    lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate(rec_batch = True))
 
-    print("Statics loaded")
-    print(predict_for_lig(ligs[0], rec_graph, model, args))
+    io(lig_loader)
+
+    
+
+
 
     
 
