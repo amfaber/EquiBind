@@ -8,7 +8,6 @@ from copy import copy, deepcopy
 import os
 
 from dgl import load_graphs
-from pytest import cmdline
 
 from rdkit import Chem
 from rdkit.Chem import RemoveHs
