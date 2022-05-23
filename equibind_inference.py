@@ -178,7 +178,7 @@ def load_statics(args):
         with open(success_path) as successes, open(failed_path) as failures:
             previous_work = successes.read().splitlines()
             previous_work += failures.read().splitlines()
-        [print(f"Skipping {lig}") for lig in previous_work]
+        print(f"Skipping {len(previous_work)} ligands in success.txt / failed.txt")
         previous_work = set(previous_work)
         ligs = [lig for lig in ligs if lig.GetProp('_Name') not in previous_work]
         print(f"{len(ligs)} ligands remain")
