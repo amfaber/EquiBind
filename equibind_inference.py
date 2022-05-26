@@ -117,7 +117,7 @@ def parse_arguments(arglist = None):
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
-    
+    p.add_argument("--mess_with_seed", action = "store_true")
     cmdline_parser = deepcopy(p)
     args = p.parse_args(arglist)
     clear_defaults = {key: argparse.SUPPRESS for key in args.__dict__}
@@ -154,7 +154,6 @@ def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
     coords_pred_optimized = optimized_conf.GetPositions()
     R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
     coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
-    # all_ligs_coords_corrected.append(coords_pred_optimized)
     for i in range(optimized_mol.GetNumAtoms()):
         x, y, z = coords_pred_optimized[i]
         optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
@@ -210,7 +209,6 @@ def get_default_args(args, cmdline_args):
         config_dict = {}
     
     run_dir=args.run_dirs[0]
-    #for run_dir in args.run_dirs:
     args.checkpoint = os.path.join(os.path.dirname(__file__), f'runs/{run_dir}/best_checkpoint.pt')
     config_dict['checkpoint'] = f'runs/{run_dir}/best_checkpoint.pt'
     # overwrite args with args from checkpoint except for the args that were contained in the config file
@@ -264,8 +262,9 @@ def io(dataloader, model, args):
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
     full_success_path = os.path.join(args.output_directory, "success.txt")
 
-    with torch.no_grad(), open(full_output_path, "a") as file, open(
-        full_failed_path, "a") as failed_file, open(full_success_path, "a") as success_file:
+    w_or_a = "a" if args.skip_in_output else "w"
+    with torch.no_grad(), open(full_output_path, w_or_a) as file, open(
+        full_failed_path, w_or_a) as failed_file, open(full_success_path, w_or_a) as success_file:
         with Chem.SDWriter(file) as writer:
             i = 0
             total_ligs = len(dataloader.dataset)
@@ -284,22 +283,24 @@ def io(dataloader, model, args):
                     failed_file.write(failure.GetProp('_Name'))
                     failed_file.write("\n")
 
-def main():
-    args, cmdline_args = parse_arguments()
+def main(arglist = None):
+    args, cmdline_args = parse_arguments(arglist)
     
     args = get_default_args(args, cmdline_args)
     assert args.output_directory, "An output directory should be specified"
     assert args.ligands_sdf, "No ligand sdf specified"
     assert args.rec_pdb, "No protein specified"
     seed_all(args.seed)
+    if args.mess_with_seed:
+        torch.rand(1)
 
     os.makedirs(args.output_directory, exist_ok = True)
-
+    
     ligs, rec_graph, model = load_statics(args)
     lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=args.n_workers_data_load)
 
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
-    with open(full_failed_path, "a") as failed_file:
+    with open(full_failed_path, "a" if args.skip_in_output else "w") as failed_file:
         for lig in lig_data.failed_ligs:
             failed_file.write(lig)
             failed_file.write("\n")
@@ -311,27 +312,3 @@ def main():
 if __name__ == '__main__':
 
     main()
-
-    # args, cmdline_args = parse_arguments()
-    
-    # args = get_default_args(args, cmdline_args)
-    # assert args.output_directory, "An output directory should be specified"
-    # assert args.ligands_sdf, "No ligand sdf specified"
-    # assert args.rec_pdb, "No protein specified"
-    # seed_all(args.seed)
-
-    # os.makedirs(args.output_directory, exist_ok = True)
-
-    # ligs, rec_graph, model = load_statics(args)
-    # lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=args.n_workers_data_load)
-
-    # full_failed_path = os.path.join(args.output_directory, "failed.txt")
-    # with open(full_failed_path, "a") as failed_file:
-    #     for lig in lig_data.failed_ligs:
-    #         failed_file.write(lig)
-    #         failed_file.write("\n")
-
-    
-    # lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate(rec_batch = True))
-
-    # io(lig_loader)
