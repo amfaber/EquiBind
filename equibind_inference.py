@@ -39,7 +39,7 @@ from torch.utils.data import DataLoader
 
 # turn on for debugging C code like Segmentation Faults
 import faulthandler
-from datasets import ligands
+from datasets import ligands2
 
 faulthandler.enable()
 
@@ -118,6 +118,9 @@ def parse_arguments(arglist = None):
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
     p.add_argument("--mess_with_seed", action = "store_true")
+    p.add_argument("--sdfslice", help = "Run only a slice of the provided SD file.")
+    p.add_argument("--lazy_dataload", action="store_true")
+
     cmdline_parser = deepcopy(p)
     args = p.parse_args(arglist)
     clear_defaults = {key: argparse.SUPPRESS for key in args.__dict__}
@@ -159,7 +162,7 @@ def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
         optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
     return optimized_mol
 
-def load_statics(args):
+def load_rec_and_model(args):
     device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
     print(f"device = {device}")
     checkpoint = torch.load(args.checkpoint, map_location=device)
@@ -170,18 +173,6 @@ def load_statics(args):
     model.to(device)
     model.eval()
 
-    ligs = read_molecules_from_sdf(args.ligands_sdf, sanitize = True)
-    success_path = os.path.join(args.output_directory, "success.txt")
-    failed_path = os.path.join(args.output_directory, "failed.txt")
-    if os.path.exists(success_path) and os.path.exists(failed_path) and args.skip_in_output:
-        with open(success_path) as successes, open(failed_path) as failures:
-            previous_work = successes.read().splitlines()
-            previous_work += failures.read().splitlines()
-        print(f"Skipping {len(previous_work)} ligands in success.txt / failed.txt")
-        previous_work = set(previous_work)
-        ligs = [lig for lig in ligs if lig.GetProp('_Name') not in previous_work]
-        print(f"{len(ligs)} ligands remain")
-
     rec_path = args.rec_pdb
     rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
     rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
@@ -190,9 +181,8 @@ def load_statics(args):
                                 surface_graph_cutoff=dp['surface_graph_cutoff'],
                                 surface_mesh_cutoff=dp['surface_mesh_cutoff'],
                                 c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
-    rec_graph = rec_graph.to(device)
 
-    return ligs, rec_graph, model
+    return rec_graph, model
 
 def get_default_args(args, cmdline_args):
     if args.config:
@@ -226,13 +216,26 @@ def get_default_args(args, cmdline_args):
     return args
 
 def _run(batch, model):
-    ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs = batch
+    ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices = batch
     failsafe = lig_graphs.ndata['feat']
     try:
         predictions = model(lig_graphs, rec_graphs, geometry_graphs)[0]
         # print(f"Succeeded for {[mol.GetProp('_Name') for mol in ligs]}")
         out_ligs = ligs
         out_lig_coords = lig_coords
+        try:
+            names = [lig.GetProp("_Name") for lig in ligs]
+        except KeyError:
+            print(ligs)
+            for lig in ligs:
+                try:
+                    conf = lig.GetConformer()
+                    print(conf.GetPositions())
+                    name = lig.GetProp("_Name")
+                except KeyError:
+                    print(list(lig.GetPropNames(includePrivate=True)))
+                sys.exit()
+        successes = list(zip(true_indices, names))
         failures = []
     except AssertionError:
         lig_graphs.ndata['feat'] = failsafe
@@ -241,20 +244,22 @@ def _run(batch, model):
         predictions = []
         out_ligs = []
         out_lig_coords = []
+        successes = []
         failures = []
-        for lig, lig_coord, lig_graph, rec_graph, geometry_graph in zip(ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs):
+        for lig, lig_coord, lig_graph, rec_graph, geometry_graph, true_index in zip(ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices):
             try:
                 output = model(lig_graph, rec_graph, geometry_graph)
                 # print(f"Succeeded for {lig.GetProp('_Name')}")
             except AssertionError as e:
-                failures.append(lig)
+                failures.append((true_index, lig.GetProp("_Name")))
                 print(f"Failed for {lig.GetProp('_Name')}")
             else:
                 out_ligs.append(lig)
                 out_lig_coords.append(lig_coord)
                 predictions.append(output[0][0])
+                successes.append((true_index, lig.GetProp("_Name")))
     assert len(predictions) == len(out_ligs)
-    return out_ligs, out_lig_coords, predictions, failures
+    return out_ligs, out_lig_coords, predictions, successes, failures
 
 def io(dataloader, model, args):
     
@@ -264,23 +269,35 @@ def io(dataloader, model, args):
 
     w_or_a = "a" if args.skip_in_output else "w"
     with torch.no_grad(), open(full_output_path, w_or_a) as file, open(
-        full_failed_path, w_or_a) as failed_file, open(full_success_path, w_or_a) as success_file:
+        full_failed_path, "a") as failed_file, open(full_success_path, w_or_a) as success_file:
         with Chem.SDWriter(file) as writer:
             i = 0
             total_ligs = len(dataloader.dataset)
             for batch in dataloader:
                 i += args.batch_size
-                print(f"Entering batch ending in index {min(i,total_ligs)}/{len(dataloader.dataset)}")
-                ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs = batch
-                out_ligs, out_lig_coords, predictions, failures = _run(batch, model)
+                print(f"Entering batch ending in index {min(i, total_ligs)}/{len(dataloader.dataset)}")
+                ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices, failed_in_batch = batch
+                for failure in failed_in_batch:
+                    if failure[1] == "Skipped":
+                        continue
+                    failed_file.write(f"{failure[0]} {failure[1]}")
+                    failed_file.write("\n")
+                if ligs is None:
+                    continue
+                lig_graphs = lig_graphs.to(args.device)
+                rec_graphs = rec_graphs.to(args.device)
+                geometry_graphs = geometry_graphs.to(args.device)
+                
+                
+                out_ligs, out_lig_coords, predictions, successes, failures = _run((ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices), model)
                 opt_mols = [run_corrections(lig, lig_coord, prediction) for lig, lig_coord, prediction in zip(out_ligs, out_lig_coords, predictions)]
-                for mol in opt_mols:
+                for mol, success in zip(opt_mols, successes):
                     writer.write(mol)
-                    success_file.write(mol.GetProp('_Name'))
+                    success_file.write(f"{success[0]} {success[1]}")
                     success_file.write("\n")
                     # print(f"written {mol.GetProp('_Name')} to output")
                 for failure in failures:
-                    failed_file.write(failure.GetProp('_Name'))
+                    failed_file.write(f"{failure[0]} {failure[1]}")
                     failed_file.write("\n")
 
 def main(arglist = None):
@@ -293,22 +310,37 @@ def main(arglist = None):
     seed_all(args.seed)
     if args.mess_with_seed:
         torch.rand(1)
-
-    os.makedirs(args.output_directory, exist_ok = True)
     
-    ligs, rec_graph, model = load_statics(args)
-    lig_data = ligands.Ligands(ligs, rec_graph, args, n_jobs=args.n_workers_data_load)
+    os.makedirs(args.output_directory, exist_ok = True)
+
+    success_path = os.path.join(args.output_directory, "success.txt")
+    failed_path = os.path.join(args.output_directory, "failed.txt")
+    if os.path.exists(success_path) and os.path.exists(failed_path) and args.skip_in_output:
+        with open(success_path) as successes, open(failed_path) as failures:
+            previous_work = successes.readlines()
+            previous_work += failures.readlines()
+        previous_work = set(map(lambda tup: int(tup.split(" ")[0]), previous_work))
+        print(f"Found {len(previous_work)} previously calculated ligands")
+    else:
+        previous_work = None
+    
+        
+    rec_graph, model = load_rec_and_model(args)
+    if args.sdfslice is not None:
+        sdf_slice = tuple(map(int, args.sdfslice.split(",")))
+    else:
+        sdf_slice = None
+    
+    lig_data = ligands2.Ligands(args.ligands_sdf, rec_graph, args, slice = sdf_slice, skips = previous_work, lazy = args.lazy_dataload)
+    lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate, num_workers = args.n_workers_data_load)
 
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
     with open(full_failed_path, "a" if args.skip_in_output else "w") as failed_file:
-        for lig in lig_data.failed_ligs:
-            failed_file.write(lig)
+        for failure in lig_data.failed_ligs:
+            failed_file.write(f"{failure[0]} {failure[1]}")
             failed_file.write("\n")
-        
-    lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate(rec_batch = True))
 
     io(lig_loader, model, args)
 
 if __name__ == '__main__':
-
     main()

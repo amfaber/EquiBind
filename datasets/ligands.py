@@ -26,7 +26,6 @@ class Ligands(Dataset):
         names = [lig.GetProp("_Name") for lig in ligs]
         kwargs = dict(max_neighbors=dp['lig_max_neighbors'],
                         use_rdkit_coords=use_rdkit_coords, radius=dp['lig_graph_radius'])
-        # self.lig_graphs = [get_lig_graph_revised(lig, name, **kwargs) for lig, name in zip(ligs, names)]
         
         lig_graphs = pmap_multi(get_lig_graph_revised, zip(ligs, names), n_jobs=self.n_jobs, verbose = verbose, **kwargs)
         
