@@ -43,7 +43,6 @@ class Ligands(Dataset):
             self.slice = 0, len(self.supplier)
         else:
             slice = (slice[0] if slice[0] >= 0 else len(self.supplier)+slice[0], slice[1] if slice[1] >= 0 else len(self.supplier)+slice[1])
-            print(slice)
             self.slice = tuple(slice)
 
         self.failed_ligs = []

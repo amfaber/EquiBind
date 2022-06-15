@@ -55,7 +55,7 @@ def parse_arguments(arglist = None):
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
     p.add_argument("--mess_with_seed", action = "store_true")
-    p.add_argument("--sdfslice", help = "Run only a slice of the provided SD file.")
+    p.add_argument("--sdfslice", help = "Run only a slice of the provided SD file. Like in python, this slice is HALF-OPEN.")
     p.add_argument("--lazy_dataload", action="store_true")
 
     cmdline_parser = deepcopy(p)
@@ -126,7 +126,6 @@ def load_rec_and_model(args):
     return rec_graph, model
 
 def run_batch(model, ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices):
-    failsafe = lig_graphs.ndata['feat']
     try:
         predictions = model(lig_graphs, rec_graphs, geometry_graphs)[0]
         out_ligs = ligs
@@ -135,7 +134,6 @@ def run_batch(model, ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, 
         successes = list(zip(true_indices, names))
         failures = []
     except AssertionError:
-        lig_graphs.ndata['feat'] = failsafe
         lig_graphs, rec_graphs, geometry_graphs = (dgl.unbatch(lig_graphs),
         dgl.unbatch(rec_graphs), dgl.unbatch(geometry_graphs))
         predictions = []
