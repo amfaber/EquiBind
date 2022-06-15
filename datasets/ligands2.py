@@ -1,9 +1,9 @@
 from torch.utils.data import Dataset
 from commons.utils import pmap_multi
-from commons.process_mols import get_geometry_graph, get_lig_graph_revised
+from commons.process_mols import get_geometry_graph, get_lig_graph_revised, get_rdkit_coords
 from dgl import batch
 from commons.geometry_utils import random_rotation_translation
-from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol
+from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol, SmilesMolSupplier, AddHs
 
 
 def rand_trans_rot_lig_graph(lig_graph, use_rdkit_coords):
@@ -18,7 +18,7 @@ def rand_trans_rot_lig_graph(lig_graph, use_rdkit_coords):
 
 
 class Ligands(Dataset):
-    def __init__(self, ligpath, rec_graph, args, lazy = False, slice = None, skips = None):
+    def __init__(self, ligpath, rec_graph, args, lazy = False, slice = None, skips = None, ext = None, addH = None, rdkit_seed = None):
         self.ligpath = ligpath
         self.rec_graph = rec_graph
         self.args = args
@@ -26,55 +26,98 @@ class Ligands(Dataset):
         self.use_rdkit_coords = args.use_rdkit_coords
         self.device = args.device
         self.lazy = lazy
-        self.supplier = SDMolSupplier(ligpath, sanitize = False, removeHs=False)
-        self.failed_ligs = []
-        self.slice = None
-        self.true_idx = []
+        self.rdkit_seed = rdkit_seed
+        
+        ##Default argument handling
         self.skips = skips if skips is not None else set()
 
-        if not lazy:
-            if slice is not None:
-                slice = (slice[0] if slice[0] >= 0 else len(self.supplier)+slice[0], slice[1] if slice[1] >= 0 else len(self.supplier)+slice[1])
-                self.slice = tuple(slice)
+        if ext is None:
+            try:
+                ext = ligpath.split(".")[-1]
+            except (AttributeError, KeyError):
+                ext = "sdf"
+        
+        if addH is None:
+            if ext == "smi":
+                addH = True
             else:
-                self.slice = 0, len(self.supplier)
+                addH = False
+        self.addH = addH
+        
+        extensions_requiring_conformer_generation = ["smi"]
+        self.generate_conformer = ext in extensions_requiring_conformer_generation
+
+        ##End defaults
+
+        suppliers = {"sdf": SDMolSupplier, "smi": SmilesMolSupplier}
+        supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False),
+                        "smi": dict(sanitize = False)}
+        self.supplier = suppliers[ext](ligpath, **supp_kwargs[ext])
+
+        if slice is None:
+            self.slice = 0, len(self.supplier)
+        else:
+            slice = (slice[0] if slice[0] >= 0 else len(self.supplier)+slice[0], slice[1] if slice[1] >= 0 else len(self.supplier)+slice[1])
+            self.slice = tuple(slice)
+
+        self.failed_ligs = []
+        self.true_idx = []
+
+        if not lazy:
             self.ligs = []
             for i in range(*self.slice):
                 if i in self.skips:
                     continue
                 lig = self.supplier[i]
+                lig, name = self._process(lig)
                 if lig is not None:
-                    sanitize_succeded = (SanitizeMol(lig, catchErrors = True) is SanitizeFlags.SANITIZE_NONE)
-                    if sanitize_succeded:
-                        self.ligs.append(PropertyMol.PropertyMol(lig))
-                        self.true_idx.append(i)
-                    else:
-                        self.failed_ligs.append((i, lig.GetProp("_Name")))
+                    self.ligs.append(PropertyMol.PropertyMol(lig))
+                    self.true_idx.append(i)
                 else:
-                    self.failed_ligs.append((i, None))
+                    self.failed_ligs.append((i, name))
+
+        if self.lazy:
+            self._len = self.slice[1]-self.slice[0]
+        else:
+            self._len = len(self.ligs)
+
+    def _process(self, lig):
+        if lig is None:
+            return None, None
+        if self.addH:
+            lig = AddHs(lig)
+        if self.generate_conformer:
+            get_rdkit_coords(lig, self.rdkit_seed)
+        sanitize_succeded = (SanitizeMol(lig, catchErrors = True) is SanitizeFlags.SANITIZE_NONE)
+        if sanitize_succeded:
+            return lig, lig.GetProp("_Name")
+        else:
+            return None, lig.GetProp("_Name")
 
     def __len__(self):
-        if self.lazy:
-            return len(self.supplier)
-        else:
-            return len(self.ligs)
+        return self._len
 
     def __getitem__(self, idx):
         if self.lazy:
-            true_index = idx
+            if idx < 0:
+                nonneg_idx = self._len + idx
+            else:
+                nonneg_idx = idx
+
+            if nonneg_idx >= self._len or nonneg_idx < 0:
+                raise IndexError(f"Index {idx} out of range for Ligands dataset with length {len(self)}")
+            
+            
+            true_index = nonneg_idx + self.slice[0]
             if true_index in self.skips:
                 return true_index, "Skipped"
             lig = self.supplier[true_index]
-            if lig is None:
-                self.failed_ligs.append((true_index, None))
-                return true_index, None
+            lig, name = self._process(lig)
+            if lig is not None:
+                lig = PropertyMol.PropertyMol(lig)
             else:
-                sanitize_succeded = (SanitizeMol(lig, catchErrors = True) is SanitizeFlags.SANITIZE_NONE)
-                if sanitize_succeded:
-                    lig = PropertyMol.PropertyMol(lig)
-                else:
-                    self.failed_ligs.append((true_index, None))
-                    return true_index, None
+                self.failed_ligs.append((true_index, name))
+                return true_index, name
         elif not self.lazy:
             lig = self.ligs[idx]
             true_index = self.true_idx[idx]

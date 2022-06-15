@@ -428,8 +428,10 @@ def get_receptor_inference(rec_path):
     assert sum(valid_lengths) == len(c_alpha_coords)
     return rec, coords, c_alpha_coords, n_coords, c_coords
 
-def get_rdkit_coords(mol):
+def get_rdkit_coords(mol, seed = None):
     ps = AllChem.ETKDGv2()
+    if seed is not None:
+        ps.randomSeed = seed
     id = AllChem.EmbedMolecule(mol, ps)
     if id == -1:
         print('rdkit coords could not be generated without using random coords. using random coords now.')
