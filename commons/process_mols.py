@@ -855,8 +855,7 @@ def get_lig_graph_revised(mol, name, radius=20, max_neighbors=None, use_rdkit_co
             log(
                 f'The lig_radius {radius} was too small for one lig atom such that it had no neighbors. So we connected {i} to the closest other lig atom {dst}')
         assert i not in dst
-        if dst == []:
-            return None
+        assert dst != []
         src = [i] * len(dst)
         src_list.extend(src)
         dst_list.extend(dst)

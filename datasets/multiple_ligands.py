@@ -1,7 +1,6 @@
 from torch.utils.data import Dataset
 from commons.process_mols import get_geometry_graph, get_lig_graph_revised, get_rdkit_coords
 from dgl import batch
-from commons.geometry_utils import random_rotation_translation
 from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol, SmilesMolSupplier, AddHs
 
 
@@ -108,15 +107,16 @@ class Ligands(Dataset):
         elif not self.lazy:
             lig = self.ligs[idx]
             true_index = self.true_idx[idx]
-        
-        lig_graph = get_lig_graph_revised(lig, lig.GetProp('_Name'), max_neighbors=self.dp['lig_max_neighbors'],
-                                          use_rdkit_coords=self.use_rdkit_coords, radius=self.dp['lig_graph_radius'])
 
-        geometry_graph = get_geometry_graph(lig) if self.dp['geometry_regularization'] else None
-        if lig_graph is None:
+        
+        try:
+            lig_graph = get_lig_graph_revised(lig, lig.GetProp('_Name'), max_neighbors=self.dp['lig_max_neighbors'],
+                                            use_rdkit_coords=self.use_rdkit_coords, radius=self.dp['lig_graph_radius'])
+        except AssertionError:
             self.failed_ligs.append((true_index, lig.GetProp("_Name")))
             return true_index, lig.GetProp("_Name")
-
+        
+        geometry_graph = get_geometry_graph(lig) if self.dp['geometry_regularization'] else None
 
         lig_graph.ndata["new_x"] = lig_graph.ndata["x"]
         return lig, lig_graph.ndata["new_x"], lig_graph, self.rec_graph, geometry_graph, true_index
