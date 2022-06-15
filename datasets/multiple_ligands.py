@@ -5,17 +5,6 @@ from commons.geometry_utils import random_rotation_translation
 from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol, SmilesMolSupplier, AddHs
 
 
-def rand_trans_rot_lig_graph(lig_graph, use_rdkit_coords):
-    rot_T, rot_b = random_rotation_translation(translation_distance=5)
-    if (use_rdkit_coords):
-        lig_coords_to_move = lig_graph.ndata['new_x']
-    else:
-        lig_coords_to_move = lig_graph.ndata['x']
-    mean_to_remove = lig_coords_to_move.mean(dim=0, keepdims=True)
-    input_coords = (rot_T @ (lig_coords_to_move - mean_to_remove).T).T + rot_b
-    lig_graph.ndata['new_x'] = input_coords
-
-
 class Ligands(Dataset):
     def __init__(self, ligpath, rec_graph, args, lazy = False, slice = None, skips = None, ext = None, addH = None, rdkit_seed = None):
         self.ligpath = ligpath
@@ -55,6 +44,7 @@ class Ligands(Dataset):
             self.slice = 0, len(self.supplier)
         else:
             slice = (slice[0] if slice[0] >= 0 else len(self.supplier)+slice[0], slice[1] if slice[1] >= 0 else len(self.supplier)+slice[1])
+            print(slice)
             self.slice = tuple(slice)
 
         self.failed_ligs = []
@@ -126,8 +116,6 @@ class Ligands(Dataset):
         if lig_graph is None:
             self.failed_ligs.append((true_index, lig.GetProp("_Name")))
             return true_index, lig.GetProp("_Name")
-        # lig_graph = lig_graph.to(self.args.device)
-        # geometry_graph = geometry_graph.to(self.args.device)
 
 
         lig_graph.ndata["new_x"] = lig_graph.ndata["x"]
