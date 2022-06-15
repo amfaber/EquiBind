@@ -1,5 +1,4 @@
 from torch.utils.data import Dataset
-from commons.utils import pmap_multi
 from commons.process_mols import get_geometry_graph, get_lig_graph_revised, get_rdkit_coords
 from dgl import batch
 from commons.geometry_utils import random_rotation_translation
@@ -46,8 +45,6 @@ class Ligands(Dataset):
         
         extensions_requiring_conformer_generation = ["smi"]
         self.generate_conformer = ext in extensions_requiring_conformer_generation
-
-        ##End defaults
 
         suppliers = {"sdf": SDMolSupplier, "smi": SmilesMolSupplier}
         supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False),

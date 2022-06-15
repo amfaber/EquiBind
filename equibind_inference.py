@@ -3,28 +3,19 @@ import argparse
 import sys
 from functools import partial
 
-from copy import copy, deepcopy
+from copy import deepcopy
 
 import os
 
-from dgl import load_graphs
-
 from rdkit import Chem
-from rdkit.Chem import RemoveHs
 from rdkit.Geometry import Point3D
-from tqdm import tqdm
 
 from commons.geometry_utils import rigid_transform_Kabsch_3D, get_torsions, get_dihedral_vonMises, apply_changes
-from commons.logger import Logger
-from commons.process_mols import read_molecule, get_receptor, get_lig_graph_revised, \
-    get_rec_graph, get_receptor_atom_subgraph, get_geometry_graph, get_geometry_graph_ring, \
-    get_receptor_inference, read_molecules_from_sdf
+from commons.process_mols import get_rec_graph, get_receptor_inference
 
 #from train import load_model
 
-from datasets.pdbbind import PDBBind
-
-from commons.utils import seed_all, read_strings_from_txt
+from commons.utils import seed_all
 
 import yaml
 
@@ -130,60 +121,6 @@ def parse_arguments(arglist = None):
 
     return p.parse_args(arglist), set(cmdline_args.__dict__.keys())
 
-def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
-    input_coords = lig_coord.detach().cpu()
-    prediction = ligs_coords_pred_untuned.detach().cpu()
-    lig_input = deepcopy(lig)
-    conf = lig_input.GetConformer()
-    for i in range(lig_input.GetNumAtoms()):
-        x, y, z = input_coords.numpy()[i]
-        conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-
-    lig_equibind = deepcopy(lig)
-    conf = lig_equibind.GetConformer()
-    for i in range(lig_equibind.GetNumAtoms()):
-        x, y, z = prediction.numpy()[i]
-        conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-
-    coords_pred = lig_equibind.GetConformer().GetPositions()
-
-    Z_pt_cloud = coords_pred
-    rotable_bonds = get_torsions([lig_input])
-    new_dihedrals = np.zeros(len(rotable_bonds))
-    for idx, r in enumerate(rotable_bonds):
-        new_dihedrals[idx] = get_dihedral_vonMises(lig_input, lig_input.GetConformer(), r, Z_pt_cloud)
-    optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
-    optimized_conf = optimized_mol.GetConformer()
-    coords_pred_optimized = optimized_conf.GetPositions()
-    R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
-    coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
-    for i in range(optimized_mol.GetNumAtoms()):
-        x, y, z = coords_pred_optimized[i]
-        optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
-    return optimized_mol
-
-def load_rec_and_model(args):
-    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
-    print(f"device = {device}")
-    checkpoint = torch.load(args.checkpoint, map_location=device)
-    dp = args.dataset_params
-
-    model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
-    model.load_state_dict(checkpoint['model_state_dict'])
-    model.to(device)
-    model.eval()
-
-    rec_path = args.rec_pdb
-    rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
-    rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
-                                use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
-                                surface_max_neighbors=dp['surface_max_neighbors'],
-                                surface_graph_cutoff=dp['surface_graph_cutoff'],
-                                surface_mesh_cutoff=dp['surface_mesh_cutoff'],
-                                c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
-
-    return rec_graph, model
-
 def get_default_args(args, cmdline_args):
     if args.config:
         config_dict = yaml.load(args.config, Loader=yaml.FullLoader)
@@ -215,7 +152,29 @@ def get_default_args(args, cmdline_args):
     args.model_parameters['noise_initial'] = 0
     return args
 
-def _run(batch, model):
+def load_rec_and_model(args):
+    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
+    print(f"device = {device}")
+    checkpoint = torch.load(args.checkpoint, map_location=device)
+    dp = args.dataset_params
+
+    model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    model.to(device)
+    model.eval()
+
+    rec_path = args.rec_pdb
+    rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
+    rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
+                                use_rec_atoms=dp['use_rec_atoms'], rec_radius=dp['rec_graph_radius'],
+                                surface_max_neighbors=dp['surface_max_neighbors'],
+                                surface_graph_cutoff=dp['surface_graph_cutoff'],
+                                surface_mesh_cutoff=dp['surface_mesh_cutoff'],
+                                c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
+
+    return rec_graph, model
+
+def run_batch(batch, model):
     ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices = batch
     failsafe = lig_graphs.ndata['feat']
     try:
@@ -261,7 +220,39 @@ def _run(batch, model):
     assert len(predictions) == len(out_ligs)
     return out_ligs, out_lig_coords, predictions, successes, failures
 
-def io(dataloader, model, args):
+def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
+    input_coords = lig_coord.detach().cpu()
+    prediction = ligs_coords_pred_untuned.detach().cpu()
+    lig_input = deepcopy(lig)
+    conf = lig_input.GetConformer()
+    for i in range(lig_input.GetNumAtoms()):
+        x, y, z = input_coords.numpy()[i]
+        conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+
+    lig_equibind = deepcopy(lig)
+    conf = lig_equibind.GetConformer()
+    for i in range(lig_equibind.GetNumAtoms()):
+        x, y, z = prediction.numpy()[i]
+        conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+
+    coords_pred = lig_equibind.GetConformer().GetPositions()
+
+    Z_pt_cloud = coords_pred
+    rotable_bonds = get_torsions([lig_input])
+    new_dihedrals = np.zeros(len(rotable_bonds))
+    for idx, r in enumerate(rotable_bonds):
+        new_dihedrals[idx] = get_dihedral_vonMises(lig_input, lig_input.GetConformer(), r, Z_pt_cloud)
+    optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
+    optimized_conf = optimized_mol.GetConformer()
+    coords_pred_optimized = optimized_conf.GetPositions()
+    R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
+    coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
+    for i in range(optimized_mol.GetNumAtoms()):
+        x, y, z = coords_pred_optimized[i]
+        optimized_conf.SetAtomPosition(i, Point3D(float(x), float(y), float(z)))
+    return optimized_mol
+
+def write_while_inferring(dataloader, model, args):
     
     full_output_path = os.path.join(args.output_directory, "output.sdf")
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
@@ -289,7 +280,7 @@ def io(dataloader, model, args):
                 geometry_graphs = geometry_graphs.to(args.device)
                 
                 
-                out_ligs, out_lig_coords, predictions, successes, failures = _run((ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices), model)
+                out_ligs, out_lig_coords, predictions, successes, failures = run_batch((ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices), model)
                 opt_mols = [run_corrections(lig, lig_coord, prediction) for lig, lig_coord, prediction in zip(out_ligs, out_lig_coords, predictions)]
                 for mol, success in zip(opt_mols, successes):
                     writer.write(mol)
@@ -339,8 +330,8 @@ def main(arglist = None):
         for failure in lig_data.failed_ligs:
             failed_file.write(f"{failure[0]} {failure[1]}")
             failed_file.write("\n")
-
-    io(lig_loader, model, args)
+    
+    write_while_inferring(lig_loader, model, args)
 
 if __name__ == '__main__':
     main()

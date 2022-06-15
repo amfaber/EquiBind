@@ -120,10 +120,6 @@ def cross_attention(queries, keys, values, mask, cross_msgs):
 def get_mask(ligand_batch_num_nodes, receptor_batch_num_nodes, device):
     rows = ligand_batch_num_nodes.sum()
     cols = receptor_batch_num_nodes.sum()
-    if len(ligand_batch_num_nodes) == 1 or len(receptor_batch_num_nodes) == 1:
-        mask = torch.ones(rows, cols, device = device)
-        return mask
-
     mask = torch.zeros(rows, cols, device=device)
     partial_l = 0
     partial_r = 0

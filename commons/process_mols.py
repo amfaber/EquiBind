@@ -235,7 +235,7 @@ class AtomEncoder(torch.nn.Module):
 
     def forward(self, x):
         x_embedding = 0
-        assert x.shape[1] == self.num_categorical_features + self.num_scalar_features, f"x.shape[1] = {x.shape[1]}, self.num_categorical_features =  {self.num_categorical_features}, self.num_scalar_features = {self.num_scalar_features}"
+        assert x.shape[1] == self.num_categorical_features + self.num_scalar_features
         for i in range(self.num_categorical_features):
             x_embedding += self.atom_embedding_list[i](x[:, i].long())
             if i + 1 == self.n_feats_to_use:
@@ -1253,15 +1253,3 @@ def read_molecule(molecule_file, sanitize=False, calc_charges=False, remove_hs=F
         return None
 
     return mol
-
-def read_molecules_from_sdf(molecule_file, sanitize = False, return_names = False):
-    supplier = Chem.SDMolSupplier(molecule_file, sanitize=False, removeHs=False)
-    mols = [mol for mol in supplier]
-    if sanitize:
-        [Chem.SanitizeMol(mol) for mol in mols]
-    if not return_names:
-        return mols
-    else:
-        names = [mol.GetProp("_Name") for mol in mols]
-        return mols, names
-    
