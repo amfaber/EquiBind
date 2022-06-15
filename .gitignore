@@ -145,7 +145,3 @@ runs2
 /runs/*
 !/runs/rigid_redocking
 !/runs/flexible_self_docking
-runs/flexible_self_docking/predictions_RDKitFalse.pt
-runs/flexible_self_docking/predictions_RDKitTrue.pt
-.bash_history
-
