@@ -38,8 +38,9 @@ from models.equibind import EquiBind
 def parse_arguments(arglist = None):
     p = argparse.ArgumentParser()    
     p.add_argument('--config', type=argparse.FileType(mode='r'), default=None)
-    p.add_argument('--checkpoint', '--model', dest = "checkpoint", default = "runs/flexible_self_docking/best_checkpoint.pt",
-                   type=str, help='path to .pt file containing the model used for inference')
+    p.add_argument('--checkpoint', '--model', dest = "checkpoint",
+                   type=str, help='path to .pt file containing the model used for inference. '
+                   'Defaults to runs/flexible_self_docking/best_checkpoint.pt in the same directory as the file being run')
     p.add_argument('--train_args', type = str, help = "Path to a yaml file containing the parameters that were used to train the model. "
                     "If not supplied, it is assumed that a file named 'train_arguments.yaml' is located in the same directory as the model checkpoint")
     p.add_argument('-o', '--output_directory', type=str, default=None, help='path where to put the predicted results')
@@ -80,6 +81,9 @@ def get_default_args(args, cmdline_args):
         args.config = args.config.name
     else:
         config_dict = {}
+    
+    if args.checkpoint is None:
+        args.checkpoint = os.path.join(os.path.dirname(__file__), "runs/flexible_self_docking/best_checkpoint.pt")
     
     config_dict['checkpoint'] = args.checkpoint
     # overwrite args with args from checkpoint except for the args that were contained in the config file or provided directly in the commandline
