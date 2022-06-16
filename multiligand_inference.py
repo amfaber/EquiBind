@@ -293,7 +293,7 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     
     lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
     
-    write_while_inferring(lig_loader, model, args)
+    return write_while_inferring(lig_loader, model, args)
 
 
 if __name__ == '__main__':

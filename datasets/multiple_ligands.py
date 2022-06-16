@@ -119,7 +119,8 @@ class Ligands(Dataset):
         elif not self.lazy:
             lig = self.ligs[idx]
             true_index = self.true_idx[idx]
-
+            if true_index in self.skips:
+                return true_index, "Skipped"
         
         try:
             lig_graph = get_lig_graph_revised(lig, lig.GetProp('_Name'), max_neighbors=self.dp['lig_max_neighbors'],
