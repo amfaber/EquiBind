@@ -44,7 +44,6 @@ def parse_arguments(arglist = None):
     p.add_argument('--train_args', type = str, help = "Path to a yaml file containing the parameters that were used to train the model. "
                     "If not supplied, it is assumed that a file named 'train_arguments.yaml' is located in the same directory as the model checkpoint")
     p.add_argument('-o', '--output_directory', type=str, default=None, help='path where to put the predicted results')
-    p.add_argument('--run_dirs', type=list, default=["flexible_self_docking"], help='path directory with saved runs')
     p.add_argument('--batch_size', type=int, default=8, help='samples that will be processed in parallel')
     p.add_argument('--seed', type=int, default=1, help='seed for reproducibility')
     p.add_argument('--device', type=str, default='cuda', help='What device to train on: cuda or cpu')
@@ -55,9 +54,9 @@ def parse_arguments(arglist = None):
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
-    p.add_argument("--mess_with_seed", action = "store_true")
-    p.add_argument("--sdfslice", help = "Run only a slice of the provided SD file. Like in python, this slice is HALF-OPEN.")
-    p.add_argument("--lazy_dataload", action="store_true")
+    p.add_argument("--lig_slice", help = "Run only a slice of the provided ligand file. Like in python, this slice is HALF-OPEN. Should be provided in the format --lig_slice start,end")
+    p.add_argument("--lazy_dataload", dest = "lazy_dataload", action="store_true", default = None, help = "Turns on lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
+    p.add_argument("--no_lazy_dataload", dest = "lazy_dataload", action="store_false", default = None, help = "Turns off lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
 
     cmdline_parser = deepcopy(p)
     args = p.parse_args(arglist)
@@ -201,6 +200,8 @@ def write_while_inferring(dataloader, model, args):
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
     full_success_path = os.path.join(args.output_directory, "success.txt")
 
+    has_any_work_been_done = False
+
     w_or_a = "a" if args.skip_in_output else "w"
     with torch.no_grad(), open(full_output_path, w_or_a) as file, open(
         full_failed_path, "a") as failed_file, open(full_success_path, w_or_a) as success_file:
@@ -218,6 +219,7 @@ def write_while_inferring(dataloader, model, args):
                     failed_file.write("\n")
                 if ligs is None:
                     continue
+                
                 lig_graphs = lig_graphs.to(args.device)
                 rec_graphs = rec_graphs.to(args.device)
                 geometry_graphs = geometry_graphs.to(args.device)
@@ -231,22 +233,18 @@ def write_while_inferring(dataloader, model, args):
                     writer.write(mol)
                     success_file.write(f"{success[0]} {success[1]}")
                     success_file.write("\n")
+                    if not has_any_work_been_done:
+                        has_any_work_been_done = True
                     # print(f"written {mol.GetProp('_Name')} to output")
                 for failure in failures:
                     failed_file.write(f"{failure[0]} {failure[1]}")
                     failed_file.write("\n")
 
-def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, args = None):
-    if args is None:
-        args, cmdline_args = parse_arguments(arglist)
-        args = get_default_args(args, cmdline_args)
-    
-    assert args.output_directory, "An output directory should be specified"
-    assert args.ligands_sdf, "No ligand sdf specified"
-    assert args.rec_pdb, "No protein specified"
-    seed_all(args.seed)
-    
-    os.makedirs(args.output_directory, exist_ok = True)
+    return has_any_work_been_done
+
+def find_previous_work(args, create_output_dir = True):
+    if create_output_dir:
+        os.makedirs(args.output_directory, exist_ok = True)
 
     success_path = os.path.join(args.output_directory, "success.txt")
     failed_path = os.path.join(args.output_directory, "failed.txt")
@@ -259,12 +257,24 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     else:
         previous_work = None
     
+    return previous_work
 
-    # rec_graph, model = load_rec_and_model(args)
+def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, args = None):
+    if args is None:
+        args, cmdline_args = parse_arguments(arglist)
+        args = get_default_args(args, cmdline_args)
+    
+    assert args.output_directory, "An output directory should be specified"
+    assert args.ligands_sdf, "No ligand sdf specified"
+    assert args.rec_pdb, "No protein specified"
+    seed_all(args.seed)
+    
+    previous_work = find_previous_work(args, create_output_dir = True)
+    
     if args.lig_slice is not None:
         lig_slice = tuple(map(int, args.lig_slice.split(",")))
     else:
-        sdf_slice = None
+        lig_slice = None
     
     if rec_graph is None:
         rec_graph = load_rec(args)
@@ -275,15 +285,16 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     if lig_dataset is None:
         lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, slice = lig_slice, skips = previous_work, lazy = args.lazy_dataload)
     
-    lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
-
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
     with open(full_failed_path, "a" if args.skip_in_output else "w") as failed_file:
         for failure in lig_dataset.failed_ligs:
             failed_file.write(f"{failure[0]} {failure[1]}")
             failed_file.write("\n")
     
+    lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
+    
     write_while_inferring(lig_loader, model, args)
+
 
 if __name__ == '__main__':
     main()
