@@ -36,7 +36,7 @@ class Ligands(Dataset):
 
         suppliers = {"sdf": SDMolSupplier, "smi": SmilesMolSupplier}
         supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False),
-                        "smi": dict(sanitize = False)}
+                        "smi": dict(sanitize = False, titleLine = False)}
         self.supplier = suppliers[ext](ligpath, **supp_kwargs[ext])
 
         if slice is None:
@@ -72,7 +72,10 @@ class Ligands(Dataset):
         if self.addH:
             lig = AddHs(lig)
         if self.generate_conformer:
-            get_rdkit_coords(lig, self.rdkit_seed)
+            try:
+                get_rdkit_coords(lig, self.rdkit_seed)
+            except ValueError:
+                return None, lig.GetProp("_Name")
         sanitize_succeded = (SanitizeMol(lig, catchErrors = True) is SanitizeFlags.SANITIZE_NONE)
         if sanitize_succeded:
             return lig, lig.GetProp("_Name")

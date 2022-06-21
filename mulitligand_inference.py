@@ -106,18 +106,8 @@ def get_default_args(args, cmdline_args):
     args.model_parameters['noise_initial'] = 0
     return args
 
-def load_rec_and_model(args):
-    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
-    print(f"device = {device}")
-    # sys.exit()
-    checkpoint = torch.load(args.checkpoint, map_location=device)
+def load_rec(args):
     dp = args.dataset_params
-
-    model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
-    model.load_state_dict(checkpoint['model_state_dict'])
-    model.to(device)
-    model.eval()
-
     rec_path = args.rec_pdb
     rec, rec_coords, c_alpha_coords, n_coords, c_coords = get_receptor_inference(rec_path)
     rec_graph = get_rec_graph(rec, rec_coords, c_alpha_coords, n_coords, c_coords,
@@ -126,8 +116,22 @@ def load_rec_and_model(args):
                                 surface_graph_cutoff=dp['surface_graph_cutoff'],
                                 surface_mesh_cutoff=dp['surface_mesh_cutoff'],
                                 c_alpha_max_neighbors=dp['c_alpha_max_neighbors'])
+    return rec_graph
 
-    return rec_graph, model
+def load_model(args):
+    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
+    print(f"device = {device}")
+    # sys.exit()
+    checkpoint = torch.load(args.checkpoint, map_location=device)
+
+    model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    model.to(device)
+    model.eval()
+    return model
+
+def load_rec_and_model(args):
+    return load_rec(args), load_model(args)
 
 def run_batch(model, ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, true_indices):
     try:
@@ -232,10 +236,11 @@ def write_while_inferring(dataloader, model, args):
                     failed_file.write(f"{failure[0]} {failure[1]}")
                     failed_file.write("\n")
 
-def main(arglist = None):
-    args, cmdline_args = parse_arguments(arglist)
+def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, args = None):
+    if args is None:
+        args, cmdline_args = parse_arguments(arglist)
+        args = get_default_args(args, cmdline_args)
     
-    args = get_default_args(args, cmdline_args)
     assert args.output_directory, "An output directory should be specified"
     assert args.ligands_sdf, "No ligand sdf specified"
     assert args.rec_pdb, "No protein specified"
@@ -254,19 +259,27 @@ def main(arglist = None):
     else:
         previous_work = None
     
-        
-    rec_graph, model = load_rec_and_model(args)
-    if args.sdfslice is not None:
-        sdf_slice = tuple(map(int, args.sdfslice.split(",")))
+
+    # rec_graph, model = load_rec_and_model(args)
+    if args.lig_slice is not None:
+        lig_slice = tuple(map(int, args.lig_slice.split(",")))
     else:
         sdf_slice = None
     
-    lig_data = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, slice = sdf_slice, skips = previous_work, lazy = args.lazy_dataload)
-    lig_loader = DataLoader(lig_data, batch_size = args.batch_size, collate_fn = lig_data.collate, num_workers = args.n_workers_data_load)
+    if rec_graph is None:
+        rec_graph = load_rec(args)
+    
+    if model is None:
+        model = load_model(args)
+    
+    if lig_dataset is None:
+        lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, slice = lig_slice, skips = previous_work, lazy = args.lazy_dataload)
+    
+    lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
 
     full_failed_path = os.path.join(args.output_directory, "failed.txt")
     with open(full_failed_path, "a" if args.skip_in_output else "w") as failed_file:
-        for failure in lig_data.failed_ligs:
+        for failure in lig_dataset.failed_ligs:
             failed_file.write(f"{failure[0]} {failure[1]}")
             failed_file.write("\n")
     
