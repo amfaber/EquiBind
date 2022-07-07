@@ -285,11 +285,6 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     if lig_dataset is None:
         lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, slice = lig_slice, skips = previous_work, lazy = args.lazy_dataload)
     
-    full_failed_path = os.path.join(args.output_directory, "failed.txt")
-    with open(full_failed_path, "a" if args.skip_in_output else "w") as failed_file:
-        for failure in lig_dataset.failed_ligs:
-            failed_file.write(f"{failure[0]} {failure[1]}")
-            failed_file.write("\n")
     
     lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
     
