@@ -54,9 +54,9 @@ def parse_arguments(arglist = None):
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
-    p.add_argument("--lig_slice", help = "Run only a slice of the provided ligand file. Like in python, this slice is HALF-OPEN. Should be provided in the format --lig_slice start,end")
-    p.add_argument("--lazy_dataload", dest = "lazy_dataload", action="store_true", default = None, help = "Turns on lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
-    p.add_argument("--no_lazy_dataload", dest = "lazy_dataload", action="store_false", default = None, help = "Turns off lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
+    # p.add_argument("--lig_slice", help = "Run only a slice of the provided ligand file. Like in python, this slice is HALF-OPEN. Should be provided in the format --lig_slice start,end")
+    # p.add_argument("--lazy_dataload", dest = "lazy_dataload", action="store_true", default = None, help = "Turns on lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
+    # p.add_argument("--no_lazy_dataload", dest = "lazy_dataload", action="store_false", default = None, help = "Turns off lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
 
     cmdline_parser = deepcopy(p)
     args = p.parse_args(arglist)
@@ -271,10 +271,10 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     
     previous_work = find_previous_work(args, create_output_dir = True)
     
-    if args.lig_slice is not None:
-        lig_slice = tuple(map(int, args.lig_slice.split(",")))
-    else:
-        lig_slice = None
+    # if args.lig_slice is not None:
+    #     lig_slice = tuple(map(int, args.lig_slice.split(",")))
+    # else:
+    #     lig_slice = None
     
     if rec_graph is None:
         rec_graph = load_rec(args)
@@ -283,7 +283,7 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
         model = load_model(args)
     
     if lig_dataset is None:
-        lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, slice = lig_slice, skips = previous_work, lazy = args.lazy_dataload)
+        lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, skips = previous_work)
     
     
     lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
