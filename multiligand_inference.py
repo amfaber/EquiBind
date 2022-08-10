@@ -46,7 +46,7 @@ def parse_arguments(arglist = None):
     p.add_argument('-o', '--output_directory', type=str, default=None, help='path where to put the predicted results')
     p.add_argument('--batch_size', type=int, default=8, help='samples that will be processed in parallel')
     p.add_argument('--seed', type=int, default=1, help='seed for reproducibility')
-    p.add_argument('--device', type=str, default='cuda', help='What device to train on: cuda or cpu')
+    p.add_argument('--device', type=str, default=None, help='What device to train on: cuda or cpu')
     p.add_argument('--num_confs', type=int, default=1, help='num_confs if using rdkit conformers')
     p.add_argument('--use_rdkit_coords', action="store_true", help='override the rkdit usage behavior of the used model')
     p.add_argument('--no_skip', dest = "skip_in_output", action = "store_false", help = 'skip input files that already have corresponding folders in the output directory. Used to resume a large interrupted computation')
@@ -84,6 +84,9 @@ def get_default_args(args, cmdline_args):
     if args.checkpoint is None:
         args.checkpoint = os.path.join(os.path.dirname(__file__), "runs/flexible_self_docking/best_checkpoint.pt")
     
+    if args.device is None:
+        args.device = "cuda" if torch.cuda.is_available() else "cpu"
+    
     config_dict['checkpoint'] = args.checkpoint
     # overwrite args with args from checkpoint except for the args that were contained in the config file or provided directly in the commandline
     arg_dict = args.__dict__
@@ -96,7 +99,7 @@ def get_default_args(args, cmdline_args):
             checkpoint_dict = yaml.load(arg_file, Loader=yaml.FullLoader)
 
     for key, value in checkpoint_dict.items():
-        if (key not in config_dict.keys()) and (key not in cmdline_args):
+        if (key not in config_dict.keys()) and (key not in cmdline_args) and not key == "device":
             if isinstance(value, list) and key in arg_dict:
                 for v in value:
                     arg_dict[key].append(v)
@@ -118,9 +121,9 @@ def load_rec(args):
     return rec_graph
 
 def load_model(args):
-    device = torch.device("cuda:0" if torch.cuda.is_available() and args.device == 'cuda' else "cpu")
+    device = args.device
     print(f"device = {device}")
-    # sys.exit()
+    
     checkpoint = torch.load(args.checkpoint, map_location=device)
 
     model = EquiBind(device = device, lig_input_edge_feats_dim = 15, rec_input_edge_feats_dim = 27, **args.model_parameters)
@@ -219,7 +222,7 @@ def write_while_inferring(dataloader, model, args):
                     failed_file.write("\n")
                 if ligs is None:
                     continue
-                
+
                 lig_graphs = lig_graphs.to(args.device)
                 rec_graphs = rec_graphs.to(args.device)
                 geometry_graphs = geometry_graphs.to(args.device)
