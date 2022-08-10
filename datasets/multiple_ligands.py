@@ -5,7 +5,7 @@ from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol, S
 
 
 class Ligands(Dataset):
-    def __init__(self, ligpath, rec_graph, args, skips = None, ext = None, addH = None, rdkit_seed = None, lig_load_workers = 4):
+    def __init__(self, ligpath, rec_graph, args, skips = None, ext = None, addH = None, rdkit_seed = None, lig_load_workers = 0):
         self.ligpath = ligpath
         self.rec_graph = rec_graph
         self.args = args
@@ -34,17 +34,23 @@ class Ligands(Dataset):
         
         self.generate_conformer = ext in extensions_requiring_conformer_generation
 
-        suppliers = {"sdf": MultithreadedSDMolSupplier, "smi": MultithreadedSmilesMolSupplier}
-        supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False, numWriterThreads = lig_load_workers),
-                        "smi": dict(sanitize = False, titleLine = False, numWriterThreads = lig_load_workers)}
+        if lig_load_workers > 0:
+            suppliers = {"sdf": MultithreadedSDMolSupplier, "smi": MultithreadedSmilesMolSupplier}
+            supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False, numWriterThreads = lig_load_workers),
+                            "smi": dict(sanitize = False, titleLine = False, numWriterThreads = lig_load_workers)}
+            self.supplier = suppliers[ext](ligpath, **supp_kwargs[ext])
+            print("start loading ligs")
+            self.ligs = [(lig, self.supplier.GetLastRecordId()) for lig in self.supplier]
+            self.ligs = sorted(self.ligs, key = lambda tup: tup[1])
+            self.ligs = list(zip(*self.ligs))[0][:-1]
+            print("finish loading ligs")
+        else:
+            suppliers = {"sdf": SDMolSupplier, "smi": SmilesMolSupplier}
+            supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False),
+                            "smi": dict(sanitize = False, titleLine = False)}
+            self.supplier = suppliers[ext](ligpath, **supp_kwargs[ext])
+            self.ligs = [lig for lig in self.supplier]
         
-        self.supplier = suppliers[ext](ligpath, **supp_kwargs[ext])
-        print("start loading ligs")
-        self.ligs = [(lig, self.supplier.GetLastRecordId()) for lig in self.supplier]
-        self.ligs = sorted(self.ligs, key = lambda tup: tup[1])
-        self.ligs = list(zip(*self.ligs))[0][:-1]
-        print("finish loading ligs")
-
         self._len = len(self.ligs)
 
     

@@ -286,7 +286,7 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
         model = load_model(args)
     
     if lig_dataset is None:
-        lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, skips = previous_work)
+        lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, skips = previous_work, lig_load_workers = args.n_workers_data_load)
     
     
     lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
