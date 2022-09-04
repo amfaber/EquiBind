@@ -36,7 +36,7 @@ faulthandler.enable()
 from models.equibind import EquiBind
 
 def parse_arguments(arglist = None):
-    p = argparse.ArgumentParser()    
+    p = argparse.ArgumentParser()
     p.add_argument('--config', type=argparse.FileType(mode='r'), default=None)
     p.add_argument('--checkpoint', '--model', dest = "checkpoint",
                    type=str, help='path to .pt file containing the model used for inference. '
@@ -49,11 +49,13 @@ def parse_arguments(arglist = None):
     p.add_argument('--device', type=str, default=None, help='What device to train on: cuda or cpu')
     p.add_argument('--num_confs', type=int, default=1, help='num_confs if using rdkit conformers')
     p.add_argument('--use_rdkit_coords', action="store_true", help='override the rkdit usage behavior of the used model')
+    p.add_argument('--addH', action = "store_true", help = "Add hydrogens to the ligands before running EquiBind. If this flag is not enabled, every ligand should have hydrogens already.")
     p.add_argument('--no_skip', dest = "skip_in_output", action = "store_false", help = 'skip input files that already have corresponding folders in the output directory. Used to resume a large interrupted computation')
     p.add_argument("--no_run_corrections", dest = "run_corrections", action = "store_false", help = "possibility of turning off running fast point cloud ligand fitting")
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
     p.add_argument("-r", "--rec_pdb", type = str, help = "The receptor to dock the ligands in --ligands_sdf against")
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
+    p.add_argument("--lig_name", default = None, help = "Choose the name of a property from the mol file to interpret as the name of the molecule")
     # p.add_argument("--lig_slice", help = "Run only a slice of the provided ligand file. Like in python, this slice is HALF-OPEN. Should be provided in the format --lig_slice start,end")
     # p.add_argument("--lazy_dataload", dest = "lazy_dataload", action="store_true", default = None, help = "Turns on lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
     # p.add_argument("--no_lazy_dataload", dest = "lazy_dataload", action="store_false", default = None, help = "Turns off lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
@@ -85,7 +87,7 @@ def get_default_args(args, cmdline_args):
         args.checkpoint = os.path.join(os.path.dirname(__file__), "runs/flexible_self_docking/best_checkpoint.pt")
     
     if args.device is None:
-        args.device = "cuda" if torch.cuda.is_available() else "cpu"
+        args.device = "cuda:0" if torch.cuda.is_available() else "cpu"
     
     config_dict['checkpoint'] = args.checkpoint
     # overwrite args with args from checkpoint except for the args that were contained in the config file or provided directly in the commandline
@@ -140,7 +142,7 @@ def run_batch(model, ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, 
         predictions = model(lig_graphs, rec_graphs, geometry_graphs)[0]
         out_ligs = ligs
         out_lig_coords = lig_coords
-        names = [lig.GetProp("_Name") for lig in ligs]
+        names = [multiple_ligands.safe_get_name(lig) for lig in ligs]
         successes = list(zip(true_indices, names))
         failures = []
     except AssertionError:
@@ -155,13 +157,13 @@ def run_batch(model, ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, 
             try:
                 output = model(lig_graph, rec_graph, geometry_graph)
             except AssertionError as e:
-                failures.append((true_index, lig.GetProp("_Name")))
+                failures.append((true_index, multiple_ligands.safe_get_name(lig)))
                 print(f"Failed for {lig.GetProp('_Name')}")
             else:
                 out_ligs.append(lig)
                 out_lig_coords.append(lig_coord)
                 predictions.append(output[0][0])
-                successes.append((true_index, lig.GetProp("_Name")))
+                successes.append((true_index, multiple_ligands.safe_get_name(lig)))
     assert len(predictions) == len(out_ligs)
     return out_ligs, out_lig_coords, predictions, successes, failures
 
@@ -242,6 +244,9 @@ def write_while_inferring(dataloader, model, args):
                 for failure in failures:
                     failed_file.write(f"{failure[0]} {failure[1]}")
                     failed_file.write("\n")
+                failed_file.flush()
+                success_file.flush()
+                writer.flush()
 
     return has_any_work_been_done
 
@@ -285,8 +290,26 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     if model is None:
         model = load_model(args)
     
+    if "addH" in cmdline_args:
+        addH = args.addH
+    else:
+        addH = None
+
+    if "use_rdkit_coords" in cmdline_args:
+        generate_conformer = args.use_rdkit_coords
+    else:
+        generate_conformer = None
+
     if lig_dataset is None:
-        lig_dataset = multiple_ligands.Ligands(args.ligands_sdf, rec_graph, args, skips = previous_work, lig_load_workers = args.n_workers_data_load)
+        lig_dataset = multiple_ligands.Ligands(
+            args.ligands_sdf,
+            rec_graph,
+            args,
+            skips = previous_work,
+            addH = addH,
+            generate_conformer = generate_conformer,
+            lig_load_workers = args.n_workers_data_load
+            )
     
     
     lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
