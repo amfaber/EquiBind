@@ -440,9 +440,10 @@ def get_rdkit_coords(mol, seed = None):
         AllChem.MMFFOptimizeMolecule(mol, confId=0)
     else:
         AllChem.MMFFOptimizeMolecule(mol, confId=0)
-    conf = mol.GetConformer()
-    lig_coords = conf.GetPositions()
-    return torch.tensor(lig_coords, dtype=torch.float32)
+    return mol
+    # conf = mol.GetConformer()
+    # lig_coords = conf.GetPositions()
+    # return torch.tensor(lig_coords, dtype=torch.float32)
 
 def get_multiple_rdkit_coords(mol,num_conf=10):
     ps = AllChem.ETKDGv2()
