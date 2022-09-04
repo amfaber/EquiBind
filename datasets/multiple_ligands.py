@@ -3,9 +3,19 @@ from commons.process_mols import get_geometry_graph, get_lig_graph_revised, get_
 from dgl import batch
 from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol, SmilesMolSupplier, AddHs, MultithreadedSmilesMolSupplier, MultithreadedSDMolSupplier
 
+def safe_get_name(lig):
+    try:
+        return lig.GetProp("_Name")
+    except KeyError:
+        return None
 
 class Ligands(Dataset):
-    def __init__(self, ligpath, rec_graph, args, skips = None, ext = None, addH = None, rdkit_seed = None, lig_load_workers = 0):
+    def __init__(
+            self, ligpath, rec_graph, args,
+            skips = None, ext = None, addH = None,
+            rdkit_seed = None, lig_load_workers = 0,
+            generate_conformer = None,
+            ):
         self.ligpath = ligpath
         self.rec_graph = rec_graph
         self.args = args
@@ -32,7 +42,9 @@ class Ligands(Dataset):
                 addH = False
         self.addH = addH
         
-        self.generate_conformer = ext in extensions_requiring_conformer_generation
+        if generate_conformer is None:
+            generate_conformer = ext in extensions_requiring_conformer_generation
+        self.generate_conformer = generate_conformer
 
         if lig_load_workers > 0:
             suppliers = {"sdf": MultithreadedSDMolSupplier, "smi": MultithreadedSmilesMolSupplier}
@@ -53,22 +65,26 @@ class Ligands(Dataset):
         
         self._len = len(self.ligs)
 
-    
     def _process(self, lig):
         if lig is None:
             return None, None
         if self.addH:
+            sanitize_succeded = (SanitizeMol(lig, catchErrors = True) is SanitizeFlags.SANITIZE_NONE)
+            if not sanitize_succeded:
+                return None, safe_get_name(lig)
             lig = AddHs(lig)
         if self.generate_conformer:
             try:
                 get_rdkit_coords(lig, self.rdkit_seed)
             except ValueError:
-                return None, lig.GetProp("_Name")
+                return None, safe_get_name(lig)
         sanitize_succeded = (SanitizeMol(lig, catchErrors = True) is SanitizeFlags.SANITIZE_NONE)
+        if self.args.lig_name is not None:
+            lig.SetProp("_Name", lig.GetProp(self.args.lig_name))
         if sanitize_succeded:
-            return lig, lig.GetProp("_Name")
+            return lig, safe_get_name(lig)
         else:
-            return None, lig.GetProp("_Name")
+            return None, safe_get_name(lig)
 
     def __len__(self):
         return self._len
@@ -86,10 +102,10 @@ class Ligands(Dataset):
             lig = PropertyMol.PropertyMol(lig)
 
         try:
-            lig_graph = get_lig_graph_revised(lig, lig.GetProp('_Name'), max_neighbors=self.dp['lig_max_neighbors'],
-                                            use_rdkit_coords=self.use_rdkit_coords, radius=self.dp['lig_graph_radius'])
+            lig_graph = get_lig_graph_revised(lig, safe_get_name(lig), max_neighbors=self.dp['lig_max_neighbors'],
+                                            use_rdkit_coords=False, radius=self.dp['lig_graph_radius'])
         except AssertionError:
-            return idx, lig.GetProp("_Name")
+            return idx, safe_get_name(lig)
         
         geometry_graph = get_geometry_graph(lig) if self.dp['geometry_regularization'] else None
 
