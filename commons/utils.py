@@ -7,7 +7,7 @@ from joblib import Parallel, delayed, cpu_count
 import torch
 import numpy as np
 import dgl
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
 from commons.logger import log
@@ -139,15 +139,15 @@ def flatten_dict(params: Dict[Any, Any], delimiter: str = '/') -> Dict[str, Any]
 
 
 
-def tensorboard_gradient_magnitude(optimizer: torch.optim.Optimizer, writer: SummaryWriter, step, param_groups=[0]):
-    for i, param_group in enumerate(optimizer.param_groups):
-        if i in param_groups:
-            all_params = []
-            for params in param_group['params']:
-                if params.grad != None:
-                    all_params.append(params.grad.view(-1))
-            writer.add_scalar(f'gradient_magnitude_param_group_{i}', torch.cat(all_params).abs().mean(),
-                              global_step=step)
+# def tensorboard_gradient_magnitude(optimizer: torch.optim.Optimizer, writer: SummaryWriter, step, param_groups=[0]):
+#     for i, param_group in enumerate(optimizer.param_groups):
+#         if i in param_groups:
+#             all_params = []
+#             for params in param_group['params']:
+#                 if params.grad != None:
+#                     all_params.append(params.grad.view(-1))
+#             writer.add_scalar(f'gradient_magnitude_param_group_{i}', torch.cat(all_params).abs().mean(),
+#                               global_step=step)
 
 def move_to_device(element, device):
     '''
