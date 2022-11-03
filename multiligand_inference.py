@@ -48,8 +48,10 @@ def parse_arguments(arglist = None):
     p.add_argument('--seed', type=int, default=1, help='seed for reproducibility')
     p.add_argument('--device', type=str, default=None, help='What device to train on: cuda or cpu')
     p.add_argument('--num_confs', type=int, default=1, help='num_confs if using rdkit conformers')
-    p.add_argument('--use_rdkit_coords', action="store_true", help='override the rkdit usage behavior of the used model')
-    p.add_argument('--addH', action = "store_true", help = "Add hydrogens to the ligands before running EquiBind. If this flag is not enabled, every ligand should have hydrogens already.")
+    p.add_argument('--use_rdkit_coords', action="store_true", default = None, help='override the rkdit usage behavior of the used model')
+    p.add_argument('--no_use_rdkit_coords', dest = "use_rdkit_coords",action="store_false", help='override the rkdit usage behavior of the used model')
+    p.add_argument('--addH', action = "store_true", default = None, help = "Add hydrogens to the ligands before running EquiBind. If this flag is not enabled, every ligand should have hydrogens already.")
+    p.add_argument('--no_addH', dest = "addH", action = "store_false", help = "Add hydrogens to the ligands before running EquiBind. If this flag is not enabled, every ligand should have hydrogens already.")
     p.add_argument('--no_skip', dest = "skip_in_output", action = "store_false", help = 'skip input files that already have corresponding folders in the output directory. Used to resume a large interrupted computation')
     p.add_argument("--no_run_corrections", dest = "run_corrections", action = "store_false", help = "possibility of turning off running fast point cloud ligand fitting")
     p.add_argument("-l", "--ligands_sdf", type=str, help = "A single sdf file containing all ligands to be screened when running in screening mode")
@@ -158,7 +160,7 @@ def run_batch(model, ligs, lig_coords, lig_graphs, rec_graphs, geometry_graphs, 
                 output = model(lig_graph, rec_graph, geometry_graph)
             except AssertionError as e:
                 failures.append((true_index, multiple_ligands.safe_get_name(lig)))
-                print(f"Failed for {lig.GetProp('_Name')}")
+                print(f"Failed for {multiple_ligands.safe_get_name(lig)}")
             else:
                 out_ligs.append(lig)
                 out_lig_coords.append(lig_coord)
@@ -271,7 +273,8 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     if args is None:
         args, cmdline_args = parse_arguments(arglist)
         args = get_default_args(args, cmdline_args)
-    
+    # print(args)
+    # sys.exit()
     assert args.output_directory, "An output directory should be specified"
     assert args.ligands_sdf, "No ligand sdf specified"
     assert args.rec_pdb, "No protein specified"
@@ -290,24 +293,14 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
     if model is None:
         model = load_model(args)
     
-    if "addH" in cmdline_args:
-        addH = args.addH
-    else:
-        addH = None
-
-    if "use_rdkit_coords" in cmdline_args:
-        generate_conformer = args.use_rdkit_coords
-    else:
-        generate_conformer = None
-
     if lig_dataset is None:
         lig_dataset = multiple_ligands.Ligands(
             args.ligands_sdf,
             rec_graph,
             args,
             skips = previous_work,
-            addH = addH,
-            generate_conformer = generate_conformer,
+            # addH = args.addH,
+            # generate_conformer = args.use_rdkit_coords,
             lig_load_workers = args.n_workers_data_load
             )
     

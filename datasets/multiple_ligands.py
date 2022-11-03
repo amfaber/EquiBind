@@ -3,6 +3,7 @@ from commons.process_mols import get_geometry_graph, get_lig_graph_revised, get_
 from dgl import batch
 from rdkit.Chem import SDMolSupplier, SanitizeMol, SanitizeFlags, PropertyMol, SmilesMolSupplier, AddHs, MultithreadedSmilesMolSupplier, MultithreadedSDMolSupplier
 
+
 def safe_get_name(lig):
     try:
         return lig.GetProp("_Name")
@@ -12,17 +13,17 @@ def safe_get_name(lig):
 class Ligands(Dataset):
     def __init__(
             self, ligpath, rec_graph, args,
-            skips = None, ext = None, addH = None,
+            skips = None, ext = None,
             rdkit_seed = None, lig_load_workers = 0,
-            generate_conformer = None,
             ):
         self.ligpath = ligpath
         self.rec_graph = rec_graph
         self.args = args
         self.dp = args.dataset_params
-        self.use_rdkit_coords = args.use_rdkit_coords
         self.device = args.device
         self.rdkit_seed = rdkit_seed
+        self.generate_conformer = args.use_rdkit_coords
+        self.addH = args.addH
         
         ##Default argument handling
         self.skips = skips
@@ -35,16 +36,14 @@ class Ligands(Dataset):
             except (AttributeError, KeyError):
                 ext = "sdf"
 
-        if addH is None:
+        if self.addH is None:
             if ext == "smi":
-                addH = True
+                self.addH = True
             else:
-                addH = False
-        self.addH = addH
+                self.addH = False
         
-        if generate_conformer is None:
-            generate_conformer = ext in extensions_requiring_conformer_generation
-        self.generate_conformer = generate_conformer
+        if self.generate_conformer is None:
+            self.generate_conformer = ext in extensions_requiring_conformer_generation
 
         if lig_load_workers > 0:
             suppliers = {"sdf": MultithreadedSDMolSupplier, "smi": MultithreadedSmilesMolSupplier}
