@@ -59,7 +59,7 @@ def parse_arguments(arglist = None):
     p.add_argument("--n_workers_data_load", type = int, default = 4, help = "The number of cores used for loading the ligands and generating the graphs used as input to the model")
     p.add_argument("--lig_name", default = None, help = "Choose the name of a property from the mol file to interpret as the name of the molecule")
     # p.add_argument("--lig_slice", help = "Run only a slice of the provided ligand file. Like in python, this slice is HALF-OPEN. Should be provided in the format --lig_slice start,end")
-    # p.add_argument("--lazy_dataload", dest = "lazy_dataload", action="store_true", default = None, help = "Turns on lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
+    p.add_argument("--lazy_dataload", dest = "lazy_dataload", action="store_true", default = None, help = "Turns on lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
     # p.add_argument("--no_lazy_dataload", dest = "lazy_dataload", action="store_false", default = None, help = "Turns off lazy dataloading. If on, will postpone rdkit parsing of each ligand until it is requested.")
 
     cmdline_parser = deepcopy(p)
@@ -194,7 +194,10 @@ def run_corrections(lig, lig_coord, ligs_coords_pred_untuned):
     optimized_mol = apply_changes(lig_input, new_dihedrals, rotable_bonds)
     optimized_conf = optimized_mol.GetConformer()
     coords_pred_optimized = optimized_conf.GetPositions()
-    R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
+    try:
+        R, t = rigid_transform_Kabsch_3D(coords_pred_optimized.T, coords_pred.T)
+    except np.linalg.LinAlgError:
+        return None
     coords_pred_optimized = (R @ (coords_pred_optimized).T).T + t.squeeze()
     for i in range(optimized_mol.GetNumAtoms()):
         x, y, z = coords_pred_optimized[i]
@@ -236,13 +239,18 @@ def write_while_inferring(dataloader, model, args):
                                                                                        lig_graphs, rec_graphs,
                                                                                        geometry_graphs, true_indices)
                 opt_mols = [run_corrections(lig, lig_coord, prediction) for lig, lig_coord, prediction in zip(out_ligs, out_lig_coords, predictions)]
+                    
                 for mol, success in zip(opt_mols, successes):
-                    writer.write(mol)
-                    success_file.write(f"{success[0]} {success[1]}")
-                    success_file.write("\n")
-                    if not has_any_work_been_done:
-                        has_any_work_been_done = True
+                    if mol is not None:
+                        writer.write(mol)
+                        success_file.write(f"{success[0]} {success[1]}")
+                        success_file.write("\n")
+                        if not has_any_work_been_done:
+                            has_any_work_been_done = True
+                    else:
+                        failures.append(success)
                     # print(f"written {mol.GetProp('_Name')} to output")
+                failures.sort(key = lambda x: x[0])
                 for failure in failures:
                     failed_file.write(f"{failure[0]} {failure[1]}")
                     failed_file.write("\n")
@@ -269,7 +277,7 @@ def find_previous_work(args, create_output_dir = True):
     
     return previous_work
 
-def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, args = None):
+def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, args = None, keeps = None):
     if args is None:
         args, cmdline_args = parse_arguments(arglist)
         args = get_default_args(args, cmdline_args)
@@ -301,10 +309,14 @@ def main(arglist = None, lig_dataset = None, model = None, rec_graph = None, arg
             skips = previous_work,
             # addH = args.addH,
             # generate_conformer = args.use_rdkit_coords,
-            lig_load_workers = args.n_workers_data_load
+            rdkit_seed = args.seed,
+            lig_load_workers = args.n_workers_data_load,
+            keeps = keeps,
+            lazy = args.lazy_dataload
             )
     
-    
+    if args.lazy_dataload:
+        args.n_workers_data_load = 0
     lig_loader = DataLoader(lig_dataset, batch_size = args.batch_size, collate_fn = lig_dataset.collate, num_workers = args.n_workers_data_load)
     
     return write_while_inferring(lig_loader, model, args)

@@ -15,6 +15,8 @@ class Ligands(Dataset):
             self, ligpath, rec_graph, args,
             skips = None, ext = None,
             rdkit_seed = None, lig_load_workers = 0,
+            keeps = None,
+            lazy = False
             ):
         self.ligpath = ligpath
         self.rec_graph = rec_graph
@@ -27,6 +29,8 @@ class Ligands(Dataset):
         
         ##Default argument handling
         self.skips = skips
+        self.keeps = keeps
+        self.lazy = lazy
 
         extensions_requiring_conformer_generation = ["smi"]
 
@@ -45,7 +49,7 @@ class Ligands(Dataset):
         if self.generate_conformer is None:
             self.generate_conformer = ext in extensions_requiring_conformer_generation
 
-        if lig_load_workers > 0:
+        if lig_load_workers > 0 and not self.lazy:
             suppliers = {"sdf": MultithreadedSDMolSupplier, "smi": MultithreadedSmilesMolSupplier}
             supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False, numWriterThreads = lig_load_workers),
                             "smi": dict(sanitize = False, titleLine = False, numWriterThreads = lig_load_workers)}
@@ -60,9 +64,15 @@ class Ligands(Dataset):
             supp_kwargs = {"sdf": dict(sanitize = False, removeHs =  False),
                             "smi": dict(sanitize = False, titleLine = False)}
             self.supplier = suppliers[ext](ligpath, **supp_kwargs[ext])
-            self.ligs = [lig for lig in self.supplier]
+            if not self.lazy:
+                self.ligs = [lig for lig in self.supplier]
+            else:
+                self.ligs = None
         
-        self._len = len(self.ligs)
+        if self.ligs is not None:
+            self._len = len(self.ligs)
+        else:
+            self._len = len(self.supplier)
 
     def _process(self, lig):
         if lig is None:
@@ -89,9 +99,15 @@ class Ligands(Dataset):
         return self._len
 
     def __getitem__(self, idx):
-        lig = self.ligs[idx]
+        if self.ligs is not None:
+            lig = self.ligs[idx]
+        else:
+            lig = self.supplier[idx]
 
         if self.skips is not None and idx in self.skips:
+            return idx, "Skipped"
+        
+        if self.keeps is not None and idx not in self.keeps:
             return idx, "Skipped"
         
         lig, name = self._process(lig)
